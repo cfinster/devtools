@@ -4,6 +4,19 @@
     <title>{{page.title}}</title>
     <link rel="stylesheet" href="../styles.css" type="text/css">
     <script src="../require.js"></script>
+    <script>
+      (function() {
+        require({
+          baseUrl: "../"
+        });
+        var modules = "{{page.modules}}";
+        if (modules) {
+          require.ready(function() {
+            require(modules.split(","), function() {});
+          });
+        }
+      })();
+    </script>
     <script src="../emphasis-src.js"></script>
   </head>
   <body>
