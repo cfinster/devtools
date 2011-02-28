@@ -40,7 +40,7 @@
 	 * license.  Please see http://www.yui-ext.com/ for more information. */
 
 
-(function() {
+define(function() {
 var Emphasis = {
     init: function() {
         this.config();
@@ -486,8 +486,5 @@ var Emphasis = {
     }
 };
 
-require.ready(function() {
-	Emphasis.init();
-	});
-	
-})();
+Emphasis.init();
+});
