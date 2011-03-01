@@ -1,0 +1,20 @@
+{
+ "projects": [
+  "workspaces",
+  "ui"
+ ],
+ "people": [
+  {
+   "id": "msucan",
+   "name": "Mihai Sucan"
+  },
+  {
+   "id": "rcampbell",
+   "name": "Rob Campbell"
+  },
+  {
+   "name": "Kevin Dangoor",
+   "id": "kdangoor"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Data Updater</title>
+    <link rel="stylesheet" href="../styles.css" type="text/css">
+    <script src="../js/require.js"></script>
+    <script>
+      (function() {
+        require({
+          baseUrl: "../js/"
+        });
+        require.ready(function() {
+          require(["specjs/updater"], function() {
+          });
+        })
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Project Data Updater</h1>
+    <div>
+      Data Directory: <input type="text" id="datadir"> <button id="setdatadir">Set</button>
+    </div>
+  </body>
+</html>
