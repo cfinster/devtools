@@ -1,5 +1,7 @@
 define(function(require, exports, module) {
 
+var privileged = false;
+
 // Adapted from TiddlyWiki
 
 // Returns null if it can't do it, false if there's an error, true if it saved OK
@@ -8,7 +10,11 @@ exports.saveFile = function(filePath,content)
     console.log("Saving to ", filePath);
 	if(window.Components) {
 		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+		    if (!privileged) {
+    			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    			privileged = true;
+		    }
+		    
 			var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
 			file.initWithPath(filePath);
 			if(!file.exists())
