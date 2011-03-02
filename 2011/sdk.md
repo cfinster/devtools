@@ -1,16 +1,9 @@
 ---
-title: DevTools SDK
+title: DevTools SDK 1
 layout: page
 ---
 
-# Mozilla DevTools SDK #
-
-<table class="metadata">
-    <tr><th>Revision</th><td>January 26, 2011</td></tr>
-    <tr><th>Status</th><td>Design</td></tr>
-    <tr><th>Feature Owner</th><td>Kevin Dangoor</td></tr>
-    <tr><th>Technical Owner</th><td>Rob Campbell</td></tr>
-</table>
+# Firefox DevTools SDK 1 #
 
 The Developer Tools SDK (henceforth "DTSDK") allows web developers
 to [practice their love](http://www.time.com/time/specials/packages/article/0,28804,1870938_1870943_1870953,00.html)

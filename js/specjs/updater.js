@@ -17,23 +17,4 @@ $("#setdatadir").click(function() {
     console.log("datadir saved");
 });
 
-$("#generate").click(function() {
-    if (!datadir) {
-        alert("datadir is not set!");
-        return;
-    }
-    console.log("Loading template");
-    $.get("status_template.html", function(template) {
-        console.log("Load project list");
-        model.loadProjectList(function(pl) {
-            console.log("Fetching projects");
-            pl.fetchAllProjects(function(pl) {
-                var filename = datadir + "/status.html";
-                var merged = _.template(template, {pl: pl});
-                file.saveFile(filename, merged);
-            });
-        });
-    });
-});
-
 });

@@ -1,14 +1,12 @@
 ---
-title: Object Browser
+title: Object Browser Plus
 layout: page
 ---
 
-# Object Browser #
-
-<table class="metadata">
-    <tr><th>Revision</th><td>February 23, 2011</td></tr>
-    <tr><th>Status</th><td>Design</td></tr>
-    <tr><th>Owner</th><td>TBD</td></tr>
-</table>
+# Object Browser Plus #
 
 The Object Browser allows the user to browse a JS object's properties.
+The Web Console in Firefox 4 includes an object browser, but we would
+like to make improvements to that browser. It needs to become
+e10s-ready and should do a better job of handling updates to an
+object's state.

@@ -1,17 +1,128 @@
 <html>
   <head>
-    <link rel="stylesheet" href-"../status.css" type="text/css">
+    <link rel="stylesheet" href="../status.css" type="text/css">
     <script src="../js/require.js"></script>
+    <script>
+      (function() {
+        require({
+          baseUrl: "../js/"
+        });
+        require.ready(function() {
+          require(["specjs/status"], function() {});
+        });
+      })();
+    </script>
     <title>Developer Tools Project Status</title>
   </head>
   <body>
     <h1>Developer Tools Project Status</h1>
-    <ul>
+    <div class="maindate">March 2</div>
     
-      <li>workspaces</li>
+    <section class="project">
+      <h2><a href="console5.html">Web Console "5"</a></h2>
+      <div class="blurb">Adding awesome to the existing Web Console</div>
+      
+      <section class="people">
+        <h3>People</h3>
+        <ul>
+          <li>ddahl</li>
+        </ul>
+      </section>
+    </section>
     
-      <li>ui</li>
+    <section class="project">
+      <h2><a href="ui.html">Overall UI</a></h2>
+      <div class="blurb">The way things fit together</div>
+      
+      <div class="tabs">
+        <section>
+          <h3>Updates</h3>
+          <ul>
+            <li><span class="date">2011/02/24</span> quick mockups added</li>
+          </ul>
+        </section>
+      </div>
+    </section>
     
-    </ul>
+    <section class="project">
+      <h2><a href="install.html">Devtools Installation</a></h2>
+      <div class="blurb">Our devtools in ur Firefox</div>
+    </section>
+    
+    <section class="project">
+      <h2><a href="memory.html">Memory Tooling Backend</a></h2>
+      <div class="blurb">Data for the future</div>
+    </section>
+    
+    <section class="project">
+      <h2><a href="highlighter.html">Highlighter</a></h2>
+      <div class="blurb">Beautiful information about your DOM</div>
+      <section class="people">
+        <h3>People</h3>
+        <ul>
+          <li>rcampbell</li>
+        </ul>
+      </section>
+    </section>
+    
+    <section class="project">
+      <h2><a href="styledoctor.html">Style Doctor</a></h2>
+      <div class="blurb">The cure for what ails your CSS</div>
+      <section class="people">
+        <h3>People</h3>
+        <ul>
+          <li>jwalker</li>
+        </ul>
+      </section>
+    </section>
+    
+    <section class="project">
+      <h2><a href="objectbrowser.html">Object Browser Plus</a></h2>
+      <div class="blurb">Take a look inside!</div>
+    </section>
+    
+    <section class="project">
+      <h2><a href="styleinspector.html">Style Inspector</a></h2>
+      <div class="blurb">View an element's style, in style!</div>
+    </section>
+    
+    <section class="project">
+      <h2><a href="workspaces.html">Workspaces Prototype</a></h2>
+      <div class="blurb">The humane way to monkey with code.</div>
+      <section class="people">
+        <h3>People</h3>
+        <ul>
+          <li>rcampbell</li>
+          <li>msucan</li>
+        </ul>
+      </section>
+      
+      <div class="tabs">
+        <section>
+          <h3>Updates</h3>
+          <ul>
+            <li><span class="date">2011/03/01</span> Prototype is working as a Jetpack</li>
+            <li><span class="date">2011/01/05</span> Initial Prototype Add-On</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Bugs</h3>
+          <ul>
+            <li>636723</li>
+            <li>636724</li>
+            <li>636725</li>
+            <li>636727</li>
+            <li>636731</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    
+    <section class="project">
+      <h2><a href="sdk.html">Devtools SDK 1</a></h2>
+      <div class="blurb">First bits of customizability</div>
+    </section>
+    
   </body>
 </html>
