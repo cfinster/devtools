@@ -83,20 +83,21 @@ var ProjectList = exports.ProjectList = backbone.Model.extend({
     
     fetchAllProjects: function(callback) {
         var loading = _.clone(this.get("projects"));
+        var self = this;
         this.get("projects").forEach(function(projectName) {
-            this.fetchProject(projectName, function(project) {
+            self.fetchProject(projectName, function(project) {
                 var i = loading.indexOf(projectName);
                 loading.splice(i, 1);
                 if (loading.length == 0) {
                     if (callback) {
-                        callback(this);
+                        callback(self);
                     }
                 } else {
                     console.log("Done with ", projectName, " waiting on:");
                     console.log(loading);
                 }
             });
-        }.bind(this));
+        });
     },
     
     getProject: function(projectName) {
