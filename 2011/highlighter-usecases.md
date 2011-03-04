@@ -3,7 +3,7 @@ title: Highlighter Use-cases
 layout: page
 ---
 # Highlighter Usage #
-![Highlighter Mockup](images/highlighter-mockup.png)
+[Highlighter Mockup](images/highlighter-mockup.png)
 
 ## A Story ##
 

@@ -18,3 +18,5 @@ The revised concept is a "Highlighter" that is just the visual selector o
 f elements with the ability to overlay additional information directly 
 over the page being inspected. Separate tools (Style Doctor, Style Inspector, 
 etc.) will work with the selected elements.
+
+_see [Highlighter Use Cases](highlighter-usecases)_
