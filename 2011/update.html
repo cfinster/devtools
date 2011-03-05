@@ -10,7 +10,8 @@
           baseUrl: "../js/"
         });
         require.ready(function() {
-          require(["specjs/updater"], function() {
+          require(["specjs/updater"], function(updater) {
+            updater.attachUI();
           });
         })
       })();
@@ -19,10 +20,13 @@
   <body>
     <h1>Project Data Updater</h1>
     <div>
-      Data Directory: <input type="text" id="datadir"> <button id="setdatadir">Set</button>
+      Data Directory: <input type="text" id="datadir">
     </div>
     <div>
-      <button id="generate">Generate Status</button>
+      <button id="update">Update Bugdata</button>
+    </div>
+    <div>
+      <button id="statusupdate">Update data for Status</button>
     </div>
   </body>
 </html>

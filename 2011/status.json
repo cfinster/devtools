@@ -1,0 +1,32 @@
+{
+ "636724": {
+  "summary": "Change workspaces to follow the devtools scoping rules",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces]"
+ },
+ "636725": {
+  "summary": "Unit tests for Workspaces",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces]"
+ },
+ "636727": {
+  "summary": "Add Ace to workspaces",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces]"
+ },
+ "636731": {
+  "summary": "Add Cockpit commands for Workspaces",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces]"
+ },
+ "636723": {
+  "summary": "Turn Workspaces into a Jetpack",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces]"
+ }
+}

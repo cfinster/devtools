@@ -1,0 +1,103 @@
+{
+ "_version": 1,
+ "636724": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:46:48Z"
+  },
+  "summary": "Change workspaces to follow the devtools scoping rules",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:46:00Z"
+  },
+  "whiteboard": "[workspaces]",
+  "id": 636724,
+  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636724\" target=\"_blank\">636724</a>"
+ },
+ "636725": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:48:50Z"
+  },
+  "summary": "Unit tests for Workspaces",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:48:00Z"
+  },
+  "whiteboard": "[workspaces]",
+  "id": 636725,
+  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636725\" target=\"_blank\">636725</a>"
+ },
+ "636727": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:50:50Z"
+  },
+  "summary": "Add Ace to workspaces",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:50:00Z"
+  },
+  "whiteboard": "[workspaces]",
+  "id": 636727,
+  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636727\" target=\"_blank\">636727</a>"
+ },
+ "636731": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-27T15:34:38Z"
+  },
+  "summary": "Add Cockpit commands for Workspaces",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:55:00Z"
+  },
+  "whiteboard": "[workspaces]",
+  "id": 636731,
+  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636731\" target=\"_blank\">636731</a>"
+ },
+ "636723": {
+  "_type": "Bug",
+  "status": "ASSIGNED",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-03T19:56:19Z"
+  },
+  "summary": "Turn Workspaces into a Jetpack",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-25T20:43:00Z"
+  },
+  "whiteboard": "[workspaces]",
+  "id": 636723,
+  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636723\" target=\"_blank\">636723</a>"
+ }
+}

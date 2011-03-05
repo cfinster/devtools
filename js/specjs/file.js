@@ -11,6 +11,7 @@ exports.saveFile = function(filePath,content)
 	if(window.Components) {
 		try {
 		    if (!privileged) {
+		        console.log("Requesting enhanced privileges");
     			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     			privileged = true;
 		    }
