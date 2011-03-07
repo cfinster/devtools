@@ -29,7 +29,7 @@ exports.attachUI = function() {
             return;
         }
         if (!exports.bugData) {
-            buggerall.getCachedResult("bugdata.json", function(q) {
+            buggerall.getCachedResult("bugdata.json?" + new Date().getTime(), function(q) {
                 exports.bugData = q;
                 exports.generateStatusData();
             });
@@ -45,7 +45,6 @@ var projectsFooter = "<!-- end of projects -->";
 
 exports.gatherBugList = function(callback) {
     $.get('status.html?' + new Date().getTime(), function(text) {
-        window.text = text;
         var headerLocation = text.indexOf(projectsHeader);
         var footerLocation = text.indexOf(projectsFooter);
         if (headerLocation == -1 || footerLocation == -1) {
@@ -53,8 +52,9 @@ exports.gatherBugList = function(callback) {
             return;
         }
         text = text.substring(headerLocation + projectsHeader.length, 
-            footerLocation - (headerLocation + projectsHeader.length));
+            footerLocation);
         var projects = new Projects($(text));
+        exports.projects = projects;
         var bugIds = [];
         _.values(projects).forEach(function(project) {
             project.getBugIds().forEach(function(id) {

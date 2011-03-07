@@ -1,6 +1,5 @@
 body.awesome {
-    background: black;
-    color: white;
+    background: url(images/Lightblue_empty_grid.svg);
 }
 
 body.awesome section.project h2 a {
@@ -88,4 +87,12 @@ ul.navigation li.selected a:link, ul.navigation li.selected a:visited {
 	background: -moz-linear-gradient(top center, #d1d1d1, #f2f2f2 80%) repeat scroll 0 0 #f2f2f2;
 	background: -webkit-gradient(linear,left bottom,left top,color-stop(.2, #f2f2f2),color-stop(.8, #d1d1d1));
 	background-color: #f2f2f2;
+}
+
+a.bugid {
+    color: blue;
+}
+
+a.resolved {
+    text-decoration: line-through;
 }

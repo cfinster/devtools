@@ -1,4 +1,9 @@
 {
+ "638452": {
+  "summary": "Can you please help us make the Orion code editor fast on Firefox?",
+  "status": "UNCONFIRMED",
+  "assignedName": "nobody"
+ },
  "636724": {
   "summary": "Change workspaces to follow the devtools scoping rules",
   "status": "NEW",
@@ -22,6 +27,23 @@
   "status": "NEW",
   "assignedName": "mihai.sucan",
   "whiteboard": "[workspaces]"
+ },
+ "524674": {
+  "summary": "nsIEventListenerService: tracking of dynamically added and removed event listeners",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p2]"
+ },
+ "580880": {
+  "summary": "chrome JS access to setTimeout enumeration",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p2]"
+ },
+ "638871": {
+  "summary": "API for code evaluation in different processes for Jetpack addons",
+  "status": "NEW",
+  "assignedName": "nobody"
  },
  "636723": {
   "summary": "Turn Workspaces into a Jetpack",

@@ -1,5 +1,23 @@
 {
  "_version": 1,
+ "638452": {
+  "_type": "Bug",
+  "status": "UNCONFIRMED",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-06T04:04:45Z"
+  },
+  "summary": "Can you please help us make the Orion code editor fast on Firefox?",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-03T21:23:00Z"
+  },
+  "id": 638452
+ },
  "636724": {
   "_type": "Bug",
   "status": "NEW",
@@ -17,8 +35,7 @@
    "value": "2011-02-25T20:46:00Z"
   },
   "whiteboard": "[workspaces]",
-  "id": 636724,
-  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636724\" target=\"_blank\">636724</a>"
+  "id": 636724
  },
  "636725": {
   "_type": "Bug",
@@ -37,8 +54,7 @@
    "value": "2011-02-25T20:48:00Z"
   },
   "whiteboard": "[workspaces]",
-  "id": 636725,
-  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636725\" target=\"_blank\">636725</a>"
+  "id": 636725
  },
  "636727": {
   "_type": "Bug",
@@ -57,8 +73,7 @@
    "value": "2011-02-25T20:50:00Z"
   },
   "whiteboard": "[workspaces]",
-  "id": 636727,
-  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636727\" target=\"_blank\">636727</a>"
+  "id": 636727
  },
  "636731": {
   "_type": "Bug",
@@ -77,15 +92,71 @@
    "value": "2011-02-25T20:55:00Z"
   },
   "whiteboard": "[workspaces]",
-  "id": 636731,
-  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636731\" target=\"_blank\">636731</a>"
+  "id": 636731
+ },
+ "524674": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-01-06T22:19:43Z"
+  },
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2009-10-27T19:01:00Z"
+  },
+  "whiteboard": "[firebug-p2]",
+  "id": 524674,
+  "status": "NEW",
+  "summary": "nsIEventListenerService: tracking of dynamically added and removed event listeners"
+ },
+ "580880": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2010-09-01T00:55:44Z"
+  },
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-07-22T08:12:00Z"
+  },
+  "whiteboard": "[firebug-p2]",
+  "id": 580880,
+  "depends_on": "581072",
+  "status": "NEW",
+  "summary": "chrome JS access to setTimeout enumeration"
+ },
+ "638871": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-05T00:03:02Z"
+  },
+  "summary": "API for code evaluation in different processes for Jetpack addons",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-05T00:00:00Z"
+  },
+  "id": 638871
  },
  "636723": {
   "_type": "Bug",
   "status": "ASSIGNED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-03T19:56:19Z"
+   "value": "2011-03-05T00:03:21Z"
   },
   "summary": "Turn Workspaces into a Jetpack",
   "assigned_to": {
@@ -97,7 +168,6 @@
    "value": "2011-02-25T20:43:00Z"
   },
   "whiteboard": "[workspaces]",
-  "id": 636723,
-  "link": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=636723\" target=\"_blank\">636723</a>"
+  "id": 636723
  }
 }

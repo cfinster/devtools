@@ -1,5 +1,10 @@
 define(function(require, exports, module) {
 
+var Projects = require("./model").Projects;
+
+exports.projects = new Projects($("#projects"));
+exports.statusdata = null;
+
 var setupProjectNavigation = function() {
     $('section.project').each(function(index, project) {
         var tabnames = [];
@@ -14,8 +19,36 @@ var setupProjectNavigation = function() {
     });
 };
 
+var updateBugInformation = function() {
+    $.getJSON('status.json?' + new Date().getTime(), function(data) {
+        exports.statusdata = data;
+        $('ul.buglist li').each(function() {
+            var el = $(this);
+            var bugid = el.text();
+            var bug = data[bugid];
+            if (!bug) {
+                console.log("Couldn't find data for bug: ", bugid);
+                return;
+            }
+            el.empty();
+            var outer = $('<span/>', {
+                "class": "bug"
+            });
+            $('<a/>', {
+                "class": bug.status == "RESOLVED" ? "bugid resolved" : "bugid",
+                href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
+                target: "_blank",
+                text: bugid
+            }).appendTo(outer);
+            outer.append(" " + bug.summary);
+            el.append(outer);
+        });
+    });
+};
+
 if ($('body').hasClass("awesome")) {
     setupProjectNavigation();
+    updateBugInformation();
 }
 
 });

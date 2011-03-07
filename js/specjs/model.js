@@ -25,6 +25,7 @@ exports.Projects = function(el) {
     var self = this;
     $('section.project', el).each(function() {
         var p = new exports.Project(this);
+        console.log("Project found: ", p.name);
         self[p.name] = p;
     });
 };
