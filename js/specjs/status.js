@@ -1,21 +1,34 @@
 define(function(require, exports, module) {
 
+var _ = require("underscore")._;
 var Projects = require("./model").Projects;
 
 exports.projects = new Projects($("#projects"));
 exports.statusdata = null;
 
+var expander = function() {
+    var project = this.project;
+    var elem = $(this);
+    if (project.expanded) {
+        elem.html("&#9654;");
+        $(project.el).find("section.people,div.tabs").removeClass("visible");
+    } else {
+        elem.html("&#9660;");
+        $(project.el).find("section.people,div.tabs").addClass("visible");
+    }
+    project.expanded = !project.expanded;
+};
+
 var setupProjectNavigation = function() {
-    $('section.project').each(function(index, project) {
-        var tabnames = [];
-        $(project).find("div.tabs section h3").each(function(index) {
-            tabnames.push(this.innerHTML);
-            $(this).hide();
+    _.values(exports.projects).forEach(function(project) {
+        var elem = $('<span/>', {
+            html: "&#9654;",
+            click: expander,
+            "class": "expander"
         });
-        var header = '<li><a href="#">';
-        var footer = '</a></li>';
-        var tabnav = $('<ul class="navigation">' + header + tabnames.join(footer + header) + footer + '<li class="shadow"></li></ul>');
-        $(project).find('div.tabs').prepend(tabnav);
+        project.expanded = false;
+        elem[0].project = project;
+        $(project.el).find("h2").prepend(elem);
     });
 };
 
