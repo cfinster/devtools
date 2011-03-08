@@ -18,6 +18,30 @@ exports.Project.prototype = {
             result.push($(this).text());
         });
         return result;
+    },
+    
+    getPeople: function() {
+        var result = [];
+        $(this.el).find("section.people ul li").each(function() {
+            var personid = $(this).text();
+            var personEl = document.getElementById(personid);
+            if (!personEl) {
+                console.log("Unknown person: ", personid);
+                return;
+            }
+            result.push(new exports.Person(personEl));
+        });
+        return result;
+    }
+};
+
+exports.Person = function(el) {
+    this.el = el;
+};
+
+exports.Person.prototype = {
+    getAvatar: function() {
+        return $(this.el).find("img.avatar")[0];
     }
 };
 

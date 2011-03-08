@@ -23,9 +23,59 @@
 }
 
 body.awesome {
-    background: url(images/Lightblue_empty_grid.svg);
+/*    background: url(images/Lightblue_empty_grid.svg);*/
     font-family: 'ArchitectsDaughterRegular', Helvetica, Arial, sans-serif;
     color: #0000aa;
+}
+
+body.awesome section.project {
+    border: 2px solid #00a;
+    margin-bottom: 1em;
+}
+
+body.awesome div.summary {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    width: 100%;
+    border-bottom: 1px solid #00a;
+}
+
+body.awesome div.summary div.main {
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-flex: 1;
+    width: 100%;
+}
+
+body.awesome div.summary div.main div.top {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    width: 100%;
+    border-bottom: 1px solid #00a;
+}
+
+body.awesome div.summary div.top h2 {
+    -moz-box-flex: 1;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+body.awesome div.summary div.top div.avatars {
+    border-left: 1px solid #00a;
+    width: 138px;
+    padding: 10px 5px 0px 5px;
+}
+
+body.awesome div.status {
+    width: 70px;
+    line-height: 35px;
+    padding: 20px 10px 0px 10px;
+    border-left: 1px solid #00a;
+}
+
+body.awesome div.summary img.avatar {
+    width: 32px;
+    height: 32px;
 }
 
 body.awesome section.project h2 a {
@@ -55,16 +105,22 @@ body.awesome #people {
     display: none;
 }
 
-body.awesome section.people, body.awesome div.tabs {
+body.awesome section.people {
     display: none;
 }
 
-body.awesome section.people.visible, body.awesome div.tabs.visible {
+body.awesome div.tabs {
+    display: none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body.awesome div.tabs.visible {
     display: block;
 }
 
 
 span.expander {
+    font-family: sans-serif;
     cursor: pointer;
     margin-right: 4px;
     padding-right: 4px;
