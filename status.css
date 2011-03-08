@@ -30,7 +30,7 @@ body.awesome {
 
 body.awesome section.project {
     border: 2px solid #00a;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     background: white;
 }
 
@@ -100,6 +100,7 @@ body.awesome div.status {
     line-height: 35px;
     padding: 20px 10px 0px 10px;
     border-left: 1px solid #00a;
+    font-family: "BostonTrafficRegular", Helvetica, Arial, sans-serif;;
 }
 
 body.awesome div.summary img.avatar {
