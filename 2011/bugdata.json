@@ -2,12 +2,10 @@
  "_version": 1,
  "638452": {
   "_type": "Bug",
-  "status": "UNCONFIRMED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-06T04:04:45Z"
+   "value": "2011-03-08T01:10:15Z"
   },
-  "summary": "Can you please help us make the Orion code editor fast on Firefox?",
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
    "name": "nobody"
@@ -16,7 +14,33 @@
    "_type": "Date",
    "value": "2011-03-03T21:23:00Z"
   },
-  "id": 638452
+  "id": 638452,
+  "status": "UNCONFIRMED",
+  "summary": "Can you please help us make the Orion code editor fast on Firefox?",
+  "attachments": {
+   "517464": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/517464",
+    "bug_id": 638452,
+    "last_change_time": "2011-03-07T19:03:20Z",
+    "description": "Patch I used to measure reflows",
+    "size": 1562,
+    "content_type": "application/octet-stream",
+    "attacher": {
+     "name": "bzbarsky"
+    },
+    "file_name": "test.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-08T00:03:00Z"
+    },
+    "id": 517464,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/638452",
+    "is_obsolete": false
+   }
+  }
  },
  "636724": {
   "_type": "Bug",
@@ -133,6 +157,24 @@
   "status": "NEW",
   "summary": "chrome JS access to setTimeout enumeration"
  },
+ "638142": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-07T22:06:48Z"
+  },
+  "summary": "Add ability to anchor a panel to a widget",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-02T23:14:00Z"
+  },
+  "id": 638142
+ },
  "638871": {
   "_type": "Bug",
   "status": "NEW",
@@ -150,6 +192,24 @@
    "value": "2011-03-05T00:00:00Z"
   },
   "id": 638871
+ },
+ "639518": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-08T02:03:46Z"
+  },
+  "summary": "Create a Cross Add-on registry and communication service",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-07T22:05:00Z"
+  },
+  "id": 639518
  },
  "636723": {
   "_type": "Bug",
@@ -169,5 +229,129 @@
   },
   "whiteboard": "[workspaces]",
   "id": 636723
+ },
+ "638131": {
+  "_type": "Bug",
+  "status": "ASSIGNED",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-07T23:04:40Z"
+  },
+  "summary": "Add ability to check if a panel is open or not",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-02T22:55:00Z"
+  },
+  "whiteboard": "[devtools]",
+  "id": 638131,
+  "attachments": {
+   "517450": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "myk"
+      },
+      "type_id": 4,
+      "status": "?",
+      "name": "review",
+      "id": 433001,
+      "setter": {
+       "name": "dietrich"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/517450",
+    "bug_id": 638131,
+    "last_change_time": "2011-03-07T18:04:40Z",
+    "description": "Pointer to pull request",
+    "size": 359,
+    "content_type": "text/html",
+    "attacher": {
+     "name": "dietrich"
+    },
+    "file_name": "bug-638131-pullreq.html",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-07T23:03:00Z"
+    },
+    "id": 517450,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/638131",
+    "is_obsolete": false
+   }
+  }
+ },
+ "638075": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-05T12:33:56Z"
+  },
+  "keywords": [
+   "regressionwindow-wanted"
+  ],
+  "assigned_to": {
+   "name": "general"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-02T18:15:00Z"
+  },
+  "whiteboard": "[firebug-p1]",
+  "id": 638075,
+  "status": "REOPENED",
+  "summary": "Memory consumption increases when registering a stream listener.",
+  "attachments": {
+   "516236": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516236",
+    "bug_id": 638075,
+    "last_change_time": "2011-03-03T07:29:48Z",
+    "description": "Test extension",
+    "size": 3906,
+    "content_type": "application/x-xpinstall",
+    "attacher": {
+     "name": "odvarko"
+    },
+    "file_name": "httpMonitor.xpi",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-02T18:18:00Z"
+    },
+    "id": 516236,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/638075",
+    "is_obsolete": true
+   },
+   "516523": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516523",
+    "bug_id": 638075,
+    "last_change_time": "2011-03-03T07:29:48Z",
+    "description": "Test extension update so it works also in 3.6",
+    "size": 11925,
+    "content_type": "application/x-xpinstall",
+    "attacher": {
+     "name": "odvarko"
+    },
+    "file_name": "httpMonitor.xpi",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-03T12:29:00Z"
+    },
+    "id": 516523,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/638075",
+    "is_obsolete": false
+   }
+  }
  }
 }

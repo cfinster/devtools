@@ -13,14 +13,29 @@
         });
       })();
     </script>
-    <title>Developer Tools Project Status</title>
+    <title>Mozilla Developer Tools Project Status</title>
   </head>
   <body class="awesome">
-    <h1>Developer Tools Project Status</h1>
-    <div class="maindate">March 7</div>
+		<div class="topsummary">
+	    <h1>Mozilla DevTools Project Status</h1>
+	    <div class="maindate">March 8</div>
+		</div>
     
     <!-- projects follow -->
     <div id="projects">
+			<section class="project">
+				<h2><a href="jsd2.html">JSD2</a></h2>
+				<div class="blurb">Debugging the multiprocess world</div>
+				<div class="status">Planning</div>
+				
+				<section class="people">
+					<h3>People</h3>
+					<ul>
+						<li>jblandy</li>
+					</ul>
+				</section>
+			</section>
+			
       <section class="project">
         <h2><a href="console5.html">Web Console "5"</a></h2>
         <div class="blurb">Adding awesome to the existing Web Console</div>
@@ -169,6 +184,28 @@
 						<li>msucan</li>
 					</ul>
 				</section>
+				
+				<div class="tabs">
+					<section>
+						<h3>Updates</h3>
+						<ul>
+						</ul>
+					</section>
+					<section>
+						<h3>flags</h3>
+						<ul>
+							<li>How do we run our automated tests to ensure that changes in the mozilla-central don't break the SDK?</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Bugs</h3>
+						<ul>
+							<li>639518</li>
+							<li>638871</li>
+							<li>638131</li>
+							<li>638142</li>
+						</ul>
+					</section>
       </section>
     
       <section class="project">
@@ -189,30 +226,35 @@
             <ul>
               <li>580880</li>
               <li>524674</li>
+							<li>638075</li>
             </ul>
           </section>
         </div>
       </section>
     
-      <section class="project">
-        <h2><a href="incontent.html">In-Content Tools</a></h2>
-        <div class="blurb">Improved support for browser content-based tools</div>
-				<div class="status">Planning</div>
-      
-        <div class="tabs">
-          <section>
-            <h3>Bugs</h3>
-            <ul>
-              <li>638452</li>
-            </ul>
-          </section>
-        </div>
-      </section>
-	    <section class="project">
-	      <h2><a href="objectinspector.html">Object Inspector Plus</a></h2>
-	      <div class="blurb">Take a look inside!</div>
-				<div class="status">Planning</div>
-	    </section>
+			<h2 class="tier2">Second Tier</h2>
+			<div id="tier2">
+	      <section class="project">
+	        <h2><a href="incontent.html">In-Content Tools</a></h2>
+	        <div class="blurb">Improved support for browser content-based tools</div>
+					<div class="status">Planning</div>
+
+	        <div class="tabs">
+	          <section>
+	            <h3>Bugs</h3>
+	            <ul>
+	              <li>638452</li>
+	            </ul>
+	          </section>
+	        </div>
+	      </section>
+
+		    <section class="project">
+		      <h2><a href="objectinspector.html">Object Inspector Plus</a></h2>
+		      <div class="blurb">Take a look inside!</div>
+					<div class="status">Planning</div>
+		    </section>
+			</div>
     </div>
     <!-- end of projects -->
 		
@@ -250,6 +292,11 @@
 			<section id="jodvarko">
 				<h3>Jan Odvarko</h3>
 				<div><img alt="jodvarko" title="Jan (Honza) Odvarko" src="http://gravatar.com/avatar/34b251cf082c202fb3160b1afb810001" class="avatar"></div>
+			</section>
+			
+			<section id="jblandy">
+				<h3>Jim Blandy</h3>
+				<div><img alt="jblandy" title="Jim Blandy" src="http://www.red-bean.com/jimb/jimb.jpg" class="avatar"></div>
 			</section>
 		</div>
 		

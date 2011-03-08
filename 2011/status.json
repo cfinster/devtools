@@ -40,8 +40,18 @@
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]"
  },
+ "638142": {
+  "summary": "Add ability to anchor a panel to a widget",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
  "638871": {
   "summary": "API for code evaluation in different processes for Jetpack addons",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
+ "639518": {
+  "summary": "Create a Cross Add-on registry and communication service",
   "status": "NEW",
   "assignedName": "nobody"
  },
@@ -50,5 +60,17 @@
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
   "whiteboard": "[workspaces]"
+ },
+ "638131": {
+  "summary": "Add ability to check if a panel is open or not",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[devtools]"
+ },
+ "638075": {
+  "summary": "Memory consumption increases when registering a stream listener.",
+  "status": "REOPENED",
+  "assignedName": "general",
+  "whiteboard": "[firebug-p1]"
  }
 }

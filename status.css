@@ -23,7 +23,7 @@
 }
 
 body.awesome {
-/*    background: url(images/Lightblue_empty_grid.svg);*/
+    background: url(images/Lightblue_empty_grid.svg);
     font-family: 'ArchitectsDaughterRegular', Helvetica, Arial, sans-serif;
     color: #0000aa;
 }
@@ -31,11 +31,34 @@ body.awesome {
 body.awesome section.project {
     border: 2px solid #00a;
     margin-bottom: 1em;
+    background: white;
+}
+
+body.awesome .topsummary {
+    display: -webkit-box;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+body.awesome .topsummary h1 {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+body.awesome .maindate {
+    width: 50px;
+    line-height: 60px;
+    height: 60px;
 }
 
 body.awesome div.summary {
     display: -moz-box;
     -moz-box-orient: horizontal;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
     width: 100%;
     border-bottom: 1px solid #00a;
 }
@@ -44,18 +67,24 @@ body.awesome div.summary div.main {
     display: -moz-box;
     -moz-box-orient: vertical;
     -moz-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex: 1;
     width: 100%;
 }
 
 body.awesome div.summary div.main div.top {
     display: -moz-box;
     -moz-box-orient: horizontal;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
     width: 100%;
     border-bottom: 1px solid #00a;
 }
 
 body.awesome div.summary div.top h2 {
     -moz-box-flex: 1;
+    -webkit-box-flex: 1;
     margin-bottom: 5px;
     margin-top: 10px;
 }
@@ -83,7 +112,7 @@ body.awesome section.project h2 a {
     border-bottom: 1px solid #0000aa;
 }
 
-body.awesome h1, body.awesome h2 {
+body.awesome h1, body.awesome h2, body.awesome div.maindate {
     font-family: "BostonTrafficRegular", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #0000aa;
@@ -112,6 +141,7 @@ body.awesome section.people {
 body.awesome div.tabs {
     display: none;
     font-family: Helvetica, Arial, sans-serif;
+    color: black;
 }
 
 body.awesome div.tabs.visible {
@@ -124,4 +154,8 @@ span.expander {
     cursor: pointer;
     margin-right: 4px;
     padding-right: 4px;
+}
+
+body.awesome div#tier2 {
+    display: none;
 }

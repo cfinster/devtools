@@ -6,8 +6,7 @@ layout: page
 # Firefox DevTools SDK 1 #
 
 The Developer Tools SDK (henceforth "DTSDK") allows web developers
-to [practice their love](http://www.time.com/time/specials/packages/article/0,28804,1870938_1870943_1870953,00.html)
-with their very own developer tools. No rebuilding the browser, no digging
+to create and update their own developer tools. No rebuilding the browser, no digging
 into arcane, undocumented APIs. The DTSDK digs into the arcane, undocumented
 APIs so that tools developers don't have to.
 
