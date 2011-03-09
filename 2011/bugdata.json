@@ -4,7 +4,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-08T01:10:15Z"
+   "value": "2011-03-09T01:03:25Z"
   },
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
@@ -41,6 +41,42 @@
     "is_obsolete": false
    }
   }
+ },
+ "635504": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-08T04:59:43Z"
+  },
+  "summary": "Create web console customization APIs",
+  "assigned_to": {
+   "real_name": "David Dahl :ddahl",
+   "name": "ddahl"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-19T21:20:00Z"
+  },
+  "id": 635504
+ },
+ "639848": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-08T21:25:16Z"
+  },
+  "summary": "Add method to webconsole.api to add a button to the console toolbar",
+  "assigned_to": {
+   "real_name": "David Dahl :ddahl",
+   "name": "ddahl"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-08T21:24:00Z"
+  },
+  "id": 639848
  },
  "636724": {
   "_type": "Bug",
@@ -156,6 +192,25 @@
   "depends_on": "581072",
   "status": "NEW",
   "summary": "chrome JS access to setTimeout enumeration"
+ },
+ "637291": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-09T00:29:00Z"
+  },
+  "summary": "Add titlebar and name attributes to Panels",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-28T18:47:00Z"
+  },
+  "whiteboard": "[devtools]",
+  "id": 637291
  },
  "638142": {
   "_type": "Bug",
@@ -291,7 +346,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-05T12:33:56Z"
+   "value": "2011-03-08T23:17:13Z"
   },
   "keywords": [
    "regressionwindow-wanted"

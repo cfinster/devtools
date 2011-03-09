@@ -4,6 +4,16 @@
   "status": "UNCONFIRMED",
   "assignedName": "nobody"
  },
+ "635504": {
+  "summary": "Create web console customization APIs",
+  "status": "NEW",
+  "assignedName": "ddahl"
+ },
+ "639848": {
+  "summary": "Add method to webconsole.api to add a button to the console toolbar",
+  "status": "NEW",
+  "assignedName": "ddahl"
+ },
  "636724": {
   "summary": "Change workspaces to follow the devtools scoping rules",
   "status": "NEW",
@@ -39,6 +49,12 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]"
+ },
+ "637291": {
+  "summary": "Add titlebar and name attributes to Panels",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[devtools]"
  },
  "638142": {
   "summary": "Add ability to anchor a panel to a widget",

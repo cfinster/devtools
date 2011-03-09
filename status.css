@@ -89,10 +89,22 @@ body.awesome div.summary div.top h2 {
     margin-top: 10px;
 }
 
-body.awesome div.summary div.top div.avatars {
+body.awesome div.summary div.top div {
     border-left: 1px solid #00a;
     width: 138px;
     padding: 10px 5px 0px 5px;
+}
+
+body.awesome section.project div.summary div.counts span.flags {
+    padding-right: 18px;
+    margin-right: 10px;
+    background: url(images/flag.png) no-repeat right;
+}
+
+body.awesome section.project div.summary div.counts span.bugs {
+    padding-right: 18px;
+    margin-right: 10px;
+    background: url(images/bug.png) no-repeat right;
 }
 
 body.awesome div.status {

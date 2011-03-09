@@ -37,48 +37,68 @@ var addBigText = function() {
 
 var augmentProjects = function() {
     _.values(exports.projects).forEach(function(project) {
-          var elem = $('<span/>', {
-              html: "&#9654;",
-              click: expander,
-              "class": "expander"
-          });
-          project.expanded = false;
-          elem[0].project = project;
-          $(project.el).find("h2").prepend(elem);
-
-          var projel = $(project.el);
-
-          var summary = $('<div/>', {
-              "class": "summary"
-          });
-          var main = $('<div/>', {
-              "class": "main"
-          });
-          summary.append(main);
-          projel.children("div.status").detach().appendTo(summary);
-
-          var top = $('<div/>', {
-              "class": "top"
-          });
-          var bottom = $('<div/>', {
-              "class": "bottom"
-          });
-          main.append(top);
-          main.append(bottom);
-          projel.children("h2").detach().appendTo(top);
-
-          var avatars = $('<div/>', {
-              "class": "avatars"
-          });
-          top.append(avatars);
-
-          project.getPeople().forEach(function(person) {
-              $(person.getAvatar()).clone().appendTo(avatars);
-          });
-
-          projel.children("div.blurb").detach().appendTo(bottom);
-          projel.prepend(summary);
-      });
+        var elem = $('<span/>', {
+            html: "&#9654;",
+            click: expander,
+            "class": "expander"
+        });
+        project.expanded = false;
+        elem[0].project = project;
+        $(project.el).find("h2").prepend(elem);
+        
+        var projel = $(project.el);
+        
+        var summary = $('<div/>', {
+            "class": "summary"
+        });
+        var main = $('<div/>', {
+            "class": "main"
+        });
+        summary.append(main);
+        projel.children("div.status").detach().appendTo(summary);
+        
+        var top = $('<div/>', {
+            "class": "top"
+        });
+        var bottom = $('<div/>', {
+            "class": "bottom"
+        });
+        main.append(top);
+        main.append(bottom);
+        projel.children("h2").detach().appendTo(top);
+        
+        var counts = $('<div/>', {
+            "class": "counts"
+        });
+        
+        var flagcount = project.getFlagCount();
+        if (flagcount) {
+            $('<span/>', {
+                "class": "flags",
+                text: flagcount
+            }).appendTo(counts);
+        }
+        
+        var bugcount = project.getBugCount();
+        $('<span/>', {
+            "class": "bugs",
+            text: bugcount
+        }).appendTo(counts);
+        
+        top.append(counts);
+        
+        var avatars = $('<div/>', {
+            "class": "avatars"
+        });
+        top.append(avatars);
+        
+        project.getPeople().forEach(function(person) {
+            $(person.getAvatar()).clone().appendTo(avatars);
+        });
+        
+        projel.children("div.blurb").detach().appendTo(bottom);
+        projel.prepend(summary);
+    });
 };
 
 var hideTier2 = function() {

@@ -10,11 +10,9 @@ exports.saveFile = function(filePath,content)
     console.log("Saving to ", filePath);
 	if(window.Components) {
 		try {
-		    if (!privileged) {
-		        console.log("Requesting enhanced privileges");
-    			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-    			privileged = true;
-		    }
+	        console.log("Requesting enhanced privileges");
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+			privileged = true;
 		    
 			var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
 			file.initWithPath(filePath);

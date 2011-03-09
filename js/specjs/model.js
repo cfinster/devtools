@@ -7,6 +7,8 @@ exports.Project = function(el) {
         var el = $(this);
         if (el.text() == "Bugs") {
             el.next('ul').addClass("buglist");
+        } else if (el.text() == "Flags") {
+            el.next('ul').addClass('flaglist');
         }
     });
 };
@@ -32,6 +34,14 @@ exports.Project.prototype = {
             result.push(new exports.Person(personEl));
         });
         return result;
+    },
+    
+    getFlagCount: function() {
+        return $(this.el).find('ul.flaglist li').length;
+    },
+    
+    getBugCount: function() {
+        return $(this.el).find('ul.buglist li').length;
     }
 };
 
