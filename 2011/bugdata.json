@@ -64,6 +64,24 @@
   "status": "NEW",
   "summary": "allow console to pop out into a window, back into the tab"
  },
+ "635502": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-23T14:29:41Z"
+  },
+  "summary": "Implement Global 'Browser' Console",
+  "assigned_to": {
+   "real_name": "David Dahl :ddahl",
+   "name": "ddahl"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-19T21:17:00Z"
+  },
+  "id": 635502
+ },
  "635504": {
   "_type": "Bug",
   "status": "NEW",
@@ -231,24 +249,6 @@
    }
   }
  },
- "632275": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-10T22:45:55Z"
-  },
-  "summary": "Web Console: Error message when click on an object to create an inspect window",
-  "assigned_to": {
-   "real_name": "Mihai Sucan [:msucan]",
-   "name": "mihai.sucan"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-08T07:33:00Z"
-  },
-  "id": 632275
- },
  "636724": {
   "_type": "Bug",
   "status": "NEW",
@@ -404,6 +404,42 @@
   "status": "NEW",
   "summary": "chrome JS access to setTimeout enumeration"
  },
+ "585956": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2010-08-10T19:27:45Z"
+  },
+  "summary": "Need ability to dump JS stack traces in console",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-08-10T19:27:00Z"
+  },
+  "id": 585956
+ },
+ "585991": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2010-08-20T08:59:44Z"
+  },
+  "summary": "Show a popup listing possible completions",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-08-10T20:42:00Z"
+  },
+  "id": 585991
+ },
  "637291": {
   "_type": "Bug",
   "status": "NEW",
@@ -526,6 +562,151 @@
    "value": "2011-03-07T22:05:00Z"
   },
   "id": 639518
+ },
+ "618311": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-09T23:59:42Z"
+  },
+  "keywords": [
+   "privacy"
+  ],
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-12-10T21:29:00Z"
+  },
+  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release]",
+  "id": 618311,
+  "depends_on": "602199",
+  "status": "ASSIGNED",
+  "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
+  "attachments": {
+   "510347": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 427183,
+      "setter": {
+       "name": "rcampbell"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510347",
+    "bug_id": 618311,
+    "last_change_time": "2011-02-08T14:04:47Z",
+    "description": "proposed fix",
+    "size": 6749,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-618311-1-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-02-08T01:08:00Z"
+    },
+    "id": 510347,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/618311",
+    "is_obsolete": true
+   },
+   "510591": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 4,
+      "status": "+",
+      "name": "review",
+      "id": 427394,
+      "setter": {
+       "name": "sdwilsh"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510591",
+    "bug_id": 618311,
+    "last_change_time": "2011-03-07T20:31:38Z",
+    "description": "updated patch",
+    "size": 14630,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-618311-2-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-02-08T19:04:00Z"
+    },
+    "id": 510591,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/618311",
+    "is_obsolete": false
+   }
+  }
+ },
+ "632275": {
+  "_type": "Bug",
+  "status": "ASSIGNED",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-12T02:02:45Z"
+  },
+  "summary": "Web Console: Error message when click on an object to create an inspect window",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-08T07:33:00Z"
+  },
+  "whiteboard": "[patchclean:0311]",
+  "id": 632275,
+  "attachments": {
+   "518736": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 433905,
+      "setter": {
+       "name": "rcampbell"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518736",
+    "bug_id": 632275,
+    "last_change_time": "2011-03-11T21:02:45Z",
+    "description": "proposed fix",
+    "size": 7942,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-632275-1-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-11T22:04:00Z"
+    },
+    "id": 518736,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632275",
+    "is_obsolete": false
+   }
+  }
  },
  "632347": {
   "_type": "Bug",

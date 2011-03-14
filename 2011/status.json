@@ -9,6 +9,11 @@
   "status": "NEW",
   "assignedName": "ddahl"
  },
+ "635502": {
+  "summary": "Implement Global 'Browser' Console",
+  "status": "NEW",
+  "assignedName": "ddahl"
+ },
  "635504": {
   "summary": "Create web console customization APIs",
   "status": "NEW",
@@ -23,11 +28,6 @@
   "summary": "console.log shouldn't display escaped strings",
   "status": "NEW",
   "assignedName": "dherman"
- },
- "632275": {
-  "summary": "Web Console: Error message when click on an object to create an inspect window",
-  "status": "NEW",
-  "assignedName": "mihai.sucan"
  },
  "636724": {
   "summary": "Change workspaces to follow the devtools scoping rules",
@@ -75,6 +75,16 @@
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]"
  },
+ "585956": {
+  "summary": "Need ability to dump JS stack traces in console",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
+ "585991": {
+  "summary": "Show a popup listing possible completions",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
  "637291": {
   "summary": "Add titlebar and name attributes to Panels",
   "status": "NEW",
@@ -95,6 +105,18 @@
   "summary": "Create a Cross Add-on registry and communication service",
   "status": "NEW",
   "assignedName": "nobody"
+ },
+ "618311": {
+  "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release]"
+ },
+ "632275": {
+  "summary": "Web Console: Error message when click on an object to create an inspect window",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[patchclean:0311]"
  },
  "632347": {
   "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
