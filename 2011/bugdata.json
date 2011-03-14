@@ -4,7 +4,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-09T01:03:25Z"
+   "value": "2011-03-10T10:17:37Z"
   },
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
@@ -42,6 +42,28 @@
    }
   }
  },
+ "577721": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-09T22:23:20Z"
+  },
+  "keywords": [
+   "uiwanted"
+  ],
+  "assigned_to": {
+   "real_name": "David Dahl :ddahl",
+   "name": "ddahl"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-07-09T22:20:00Z"
+  },
+  "id": 577721,
+  "depends_on": "554926",
+  "status": "NEW",
+  "summary": "allow console to pop out into a window, back into the tab"
+ },
  "635504": {
   "_type": "Bug",
   "status": "NEW",
@@ -77,6 +99,155 @@
    "value": "2011-03-08T21:24:00Z"
   },
   "id": 639848
+ },
+ "637801": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-09T22:20:42Z"
+  },
+  "summary": "console.log shouldn't display escaped strings",
+  "assigned_to": {
+   "real_name": "Dave Herman [:dherman]",
+   "name": "dherman"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-02T00:08:00Z"
+  },
+  "id": 637801,
+  "attachments": {
+   "515983": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/515983",
+    "bug_id": 637801,
+    "last_change_time": "2011-03-02T15:45:44Z",
+    "description": "simple patch to logConsoleAPIMessage",
+    "size": 1567,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "dherman"
+    },
+    "file_name": "bug637801-console-log.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-02T00:59:00Z"
+    },
+    "id": 515983,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/637801",
+    "is_obsolete": true
+   },
+   "516266": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516266",
+    "bug_id": 637801,
+    "last_change_time": "2011-03-02T23:19:03Z",
+    "description": "updated test cases",
+    "size": 6490,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "dherman"
+    },
+    "file_name": "bug637801-console-log.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-02T20:45:00Z"
+    },
+    "id": 516266,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/637801",
+    "is_obsolete": true
+   },
+   "516427": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516427",
+    "bug_id": 637801,
+    "last_change_time": "2011-03-03T20:22:58Z",
+    "description": "off by one level of eval in test #16",
+    "size": 6951,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "dherman"
+    },
+    "file_name": "bug637801-console-log.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-03T04:19:00Z"
+    },
+    "id": 516427,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/637801",
+    "is_obsolete": true
+   },
+   "516673": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "gavin.sharp"
+      },
+      "type_id": 4,
+      "status": "?",
+      "name": "review",
+      "id": 432555,
+      "setter": {
+       "name": "dherman"
+      }
+     },
+     {
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 433239,
+      "setter": {
+       "name": "mihai.sucan"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516673",
+    "bug_id": 637801,
+    "last_change_time": "2011-03-09T17:20:42Z",
+    "description": "removed tryserver mumbo jumbo",
+    "size": 6912,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "dherman"
+    },
+    "file_name": "bug637801-console-log.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-04T01:22:00Z"
+    },
+    "id": 516673,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/637801",
+    "is_obsolete": false
+   }
+  }
+ },
+ "632275": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-10T22:45:55Z"
+  },
+  "summary": "Web Console: Error message when click on an object to create an inspect window",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-08T07:33:00Z"
+  },
+  "id": 632275
  },
  "636724": {
   "_type": "Bug",
@@ -173,6 +344,46 @@
   "status": "NEW",
   "summary": "nsIEventListenerService: tracking of dynamically added and removed event listeners"
  },
+ "554926": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-09T21:33:55Z"
+  },
+  "keywords": [
+   "uiwanted"
+  ],
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-03-25T18:17:00Z"
+  },
+  "id": 554926,
+  "depends_on": "552982",
+  "status": "NEW",
+  "summary": "Dockable Panels"
+ },
+ "577722": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2010-08-09T22:13:55Z"
+  },
+  "summary": "allow console to open at the bottom, right or left of the tab",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-07-09T22:25:00Z"
+  },
+  "id": 577722
+ },
  "580880": {
   "_type": "Bug",
   "last_change_time": {
@@ -198,7 +409,7 @@
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-09T00:29:00Z"
+   "value": "2011-03-09T18:34:54Z"
   },
   "summary": "Add titlebar and name attributes to Panels",
   "assigned_to": {
@@ -210,7 +421,57 @@
    "value": "2011-02-28T18:47:00Z"
   },
   "whiteboard": "[devtools]",
-  "id": 637291
+  "id": 637291,
+  "attachments": {
+   "518045": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "dietrich"
+      },
+      "type_id": 4,
+      "status": "?",
+      "name": "review",
+      "id": 433419,
+      "setter": {
+       "name": "rcampbell"
+      }
+     },
+     {
+      "requestee": {
+       "name": "myk"
+      },
+      "type_id": 4,
+      "status": "?",
+      "name": "review",
+      "id": 433420,
+      "setter": {
+       "name": "rcampbell"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518045",
+    "bug_id": 637291,
+    "last_change_time": "2011-03-09T13:34:54Z",
+    "description": "Pointer to pull request",
+    "size": 359,
+    "content_type": "text/html",
+    "attacher": {
+     "name": "rcampbell"
+    },
+    "file_name": "bug-637291-pullreq.html",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-09T18:33:00Z"
+    },
+    "id": 518045,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/637291",
+    "is_obsolete": false
+   }
+  }
  },
  "638142": {
   "_type": "Bug",
@@ -265,6 +526,118 @@
    "value": "2011-03-07T22:05:00Z"
   },
   "id": 639518
+ },
+ "632347": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-10T00:52:26Z"
+  },
+  "keywords": [
+   "hang"
+  ],
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-08T17:32:00Z"
+  },
+  "whiteboard": "[patchclean:0309][checkin][future-release]",
+  "id": 632347,
+  "status": "ASSIGNED",
+  "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
+  "attachments": {
+   "510760": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 427528,
+      "setter": {
+       "name": "rcampbell"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510760",
+    "bug_id": 632347,
+    "last_change_time": "2011-02-10T11:39:54Z",
+    "description": "proposed patch",
+    "size": 10005,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-632347-1-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-02-09T02:36:00Z"
+    },
+    "id": 510760,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632347",
+    "is_obsolete": true
+   },
+   "511336": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 4,
+      "status": "+",
+      "name": "review",
+      "id": 428151,
+      "setter": {
+       "name": "sdwilsh"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/511336",
+    "bug_id": 632347,
+    "last_change_time": "2011-03-09T19:51:45Z",
+    "description": "updated patch",
+    "size": 10017,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-632347-2-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-02-10T16:39:00Z"
+    },
+    "id": 511336,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632347",
+    "is_obsolete": true
+   },
+   "518135": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518135",
+    "bug_id": 632347,
+    "last_change_time": "2011-03-09T19:51:45Z",
+    "description": "patch update 2",
+    "size": 10203,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-632347-3-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-10T00:51:00Z"
+    },
+    "id": 518135,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632347",
+    "is_obsolete": false
+   }
+  }
  },
  "636723": {
   "_type": "Bug",
@@ -346,7 +719,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-08T23:17:13Z"
+   "value": "2011-03-09T21:52:12Z"
   },
   "keywords": [
    "regressionwindow-wanted"
@@ -358,7 +731,7 @@
    "_type": "Date",
    "value": "2011-03-02T18:15:00Z"
   },
-  "whiteboard": "[firebug-p1]",
+  "whiteboard": "[firebug-p1][Requesting blocking .x]",
   "id": 638075,
   "status": "REOPENED",
   "summary": "Memory consumption increases when registering a stream listener.",

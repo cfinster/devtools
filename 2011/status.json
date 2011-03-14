@@ -4,6 +4,11 @@
   "status": "UNCONFIRMED",
   "assignedName": "nobody"
  },
+ "577721": {
+  "summary": "allow console to pop out into a window, back into the tab",
+  "status": "NEW",
+  "assignedName": "ddahl"
+ },
  "635504": {
   "summary": "Create web console customization APIs",
   "status": "NEW",
@@ -13,6 +18,16 @@
   "summary": "Add method to webconsole.api to add a button to the console toolbar",
   "status": "NEW",
   "assignedName": "ddahl"
+ },
+ "637801": {
+  "summary": "console.log shouldn't display escaped strings",
+  "status": "NEW",
+  "assignedName": "dherman"
+ },
+ "632275": {
+  "summary": "Web Console: Error message when click on an object to create an inspect window",
+  "status": "NEW",
+  "assignedName": "mihai.sucan"
  },
  "636724": {
   "summary": "Change workspaces to follow the devtools scoping rules",
@@ -44,6 +59,16 @@
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]"
  },
+ "554926": {
+  "summary": "Dockable Panels",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
+ "577722": {
+  "summary": "allow console to open at the bottom, right or left of the tab",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
  "580880": {
   "summary": "chrome JS access to setTimeout enumeration",
   "status": "NEW",
@@ -71,6 +96,12 @@
   "status": "NEW",
   "assignedName": "nobody"
  },
+ "632347": {
+  "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[patchclean:0309][checkin][future-release]"
+ },
  "636723": {
   "summary": "Turn Workspaces into a Jetpack",
   "status": "ASSIGNED",
@@ -87,6 +118,6 @@
   "summary": "Memory consumption increases when registering a stream listener.",
   "status": "REOPENED",
   "assignedName": "general",
-  "whiteboard": "[firebug-p1]"
+  "whiteboard": "[firebug-p1][Requesting blocking .x]"
  }
 }
