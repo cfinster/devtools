@@ -46,7 +46,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-09T22:23:20Z"
+   "value": "2011-03-15T23:42:58Z"
   },
   "keywords": [
    "uiwanted"
@@ -59,10 +59,30 @@
    "_type": "Date",
    "value": "2010-07-09T22:20:00Z"
   },
+  "whiteboard": "[console-1]",
   "id": 577721,
   "depends_on": "554926",
   "status": "NEW",
   "summary": "allow console to pop out into a window, back into the tab"
+ },
+ "577722": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-15T00:30:36Z"
+  },
+  "summary": "allow console to open at the bottom or top of tab",
+  "assigned_to": {
+   "real_name": "David Dahl :ddahl",
+   "name": "ddahl"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-07-09T22:25:00Z"
+  },
+  "whiteboard": "[console-1]",
+  "id": 577722
  },
  "635502": {
   "_type": "Bug",
@@ -249,6 +269,24 @@
    }
   }
  },
+ "641903": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-15T22:16:38Z"
+  },
+  "summary": "[gcli] Command registry",
+  "assigned_to": {
+   "real_name": "Joe Walker",
+   "name": "jwalker"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-15T22:16:00Z"
+  },
+  "id": 641903
+ },
  "636724": {
   "_type": "Bug",
   "status": "NEW",
@@ -344,6 +382,25 @@
   "status": "NEW",
   "summary": "nsIEventListenerService: tracking of dynamically added and removed event listeners"
  },
+ "529536": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-27T02:43:01Z"
+  },
+  "summary": "Get response body for redirected requests",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2009-11-18T20:56:00Z"
+  },
+  "whiteboard": "[firebug-p2]",
+  "id": 529536
+ },
  "554926": {
   "_type": "Bug",
   "last_change_time": {
@@ -365,24 +422,6 @@
   "depends_on": "552982",
   "status": "NEW",
   "summary": "Dockable Panels"
- },
- "577722": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2010-08-09T22:13:55Z"
-  },
-  "summary": "allow console to open at the bottom, right or left of the tab",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-07-09T22:25:00Z"
-  },
-  "id": 577722
  },
  "580880": {
   "_type": "Bug",
@@ -409,7 +448,7 @@
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2010-08-10T19:27:45Z"
+   "value": "2011-03-15T00:43:59Z"
   },
   "summary": "Need ability to dump JS stack traces in console",
   "assigned_to": {
@@ -420,6 +459,7 @@
    "_type": "Date",
    "value": "2010-08-10T19:27:00Z"
   },
+  "whiteboard": "[console-1]",
   "id": 585956
  },
  "585991": {
@@ -427,7 +467,7 @@
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2010-08-20T08:59:44Z"
+   "value": "2011-03-15T00:44:39Z"
   },
   "summary": "Show a popup listing possible completions",
   "assigned_to": {
@@ -438,14 +478,58 @@
    "_type": "Date",
    "value": "2010-08-10T20:42:00Z"
   },
+  "whiteboard": "[console-2]",
   "id": 585991
+ },
+ "634073": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-02-23T23:22:10Z"
+  },
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-15T02:59:00Z"
+  },
+  "whiteboard": "[firebug-p1]",
+  "id": 634073,
+  "status": "NEW",
+  "summary": "\"http-on-modify-request\" is not fired for cached images",
+  "attachments": {
+   "512270": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/512270",
+    "bug_id": 634073,
+    "last_change_time": "2011-02-14T21:59:54Z",
+    "description": "Test extension (restartless)",
+    "size": 1434,
+    "content_type": "application/x-xpinstall",
+    "attacher": {
+     "name": "odvarko"
+    },
+    "file_name": "netObserver.xpi",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-02-15T02:59:00Z"
+    },
+    "id": 512270,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/634073",
+    "is_obsolete": false
+   }
+  }
  },
  "637291": {
   "_type": "Bug",
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-09T18:34:54Z"
+   "value": "2011-03-15T15:38:23Z"
   },
   "summary": "Add titlebar and name attributes to Panels",
   "assigned_to": {
@@ -464,33 +548,18 @@
     "is_private": false,
     "flags": [
      {
-      "requestee": {
-       "name": "dietrich"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 433419,
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 434237,
       "setter": {
-       "name": "rcampbell"
-      }
-     },
-     {
-      "requestee": {
        "name": "myk"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 433420,
-      "setter": {
-       "name": "rcampbell"
       }
      }
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518045",
     "bug_id": 637291,
-    "last_change_time": "2011-03-09T13:34:54Z",
+    "last_change_time": "2011-03-15T11:38:23Z",
     "description": "Pointer to pull request",
     "size": 359,
     "content_type": "text/html",
@@ -545,29 +614,206 @@
   },
   "id": 638871
  },
- "639518": {
+ "641234": {
   "_type": "Bug",
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-08T02:03:46Z"
+   "value": "2011-03-15T00:24:02Z"
   },
-  "summary": "Create a Cross Add-on registry and communication service",
+  "summary": "Implement unique objectId for JavaScript object debugging",
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
    "name": "nobody"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2011-03-07T22:05:00Z"
+   "value": "2011-03-12T23:22:00Z"
   },
-  "id": 639518
+  "id": 641234,
+  "attachments": {
+   "518957": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518957",
+    "bug_id": 641234,
+    "last_change_time": "2011-03-12T18:22:20Z",
+    "description": "Paper describing lastChange prototype work",
+    "size": 598044,
+    "content_type": "application/pdf",
+    "attacher": {
+     "name": "johnjbarton"
+    },
+    "file_name": "fse2011-lastChange.pdf",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-12T23:22:00Z"
+    },
+    "id": 518957,
+    "is_patch": false,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/641234",
+    "is_obsolete": false
+   }
+  }
+ },
+ "641236": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-15T01:09:32Z"
+  },
+  "summary": "Implement setPropertyChangeHook()/setVariableChangeHook() for JavaScript Debugging",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-12T23:33:00Z"
+  },
+  "id": 641236
+ },
+ "526207": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2010-10-29T11:43:06Z"
+  },
+  "assigned_to": {
+   "real_name": "Honza Bambas (:mayhemer)",
+   "name": "honzab.moz"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2009-11-03T19:25:00Z"
+  },
+  "whiteboard": "[firebug-p2]",
+  "id": 526207,
+  "depends_on": "534698",
+  "status": "ASSIGNED",
+  "summary": "Add IP address and port info to nsIHttpActivityObserver",
+  "attachments": {
+   "410886": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 4,
+      "status": "-",
+      "name": "review",
+      "id": 342026,
+      "setter": {
+       "name": "cbiesinger"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/410886",
+    "bug_id": 526207,
+    "last_change_time": "2010-01-27T20:48:24Z",
+    "description": "nsSocketTransport2.cpp patch for passing IP and port via notification",
+    "size": 1795,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "carglue"
+    },
+    "file_name": "ip-address-patch.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2009-11-07T04:47:00Z"
+    },
+    "id": 410886,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/526207",
+    "is_obsolete": true
+   },
+   "417555": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/417555",
+    "bug_id": 526207,
+    "last_change_time": "2010-01-27T20:48:24Z",
+    "description": "v0.9",
+    "size": 17140,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "honzab.moz"
+    },
+    "file_name": "526207-ip-address-at-http-activity-observer.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2009-12-15T02:44:00Z"
+    },
+    "id": 417555,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/526207",
+    "is_obsolete": true
+   },
+   "423837": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/423837",
+    "bug_id": 526207,
+    "last_change_time": "2010-01-28T16:12:42Z",
+    "description": "v1",
+    "size": 17645,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "honzab.moz"
+    },
+    "file_name": "526207-ip-address-at-http-activity-observer.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2010-01-28T01:48:00Z"
+    },
+    "id": 423837,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/526207",
+    "is_obsolete": true
+   },
+   "424007": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "cbiesinger"
+      },
+      "type_id": 4,
+      "status": "?",
+      "name": "review",
+      "id": 353599,
+      "setter": {
+       "name": "honzab.moz"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/424007",
+    "bug_id": 526207,
+    "last_change_time": "2010-01-28T16:12:42Z",
+    "description": "v1.1",
+    "size": 18426,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "honzab.moz"
+    },
+    "file_name": "526207-ip-address-at-http-activity-observer.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2010-01-28T21:12:00Z"
+    },
+    "id": 424007,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/526207",
+    "is_obsolete": false
+   }
+  }
  },
  "618311": {
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-09T23:59:42Z"
+   "value": "2011-03-15T22:50:41Z"
   },
   "keywords": [
    "privacy"
@@ -580,7 +826,7 @@
    "_type": "Date",
    "value": "2010-12-10T21:29:00Z"
   },
-  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release]",
+  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release] [console-1]",
   "id": 618311,
   "depends_on": "602199",
   "status": "ASSIGNED",
@@ -659,7 +905,7 @@
   "status": "ASSIGNED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-12T02:02:45Z"
+   "value": "2011-03-14T21:26:11Z"
   },
   "summary": "Web Console: Error message when click on an object to create an inspect window",
   "assigned_to": {
@@ -670,7 +916,7 @@
    "_type": "Date",
    "value": "2011-02-08T07:33:00Z"
   },
-  "whiteboard": "[patchclean:0311]",
+  "whiteboard": "[patchclean:0314]",
   "id": 632275,
   "attachments": {
    "518736": {
@@ -689,7 +935,7 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518736",
     "bug_id": 632275,
-    "last_change_time": "2011-03-11T21:02:45Z",
+    "last_change_time": "2011-03-14T17:23:10Z",
     "description": "proposed fix",
     "size": 7942,
     "content_type": "text/plain",
@@ -702,6 +948,42 @@
      "value": "2011-03-11T22:04:00Z"
     },
     "id": 518736,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632275",
+    "is_obsolete": true
+   },
+   "519171": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "dolske"
+      },
+      "type_id": 4,
+      "status": "?",
+      "name": "review",
+      "id": 434306,
+      "setter": {
+       "name": "mihai.sucan"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/519171",
+    "bug_id": 632275,
+    "last_change_time": "2011-03-14T17:23:10Z",
+    "description": "updated patch",
+    "size": 8043,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-632275-2-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-14T21:23:00Z"
+    },
+    "id": 519171,
     "is_patch": true,
     "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632275",
     "is_obsolete": false
@@ -844,8 +1126,11 @@
   "status": "ASSIGNED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-07T23:04:40Z"
+   "value": "2011-03-15T00:17:47Z"
   },
+  "keywords": [
+   "checkin-needed"
+  ],
   "summary": "Add ability to check if a panel is open or not",
   "assigned_to": {
    "real_name": "Mihai Sucan [:msucan]",
@@ -863,21 +1148,27 @@
     "is_private": false,
     "flags": [
      {
-      "requestee": {
-       "name": "myk"
-      },
       "type_id": 4,
-      "status": "?",
+      "status": "+",
       "name": "review",
-      "id": 433001,
+      "id": 434374,
       "setter": {
-       "name": "dietrich"
+       "name": "myk"
+      }
+     },
+     {
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 434236,
+      "setter": {
+       "name": "myk"
       }
      }
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/517450",
     "bug_id": 638131,
-    "last_change_time": "2011-03-07T18:04:40Z",
+    "last_change_time": "2011-03-14T20:17:25Z",
     "description": "Pointer to pull request",
     "size": 359,
     "content_type": "text/html",
@@ -962,5 +1253,24 @@
     "is_obsolete": false
    }
   }
+ },
+ "639518": {
+  "_type": "Bug",
+  "status": "RESOLVED",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-15T20:51:31Z"
+  },
+  "summary": "Create a Cross Add-on registry and communication service",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-07T22:05:00Z"
+  },
+  "id": 639518,
+  "resolution": "WONTFIX"
  }
 }

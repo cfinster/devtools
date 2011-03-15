@@ -7,7 +7,14 @@
  "577721": {
   "summary": "allow console to pop out into a window, back into the tab",
   "status": "NEW",
-  "assignedName": "ddahl"
+  "assignedName": "ddahl",
+  "whiteboard": "[console-1]"
+ },
+ "577722": {
+  "summary": "allow console to open at the bottom or top of tab",
+  "status": "NEW",
+  "assignedName": "ddahl",
+  "whiteboard": "[console-1]"
  },
  "635502": {
   "summary": "Implement Global 'Browser' Console",
@@ -28,6 +35,11 @@
   "summary": "console.log shouldn't display escaped strings",
   "status": "NEW",
   "assignedName": "dherman"
+ },
+ "641903": {
+  "summary": "[gcli] Command registry",
+  "status": "NEW",
+  "assignedName": "jwalker"
  },
  "636724": {
   "summary": "Change workspaces to follow the devtools scoping rules",
@@ -59,13 +71,14 @@
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]"
  },
+ "529536": {
+  "summary": "Get response body for redirected requests",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p2]"
+ },
  "554926": {
   "summary": "Dockable Panels",
-  "status": "NEW",
-  "assignedName": "nobody"
- },
- "577722": {
-  "summary": "allow console to open at the bottom, right or left of the tab",
   "status": "NEW",
   "assignedName": "nobody"
  },
@@ -78,12 +91,20 @@
  "585956": {
   "summary": "Need ability to dump JS stack traces in console",
   "status": "NEW",
-  "assignedName": "nobody"
+  "assignedName": "nobody",
+  "whiteboard": "[console-1]"
  },
  "585991": {
   "summary": "Show a popup listing possible completions",
   "status": "NEW",
-  "assignedName": "nobody"
+  "assignedName": "nobody",
+  "whiteboard": "[console-2]"
+ },
+ "634073": {
+  "summary": "\"http-on-modify-request\" is not fired for cached images",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p1]"
  },
  "637291": {
   "summary": "Add titlebar and name attributes to Panels",
@@ -101,22 +122,33 @@
   "status": "NEW",
   "assignedName": "nobody"
  },
- "639518": {
-  "summary": "Create a Cross Add-on registry and communication service",
+ "641234": {
+  "summary": "Implement unique objectId for JavaScript object debugging",
   "status": "NEW",
   "assignedName": "nobody"
+ },
+ "641236": {
+  "summary": "Implement setPropertyChangeHook()/setVariableChangeHook() for JavaScript Debugging",
+  "status": "NEW",
+  "assignedName": "nobody"
+ },
+ "526207": {
+  "summary": "Add IP address and port info to nsIHttpActivityObserver",
+  "status": "ASSIGNED",
+  "assignedName": "honzab.moz",
+  "whiteboard": "[firebug-p2]"
  },
  "618311": {
   "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release]"
+  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release] [console-1]"
  },
  "632275": {
   "summary": "Web Console: Error message when click on an object to create an inspect window",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0311]"
+  "whiteboard": "[patchclean:0314]"
  },
  "632347": {
   "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
@@ -141,5 +173,10 @@
   "status": "REOPENED",
   "assignedName": "general",
   "whiteboard": "[firebug-p1][Requesting blocking .x]"
+ },
+ "639518": {
+  "summary": "Create a Cross Add-on registry and communication service",
+  "status": "RESOLVED",
+  "assignedName": "nobody"
  }
 }
