@@ -96,6 +96,29 @@ exports.generateStatusData = function() {
         bugSummary.status = bug.status;
         bugSummary.assignedName = bug.assigned_to ? bug.assigned_to.name : null;
         bugSummary.whiteboard = bug.whiteboard;
+        bugSummary.hasPatch = false;
+        
+        var patch = bug.getLatestPatch();
+        var flags = bugSummary.flags = {};
+        flags.feedback = [];
+        flags.review = [];
+        flags.superreview = [];
+        if (patch) {
+            bugSummary.hasPatch = true;
+            bugSummary.patchSize = patch.size;
+            if (patch.flags) {
+                patch.flags.forEach(function(flag) {
+                    if (flag.name == "review" || flag.name == "feedback" 
+                        || flag.name == "superreview") {
+                        flags[flag.name].push({
+                            status: flag.status,
+                            requestee: flag.requestee && flag.requestee.name,
+                            setter: flag.setter && flag.setter.name
+                        });
+                    }
+                });
+            }
+        }
     });
     file.saveFile(exports.datadir + "/status.json", JSON.stringify(bugs, null, 1));
 };

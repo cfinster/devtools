@@ -36,6 +36,7 @@ var addBigText = function() {
 };
 
 var augmentProjects = function() {
+    var latestUpdates = [];
     _.values(exports.projects).forEach(function(project) {
         var elem = $('<span/>', {
             html: "&#9654;",
@@ -127,6 +128,12 @@ var setupProjectNavigation = function() {
     hideTier2();
 };
 
+var flagMap = {
+    "feedback": "&nbsp;f",
+    "review": "&nbsp;r",
+    "superreview": "sr"
+};
+
 var updateBugInformation = function() {
     $.getJSON('status.json?' + new Date().getTime(), function(data) {
         exports.statusdata = data;
@@ -148,7 +155,25 @@ var updateBugInformation = function() {
                 target: "_blank",
                 text: bugid
             }).appendTo(outer);
-            outer.append(" " + bug.summary);
+            var flags = [];
+            var bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
+            ["feedback", "review", "superreview"].forEach(function(flagType) {
+                var bugFlags = bug.flags[flagType];
+                bugFlags.forEach(function(f) {
+                    bestStatus = flagMap[flagType] + f.status;
+                    if (f.requestee) {
+                        flags.push(flagType + f.status + " " + f.requestee);
+                    } else {
+                        flags.push(flagType + f.status + " " + f.setter);
+                    }
+                });
+            });
+            $('<span/>', {
+                "class": "patchstatus",
+                title: flags.join(", "),
+                html: " " + bestStatus
+            }).appendTo(outer);
+            outer.append(" " + bug.summary + " (" + bug.assignedName + ")");
             el.append(outer);
         });
     });

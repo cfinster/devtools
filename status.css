@@ -172,3 +172,7 @@ span.expander {
 body.awesome div#tier2 {
     display: none;
 }
+
+body.awesome span.patchstatus {
+    font-family: "Inconsolata", "Menlo", "Courier New", monospace;
+}

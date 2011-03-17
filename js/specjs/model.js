@@ -9,6 +9,8 @@ exports.Project = function(el) {
             el.next('ul').addClass("buglist");
         } else if (el.text() == "Flags") {
             el.next('ul').addClass('flaglist');
+        } else if (el.text() == "Updates") {
+            // el.next("ul").addCLass("updatelist");
         }
     });
 };
@@ -42,6 +44,17 @@ exports.Project.prototype = {
     
     getBugCount: function() {
         return $(this.el).find('ul.buglist li').length;
+    },
+    
+    getUpdates: function() {
+        return $(this.el).find("ul.updatelist li").map(function() {
+            var dateStr = $(this).find("span.date").text();
+            if (dateStr) {
+                return [Date.parse(dateStr), this.innerHTML];
+            } else {
+                return [0, this.innerHTML];
+            }
+        });
     }
 };
 
