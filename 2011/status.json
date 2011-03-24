@@ -15,60 +15,32 @@
   "status": "NEW",
   "assignedName": "ddahl",
   "whiteboard": "[console-1]",
-  "hasPatch": false,
+  "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 4993
  },
  "577722": {
   "summary": "allow console to open at the bottom or top of tab",
   "status": "NEW",
   "assignedName": "ddahl",
   "whiteboard": "[console-1]",
-  "hasPatch": false,
+  "hasPatch": true,
   "flags": {
-   "feedback": [],
+   "feedback": [
+    {
+     "status": "?",
+     "requestee": "rcampbell",
+     "setter": "ddahl"
+    }
+   ],
    "review": [],
    "superreview": []
-  }
- },
- "635502": {
-  "summary": "Implement Global 'Browser' Console",
-  "status": "NEW",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "635504": {
-  "summary": "Create web console customization APIs",
-  "status": "NEW",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1] [has-wip-patch]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "639848": {
-  "summary": "Add method to webconsole.api to add a button to the console toolbar",
-  "status": "NEW",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1] [has-patch-github]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
+  },
+  "patchSize": 8357
  },
  "637801": {
   "summary": "console.log shouldn't display escaped strings",
@@ -91,12 +63,36 @@
     }
    ],
    "superreview": []
+  },
+  "patchSize": 6912
+ },
+ "636907": {
+  "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
+  "status": "NEW",
+  "assignedName": "jimb",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
   }
  },
  "641903": {
   "summary": "[gcli] Command registry",
   "status": "NEW",
   "assignedName": "jwalker",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "585991": {
+  "summary": "Show a popup listing possible completions",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-2]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -118,18 +114,6 @@
  },
  "636725": {
   "summary": "Unit tests for Workspaces",
-  "status": "NEW",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[workspaces]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "636727": {
-  "summary": "Add Ace to workspaces",
   "status": "NEW",
   "assignedName": "mihai.sucan",
   "whiteboard": "[workspaces]",
@@ -199,251 +183,11 @@
    "superreview": []
   }
  },
- "584672": {
-  "summary": "JSTerm evaluation output needs truncation",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "585956": {
-  "summary": "Need ability to dump JS stack traces in console",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "585991": {
-  "summary": "Show a popup listing possible completions",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-2]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "592485": {
-  "summary": "Web Console cleanup: getOutputNodeById() doesn't actually return the output node",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "592519": {
-  "summary": "Web Console cleanup: Remove getContentWindowFromHUDId()",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "592523": {
-  "summary": "Web Console cleanup: Move methods from the HUD Service to the individual HeadsUpDisplay objects",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "592541": {
-  "summary": "Web Console cleanup: \"StopIteration\" is not thrown properly in the Web Console storage",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "592872": {
-  "summary": "Web Console cleanup: NodeFactory redeclares the \"factory\" function",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "594304": {
-  "summary": "Refactor HUDService NodeFactory (and maybe others)",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "595200": {
-  "summary": "Cyclic references in HUDService httpActivity",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "596101": {
-  "summary": "Web Console cleanup: createHUD() has unused variables \"self\" and \"this\", else-after-return, and unused return value",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "596177": {
-  "summary": "remove commented-out line in webConsole.css",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "596420": {
-  "summary": "Web Console cleanup: HUD_createController() should be HS_createController()",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "597150": {
-  "summary": "Inconsistent usage of HUDService.registerActiveContext()",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[post-fx-4] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "603720": {
-  "summary": "The UseOfDOM3LoadMethodWarning message fails to show in the Web Console",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "618328": {
   "summary": "Web Console: Up-arrow should go to the end of the previous line",
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[Web-Console-Testday] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "620756": {
-  "summary": "Properly check the nsIScriptError flags",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "620958": {
-  "summary": "Refactor HS_logConsoleAPIMessage as a method on HeadsUpDisplay prototype",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[followup] [post-fx4][console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "632543": {
-  "summary": "Exceptions should display a stack trace in the Web Console",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "632830": {
-  "summary": "Flickering when selecting the console's inspector window",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "633204": {
-  "summary": "Autocomplete in the Web Console isn't fully cleared on ctrl+backspace",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -463,41 +207,6 @@
    "superreview": []
   }
  },
- "634423": {
-  "summary": "Hide object and network inspection panels when tab is unfocused",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "636538": {
-  "summary": "Remove xul: prefixes in createElementNS calls in HUDService.jsm",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[cleanup] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "636907": {
-  "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "637291": {
   "summary": "Add titlebar and name attributes to Panels",
   "status": "NEW",
@@ -510,34 +219,10 @@
    "superreview": []
   }
  },
- "638110": {
-  "summary": "refactor test in browser_webconsole_bug_598357_jsterm_output.js",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "638142": {
   "summary": "Add ability to anchor a panel to a widget",
   "status": "NEW",
   "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "638551": {
-  "summary": "web console can't see monkey-patched properties of built-ins",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -558,18 +243,6 @@
  },
  "638949": {
   "summary": "Please add Copy Location in the context menu for URLs in the web console",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "638953": {
-  "summary": "Cannot copy keys or values in web console object inspector",
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[console-1]",
@@ -604,11 +277,11 @@
    "superreview": []
   }
  },
- "642108": {
-  "summary": "JS errors from HUD in Error Console",
+ "642231": {
+  "summary": "Prepare GCLI for review",
   "status": "NEW",
   "assignedName": "nobody",
-  "whiteboard": "[console-1]",
+  "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -616,11 +289,33 @@
    "superreview": []
   }
  },
- "618320": {
-  "summary": "Property panel needs restyling",
+ "642471": {
+  "summary": "Rewrite PanelHighlighter using transparent xul iframe and canvas",
   "status": "NEW",
-  "assignedName": "pwalton",
-  "whiteboard": "[console-1]",
+  "assignedName": "nobody",
+  "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][started-3/17]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642505": {
+  "summary": "Embed the GCLI in the Web Console",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "644596": {
+  "summary": "[console] expand console object with missing methods",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -638,7 +333,8 @@
    "feedback": [],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 18936
  },
  "612658": {
   "summary": "Implement ConsoleStorageService",
@@ -655,61 +351,8 @@
     }
    ],
    "superreview": []
-  }
- },
- "588871": {
-  "summary": "Remove ConsoleStorage methods used for log message storage",
-  "status": "NEW",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [
-    {
-     "status": "?",
-     "requestee": "dietrich",
-     "setter": "ddahl"
-    }
-   ],
-   "superreview": []
-  }
- },
- "627710": {
-  "summary": "Command completion breaks if unfocusing the input line",
-  "status": "NEW",
-  "assignedName": "jwalker",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "612253": {
-  "summary": "Need a shortcut key to focus the input line in web console",
-  "status": "NEW",
-  "assignedName": "pwalton",
-  "whiteboard": "[strings] [console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "616586": {
-  "summary": "Internal console logging API for use in JSMs and Components",
-  "status": "NEW",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
+  },
+  "patchSize": 17213
  },
  "614586": {
   "summary": "Implement string substitution in all console API methods",
@@ -733,7 +376,8 @@
    "feedback": [],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 17645
  },
  "560314": {
   "summary": "Implement js::dbg2: new C++ JavaScript debugging API, replacing jsd",
@@ -750,7 +394,7 @@
   "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release] [console-1]",
+  "whiteboard": "[Web-Console-Testday][patchclean:0323][checkin][console-1]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
@@ -761,30 +405,8 @@
     }
    ],
    "superreview": []
-  }
- },
- "620832": {
-  "summary": "Web console attempts to remove its observers multiple times",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0210][console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "+",
-     "setter": "rcampbell"
-    }
-   ],
-   "review": [
-    {
-     "status": "?",
-     "requestee": "gavin.sharp",
-     "setter": "mihai.sucan"
-    }
-   ],
-   "superreview": []
-  }
+  },
+  "patchSize": 14630
  },
  "632275": {
   "summary": "Web Console: Error message when click on an object to create an inspect window",
@@ -801,27 +423,24 @@
    ],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 7942
  },
  "632347": {
   "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0309][checkin][future-release][console-1]",
+  "whiteboard": "[patchclean:0323][checkin][console-1]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "sdwilsh"
-    }
-   ],
+   "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 10203
  },
- "636723": {
-  "summary": "Turn Workspaces into a Jetpack",
+ "636727": {
+  "summary": "Add Ace to workspaces",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
   "whiteboard": "[workspaces]",
@@ -832,29 +451,54 @@
    "superreview": []
   }
  },
- "592391": {
-  "summary": "Web Console cleanup: Remove \"displayNode\" assignment from deactivateHUDForContext()",
+ "642176": {
+  "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
-  "assignedName": "pwalton",
-  "whiteboard": "[cleanup] [post-fx-4][has-patch][needs-review] [console-1]",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[patchclean:0318]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 36191
  },
- "622303": {
-  "summary": "Web Console should remember filter settings.",
+ "642615": {
+  "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
   "status": "ASSIGNED",
-  "assignedName": "rcampbell",
-  "whiteboard": "[pre-approved by beltzner][console-1]",
-  "hasPatch": false,
+  "assignedName": "mihai.sucan",
+  "hasPatch": true,
   "flags": {
-   "feedback": [],
+   "feedback": [
+    {
+     "status": "?",
+     "requestee": "rcampbell",
+     "setter": "mihai.sucan"
+    }
+   ],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 5856
+ },
+ "642108": {
+  "summary": "JS errors from HUD in Error Console",
+  "status": "ASSIGNED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[console-1][has-patch][needs-test]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [
+    {
+     "status": "+",
+     "setter": "mihai.sucan"
+    }
+   ],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 9807
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -871,7 +515,8 @@
     }
    ],
    "superreview": []
-  }
+  },
+  "patchSize": 8200
  },
  "595223": {
   "summary": "Keep track of file:// url 'loadGroups'",
@@ -888,7 +533,8 @@
    ],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 6978
  },
  "626484": {
   "summary": "Incorrect order of lines when copying from web console",
@@ -911,24 +557,13 @@
     }
    ],
    "superreview": []
-  }
- },
- "603001": {
-  "summary": ".hud-filtered-by-type .hud-filtered-by-string style rules belong in content",
-  "status": "ASSIGNED",
-  "assignedName": "pwalton",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
+  },
+  "patchSize": 4401
  },
  "612252": {
   "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
   "status": "ASSIGNED",
-  "assignedName": "pwalton",
+  "assignedName": "nobody",
   "whiteboard": "[strings] [console-1]",
   "hasPatch": true,
   "flags": {
@@ -940,48 +575,14 @@
    ],
    "review": [],
    "superreview": []
-  }
- },
- "592469": {
-  "summary": "Web Console cleanup: Kill getHeadsUpDisplay()",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[has-patch][needs-review][post-fx4] [console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [
-    {
-     "status": "?",
-     "requestee": "gavin.sharp",
-     "setter": "mihai.sucan"
-    }
-   ],
-   "superreview": []
-  }
- },
- "605351": {
-  "summary": "fix and re-enable browser_webconsole_bug_593003_iframe_wrong_hud.js",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:1021] [console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "-",
-     "setter": "ddahl"
-    }
-   ],
-   "review": [],
-   "superreview": []
-  }
+  },
+  "patchSize": 7845
  },
  "619598": {
   "summary": "Up and Down does not retrieve command history in the same way as other consoles",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0309][checkin][needs approval?] [console-1]",
+  "whiteboard": "[patchclean:0323][checkin][console-1]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
@@ -992,7 +593,8 @@
     }
    ],
    "superreview": []
-  }
+  },
+  "patchSize": 10587
  },
  "638075": {
   "summary": "Memory consumption increases when registering a stream listener.",
@@ -1006,11 +608,11 @@
    "superreview": []
   }
  },
- "634406": {
-  "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
-  "status": "REOPENED",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
+ "636723": {
+  "summary": "Turn Workspaces into a Jetpack",
+  "status": "RESOLVED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces]",
   "hasPatch": false,
   "flags": {
    "feedback": [],

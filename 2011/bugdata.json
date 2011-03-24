@@ -4,7 +4,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-10T10:17:37Z"
+   "value": "2011-03-22T09:41:42Z"
   },
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
@@ -23,7 +23,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/517464",
     "bug_id": 638452,
-    "last_change_time": "2011-03-07T19:03:20Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-08T00:03:20Z"
+    },
     "description": "Patch I used to measure reflows",
     "size": 1562,
     "content_type": "application/octet-stream",
@@ -46,7 +49,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T23:42:58Z"
+   "value": "2011-03-24T02:31:45Z"
   },
   "keywords": [
    "uiwanted"
@@ -63,16 +66,66 @@
   "id": 577721,
   "depends_on": "554926",
   "status": "NEW",
-  "summary": "allow console to pop out into a window, back into the tab"
+  "summary": "allow console to pop out into a window, back into the tab",
+  "attachments": {
+   "520843": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/520843",
+    "bug_id": 577721,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-24T02:31:45Z"
+    },
+    "description": "v 0.1 WIP patch",
+    "size": 4993,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "ddahl"
+    },
+    "file_name": "position-console-own-window",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-22T07:35:00Z"
+    },
+    "id": 520843,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/577721",
+    "is_obsolete": true
+   },
+   "521331": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/521331",
+    "bug_id": 577721,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-24T02:31:45Z"
+    },
+    "description": "v 0.2 WIP",
+    "size": 10918,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "ddahl"
+    },
+    "file_name": "position-console-own-window",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-24T02:31:00Z"
+    },
+    "id": 521331,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/577721",
+    "is_obsolete": false
+   }
+  }
  },
  "577722": {
   "_type": "Bug",
-  "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T00:30:36Z"
+   "value": "2011-03-22T02:13:28Z"
   },
-  "summary": "allow console to open at the bottom or top of tab",
   "assigned_to": {
    "real_name": "David Dahl :ddahl",
    "name": "ddahl"
@@ -82,64 +135,50 @@
    "value": "2010-07-09T22:25:00Z"
   },
   "whiteboard": "[console-1]",
-  "id": 577722
- },
- "635502": {
-  "_type": "Bug",
+  "id": 577722,
   "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:46:35Z"
-  },
-  "summary": "Implement Global 'Browser' Console",
-  "assigned_to": {
-   "real_name": "David Dahl :ddahl",
-   "name": "ddahl"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-19T21:17:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 635502
- },
- "635504": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:47:31Z"
-  },
-  "assigned_to": {
-   "real_name": "David Dahl :ddahl",
-   "name": "ddahl"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-19T21:20:00Z"
-  },
-  "whiteboard": "[console-1] [has-wip-patch]",
-  "id": 635504,
-  "status": "NEW",
-  "summary": "Create web console customization APIs"
- },
- "639848": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:53:10Z"
-  },
-  "summary": "Add method to webconsole.api to add a button to the console toolbar",
-  "assigned_to": {
-   "real_name": "David Dahl :ddahl",
-   "name": "ddahl"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-03-08T21:24:00Z"
-  },
-  "whiteboard": "[console-1] [has-patch-github]",
-  "id": 639848
+  "summary": "allow console to open at the bottom or top of tab",
+  "attachments": {
+   "520776": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "rcampbell"
+      },
+      "type_id": 607,
+      "status": "?",
+      "name": "feedback",
+      "id": 435539,
+      "setter": {
+       "name": "ddahl"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/520776",
+    "bug_id": 577722,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-22T02:13:28Z"
+    },
+    "description": "v 0.2 Position console above or below content window",
+    "size": 8357,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "ddahl"
+    },
+    "file_name": "position-hud",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-22T02:12:00Z"
+    },
+    "id": 520776,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/577722",
+    "is_obsolete": false
+   }
+  }
  },
  "637801": {
   "_type": "Bug",
@@ -165,7 +204,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/515983",
     "bug_id": 637801,
-    "last_change_time": "2011-03-02T15:45:44Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-02T20:45:44Z"
+    },
     "description": "simple patch to logConsoleAPIMessage",
     "size": 1567,
     "content_type": "text/plain",
@@ -187,7 +229,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516266",
     "bug_id": 637801,
-    "last_change_time": "2011-03-02T23:19:03Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-03T04:19:03Z"
+    },
     "description": "updated test cases",
     "size": 6490,
     "content_type": "text/plain",
@@ -209,7 +254,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516427",
     "bug_id": 637801,
-    "last_change_time": "2011-03-03T20:22:58Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-04T01:22:58Z"
+    },
     "description": "off by one level of eval in test #16",
     "size": 6951,
     "content_type": "text/plain",
@@ -254,7 +302,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516673",
     "bug_id": 637801,
-    "last_change_time": "2011-03-09T17:20:42Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-09T22:20:42Z"
+    },
     "description": "removed tryserver mumbo jumbo",
     "size": 6912,
     "content_type": "text/plain",
@@ -273,6 +324,33 @@
    }
   }
  },
+ "636907": {
+  "_type": "Bug",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-24T00:15:55Z"
+  },
+  "assigned_to": {
+   "real_name": "Jim Blandy :jimb",
+   "name": "jimb"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-02-26T06:18:00Z"
+  },
+  "id": 636907,
+  "depends_on": [
+   552488,
+   611044,
+   631377,
+   637505,
+   637572,
+   638053,
+   639001
+  ],
+  "status": "NEW",
+  "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging"
+ },
  "641903": {
   "_type": "Bug",
   "status": "NEW",
@@ -290,6 +368,25 @@
    "value": "2011-03-15T22:16:00Z"
   },
   "id": 641903
+ },
+ "585991": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-23T17:46:06Z"
+  },
+  "summary": "Show a popup listing possible completions",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2010-08-10T20:42:00Z"
+  },
+  "whiteboard": "[console-2]",
+  "id": 585991
  },
  "636724": {
   "_type": "Bug",
@@ -328,25 +425,6 @@
   },
   "whiteboard": "[workspaces]",
   "id": 636725
- },
- "636727": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-02-25T20:50:50Z"
-  },
-  "summary": "Add Ace to workspaces",
-  "assigned_to": {
-   "real_name": "Mihai Sucan [:msucan]",
-   "name": "mihai.sucan"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-25T20:50:00Z"
-  },
-  "whiteboard": "[workspaces]",
-  "id": 636727
  },
  "636731": {
   "_type": "Bug",
@@ -409,7 +487,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-09T21:33:55Z"
+   "value": "2011-03-22T09:26:50Z"
   },
   "keywords": [
    "uiwanted"
@@ -431,7 +509,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2010-09-01T00:55:44Z"
+   "value": "2011-03-22T09:27:52Z"
   },
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
@@ -446,318 +524,6 @@
   "depends_on": "581072",
   "status": "NEW",
   "summary": "chrome JS access to setTimeout enumeration"
- },
- "584672": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T00:41:26Z"
-  },
-  "keywords": [
-   "uiwanted"
-  ],
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-08-05T14:55:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 584672,
-  "status": "NEW",
-  "summary": "JSTerm evaluation output needs truncation",
-  "attachments": {
-   "463111": {
-    "_type": "Attachment",
-    "is_private": false,
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/463111",
-    "bug_id": 584672,
-    "last_change_time": "2010-08-05T10:55:27Z",
-    "description": "screenshot",
-    "size": 204513,
-    "content_type": "image/png",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "webconsole-big-result-firefox.png",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-08-05T14:55:00Z"
-    },
-    "id": 463111,
-    "is_patch": false,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/584672",
-    "is_obsolete": false
-   }
-  }
- },
- "585956": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T17:55:11Z"
-  },
-  "summary": "Need ability to dump JS stack traces in console",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-08-10T19:27:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 585956
- },
- "585991": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T00:44:39Z"
-  },
-  "summary": "Show a popup listing possible completions",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-08-10T20:42:00Z"
-  },
-  "whiteboard": "[console-2]",
-  "id": 585991
- },
- "592485": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:27:00Z"
-  },
-  "summary": "Web Console cleanup: getOutputNodeById() doesn't actually return the output node",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-01T02:48:00Z"
-  },
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "id": 592485
- },
- "592519": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:02:38Z"
-  },
-  "summary": "Web Console cleanup: Remove getContentWindowFromHUDId()",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-01T03:22:00Z"
-  },
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "id": 592519
- },
- "592523": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:29:35Z"
-  },
-  "summary": "Web Console cleanup: Move methods from the HUD Service to the individual HeadsUpDisplay objects",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-01T03:35:00Z"
-  },
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "id": 592523
- },
- "592541": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:30:24Z"
-  },
-  "summary": "Web Console cleanup: \"StopIteration\" is not thrown properly in the Web Console storage",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-01T04:17:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 592541
- },
- "592872": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:52:52Z"
-  },
-  "summary": "Web Console cleanup: NodeFactory redeclares the \"factory\" function",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-02T02:15:00Z"
-  },
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "id": 592872
- },
- "594304": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:56:59Z"
-  },
-  "summary": "Refactor HUDService NodeFactory (and maybe others)",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-08T13:50:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 594304
- },
- "595200": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:58:34Z"
-  },
-  "summary": "Cyclic references in HUDService httpActivity",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-10T19:50:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 595200
- },
- "596101": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:00:20Z"
-  },
-  "summary": "Web Console cleanup: createHUD() has unused variables \"self\" and \"this\", else-after-return, and unused return value",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-14T04:58:00Z"
-  },
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "id": 596101
- },
- "596177": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:01:32Z"
-  },
-  "summary": "remove commented-out line in webConsole.css",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-14T13:02:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 596177
- },
- "596420": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:13:59Z"
-  },
-  "summary": "Web Console cleanup: HUD_createController() should be HS_createController()",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-15T03:20:00Z"
-  },
-  "whiteboard": "[cleanup] [post-fx-4] [console-1]",
-  "id": 596420
- },
- "597150": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T13:55:42Z"
-  },
-  "summary": "Inconsistent usage of HUDService.registerActiveContext()",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-16T23:46:00Z"
-  },
-  "whiteboard": "[post-fx-4] [console-1]",
-  "id": 597150
- },
- "603720": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:21:51Z"
-  },
-  "summary": "The UseOfDOM3LoadMethodWarning message fails to show in the Web Console",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-10-12T23:24:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 603720
  },
  "618328": {
   "_type": "Bug",
@@ -777,101 +543,6 @@
   },
   "whiteboard": "[Web-Console-Testday] [console-1]",
   "id": 618328
- },
- "620756": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T23:35:57Z"
-  },
-  "summary": "Properly check the nsIScriptError flags",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-12-22T01:01:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 620756
- },
- "620958": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T23:37:02Z"
-  },
-  "summary": "Refactor HS_logConsoleAPIMessage as a method on HeadsUpDisplay prototype",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-12-22T20:57:00Z"
-  },
-  "whiteboard": "[followup] [post-fx4][console-1]",
-  "id": 620958
- },
- "632543": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:38:59Z"
-  },
-  "summary": "Exceptions should display a stack trace in the Web Console",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-09T02:42:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 632543
- },
- "632830": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T12:52:29Z"
-  },
-  "summary": "Flickering when selecting the console's inspector window",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-09T21:02:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 632830
- },
- "633204": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:41:03Z"
-  },
-  "summary": "Autocomplete in the Web Console isn't fully cleared on ctrl+backspace",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-10T21:03:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 633204
  },
  "634073": {
   "_type": "Bug",
@@ -897,7 +568,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/512270",
     "bug_id": 634073,
-    "last_change_time": "2011-02-14T21:59:54Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-15T02:59:54Z"
+    },
     "description": "Test extension (restartless)",
     "size": 1434,
     "content_type": "application/x-xpinstall",
@@ -915,71 +589,6 @@
     "is_obsolete": false
    }
   }
- },
- "634423": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:43:25Z"
-  },
-  "summary": "Hide object and network inspection panels when tab is unfocused",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-16T03:54:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 634423
- },
- "636538": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:48:05Z"
-  },
-  "summary": "Remove xul: prefixes in createElementNS calls in HUDService.jsm",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-25T00:58:00Z"
-  },
-  "whiteboard": "[cleanup] [console-1]",
-  "id": 636538
- },
- "636907": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:16:17Z"
-  },
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-02-26T06:18:00Z"
-  },
-  "id": 636907,
-  "depends_on": [
-   552488,
-   611044,
-   631377,
-   637505,
-   637572,
-   638053,
-   639001
-  ],
-  "status": "NEW",
-  "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging"
  },
  "637291": {
   "_type": "Bug",
@@ -1016,7 +625,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518045",
     "bug_id": 637291,
-    "last_change_time": "2011-03-15T11:38:23Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-15T15:38:23Z"
+    },
     "description": "Pointer to pull request",
     "size": 359,
     "content_type": "text/html",
@@ -1035,31 +647,12 @@
    }
   }
  },
- "638110": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:50:10Z"
-  },
-  "summary": "refactor test in browser_webconsole_bug_598357_jsterm_output.js",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-03-02T21:55:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 638110
- },
  "638142": {
   "_type": "Bug",
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-07T22:06:48Z"
+   "value": "2011-03-22T17:22:47Z"
   },
   "summary": "Add ability to anchor a panel to a widget",
   "assigned_to": {
@@ -1071,25 +664,6 @@
    "value": "2011-03-02T23:14:00Z"
   },
   "id": 638142
- },
- "638551": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:50:54Z"
-  },
-  "summary": "web console can't see monkey-patched properties of built-ins",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-03-04T02:00:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 638551
  },
  "638871": {
   "_type": "Bug",
@@ -1128,25 +702,6 @@
   "whiteboard": "[console-1]",
   "id": 638949
  },
- "638953": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-16T00:51:56Z"
-  },
-  "summary": "Cannot copy keys or values in web console object inspector",
-  "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-03-05T03:55:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 638953
- },
  "641234": {
   "_type": "Bug",
   "last_change_time": {
@@ -1171,7 +726,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518957",
     "bug_id": 641234,
-    "last_change_time": "2011-03-12T18:22:20Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-12T23:22:20Z"
+    },
     "description": "Paper describing lastChange prototype work",
     "size": 598044,
     "content_type": "application/pdf",
@@ -1209,46 +767,79 @@
   "whiteboard": "[firebug-p2][querypoint]",
   "id": 641236
  },
- "642108": {
+ "642231": {
   "_type": "Bug",
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-16T19:12:53Z"
+   "value": "2011-03-17T21:29:48Z"
   },
-  "summary": "JS errors from HUD in Error Console",
+  "summary": "Prepare GCLI for review",
   "assigned_to": {
    "real_name": "Nobody; OK to take it and work on it",
    "name": "nobody"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2011-03-16T16:39:00Z"
+   "value": "2011-03-16T23:27:00Z"
   },
-  "whiteboard": "[console-1]",
-  "id": 642108
+  "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
+  "id": 642231
  },
- "618320": {
+ "642471": {
   "_type": "Bug",
   "status": "NEW",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T22:51:12Z"
+   "value": "2011-03-17T20:12:22Z"
   },
-  "keywords": [
-   "polish"
-  ],
-  "summary": "Property panel needs restyling",
+  "summary": "Rewrite PanelHighlighter using transparent xul iframe and canvas",
   "assigned_to": {
-   "real_name": "Patrick Walton (:pcwalton)",
-   "name": "pwalton"
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2010-12-10T21:56:00Z"
+   "value": "2011-03-17T20:11:00Z"
   },
-  "whiteboard": "[console-1]",
-  "id": 618320
+  "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][started-3/17]",
+  "id": 642471
+ },
+ "642505": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-17T21:39:11Z"
+  },
+  "summary": "Embed the GCLI in the Web Console",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-17T21:38:00Z"
+  },
+  "id": 642505
+ },
+ "644596": {
+  "_type": "Bug",
+  "status": "NEW",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-24T18:53:45Z"
+  },
+  "summary": "[console] expand console object with missing methods",
+  "assigned_to": {
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-24T18:53:00Z"
+  },
+  "id": 644596
  },
  "611032": {
   "_type": "Bug",
@@ -1281,7 +872,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/491628",
     "bug_id": 611032,
-    "last_change_time": "2010-11-24T18:53:10Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-11-24T23:53:10Z"
+    },
     "description": "crash bt and DumpJSStack",
     "size": 15590,
     "content_type": "text/plain",
@@ -1303,7 +897,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/491694",
     "bug_id": 611032,
-    "last_change_time": "2010-11-24T18:53:10Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-11-24T23:53:10Z"
+    },
     "description": "another crash, saving here",
     "size": 15272,
     "content_type": "text/plain",
@@ -1325,7 +922,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/491695",
     "bug_id": 611032,
-    "last_change_time": "2010-11-24T18:53:10Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-11-24T23:53:10Z"
+    },
     "description": "v 0.1 Break out ErrorObserver",
     "size": 13091,
     "content_type": "text/plain",
@@ -1347,7 +947,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/493041",
     "bug_id": 611032,
-    "last_change_time": "2010-11-24T18:57:25Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-11-24T23:57:25Z"
+    },
     "description": "v 0.3 Break out HUDConsoleObserver",
     "size": 16056,
     "content_type": "text/plain",
@@ -1380,7 +983,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/493042",
     "bug_id": 611032,
-    "last_change_time": "2010-12-02T23:49:46Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-03T04:49:46Z"
+    },
     "description": "v 0.3.1 WIP Patch",
     "size": 14399,
     "content_type": "text/plain",
@@ -1402,7 +1008,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/494860",
     "bug_id": 611032,
-    "last_change_time": "2010-12-21T22:23:10Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-22T03:23:10Z"
+    },
     "description": "v 0.4 Tests included",
     "size": 19452,
     "content_type": "text/plain",
@@ -1435,7 +1044,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499154",
     "bug_id": 611032,
-    "last_change_time": "2011-01-07T01:29:51Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-07T06:29:51Z"
+    },
     "description": "v 0.4.1 Updated patch",
     "size": 18992,
     "content_type": "text/plain",
@@ -1457,7 +1069,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/500967",
     "bug_id": 611032,
-    "last_change_time": "2011-01-05T00:49:24Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-05T05:49:24Z"
+    },
     "description": "v 0.1 get cached messages via nsIConsoleSvc",
     "size": 1221,
     "content_type": "text/plain",
@@ -1479,7 +1094,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/501210",
     "bug_id": 611032,
-    "last_change_time": "2011-01-05T01:05:56Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-05T06:05:56Z"
+    },
     "description": "v 0.2 get cached messages via nsIConsoleSvc",
     "size": 2772,
     "content_type": "text/plain",
@@ -1501,7 +1119,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/501217",
     "bug_id": 611032,
-    "last_change_time": "2011-01-05T23:42:18Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-06T04:42:18Z"
+    },
     "description": "v 0.2.1 get cached messages via nsIConsoleSvc",
     "size": 2665,
     "content_type": "text/plain",
@@ -1523,7 +1144,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/501496",
     "bug_id": 611032,
-    "last_change_time": "2011-01-07T20:35:07Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-08T01:35:07Z"
+    },
     "description": "v 0.3 get cached messages via nsIConsoleSvc",
     "size": 6568,
     "content_type": "text/plain",
@@ -1545,7 +1169,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/501881",
     "bug_id": 611032,
-    "last_change_time": "2011-01-07T20:35:07Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-08T01:35:07Z"
+    },
     "description": "0.4.2 comments addressed - original patch updated",
     "size": 20141,
     "content_type": "text/plain",
@@ -1567,7 +1194,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/502071",
     "bug_id": 611032,
-    "last_change_time": "2011-02-11T20:09:35Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-12T01:09:35Z"
+    },
     "description": "v 0.4.3 Fixed tests, comments addressed",
     "size": 18936,
     "content_type": "text/plain",
@@ -1603,7 +1233,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/511800",
     "bug_id": 611032,
-    "last_change_time": "2011-02-11T20:09:35Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-12T01:09:35Z"
+    },
     "description": "0.5 unbitrotted",
     "size": 15782,
     "content_type": "text/plain",
@@ -1646,7 +1279,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/491074",
     "bug_id": 612658,
-    "last_change_time": "2010-12-03T22:33:57Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-04T03:33:57Z"
+    },
     "description": "v 0.1 ConsoleStorageService",
     "size": 14276,
     "content_type": "text/plain",
@@ -1679,7 +1315,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/495121",
     "bug_id": 612658,
-    "last_change_time": "2010-12-10T21:57:52Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-11T02:57:52Z"
+    },
     "description": "v 0.2 reduced noisyness",
     "size": 14272,
     "content_type": "text/plain",
@@ -1701,7 +1340,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/496917",
     "bug_id": 612658,
-    "last_change_time": "2010-12-10T22:11:16Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-11T03:11:16Z"
+    },
     "description": "v 0.3 Review comments adressed",
     "size": 17968,
     "content_type": "text/plain",
@@ -1723,7 +1365,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/496923",
     "bug_id": 612658,
-    "last_change_time": "2010-12-10T23:16:29Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-11T04:16:29Z"
+    },
     "description": "v 0.4 comments addressed",
     "size": 18304,
     "content_type": "text/plain",
@@ -1745,7 +1390,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/496963",
     "bug_id": 612658,
-    "last_change_time": "2010-12-16T03:29:47Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-16T08:29:47Z"
+    },
     "description": "v 0.4.1 comments addressed",
     "size": 18152,
     "content_type": "text/plain",
@@ -1767,7 +1415,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/497997",
     "bug_id": 612658,
-    "last_change_time": "2010-12-20T23:07:49Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-21T04:07:49Z"
+    },
     "description": "v 0.5 Combined all privateBrowsing",
     "size": 22822,
     "content_type": "text/plain",
@@ -1789,7 +1440,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/498872",
     "bug_id": 612658,
-    "last_change_time": "2010-12-20T23:09:38Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-21T04:09:38Z"
+    },
     "description": "v 0.5.1 moved test to toolkit, some tweaks",
     "size": 18307,
     "content_type": "text/plain",
@@ -1822,7 +1476,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/498873",
     "bug_id": 612658,
-    "last_change_time": "2010-12-22T04:15:21Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-22T09:15:21Z"
+    },
     "description": "v 0.5.1 moved test to toolkit, some tweaks",
     "size": 23777,
     "content_type": "text/plain",
@@ -1844,7 +1501,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499226",
     "bug_id": 612658,
-    "last_change_time": "2010-12-22T20:00:42Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-23T01:00:42Z"
+    },
     "description": "v 0.5.2 Comments adressed, nasty leak",
     "size": 22827,
     "content_type": "text/plain",
@@ -1866,7 +1526,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499348",
     "bug_id": 612658,
-    "last_change_time": "2010-12-22T20:02:40Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-23T01:02:40Z"
+    },
     "description": "v 0.6 de-xpcomified - still leaks - tests pass",
     "size": 21680,
     "content_type": "text/plain",
@@ -1899,7 +1562,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499349",
     "bug_id": 612658,
-    "last_change_time": "2010-12-22T23:52:49Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-23T04:52:49Z"
+    },
     "description": "v 0.6.1 forgot to remove idl",
     "size": 18854,
     "content_type": "text/plain",
@@ -1921,7 +1587,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499414",
     "bug_id": 612658,
-    "last_change_time": "2010-12-22T23:59:39Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-23T04:59:39Z"
+    },
     "description": "v 0.7 comments addressed, leaks gone!",
     "size": 17275,
     "content_type": "text/plain",
@@ -1954,7 +1623,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499417",
     "bug_id": 612658,
-    "last_change_time": "2011-01-06T06:02:09Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-06T11:02:09Z"
+    },
     "description": "v 0.7.1 comments addressed, leaks gone!",
     "size": 17213,
     "content_type": "text/plain",
@@ -1990,7 +1662,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/501590",
     "bug_id": 612658,
-    "last_change_time": "2011-01-06T06:02:09Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-06T11:02:09Z"
+    },
     "description": "v 0.7.2 Comments addressed, new tests added",
     "size": 17628,
     "content_type": "text/plain",
@@ -2005,178 +1680,6 @@
     "id": 501590,
     "is_patch": true,
     "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/612658",
-    "is_obsolete": false
-   }
-  }
- },
- "588871": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T01:11:35Z"
-  },
-  "assigned_to": {
-   "real_name": "David Dahl :ddahl",
-   "name": "ddahl"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-08-19T22:31:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 588871,
-  "status": "NEW",
-  "summary": "Remove ConsoleStorage methods used for log message storage",
-  "attachments": {
-   "499160": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "dietrich"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418343,
-      "setter": {
-       "name": "ddahl"
-      }
-     },
-     {
-      "type_id": 647,
-      "status": "-",
-      "name": "approval2.0",
-      "id": 418344,
-      "setter": {
-       "name": "johnath"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499160",
-    "bug_id": 588871,
-    "last_change_time": "2011-02-15T21:13:13Z",
-    "description": "v 0.1 Code removal Patch",
-    "size": 14574,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "ddahl"
-    },
-    "file_name": "remove-console-storage-record-event",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T03:53:00Z"
-    },
-    "id": 499160,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/588871",
-    "is_obsolete": false
-   }
-  }
- },
- "627710": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T23:53:58Z"
-  },
-  "summary": "Command completion breaks if unfocusing the input line",
-  "assigned_to": {
-   "real_name": "Joe Walker",
-   "name": "jwalker"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2011-01-21T20:06:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 627710
- },
- "612253": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:33:59Z"
-  },
-  "keywords": [
-   "uiwanted"
-  ],
-  "assigned_to": {
-   "real_name": "Patrick Walton (:pcwalton)",
-   "name": "pwalton"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-11-15T18:11:00Z"
-  },
-  "whiteboard": "[strings] [console-1]",
-  "id": 612253,
-  "status": "NEW",
-  "summary": "Need a shortcut key to focus the input line in web console"
- },
- "616586": {
-  "_type": "Bug",
-  "status": "NEW",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T22:23:46Z"
-  },
-  "summary": "Internal console logging API for use in JSMs and Components",
-  "assigned_to": {
-   "real_name": "David Dahl :ddahl",
-   "name": "ddahl"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-12-04T02:10:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 616586,
-  "attachments": {
-   "495209": {
-    "_type": "Attachment",
-    "is_private": false,
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/495209",
-    "bug_id": 616586,
-    "last_change_time": "2010-12-04T04:22:44Z",
-    "description": "WIP - bare minimum logger",
-    "size": 5347,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "ddahl"
-    },
-    "file_name": "LoggingAPI",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-04T09:15:00Z"
-    },
-    "id": 495209,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/616586",
-    "is_obsolete": true
-   },
-   "495210": {
-    "_type": "Attachment",
-    "is_private": false,
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/495210",
-    "bug_id": 616586,
-    "last_change_time": "2010-12-09T22:04:07Z",
-    "description": "0.2 WIP bare minimum - untested:)",
-    "size": 5365,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "ddahl"
-    },
-    "file_name": "LoggingAPI",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-04T09:22:00Z"
-    },
-    "id": 495210,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/616586",
     "is_obsolete": false
    }
   }
@@ -2236,7 +1739,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/410886",
     "bug_id": 526207,
-    "last_change_time": "2010-01-27T20:48:24Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-01-28T01:48:24Z"
+    },
     "description": "nsSocketTransport2.cpp patch for passing IP and port via notification",
     "size": 1795,
     "content_type": "text/plain",
@@ -2258,7 +1764,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/417555",
     "bug_id": 526207,
-    "last_change_time": "2010-01-27T20:48:24Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-01-28T01:48:24Z"
+    },
     "description": "v0.9",
     "size": 17140,
     "content_type": "text/plain",
@@ -2280,7 +1789,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/423837",
     "bug_id": 526207,
-    "last_change_time": "2010-01-28T16:12:42Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-01-28T21:12:42Z"
+    },
     "description": "v1",
     "size": 17645,
     "content_type": "text/plain",
@@ -2316,7 +1828,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/424007",
     "bug_id": 526207,
-    "last_change_time": "2010-01-28T16:12:42Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-01-28T21:12:42Z"
+    },
     "description": "v1.1",
     "size": 18426,
     "content_type": "text/plain",
@@ -2375,7 +1890,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T22:50:41Z"
+   "value": "2011-03-23T21:40:37Z"
   },
   "keywords": [
    "privacy"
@@ -2388,7 +1903,7 @@
    "_type": "Date",
    "value": "2010-12-10T21:29:00Z"
   },
-  "whiteboard": "[Web-Console-Testday][patchclean:0207][checkin][next-release] [console-1]",
+  "whiteboard": "[Web-Console-Testday][patchclean:0323][checkin][console-1]",
   "id": 618311,
   "depends_on": "602199",
   "status": "ASSIGNED",
@@ -2410,7 +1925,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510347",
     "bug_id": 618311,
-    "last_change_time": "2011-02-08T14:04:47Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-08T19:04:47Z"
+    },
     "description": "proposed fix",
     "size": 6749,
     "content_type": "text/plain",
@@ -2443,7 +1961,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510591",
     "bug_id": 618311,
-    "last_change_time": "2011-03-07T20:31:38Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-23T21:40:11Z"
+    },
     "description": "updated patch",
     "size": 14630,
     "content_type": "text/plain",
@@ -2458,114 +1979,31 @@
     "id": 510591,
     "is_patch": true,
     "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/618311",
-    "is_obsolete": false
-   }
-  }
- },
- "620832": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T23:36:30Z"
-  },
-  "assigned_to": {
-   "real_name": "Mihai Sucan [:msucan]",
-   "name": "mihai.sucan"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-12-22T05:50:00Z"
-  },
-  "whiteboard": "[patchclean:0210][console-1]",
-  "id": 620832,
-  "status": "ASSIGNED",
-  "summary": "Web console attempts to remove its observers multiple times",
-  "attachments": {
-   "499195": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "type_id": 4,
-      "status": "-",
-      "name": "review",
-      "id": 418436,
-      "setter": {
-       "name": "gavin.sharp"
-      }
-     },
-     {
-      "type_id": 607,
-      "status": "+",
-      "name": "feedback",
-      "id": 418405,
-      "setter": {
-       "name": "ddahl"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499195",
-    "bug_id": 620832,
-    "last_change_time": "2011-02-10T17:31:32Z",
-    "description": "Ensure web console observers are only removed once.",
-    "size": 3279,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "josh"
-    },
-    "file_name": "hudservice-observers",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T05:51:00Z"
-    },
-    "id": 499195,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/620832",
     "is_obsolete": true
    },
-   "511421": {
+   "521232": {
     "_type": "Attachment",
     "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 428240,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     },
-     {
-      "type_id": 607,
-      "status": "+",
-      "name": "feedback",
-      "id": 428237,
-      "setter": {
-       "name": "rcampbell"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/511421",
-    "bug_id": 620832,
-    "last_change_time": "2011-02-10T17:42:16Z",
-    "description": "proposed fix",
-    "size": 1392,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/521232",
+    "bug_id": 618311,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-23T21:40:11Z"
+    },
+    "description": "rebased patch",
+    "size": 17598,
     "content_type": "text/plain",
     "attacher": {
      "name": "mihai.sucan"
     },
-    "file_name": "bug-620832-1-mozilla-central.diff",
+    "file_name": "bug-618311-3-mozilla-central.diff",
     "creation_time": {
      "_type": "Date",
-     "value": "2011-02-10T22:31:00Z"
+     "value": "2011-03-23T21:40:00Z"
     },
-    "id": 511421,
+    "id": 521232,
     "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/620832",
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/618311",
     "is_obsolete": false
    }
   }
@@ -2605,7 +2043,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518736",
     "bug_id": 632275,
-    "last_change_time": "2011-03-14T17:23:10Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-14T21:23:10Z"
+    },
     "description": "proposed fix",
     "size": 7942,
     "content_type": "text/plain",
@@ -2641,7 +2082,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/519171",
     "bug_id": 632275,
-    "last_change_time": "2011-03-14T17:23:10Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-14T21:23:10Z"
+    },
     "description": "updated patch",
     "size": 8043,
     "content_type": "text/plain",
@@ -2664,7 +2108,7 @@
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-16T00:38:39Z"
+   "value": "2011-03-23T22:03:58Z"
   },
   "keywords": [
    "hang"
@@ -2677,7 +2121,7 @@
    "_type": "Date",
    "value": "2011-02-08T17:32:00Z"
   },
-  "whiteboard": "[patchclean:0309][checkin][future-release][console-1]",
+  "whiteboard": "[patchclean:0323][checkin][console-1]",
   "id": 632347,
   "status": "ASSIGNED",
   "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
@@ -2698,7 +2142,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510760",
     "bug_id": 632347,
-    "last_change_time": "2011-02-10T11:39:54Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-10T16:39:54Z"
+    },
     "description": "proposed patch",
     "size": 10005,
     "content_type": "text/plain",
@@ -2731,7 +2178,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/511336",
     "bug_id": 632347,
-    "last_change_time": "2011-03-09T19:51:45Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-10T00:51:45Z"
+    },
     "description": "updated patch",
     "size": 10017,
     "content_type": "text/plain",
@@ -2753,7 +2203,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518135",
     "bug_id": 632347,
-    "last_change_time": "2011-03-09T19:51:45Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-23T22:03:30Z"
+    },
     "description": "patch update 2",
     "size": 10203,
     "content_type": "text/plain",
@@ -2768,93 +2221,315 @@
     "id": 518135,
     "is_patch": true,
     "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632347",
+    "is_obsolete": true
+   },
+   "521241": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/521241",
+    "bug_id": 632347,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-23T22:03:30Z"
+    },
+    "description": "rebased patch",
+    "size": 11823,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-632347-4-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-23T22:03:00Z"
+    },
+    "id": 521241,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/632347",
     "is_obsolete": false
    }
   }
  },
- "636723": {
+ "636727": {
   "_type": "Bug",
   "status": "ASSIGNED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-05T00:03:21Z"
+   "value": "2011-03-19T20:14:09Z"
   },
-  "summary": "Turn Workspaces into a Jetpack",
+  "summary": "Add Ace to workspaces",
   "assigned_to": {
    "real_name": "Mihai Sucan [:msucan]",
    "name": "mihai.sucan"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2011-02-25T20:43:00Z"
+   "value": "2011-02-25T20:50:00Z"
   },
   "whiteboard": "[workspaces]",
-  "id": 636723
+  "id": 636727
  },
- "592391": {
+ "642176": {
   "_type": "Bug",
+  "status": "ASSIGNED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T01:24:30Z"
+   "value": "2011-03-18T19:22:40Z"
   },
+  "summary": "Integrate Workspace extension into the browser",
   "assigned_to": {
-   "real_name": "Patrick Walton (:pcwalton)",
-   "name": "pwalton"
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2010-08-31T23:27:00Z"
+   "value": "2011-03-16T21:34:00Z"
   },
-  "whiteboard": "[cleanup] [post-fx-4][has-patch][needs-review] [console-1]",
-  "id": 592391,
-  "status": "ASSIGNED",
-  "summary": "Web Console cleanup: Remove \"displayNode\" assignment from deactivateHUDForContext()",
+  "whiteboard": "[patchclean:0318]",
+  "id": 642176,
   "attachments": {
-   "470890": {
+   "519883": {
     "_type": "Attachment",
     "is_private": false,
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/470890",
-    "bug_id": 592391,
-    "last_change_time": "2010-08-31T20:44:24Z",
-    "description": "Proposed patch.",
-    "size": 1160,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/519883",
+    "bug_id": 642176,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-18T19:22:18Z"
+    },
+    "description": "wip 1",
+    "size": 36191,
     "content_type": "text/plain",
     "attacher": {
-     "name": "pwalton"
+     "name": "mihai.sucan"
     },
-    "file_name": "dea01-20100831-remove-display-node-from-deactivate-hud-for-context",
+    "file_name": "bug-642176-1-mozilla-central.diff",
     "creation_time": {
      "_type": "Date",
-     "value": "2010-09-01T00:44:00Z"
+     "value": "2011-03-17T16:51:00Z"
     },
-    "id": 470890,
+    "id": 519883,
     "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592391",
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/642176",
+    "is_obsolete": true
+   },
+   "520208": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "rcampbell"
+      },
+      "type_id": 607,
+      "status": "?",
+      "name": "feedback",
+      "id": 435154,
+      "setter": {
+       "name": "mihai.sucan"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/520208",
+    "bug_id": 642176,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-18T19:22:18Z"
+    },
+    "description": "wip 2",
+    "size": 36150,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-642176-2-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-18T19:22:00Z"
+    },
+    "id": 520208,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/642176",
     "is_obsolete": false
    }
   }
  },
- "622303": {
+ "642615": {
   "_type": "Bug",
+  "status": "ASSIGNED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-16T17:59:22Z"
+   "value": "2011-03-24T20:40:15Z"
   },
-  "keywords": [
-   "regression"
-  ],
+  "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
+  "assigned_to": {
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
+  },
+  "creation_time": {
+   "_type": "Date",
+   "value": "2011-03-18T02:57:00Z"
+  },
+  "id": 642615,
+  "attachments": {
+   "521000": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "requestee": {
+       "name": "rcampbell"
+      },
+      "type_id": 607,
+      "status": "?",
+      "name": "feedback",
+      "id": 435693,
+      "setter": {
+       "name": "mihai.sucan"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/521000",
+    "bug_id": 642615,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-22T23:49:59Z"
+    },
+    "description": "proposed fix and mochitest",
+    "size": 5856,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "mihai.sucan"
+    },
+    "file_name": "bug-642615-1-mozilla-central.diff",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-22T23:49:00Z"
+    },
+    "id": 521000,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/642615",
+    "is_obsolete": false
+   }
+  }
+ },
+ "642108": {
+  "_type": "Bug",
+  "status": "ASSIGNED",
+  "last_change_time": {
+   "_type": "Date",
+   "value": "2011-03-23T00:59:32Z"
+  },
+  "summary": "JS errors from HUD in Error Console",
   "assigned_to": {
    "real_name": "Rob Campbell [:rc] (robcee)",
    "name": "rcampbell"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2011-01-01T04:50:00Z"
+   "value": "2011-03-16T16:39:00Z"
   },
-  "whiteboard": "[pre-approved by beltzner][console-1]",
-  "id": 622303,
-  "status": "ASSIGNED",
-  "summary": "Web Console should remember filter settings."
+  "whiteboard": "[console-1][has-patch][needs-test]",
+  "id": 642108,
+  "attachments": {
+   "520287": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 607,
+      "status": "-",
+      "name": "feedback",
+      "id": 435214,
+      "setter": {
+       "name": "mihai.sucan"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/520287",
+    "bug_id": 642108,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-21T22:51:16Z"
+    },
+    "description": "getHudRefForOutputNode Fix",
+    "size": 3230,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "rcampbell"
+    },
+    "file_name": "refForOutput.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-19T00:11:00Z"
+    },
+    "id": 520287,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/642108",
+    "is_obsolete": true
+   },
+   "520701": {
+    "_type": "Attachment",
+    "is_private": false,
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/520701",
+    "bug_id": 642108,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-21T23:08:04Z"
+    },
+    "description": "cssPruning tests",
+    "size": 9606,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "rcampbell"
+    },
+    "file_name": "cssPruning.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-21T22:51:00Z"
+    },
+    "id": 520701,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/642108",
+    "is_obsolete": true
+   },
+   "520709": {
+    "_type": "Attachment",
+    "is_private": false,
+    "flags": [
+     {
+      "type_id": 607,
+      "status": "+",
+      "name": "feedback",
+      "id": 435492,
+      "setter": {
+       "name": "mihai.sucan"
+      }
+     }
+    ],
+    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/520709",
+    "bug_id": 642108,
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-23T00:59:32Z"
+    },
+    "description": "cssPruning tests",
+    "size": 9807,
+    "content_type": "text/plain",
+    "attacher": {
+     "name": "rcampbell"
+    },
+    "file_name": "cssPruning2.patch",
+    "creation_time": {
+     "_type": "Date",
+     "value": "2011-03-21T23:08:00Z"
+    },
+    "id": 520709,
+    "is_patch": true,
+    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/642108",
+    "is_obsolete": false
+   }
+  }
  },
  "609890": {
   "_type": "Bug",
@@ -2884,7 +2559,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/491435",
     "bug_id": 609890,
-    "last_change_time": "2010-11-22T22:46:02Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-11-23T03:46:02Z"
+    },
     "description": "v 0.1 Display Cached ConsoleAPI Messages",
     "size": 9027,
     "content_type": "text/plain",
@@ -2917,7 +2595,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/492458",
     "bug_id": 609890,
-    "last_change_time": "2010-12-17T00:44:18Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-17T05:44:18Z"
+    },
     "description": "v 0.2 removed usage of sendToWebConsole",
     "size": 9148,
     "content_type": "text/plain",
@@ -2939,7 +2620,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/498256",
     "bug_id": 609890,
-    "last_change_time": "2010-12-20T23:41:37Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-12-21T04:41:37Z"
+    },
     "description": "v 0.3 updated as per comments",
     "size": 7670,
     "content_type": "text/plain",
@@ -2972,7 +2656,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/498886",
     "bug_id": 609890,
-    "last_change_time": "2011-01-04T03:57:32Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-04T08:57:32Z"
+    },
     "description": "v 0.3.1 updated for bitrot and changes in storageSvc patch",
     "size": 7271,
     "content_type": "text/plain",
@@ -3005,7 +2692,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/500962",
     "bug_id": 609890,
-    "last_change_time": "2011-01-04T03:59:45Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-04T08:59:45Z"
+    },
     "description": "v 0.3.2 Comments Address",
     "size": 7250,
     "content_type": "text/plain",
@@ -3038,7 +2728,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/500963",
     "bug_id": 609890,
-    "last_change_time": "2011-01-06T21:32:53Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-07T02:32:53Z"
+    },
     "description": "v 0.3.2 Comments Address",
     "size": 7250,
     "content_type": "text/plain",
@@ -3071,7 +2764,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/501795",
     "bug_id": 609890,
-    "last_change_time": "2011-02-11T20:06:52Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-12T01:06:52Z"
+    },
     "description": "v 0.3.3 Comments Address",
     "size": 8200,
     "content_type": "text/plain",
@@ -3104,7 +2800,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/511799",
     "bug_id": 609890,
-    "last_change_time": "2011-02-11T20:06:52Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-12T01:06:52Z"
+    },
     "description": "v 0.3.4 unbitrot",
     "size": 7534,
     "content_type": "text/plain",
@@ -3148,7 +2847,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/479124",
     "bug_id": 595223,
-    "last_change_time": "2010-10-02T19:16:24Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-10-02T23:16:24Z"
+    },
     "description": "proposed patch and test code",
     "size": 11322,
     "content_type": "text/plain",
@@ -3181,7 +2883,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/480420",
     "bug_id": 595223,
-    "last_change_time": "2011-01-07T19:50:02Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-08T00:50:02Z"
+    },
     "description": "rebased patch",
     "size": 6978,
     "content_type": "text/plain",
@@ -3217,7 +2922,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/502056",
     "bug_id": 595223,
-    "last_change_time": "2011-01-07T19:50:02Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-01-08T00:50:02Z"
+    },
     "description": "patch update 3",
     "size": 11704,
     "content_type": "text/plain",
@@ -3271,7 +2979,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/509182",
     "bug_id": 626484,
-    "last_change_time": "2011-02-03T22:14:17Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-04T03:14:17Z"
+    },
     "description": "Create an item array which is then sorted prior to pulling the strings; also skips filtered items, so that they aren't copied.",
     "size": 1874,
     "content_type": "text/plain",
@@ -3316,7 +3027,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/509580",
     "bug_id": 626484,
-    "last_change_time": "2011-02-04T13:35:45Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-04T18:35:45Z"
+    },
     "description": "Reworked patch based on feedback + added mochitest",
     "size": 4401,
     "content_type": "text/plain",
@@ -3335,38 +3049,19 @@
    }
   }
  },
- "603001": {
-  "_type": "Bug",
-  "status": "ASSIGNED",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:18:18Z"
-  },
-  "summary": ".hud-filtered-by-type .hud-filtered-by-string style rules belong in content",
-  "assigned_to": {
-   "real_name": "Patrick Walton (:pcwalton)",
-   "name": "pwalton"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-10-09T02:09:00Z"
-  },
-  "whiteboard": "[console-1]",
-  "id": 603001
- },
  "612252": {
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T02:33:43Z"
+   "value": "2011-03-24T20:37:34Z"
   },
   "keywords": [
    "dev-doc-needed",
    "uiwanted"
   ],
   "assigned_to": {
-   "real_name": "Patrick Walton (:pcwalton)",
-   "name": "pwalton"
+   "real_name": "Nobody; OK to take it and work on it",
+   "name": "nobody"
   },
   "creation_time": {
    "_type": "Date",
@@ -3393,7 +3088,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/491621",
     "bug_id": 612252,
-    "last_change_time": "2010-11-19T11:46:42Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2010-11-19T16:46:42Z"
+    },
     "description": "Proposed patch.",
     "size": 7845,
     "content_type": "text/plain",
@@ -3412,450 +3110,11 @@
    }
   }
  },
- "592469": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:19:46Z"
-  },
-  "assigned_to": {
-   "real_name": "Mihai Sucan [:msucan]",
-   "name": "mihai.sucan"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-09-01T02:24:00Z"
-  },
-  "whiteboard": "[has-patch][needs-review][post-fx4] [console-1]",
-  "id": 592469,
-  "depends_on": [
-   580618,
-   611789
-  ],
-  "status": "ASSIGNED",
-  "summary": "Web Console cleanup: Kill getHeadsUpDisplay()",
-  "attachments": {
-   "499067": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418279,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499067",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T18:58:02Z",
-    "description": "Part 1: HUDService - remove getHeadsUpDisplay()",
-    "size": 3773,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-01-hudservice-getHeadsUpDisplay.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-21T23:58:00Z"
-    },
-    "id": 499067,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499068": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418280,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499068",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T18:58:53Z",
-    "description": "Part 2: HUDService - remove getOutputNodeById()",
-    "size": 4987,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-02-hudservice-getOutputNodeById.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-21T23:58:00Z"
-    },
-    "id": 499068,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499069": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418281,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499069",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T18:59:46Z",
-    "description": "Part 3: HUDService - remove getConsoleOutputNode()",
-    "size": 1290,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-03-hudservice-getConsoleOutputNode.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-21T23:59:00Z"
-    },
-    "id": 499069,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499071": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418282,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499071",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:01:53Z",
-    "description": "Part 4: HUDService - remove getChromeWindowForContentWindow()",
-    "size": 1995,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-04-hudservice-getChromeWindowFromContentWindow.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:01:00Z"
-    },
-    "id": 499071,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499072": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418283,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499072",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:03:20Z",
-    "description": "Part 5: HUDService - cleanup clear/unregisterDisplay()",
-    "size": 4452,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-05-hudservice-clear-unregister-display.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:03:00Z"
-    },
-    "id": 499072,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499074": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418285,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499074",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:08:09Z",
-    "description": "Part 6: HUDService - remove displaysIndex()",
-    "size": 2885,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-06-hudservice-displaysIndex.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:08:00Z"
-    },
-    "id": 499074,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499075": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418286,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499075",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:09:32Z",
-    "description": "Part 7: tests - displaysIndex()",
-    "size": 26266,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-07-tests-displaysIndex.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:09:00Z"
-    },
-    "id": 499075,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499076": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418287,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499076",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:10:47Z",
-    "description": "Part 8: tests - getHeadsUpDisplay()",
-    "size": 27658,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-08-tests-getHeadsUpDisplay.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:10:00Z"
-    },
-    "id": 499076,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499077": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418288,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499077",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:11:53Z",
-    "description": "Part 9: tests - getOutputNodeById()",
-    "size": 9485,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-09-tests-getOutputNodeById.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:11:00Z"
-    },
-    "id": 499077,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   },
-   "499079": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "requestee": {
-       "name": "gavin.sharp"
-      },
-      "type_id": 4,
-      "status": "?",
-      "name": "review",
-      "id": 418289,
-      "setter": {
-       "name": "mihai.sucan"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/499079",
-    "bug_id": 592469,
-    "last_change_time": "2010-12-21T19:12:42Z",
-    "description": "Part 10: tests - cleanup",
-    "size": 10377,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-592469-10-tests-cleanup.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-12-22T00:12:00Z"
-    },
-    "id": 499079,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/592469",
-    "is_obsolete": false
-   }
-  }
- },
- "605351": {
-  "_type": "Bug",
-  "last_change_time": {
-   "_type": "Date",
-   "value": "2011-03-15T02:25:27Z"
-  },
-  "assigned_to": {
-   "real_name": "Mihai Sucan [:msucan]",
-   "name": "mihai.sucan"
-  },
-  "creation_time": {
-   "_type": "Date",
-   "value": "2010-10-19T05:10:00Z"
-  },
-  "whiteboard": "[patchclean:1021] [console-1]",
-  "id": 605351,
-  "status": "ASSIGNED",
-  "summary": "fix and re-enable browser_webconsole_bug_593003_iframe_wrong_hud.js",
-  "attachments": {
-   "485001": {
-    "_type": "Attachment",
-    "is_private": false,
-    "flags": [
-     {
-      "type_id": 607,
-      "status": "-",
-      "name": "feedback",
-      "id": 406119,
-      "setter": {
-       "name": "ddahl"
-      }
-     }
-    ],
-    "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/485001",
-    "bug_id": 605351,
-    "last_change_time": "2010-10-25T17:12:28Z",
-    "description": "proposed test fix",
-    "size": 4109,
-    "content_type": "text/plain",
-    "attacher": {
-     "name": "mihai.sucan"
-    },
-    "file_name": "bug-605351-1-mozilla-central.diff",
-    "creation_time": {
-     "_type": "Date",
-     "value": "2010-10-21T14:21:00Z"
-    },
-    "id": 485001,
-    "is_patch": true,
-    "bug_ref": "https://api-dev.bugzilla.mozilla.org/latest/bug/605351",
-    "is_obsolete": false
-   }
-  }
- },
  "619598": {
   "_type": "Bug",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-15T23:08:16Z"
+   "value": "2011-03-23T21:46:50Z"
   },
   "assigned_to": {
    "real_name": "Mihai Sucan [:msucan]",
@@ -3865,7 +3124,7 @@
    "_type": "Date",
    "value": "2010-12-16T08:13:00Z"
   },
-  "whiteboard": "[patchclean:0309][checkin][needs approval?] [console-1]",
+  "whiteboard": "[patchclean:0323][checkin][console-1]",
   "id": 619598,
   "status": "ASSIGNED",
   "summary": "Up and Down does not retrieve command history in the same way as other consoles",
@@ -3875,7 +3134,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/508873",
     "bug_id": 619598,
-    "last_change_time": "2011-02-02T21:21:30Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-03T02:21:30Z"
+    },
     "description": "Split the value on new lines, and check if cursor is on start or end line.",
     "size": 3631,
     "content_type": "text/plain",
@@ -3908,7 +3170,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/509215",
     "bug_id": 619598,
-    "last_change_time": "2011-02-05T15:38:27Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-02-05T20:38:27Z"
+    },
     "description": "proposed patch",
     "size": 10883,
     "content_type": "text/plain",
@@ -3941,7 +3206,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/510017",
     "bug_id": 619598,
-    "last_change_time": "2011-03-09T18:19:39Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-09T23:19:39Z"
+    },
     "description": "updated patch",
     "size": 10587,
     "content_type": "text/plain",
@@ -3963,7 +3231,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/518103",
     "bug_id": 619598,
-    "last_change_time": "2011-03-09T18:17:59Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-09T23:17:59Z"
+    },
     "description": "updated patch",
     "size": 10999,
     "content_type": "text/plain",
@@ -4008,7 +3279,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516236",
     "bug_id": 638075,
-    "last_change_time": "2011-03-03T07:29:48Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-03T12:29:48Z"
+    },
     "description": "Test extension",
     "size": 3906,
     "content_type": "application/x-xpinstall",
@@ -4030,7 +3304,10 @@
     "is_private": false,
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/516523",
     "bug_id": 638075,
-    "last_change_time": "2011-03-03T07:29:48Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-03T12:29:48Z"
+    },
     "description": "Test extension update so it works also in 3.6",
     "size": 11925,
     "content_type": "application/x-xpinstall",
@@ -4049,24 +3326,25 @@
    }
   }
  },
- "634406": {
+ "636723": {
   "_type": "Bug",
-  "status": "REOPENED",
+  "status": "RESOLVED",
   "last_change_time": {
    "_type": "Date",
-   "value": "2011-03-16T00:43:06Z"
+   "value": "2011-03-18T19:43:33Z"
   },
-  "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
+  "summary": "Turn Workspaces into a Jetpack",
   "assigned_to": {
-   "real_name": "Nobody; OK to take it and work on it",
-   "name": "nobody"
+   "real_name": "Mihai Sucan [:msucan]",
+   "name": "mihai.sucan"
   },
   "creation_time": {
    "_type": "Date",
-   "value": "2011-02-16T03:20:00Z"
+   "value": "2011-02-25T20:43:00Z"
   },
-  "whiteboard": "[console-1]",
-  "id": 634406
+  "whiteboard": "[workspaces]",
+  "id": 636723,
+  "resolution": "FIXED"
  },
  "638131": {
   "_type": "Bug",
@@ -4112,7 +3390,10 @@
     ],
     "ref": "https://api-dev.bugzilla.mozilla.org/latest/attachment/517450",
     "bug_id": 638131,
-    "last_change_time": "2011-03-14T20:17:25Z",
+    "last_change_time": {
+     "_type": "Date",
+     "value": "2011-03-15T00:17:25Z"
+    },
     "description": "Pointer to pull request",
     "size": 359,
     "content_type": "text/html",
