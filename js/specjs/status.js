@@ -2,6 +2,7 @@ define(function(require, exports, module) {
 
 var _ = require("underscore")._;
 var Projects = require("./model").Projects;
+var getBugIDandLabel = require("./model").getBugIDandLabel;
 require("bigtext");
 
 exports.projects = new Projects($("#projects"));
@@ -137,9 +138,13 @@ var flagMap = {
 var updateBugInformation = function() {
     $.getJSON('status.json?' + new Date().getTime(), function(data) {
         exports.statusdata = data;
-        $('ul.buglist li').each(function() {
+        $('span.bug').each(function() {
             var el = $(this);
-            var bugid = el.text();
+            var info = getBugIDandLabel(el);
+            if (info == null) {
+                return;
+            }
+            var bugid = info.id;
             var bug = data[bugid];
             if (!bug) {
                 console.log("Couldn't find data for bug: ", bugid);
@@ -173,7 +178,10 @@ var updateBugInformation = function() {
                 title: flags.join(", "),
                 html: " " + bestStatus
             }).appendTo(outer);
-            outer.append(" " + bug.summary + " (" + bug.assignedName + ")");
+            
+            var summary = info.label || bug.summary;
+            
+            outer.append(" " + summary + " (" + bug.assignedName + ") " + bug.whiteboard);
             el.append(outer);
         });
     });

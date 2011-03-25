@@ -15,11 +15,27 @@ exports.Project = function(el) {
     });
 };
 
+exports.getBugIDandLabel = function(spanEl) {
+    var completeText = $(spanEl).text();
+    var match = /^(bug|)\s*(\d+)\s*(.*)/.exec(completeText);
+    if (!match) {
+        return null;
+    }
+    return {
+        id: match[2],
+        label: match[3]
+    };
+};
+
 exports.Project.prototype = {
     getBugIds: function() {
         var result = [];
-        $("ul.buglist li", this.el).each(function() {
-            result.push($(this).text());
+        $("span.bug", this.el).each(function() {
+            var info = exports.getBugIDandLabel(this);
+            if (info == null) {
+                return;
+            }
+            result.push(info.id);
         });
         return result;
     },
@@ -43,7 +59,7 @@ exports.Project.prototype = {
     },
     
     getBugCount: function() {
-        return $(this.el).find('ul.buglist li').length;
+        return $(this.el).find('span.bug').length;
     },
     
     getUpdates: function() {
