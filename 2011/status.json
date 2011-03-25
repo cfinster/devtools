@@ -11,20 +11,7 @@
   }
  },
  "577721": {
-  "summary": "allow console to pop out into a window, back into the tab",
-  "status": "NEW",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 4993
- },
- "577722": {
-  "summary": "allow console to open at the bottom or top of tab",
+  "summary": "allow repositioning of the web console: above, below and out into a panel/window",
   "status": "NEW",
   "assignedName": "ddahl",
   "whiteboard": "[console-1]",
@@ -33,14 +20,14 @@
    "feedback": [
     {
      "status": "?",
-     "requestee": "rcampbell",
+     "requestee": "dao",
      "setter": "ddahl"
     }
    ],
    "review": [],
    "superreview": []
   },
-  "patchSize": 8357
+  "patchSize": 18538
  },
  "637801": {
   "summary": "console.log shouldn't display escaped strings",
@@ -176,18 +163,6 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "618328": {
-  "summary": "Web Console: Up-arrow should go to the end of the previous line",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[Web-Console-Testday] [console-1]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -458,11 +433,16 @@
   "whiteboard": "[patchclean:0318]",
   "hasPatch": true,
   "flags": {
-   "feedback": [],
+   "feedback": [
+    {
+     "status": "+",
+     "setter": "rcampbell"
+    }
+   ],
    "review": [],
    "superreview": []
   },
-  "patchSize": 36191
+  "patchSize": 36150
  },
  "642615": {
   "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -486,19 +466,20 @@
   "summary": "JS errors from HUD in Error Console",
   "status": "ASSIGNED",
   "assignedName": "rcampbell",
-  "whiteboard": "[console-1][has-patch][needs-test]",
+  "whiteboard": "[console-1][has-patch][in-review]",
   "hasPatch": true,
   "flags": {
-   "feedback": [
+   "feedback": [],
+   "review": [
     {
-     "status": "+",
-     "setter": "mihai.sucan"
+     "status": "?",
+     "requestee": "ddahl",
+     "setter": "rcampbell"
     }
    ],
-   "review": [],
    "superreview": []
   },
-  "patchSize": 9807
+  "patchSize": 9711
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -607,6 +588,25 @@
    "review": [],
    "superreview": []
   }
+ },
+ "577722": {
+  "summary": "allow console to open at the bottom or top of tab",
+  "status": "RESOLVED",
+  "assignedName": "ddahl",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [
+    {
+     "status": "?",
+     "requestee": "rcampbell",
+     "setter": "ddahl"
+    }
+   ],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 8357
  },
  "636723": {
   "summary": "Turn Workspaces into a Jetpack",
