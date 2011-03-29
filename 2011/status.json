@@ -17,13 +17,7 @@
   "whiteboard": "[console-1]",
   "hasPatch": true,
   "flags": {
-   "feedback": [
-    {
-     "status": "?",
-     "requestee": "dao",
-     "setter": "ddahl"
-    }
-   ],
+   "feedback": [],
    "review": [],
    "superreview": []
   },
@@ -306,10 +300,16 @@
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [],
+   "review": [
+    {
+     "status": "?",
+     "requestee": "gavin.sharp",
+     "setter": "ddahl"
+    }
+   ],
    "superreview": []
   },
-  "patchSize": 18936
+  "patchSize": 21534
  },
  "612658": {
   "summary": "Implement ConsoleStorageService",
@@ -319,15 +319,10 @@
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "-",
-     "setter": "gavin.sharp"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 17213
+  "patchSize": 17628
  },
  "614586": {
   "summary": "Implement string substitution in all console API methods",
@@ -369,19 +364,14 @@
   "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[Web-Console-Testday][patchclean:0323][checkin][console-1]",
+  "whiteboard": "[console-1][merge-m-c]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "sdwilsh"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 14630
+  "patchSize": 17598
  },
  "632275": {
   "summary": "Web Console: Error message when click on an object to create an inspect window",
@@ -405,14 +395,14 @@
   "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0323][checkin][console-1]",
+  "whiteboard": "[console-1][merge-m-c]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
   },
-  "patchSize": 10203
+  "patchSize": 1250
  },
  "636727": {
   "summary": "Add Ace to workspaces",
@@ -466,20 +456,19 @@
   "summary": "JS errors from HUD in Error Console",
   "status": "ASSIGNED",
   "assignedName": "rcampbell",
-  "whiteboard": "[console-1][has-patch][in-review]",
+  "whiteboard": "[console-1][merge-m-c]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
-     "status": "?",
-     "requestee": "ddahl",
-     "setter": "rcampbell"
+     "status": "+",
+     "setter": "dtownsend"
     }
    ],
    "superreview": []
   },
-  "patchSize": 9711
+  "patchSize": 9966
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -497,7 +486,7 @@
    ],
    "superreview": []
   },
-  "patchSize": 8200
+  "patchSize": 7534
  },
  "595223": {
   "summary": "Keep track of file:// url 'loadGroups'",
@@ -563,19 +552,14 @@
   "summary": "Up and Down does not retrieve command history in the same way as other consoles",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0323][checkin][console-1]",
+  "whiteboard": "[console-1][merge-m-c]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "sdwilsh"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 10587
+  "patchSize": 10999
  },
  "638075": {
   "summary": "Memory consumption increases when registering a stream listener.",
@@ -588,25 +572,6 @@
    "review": [],
    "superreview": []
   }
- },
- "577722": {
-  "summary": "allow console to open at the bottom or top of tab",
-  "status": "RESOLVED",
-  "assignedName": "ddahl",
-  "whiteboard": "[console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "?",
-     "requestee": "rcampbell",
-     "setter": "ddahl"
-    }
-   ],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 8357
  },
  "636723": {
   "summary": "Turn Workspaces into a Jetpack",

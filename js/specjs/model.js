@@ -3,6 +3,7 @@ define(function(require, exports, module) {
 exports.Project = function(el) {
     this.el = el;
     this.name = $('h2', el).text();
+    this.id = el.getAttribute("id");
     $('section h3', el).each(function() {
         var el = $(this);
         if (el.text() == "Bugs") {
@@ -88,8 +89,7 @@ exports.Projects = function(el) {
     var self = this;
     $('section.project', el).each(function() {
         var p = new exports.Project(this);
-        console.log("Project found: ", p.name);
-        self[p.name] = p;
+        self[p.id] = p;
     });
 };
 

@@ -12,10 +12,10 @@ var expander = function() {
     var project = this.project;
     var elem = $(this);
     if (project.expanded) {
-        elem.html("&#9654;");
+        elem.html("&#9654; ");
         $(project.el).find("div.tabs").slideUp();
     } else {
-        elem.html("&#9660;");
+        elem.html("&#9660; ");
         $(project.el).find("div.tabs").slideDown();
     }
     project.expanded = !project.expanded;
@@ -39,9 +39,10 @@ var addBigText = function() {
 var augmentProjects = function() {
     var latestUpdates = [];
     _.values(exports.projects).forEach(function(project) {
-        var elem = $('<span/>', {
-            html: "&#9654;",
+        var elem = $('<a/>', {
+            html: "&#9654; ",
             click: expander,
+            href: "#" + project.id,
             "class": "expander"
         });
         project.expanded = false;
@@ -191,5 +192,25 @@ if ($('body').hasClass("awesome")) {
     setupProjectNavigation();
     updateBugInformation();
 }
+
+exports.jumpToProject = function() {
+    var hash = location.hash.substring(1);
+    if (!hash) {
+        return;
+    }
+    
+    var p = exports.projects[hash];
+    if (!p) {
+        return;
+    }
+    
+    // scroll to the project
+    $('html, body').animate({
+        scrollTop: $(p.el).offset().top
+    }, 250);
+    
+    // expand it out
+    $("a.expander", p.el).click();
+};
 
 });

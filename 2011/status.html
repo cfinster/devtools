@@ -9,7 +9,9 @@
           baseUrl: "../js/"
         });
         require.ready(function() {
-          require(["specjs/status"], function() {});
+          require(["specjs/status"], function(status) {
+						status.jumpToProject();
+					});
         });
       })();
     </script>
@@ -18,36 +20,15 @@
   <body class="awesome">
 		<div class="topsummary">
 	    <h1>Mozilla DevTools Project Status</h1>
-	    <div class="maindate">March 25</div>
+	    <div class="maindate">March 29</div>
 		</div>
     
     <!-- projects follow -->
     <div id="projects">
-			<section class="project" id="jsd2">
-				<h2><a href="https://wiki.mozilla.org/DevTools/Features/JSD2">JSD2</a></h2>
-				<div class="blurb">Debugging the multiprocess world</div>
-				<div class="status">Planning</div>
-				
-				<section class="people">
-					<h3>People</h3>
-					<ul>
-						<li>jblandy</li>
-					</ul>
-				</section>
-				<div class="tabs">
-					<section>
-						<h3>Bugs</h3>
-						<ul>
-							<li><span class="bug">560314</span></li>
-							<li><span class="bug">636907</span></li>
-						</ul>
-					</section>
-			</section>
-			
       <section class="project" id="console5">
         <h2><a href="https://wiki.mozilla.org/DevTools/Features/WebConsole5">Web Console "5"</a></h2>
         <div class="blurb">Adding awesome to the existing Web Console</div>
-				<div class="status">Planning</div>
+				<div class="status">Implementation</div>
       
         <section class="people">
           <h3>People</h3>
@@ -88,6 +69,27 @@
 				</div>
       </section>
     
+			<section class="project" id="jsd2">
+				<h2><a href="https://wiki.mozilla.org/DevTools/Features/JSD2">JSD2</a></h2>
+				<div class="blurb">Debugging the multiprocess world</div>
+				<div class="status">Planning</div>
+				
+				<section class="people">
+					<h3>People</h3>
+					<ul>
+						<li>jblandy</li>
+					</ul>
+				</section>
+				<div class="tabs">
+					<section>
+						<h3>Bugs</h3>
+						<ul>
+							<li><span class="bug">560314</span></li>
+							<li><span class="bug">636907</span></li>
+						</ul>
+					</section>
+			</section>
+			
       <section class="project" id="ui">
         <h2><a href="https://wiki.mozilla.org/DevTools/Features/OverallUI">Overall UI</a></h2>
         <div class="blurb">The way things fit together</div>
@@ -256,6 +258,18 @@
     
 			<h2 class="tier2">Second Tier</h2>
 			<div id="tier2">
+				<section class="project" id="webconsole6">
+					<h2><a href="https://wiki.mozilla.org/DevTools/Features/WebConsole6">Web Console 6</a></h2>
+					<div class="blurb">Console Cleanup and Integration</div>
+					<div class="status">Planning</div>
+					
+					<section class="people">
+						<h3>People</h3>
+						<ul>
+							<li>ddahl</li>
+						</ul>
+					</section>
+				</section>
 	      <section class="project" id="styledoctor">
 	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/StyleDoctor">Style Doctor</a></h2>
 	        <div class="blurb">The cure for what ails your CSS</div>
