@@ -76,9 +76,45 @@
 									<li><span class="bug">642111 Web Console messages should scroll into view automatically</span></li>
 								</ul>
 							</li>
+							<li><span class="bug">645163</span></li>
+							<li><span class="bug">637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)</span></li>
 						</ul>
 					</section>
 				</div>
+      </section>
+    
+      <section class="project" id="workspaces">
+        <h2><a href="https://wiki.mozilla.org/DevTools/Features/Workspaces">Workspaces First Take</a></h2>
+        <div class="blurb">The humane way to monkey with code.</div>
+				<div class="status">Implementation</div>
+				
+        <section class="people">
+          <h3>People</h3>
+          <ul>
+            <li>rcampbell</li>
+            <li>msucan</li>
+          </ul>
+        </section>
+      
+        <div class="tabs">
+          <section>
+            <h3>Updates</h3>
+            <ul>
+							<li><span class="date">2011/03/18</span> Patch to put the Workspaces in browser</li>
+              <li><span class="date">2011/03/01</span> Prototype is working as a Jetpack</li>
+              <li><span class="date">2011/01/05</span> Initial Prototype Add-On</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Bugs</h3>
+            <ul>
+							<li><span class="bug">642176 Integrate Workspace extension into the browser</span></li>
+              <li><span class="bug">636725 Unit tests for Workspaces</span></li>
+							<li><span class="bug">646070 Respect chrome developer tools preference in workspace</span></li>
+            </ul>
+          </section>
+        </div>
       </section>
     
 			<section class="project" id="jsd2">
@@ -213,44 +249,6 @@
 				
       </section>
     
-      <section class="project" id="workspaces">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/Workspaces">Workspaces Prototype</a></h2>
-        <div class="blurb">The humane way to monkey with code.</div>
-				<div class="status">Prototype</div>
-				
-        <section class="people">
-          <h3>People</h3>
-          <ul>
-            <li>rcampbell</li>
-            <li>msucan</li>
-          </ul>
-        </section>
-      
-        <div class="tabs">
-          <section>
-            <h3>Updates</h3>
-            <ul>
-							<li><span class="date">2011/03/18</span> Patch to put the Workspaces in browser</li>
-              <li><span class="date">2011/03/01</span> Prototype is working as a Jetpack</li>
-              <li><span class="date">2011/01/05</span> Initial Prototype Add-On</li>
-            </ul>
-          </section>
-
-          <section>
-            <h3>Bugs</h3>
-            <ul>
-							<li><span class="bug">642176</span></li>
-              <li><span class="bug">636724</span></li>
-              <li><span class="bug">636725</span></li>
-              <li><span class="bug">636727</span></li>
-              <li><span class="bug">636731</span></li>
-							<li><span class="bug">644413 Workspaces should be able to restore their context via mode-line</span></li>
-							<li><span class="bug">644409 Make workspaces save their state across restarts</span></li>
-            </ul>
-          </section>
-        </div>
-      </section>
-    
       <section class="project" id="firebug6">
         <h2>Firebug Platform Improvements</h2>
         <div class="blurb">Helping Firebug do even more</div>
@@ -303,10 +301,38 @@
 								<li><span class="bug">592552 History is shared among all Web Console instances</span></li>
 								<li><span class="bug">642112 Web Console checkmarks do not reliably display their state</span></li>
 								<li><span class="bug">622303 Web Console should remember filter settings</span></li>
+								<li><span class="bug">642113 Web Console should remember its configuration</span></li>
 							</ul>
 						</section>
 					</div>
 				</section>
+				
+				<section class="project" id="workspaces6">
+	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined">Workspaces Refined</a></h2>
+	        <div class="blurb">The refined, humane way to engage in software development experiments.</div>
+					<div class="status">Prototype</div>
+
+	        <section class="people">
+	          <h3>People</h3>
+	          <ul>
+	            <li>rcampbell</li>
+	            <li>msucan</li>
+	          </ul>
+	        </section>
+
+	        <div class="tabs">
+	          <section>
+	            <h3>Bugs</h3>
+	            <ul>
+	              <li><span class="bug">636727 Add Ace to workspaces</span></li>
+	              <li><span class="bug">636731 Add GCLI commands for Workspaces</span></li>
+								<li><span class="bug">644413 Workspaces should be able to restore their context via mode-line</span></li>
+								<li><span class="bug">644409 Make workspaces save their state across restarts</span></li>
+	            </ul>
+	          </section>
+	        </div>
+	      </section>
+				
 	      <section class="project" id="styledoctor">
 	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/StyleDoctor">Style Doctor</a></h2>
 	        <div class="blurb">The cure for what ails your CSS</div>

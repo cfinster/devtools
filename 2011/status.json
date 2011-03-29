@@ -93,18 +93,6 @@
    "superreview": []
   }
  },
- "636724": {
-  "summary": "Change workspaces to follow the devtools scoping rules",
-  "status": "NEW",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[workspaces]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "636725": {
   "summary": "Unit tests for Workspaces",
   "status": "NEW",
@@ -561,6 +549,18 @@
    "superreview": []
   }
  },
+ "646070": {
+  "summary": "Respect chrome developer tools preference in workspace",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[workspace]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "611032": {
   "summary": "Break out HUDConsoleObserver from HUDService",
   "status": "NEW",
@@ -738,6 +738,11 @@
      "status": "?",
      "requestee": "jonas",
      "setter": "rcampbell"
+    },
+    {
+     "status": "?",
+     "requestee": "gal",
+     "setter": "rcampbell"
     }
    ],
    "superreview": []
@@ -877,6 +882,18 @@
    "superreview": []
   }
  },
+ "637131": {
+  "summary": "Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
+  "status": "REOPENED",
+  "assignedName": "nobody",
+  "whiteboard": "[console-2]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "638131": {
   "summary": "Add ability to check if a panel is open or not",
   "status": "RESOLVED",
@@ -893,6 +910,29 @@
   "summary": "Create a Cross Add-on registry and communication service",
   "status": "RESOLVED",
   "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642113": {
+  "summary": "Web Console should remember its configuration",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "645163": {
+  "summary": "XUL Panel is closed by menu style toolbar button",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "whiteboard": "[blocks-devtools-fx5-patches]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
