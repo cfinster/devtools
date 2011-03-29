@@ -23,6 +23,18 @@
   },
   "patchSize": 18538
  },
+ "587757": {
+  "summary": "Implement Browser Console",
+  "status": "NEW",
+  "assignedName": "ddahl",
+  "whiteboard": "[console-1]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "637801": {
   "summary": "console.log shouldn't display escaped strings",
   "status": "NEW",
@@ -106,7 +118,7 @@
   }
  },
  "636731": {
-  "summary": "Add Cockpit commands for Workspaces",
+  "summary": "Add GCLI commands for Workspaces",
   "status": "NEW",
   "assignedName": "mihai.sucan",
   "whiteboard": "[workspaces]",
@@ -157,6 +169,29 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "585956": {
+  "summary": "Implement console.trace() in web console",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[console-1]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "592552": {
+  "summary": "History is shared among all Web Console instances",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -246,11 +281,186 @@
    "superreview": []
   }
  },
+ "642109": {
+  "summary": "Web Console REPL \"readline\" occasionally stops working right",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642111": {
+  "summary": "Web Console messages should scroll into view automatically",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642112": {
+  "summary": "Web Console checkmarks do not reliably display their state",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642136": {
+  "summary": "Debugger access to closure environments",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p2]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642189": {
+  "summary": "GCLI should support grouped parameters",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=3d,worst=10d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642196": {
+  "summary": "GCLI should allow JS to be entered using {}",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=3d,likely=5d,worst=10d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642226": {
+  "summary": "GCLI should support use without an input element",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=3d,worst=10d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "642231": {
   "summary": "Prepare GCLI for review",
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642237": {
+  "summary": "GCLI should display its opening command menu in a hierarchy",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642238": {
+  "summary": "GCLI metadata should have types on return values",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=1d,likely=2d,worst=5d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642239": {
+  "summary": "GCLI should have history retention",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=3d,worst=8d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642240": {
+  "summary": "GCLI needs some form of URI for reference to everything",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=1d,likely=3d,worst=8d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642241": {
+  "summary": "Experiment with better UI presentation methods in GCLI",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=5d,likely=10d,worst=20d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642242": {
+  "summary": "GCLI should embed help as commands",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=1d,likely=2d,worst=3d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642400": {
+  "summary": "Ace/Pilot/GCLI doesn't have a good definition of the environment",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642401": {
+  "summary": "Ace/Pilot/GCLI doesn't have a good definition of pref scopes",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -281,8 +491,67 @@
    "superreview": []
   }
  },
+ "644409": {
+  "summary": "Make workspaces save their state across restarts",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[workspace][best: 3h, likely: 2d, worst: 4d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "644413": {
+  "summary": "Workspaces should be able to restore their context via mode-line",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[workspace]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "644419": {
+  "summary": "Console should have user-settable log limits for each message category",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[console]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "644596": {
   "summary": "[console] expand console object with missing methods",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "646025": {
+  "summary": "Add file location to console.log, info, debug, etc.",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[console]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "646028": {
+  "summary": "Add a filter item to the Web Developer toolbar dropdown in Web Console",
   "status": "NEW",
   "assignedName": "nobody",
   "hasPatch": false,
@@ -452,6 +721,41 @@
   },
   "patchSize": 5856
  },
+ "616742": {
+  "summary": "Implement console.debug() (was: Navigation broken on Citytv website)",
+  "status": "ASSIGNED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[console-3]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "ddahl"
+    },
+    {
+     "status": "?",
+     "requestee": "jonas",
+     "setter": "rcampbell"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 3183
+ },
+ "622303": {
+  "summary": "Web Console should remember filter settings.",
+  "status": "ASSIGNED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[pre-approved by beltzner][console-1]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "642108": {
   "summary": "JS errors from HUD in Error Console",
   "status": "ASSIGNED",
@@ -566,18 +870,6 @@
   "status": "REOPENED",
   "assignedName": "general",
   "whiteboard": "[firebug-p1][Requesting blocking .x]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "636723": {
-  "summary": "Turn Workspaces into a Jetpack",
-  "status": "RESOLVED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[workspaces]",
   "hasPatch": false,
   "flags": {
    "feedback": [],

@@ -64,6 +64,18 @@
 							<li><span class="bug">612252</span></li>
 							<li><span class="bug">614586</span></li>
 							<li><span class="bug">642615</span></li>
+							<li><span class="bug">646025</span></li>
+							<li><span class="bug">646028</span></li>
+							<li><span class="bug">616742 Implement console.debug</span></li>
+							<li><span class="bug">585956 Implement console.trace() in web console</span></li>
+							<li><span class="bug">644419 Console should have user-settable log limits for each message category</span></li>
+							<li><span class="bug">642108 JS errors from HUD in Error Console</span>
+								<ul>
+									<li>642108 appears to cause the following other problems:</li>
+									<li><span class="bug">642109 Web Console REPL "readline" occasionally stops working right</span></li>
+									<li><span class="bug">642111 Web Console messages should scroll into view automatically</span></li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 				</div>
@@ -160,7 +172,7 @@
       </section>
     
       <section class="project" id="gcli">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/GCLI">Cockpit Command Line Interface Prototype</a></h2>
+        <h2><a href="https://wiki.mozilla.org/DevTools/Features/GCLI">Graphical Command Line Interface Prototype</a></h2>
         <div class="blurb">The fastest, most discoverable way to control your tools</div>
 				<div class="status">Prototype</div>
 				
@@ -177,7 +189,18 @@
 						<ul>
 							<li><span class="bug">641903</span></li>
 							<li><span class="bug">642505</span></li>
-							<li><span class="bug">642231</span></li>
+							<li><span class="bug">642231 Prepare GCLI for review</span></li>
+							<li><span class="bug">642241 Experiment with better UI presentation methods in GCLI</span></li>
+							<li><span class="bug">642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes</span></li>
+							<li><span class="bug">642400 Ace/Pilot/GCLI doesn't have a good definition of the environment</span></li>
+							<li><span class="bug">642242 GCLI should embed help as commands</span></li>
+							<li><span class="bug">642240 GCLI needs some form of URI for reference to everything</span></li>
+							<li><span class="bug">642239 GCLI should have history retention</span></li>
+							<li><span class="bug">642238 GCLI metadata should have types on return values</span></li>
+							<li><span class="bug">642237 GCLI should display its opening command menu in a hierarchy</span></li>
+							<li><span class="bug">642226 GCLI should support use without an input element</span></li>
+							<li><span class="bug">642196 GCLI should allow JS to be entered using {}</span></li>
+							<li><span class="bug">642189 GCLI should support grouped parameters</span></li>
 						</ul>
 					</section>
 				</div>
@@ -207,6 +230,7 @@
           <section>
             <h3>Updates</h3>
             <ul>
+							<li><span class="date">2011/03/18</span> Patch to put the Workspaces in browser</li>
               <li><span class="date">2011/03/01</span> Prototype is working as a Jetpack</li>
               <li><span class="date">2011/01/05</span> Initial Prototype Add-On</li>
             </ul>
@@ -215,13 +239,13 @@
           <section>
             <h3>Bugs</h3>
             <ul>
-              <li><span class="bug">636723</span></li>
+							<li><span class="bug">642176</span></li>
               <li><span class="bug">636724</span></li>
               <li><span class="bug">636725</span></li>
               <li><span class="bug">636727</span></li>
               <li><span class="bug">636731</span></li>
-							<li><span class="bug">638871</span></li>
-							<li><span class="bug">642176</span></li>
+							<li><span class="bug">644413 Workspaces should be able to restore their context via mode-line</span></li>
+							<li><span class="bug">644409 Make workspaces save their state across restarts</span></li>
             </ul>
           </section>
         </div>
@@ -251,6 +275,7 @@
 							<li><span class="bug">526207</span></li>
 							<li><span class="bug">641236</span></li>
 							<li><span class="bug">641234</span></li>
+							<li><span class="bug">642136 Debugger access to closure environments</span></li>
             </ul>
           </section>
         </div>
@@ -269,6 +294,18 @@
 							<li>ddahl</li>
 						</ul>
 					</section>
+					
+					<div class="tabs">
+						<section>
+							<h3>Bugs</h3>
+							<ul>
+								<li><span class="bug">587757 Implement Browser Console</span></li>
+								<li><span class="bug">592552 History is shared among all Web Console instances</span></li>
+								<li><span class="bug">642112 Web Console checkmarks do not reliably display their state</span></li>
+								<li><span class="bug">622303 Web Console should remember filter settings</span></li>
+							</ul>
+						</section>
+					</div>
 				</section>
 	      <section class="project" id="styledoctor">
 	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/StyleDoctor">Style Doctor</a></h2>
