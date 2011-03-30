@@ -181,8 +181,9 @@ var updateBugInformation = function() {
             }).appendTo(outer);
             
             var summary = info.label || bug.summary;
+            var whiteboard = bug.whiteboard || "";
             
-            outer.append(" " + summary + " (" + bug.assignedName + ") " + bug.whiteboard);
+            outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard);
             el.append(outer);
         });
     });

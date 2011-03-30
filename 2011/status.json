@@ -81,18 +81,6 @@
    "superreview": []
   }
  },
- "585991": {
-  "summary": "Show a popup listing possible completions",
-  "status": "NEW",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[console-2]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "636725": {
   "summary": "Unit tests for Workspaces",
   "status": "NEW",
@@ -134,17 +122,6 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "554926": {
-  "summary": "Dockable Panels",
-  "status": "NEW",
-  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -605,6 +582,18 @@
    "superreview": []
   }
  },
+ "554926": {
+  "summary": "Dockable Panels",
+  "status": "ASSIGNED",
+  "assignedName": "enndeakin",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 15341
+ },
  "526207": {
   "summary": "Add IP address and port info to nsIHttpActivityObserver",
   "status": "ASSIGNED",
@@ -628,6 +617,25 @@
    "review": [],
    "superreview": []
   }
+ },
+ "585991": {
+  "summary": "Show a popup listing possible completions",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-2][patchclean:0329]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [
+    {
+     "status": "?",
+     "requestee": "rcampbell",
+     "setter": "mihai.sucan"
+    }
+   ],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 20215
  },
  "618311": {
   "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",

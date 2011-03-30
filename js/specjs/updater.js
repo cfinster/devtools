@@ -9,23 +9,27 @@ exports.datadir = null;
 exports.bugList = null;
 exports.bugData = null;
 
+var checkDataDir = function() {
+    exports.datadir = $('#datadir').val();
+    if (!exports.datadir) {
+        alert("Please set the datadir first");
+        return false;
+    }
+    return true;
+};
+
 exports.attachUI = function() {
     exports.datadir = $('#datadir').val();
-    $('#datadir').change(function() {
-        exports.datadir = $(this).val();
-    });
     
     $('#update').click(function() {
-        if (!exports.datadir) {
-            alert("Please set the datadir first");
+        if (!checkDataDir()) {
             return;
         }
         exports.gatherBugList(exports.saveBugData);
     });
     
     $('#statusupdate').click(function() {
-        if (!exports.datadir) {
-            alert("Please set the datadir first");
+        if (!checkDataDir()) {
             return;
         }
         if (!exports.bugData) {
