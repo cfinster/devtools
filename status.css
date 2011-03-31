@@ -10,31 +10,18 @@
 
 }
 
-@font-face {
-    font-family: 'ArchitectsDaughterRegular';
-    src: url('fonts/ArchitectsDaughter-webfont.eot');
-    src: url('fonts/ArchitectsDaughter-webfont.eot?iefix') format('eot'),
-         url('fonts/ArchitectsDaughter-webfont.woff') format('woff'),
-         url('fonts/ArchitectsDaughter-webfont.ttf') format('truetype'),
-         url('fonts/ArchitectsDaughter-webfont.svg#webfontRPduMdrp') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+body
+{
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-body.awesome {
-    background: url(images/Lightblue_empty_grid.svg);
-    font-family: 'ArchitectsDaughterRegular', Helvetica, Arial, sans-serif;
-    color: #0000aa;
-}
-
-body.awesome section.project {
+section.project {
     border: 2px solid #00a;
     margin-bottom: 2em;
     background: white;
 }
 
-body.awesome .topsummary {
+.topsummary {
     display: -webkit-box;
     display: -moz-box;
     -moz-box-orient: horizontal;
@@ -43,18 +30,35 @@ body.awesome .topsummary {
     margin-bottom: 2em;
 }
 
-body.awesome .topsummary h1 {
+.topsummary h1 {
     -moz-box-flex: 1;
     -webkit-box-flex: 1;
 }
 
-body.awesome .maindate {
+.maindate {
     width: 50px;
     line-height: 60px;
     height: 60px;
 }
 
-body.awesome div.summary {
+#primary {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    width: 100%;
+}
+
+#nav {
+    width: 150px;
+}
+
+#content {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+section.project div.summary {
     display: -moz-box;
     -moz-box-orient: horizontal;
     display: -webkit-box;
@@ -63,7 +67,7 @@ body.awesome div.summary {
     border-bottom: 1px solid #00a;
 }
 
-body.awesome div.summary div.main {
+div.summary div.main {
     display: -moz-box;
     -moz-box-orient: vertical;
     -moz-box-flex: 1;
@@ -73,7 +77,7 @@ body.awesome div.summary div.main {
     width: 100%;
 }
 
-body.awesome div.summary div.main div.top {
+div.summary div.main div.top {
     display: -moz-box;
     -moz-box-orient: horizontal;
     display: -webkit-box;
@@ -82,32 +86,32 @@ body.awesome div.summary div.main div.top {
     border-bottom: 1px solid #00a;
 }
 
-body.awesome div.summary div.top h2 {
+div.summary div.top h2 {
     -moz-box-flex: 1;
     -webkit-box-flex: 1;
     margin-bottom: 5px;
     margin-top: 10px;
 }
 
-body.awesome div.summary div.top div {
+div.summary div.top div {
     border-left: 1px solid #00a;
     width: 138px;
     padding: 10px 5px 0px 5px;
 }
 
-body.awesome section.project div.summary div.counts span.flags {
+section.project div.summary div.counts span.flags {
     padding-right: 18px;
     margin-right: 10px;
     background: url(images/flag.png) no-repeat right;
 }
 
-body.awesome section.project div.summary div.counts span.bugs {
+section.project div.summary div.counts span.bugs {
     padding-right: 18px;
     margin-right: 10px;
     background: url(images/bug.png) no-repeat right;
 }
 
-body.awesome div.status {
+div.status {
     width: 70px;
     line-height: 35px;
     padding: 20px 10px 0px 10px;
@@ -115,27 +119,27 @@ body.awesome div.status {
     font-family: "BostonTrafficRegular", Helvetica, Arial, sans-serif;;
 }
 
-body.awesome div.summary img.avatar {
+div.summary img.avatar {
     width: 32px;
     height: 32px;
 }
 
-body.awesome section.project h2 a {
+section.project h2 a {
     text-decoration: none;
     border-bottom: 1px solid #0000aa;
 }
 
-body.awesome h1, body.awesome h2, body.awesome div.maindate {
+h1, h2, div.maindate {
     font-family: "BostonTrafficRegular", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #0000aa;
 }
 
-body.awesome a:visited, body.awesome a:link {
+a:visited, a:link {
     color: #0000aa;
 }
 
-body.awesome a.bugid {
+a.bugid {
     color: #0000aa;
 }
 
@@ -143,21 +147,21 @@ a.resolved {
     text-decoration: line-through;
 }
 
-body.awesome #people {
+#people {
     display: none;
 }
 
-body.awesome section.people {
+section.people {
     display: none;
 }
 
-body.awesome div.tabs {
+div.tabs {
     display: none;
     font-family: Helvetica, Arial, sans-serif;
     color: black;
 }
 
-body.awesome div.tabs.visible {
+div.tabs.visible {
     display: block;
 }
 
@@ -169,11 +173,11 @@ span.expander {
     padding-right: 4px;
 }
 
-body.awesome div#tier2 {
+div#tier2 {
     display: none;
 }
 
-body.awesome span.patchstatus {
+span.patchstatus {
     font-family: "Inconsolata", "Menlo", "Courier New", monospace;
 }
 

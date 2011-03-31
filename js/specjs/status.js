@@ -7,29 +7,23 @@ if (!specjs) {
 
 var exports = specjs.status = {};
 
-exports.Project = function(el) {
-    this.el = el;
-    this.name = $('h2', el).text();
-    this.id = el.getAttribute("id");
-    $('section h3', el).each(function() {
-        var el = $(this);
-        if (el.text() == "Bugs") {
-            el.next('ul').addClass("buglist");
-        } else if (el.text() == "Flags") {
-            el.next('ul').addClass('flaglist');
-        } else if (el.text() == "Updates") {
-            // el.next("ul").addCLass("updatelist");
-        }
-    });
+var Project = exports.Project = function(data) {
+    _.extend(this, {
+        id: "",
+        url: "",
+        name: "",
+        blurb: "",
+        stauts: "",
+        people: [],
+        bugs: [],
+        updates: [],
+        flags: []
+    }, data);
 };
 
-var getBugIDandLabel = exports.getBugIDandLabel = function(spanEl) {
-    if (typeof(spanEl) == "string" || typeof(spanEl) == "number") {
-        completeText = spanEl.toString();
-    } else {
-        var completeText = $(spanEl).text();
-    }
-    var match = /^(bug|)\s*(\d+)\s*(.*)/.exec(completeText);
+var getBugIDandLabel = exports.getBugIDandLabel = function(text) {
+    text = text.toString();
+    var match = /^(bug|)\s*(\d+)\s*(.*)/.exec(text);
     if (!match) {
         return null;
     }
@@ -39,115 +33,25 @@ var getBugIDandLabel = exports.getBugIDandLabel = function(spanEl) {
     };
 };
 
+var getBugID = function(text) {
+    return getBugIDandLabel(text).id;
+};
+
 exports.Project.prototype = {
     getBugIds: function() {
-        var result = [];
-        $("span.bug", this.el).each(function() {
-            var info = exports.getBugIDandLabel(this);
-            if (info == null) {
-                return;
-            }
-            result.push(info.id);
-        });
-        return result;
-    },
-    
-    getPeople: function() {
-        var result = [];
-        $(this.el).find("section.people ul li").each(function() {
-            var personid = $(this).text();
-            var personEl = document.getElementById(personid);
-            if (!personEl) {
-                console.log("Unknown person: ", personid);
-                return;
-            }
-            result.push(new exports.Person(personEl));
-        });
-        return result;
-    },
-    
-    getFlagCount: function() {
-        return $(this.el).find('ul.flaglist li').length;
-    },
-    
-    getBugCount: function() {
-        return $(this.el).find('span.bug').length;
-    },
-    
-    getUpdates: function() {
-        return $(this.el).find("ul.updatelist li").map(function() {
-            var dateStr = $(this).find("span.date").text();
-            if (dateStr) {
-                return [Date.parse(dateStr), this.innerHTML];
-            } else {
-                return [0, this.innerHTML];
-            }
-        });
+        return this.bugs.map(getBugID);
     }
 };
 
-exports.Person = function(el) {
-    this.el = el;
+exports.Person = function(data) {
+    _.extend(this, {
+        id: "",
+        name: "",
+        avatar: ""
+    }, data);
 };
 
-exports.Person.prototype = {
-    getAvatar: function() {
-        return $(this.el).find("img.avatar")[0];
-    }
-};
-
-var Projects = exports.Projects = function(el) {
-    var self = this;
-    $('section.project', el).each(function() {
-        var p = new exports.Project(this);
-        self[p.id] = p;
-    });
-};
-
-var defaultProject = {
-    id: "",
-    url: "",
-    name: "",
-    blurb: "",
-    stauts: "",
-    people: [],
-    bugs: [],
-    updates: []
-};
-
-var defaultPerson = {
-    id: "",
-    name: "",
-    avatar: ""
-};
-
-var expander = function() {
-    var project = this.project;
-    var elem = $(this);
-    if (project.expanded) {
-        elem.html("&#9654; ");
-        $(project.el).find("div.tabs").slideUp();
-    } else {
-        elem.html("&#9660; ");
-        $(project.el).find("div.tabs").slideDown();
-    }
-    project.expanded = !project.expanded;
-};
-
-var addBigText = function() {
-    $('.maindate').each(function() {
-        var el = $(this);
-        var text = el.text();
-        el.html("<div>" + text.split(" ").join("</div><div>") + "</div>").bigtext();
-    });
-    
-    $(".status").each(function() {
-        var el = $(this);
-        var status = el.text().replace(/^\s+|\s+$/,"");
-        var statusAbbreviation = status.substring(0, 2).toUpperCase();
-        el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
-    }).bigtext();
-};
+exports.projects = {};
 
 var augmentProjects = function() {
     var latestUpdates = [];
@@ -217,32 +121,6 @@ var augmentProjects = function() {
     });
 };
 
-var hideTier2 = function() {
-    var elem = $('<span/>', {
-        html: "&#9654;",
-        click: function() {
-            var elem = $(this);
-            if (this.expanded) {
-                elem.html("&#9654;");
-                $("#tier2").slideUp();
-            } else {
-                elem.html("&#9660;");
-                $("#tier2").slideDown();
-            }
-            this.expanded = !this.expanded;
-        },
-        "class": "expander"
-    });
-    elem[0].expanded = false;
-    $("h2.tier2").prepend(elem);
-};
-
-var setupProjectNavigation = function() {
-    addBigText();
-    augmentProjects();
-    hideTier2();
-};
-
 var flagMap = {
     "feedback": "&nbsp;f",
     "review": "&nbsp;r",
@@ -302,30 +180,29 @@ var updateBugInformation = function() {
     });
 };
 
-if ($('body').hasClass("awesome")) {
-    var projectTemplate = _.template(document.getElementById("project_template").innerHTML);
-    var personTemplate = _.template(document.getElementById("person_template").innerHTML);
+var projectMap = {};
 
+for (var i = 0; i < projects.length; i++) {
+    var project = new Project(projects[i]);
+    projects[i] = project;
+    projectMap[project.id] = project;
+};
+
+exports.showProject = function(id) {
+    var project = projectMap[id];
+    var newNode = $(exports.projectTemplate(project));
+    newNode.appendTo($("#content"));
+};
+
+exports.populatePage = function() {
+    exports.projectTemplate = _.template(document.getElementById("project_template").innerHTML);
+    exports.personTemplate = _.template(document.getElementById("person_template").innerHTML);
+    var projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML);
     projects.forEach(function(project) {
-        var base = _.clone(defaultProject);
-        project = _.extend(base, project);
-        var newNode = $(projectTemplate(project));
+        var newNode = $(projectNavTemplate(project));
         newNode.appendTo($("#projects"));
     });
-
-    people.forEach(function(person) {
-        var base = _.clone(defaultPerson);
-        person = _.extend(base, person);
-        var newNode = $(personTemplate(person));
-        $("#people").append(newNode);
-    });
-
-    exports.projects = new Projects($("#projects"));
-    exports.statusdata = null;
-
-    setupProjectNavigation();
-    updateBugInformation();
-}
+};
 
 exports.jumpToProject = function() {
     var hash = location.hash.substring(1);
@@ -333,18 +210,7 @@ exports.jumpToProject = function() {
         return;
     }
     
-    var p = exports.projects[hash];
-    if (!p) {
-        return;
-    }
-    
-    // scroll to the project
-    $('html, body').animate({
-        scrollTop: $(p.el).offset().top
-    }, 250);
-    
-    // expand it out
-    $("a.expander", p.el).click();
+    exports.showProject(hash);
 };
 
 })(this);
