@@ -5,6 +5,40 @@ var Projects = require("./model").Projects;
 var getBugIDandLabel = require("./model").getBugIDandLabel;
 require("bigtext");
 
+var projectTemplate = _.template(document.getElementById("project_template").innerHTML);
+var personTemplate = _.template(document.getElementById("person_template").innerHTML);
+
+var defaultProject = {
+    id: "",
+    url: "",
+    name: "",
+    blurb: "",
+    stauts: "",
+    people: [],
+    bugs: [],
+    updates: []
+};
+
+var defaultPerson = {
+    id: "",
+    name: "",
+    avatar: ""
+};
+
+projects.forEach(function(project) {
+    var base = _.clone(defaultProject);
+    project = _.extend(base, project);
+    var newNode = $(projectTemplate(project));
+    newNode.appendTo($("#projects"));
+});
+
+people.forEach(function(person) {
+    var base = _.clone(defaultPerson);
+    person = _.extend(base, person);
+    var newNode = $(personTemplate(person));
+    $("#people").append(newNode);
+});
+
 exports.projects = new Projects($("#projects"));
 exports.statusdata = null;
 

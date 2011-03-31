@@ -176,3 +176,7 @@ body.awesome div#tier2 {
 body.awesome span.patchstatus {
     font-family: "Inconsolata", "Menlo", "Courier New", monospace;
 }
+
+#templates {
+    display: none;
+}

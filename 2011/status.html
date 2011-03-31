@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="../status.css" type="text/css">
     <script src="../js/require.js"></script>
+		<script src="projects.js"></script>
     <script>
       (function() {
         require({
@@ -25,429 +26,60 @@
     
     <!-- projects follow -->
     <div id="projects">
-      <section class="project" id="console5">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/WebConsole5">Web Console "5"</a></h2>
-        <div class="blurb">Adding awesome to the existing Web Console</div>
-				<div class="status">Implementation</div>
-      
-        <section class="people">
-          <h3>People</h3>
-          <ul>
-            <li>ddahl</li>
-						<li>msucan</li>
-          </ul>
-        </section>
-
-				<div class="tabs">
-					<section>
-						<h3>Updates</h3>
-					</section>
-					
-					<section>
-						<h3>Bugs</h3>
-						<ul>
-							<li><span class="bug">577721</span></li>
-							<li><span class="bug">585991</span></li>
-							<li><span class="bug">637801</span></li>
-							<li><span class="bug">632347</span></li>
-							<li><span class="bug">632275</span></li>
-							<li><span class="bug">644596</span></li>
-							<li><span class="bug">618311</span></li>
-							<li><span class="bug">638949</span></li>
-							<li><span class="bug">642108</span></li>
-							<li><span class="bug">609890</span></li>
-							<li><span class="bug">611032</span></li>
-							<li><span class="bug">612658</span></li>
-							<li><span class="bug">595223</span></li>
-							<li><span class="bug">626484</span></li>
-							<li><span class="bug">619598</span></li>
-							<li><span class="bug">612252</span></li>
-							<li><span class="bug">614586</span></li>
-							<li><span class="bug">642615</span></li>
-							<li><span class="bug">646025</span></li>
-							<li><span class="bug">646028</span></li>
-							<li><span class="bug">616742 Implement console.debug</span></li>
-							<li><span class="bug">585956 Implement console.trace() in web console</span></li>
-							<li><span class="bug">644419 Console should have user-settable log limits for each message category</span></li>
-							<li><span class="bug">642108 JS errors from HUD in Error Console</span>
-								<ul>
-									<li>642108 appears to cause the following other problems:</li>
-									<li><span class="bug">642109 Web Console REPL "readline" occasionally stops working right</span></li>
-									<li><span class="bug">642111 Web Console messages should scroll into view automatically</span></li>
-								</ul>
-							</li>
-							<li><span class="bug">645163</span></li>
-							<li><span class="bug">637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)</span></li>
-						</ul>
-					</section>
-				</div>
-      </section>
-    
-      <section class="project" id="workspaces">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/Workspaces">Workspaces First Take</a></h2>
-        <div class="blurb">The humane way to monkey with code.</div>
-				<div class="status">Implementation</div>
-				
-        <section class="people">
-          <h3>People</h3>
-          <ul>
-            <li>rcampbell</li>
-            <li>msucan</li>
-          </ul>
-        </section>
-      
-        <div class="tabs">
-          <section>
-            <h3>Updates</h3>
-            <ul>
-							<li><span class="date">2011/03/18</span> Patch to put the Workspaces in browser</li>
-              <li><span class="date">2011/03/01</span> Prototype is working as a Jetpack</li>
-              <li><span class="date">2011/01/05</span> Initial Prototype Add-On</li>
-            </ul>
-          </section>
-
-          <section>
-            <h3>Bugs</h3>
-            <ul>
-							<li><span class="bug">642176 Integrate Workspace extension into the browser</span></li>
-              <li><span class="bug">636725 Unit tests for Workspaces</span></li>
-							<li><span class="bug">646070 Respect chrome developer tools preference in workspace</span></li>
-            </ul>
-          </section>
-        </div>
-      </section>
-    
-			<section class="project" id="jsd2">
-				<h2><a href="https://wiki.mozilla.org/DevTools/Features/JSD2">JSD2</a></h2>
-				<div class="blurb">Debugging the multiprocess world</div>
-				<div class="status">Planning</div>
-				
-				<section class="people">
-					<h3>People</h3>
-					<ul>
-						<li>jblandy</li>
-					</ul>
-				</section>
-				<div class="tabs">
-					<section>
-						<h3>Bugs</h3>
-						<ul>
-							<li><span class="bug">560314</span></li>
-							<li><span class="bug">636907</span></li>
-						</ul>
-					</section>
-			</section>
-			
-      <section class="project" id="ui">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/OverallUI">Overall UI</a></h2>
-        <div class="blurb">The way things fit together</div>
-				<div class="status">Planning</div>
-      
-        <div class="tabs">
-          <section>
-            <h3>Updates</h3>
-            <ul>
-              <li><span class="date">2011/02/24</span> quick mockups added</li>
-            </ul>
-          </section>
-					<section>
-						<h3>Bugs</h3>
-						<ul>
-							<li><span class="bug">554926</span></li>
-						</ul>
-					</section>
-        </div>
-      </section>
-    
-      <section class="project" id="install">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/Install">Devtools Installation</a></h2>
-        <div class="blurb">Our devtools in ur Firefox</div>
-				<div class="status">Planning</div>
-				
-				<section class="people">
-					<h3>People</h3>
-					<ul>
-						<li>msucan</li>
-					</ul>
-				</section>
-      </section>
-    
-      <section class="project" id="memoryback">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/Memory">Memory Tooling Backend</a></h2>
-        <div class="blurb">Data for the future</div>
-				<div class="status">Planning</div>
-				
-				<section class="people">
-					<h3>People</h3>
-					<ul>
-						<li>dcamp</li>
-					</ul>
-				</section>
-      </section>
-    
-      <section class="project" id="highlighter">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/Highlighter">Highlighter</a></h2>
-        <div class="blurb">Beautiful information about your DOM</div>
-				<div class="status">Planning</div>
-
-        <section class="people">
-          <h3>People</h3>
-          <ul>
-            <li>rcampbell</li>
-          </ul>
-        </section>
-				
-				<div class="tabs">
-					<section>
-						<h3>Bugs</h3>
-						<ul>
-							<li><span class="bug">642471</span></li>
-						</ul>
-					</section>
-				</div>
-      </section>
-    
-      <section class="project" id="gcli">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/GCLI">Graphical Command Line Interface Prototype</a></h2>
-        <div class="blurb">The fastest, most discoverable way to control your tools</div>
-				<div class="status">Prototype</div>
-				
-        <section class="people">
-          <h3>People</h3>
-          <ul>
-            <li>jwalker</li>
-          </ul>
-        </section>
-				
-				<div class="tabs">
-					<section>
-						<h3>Bugs</h3>
-						<ul>
-							<li><span class="bug">641903</span></li>
-							<li><span class="bug">642505</span></li>
-							<li><span class="bug">642231 Prepare GCLI for review</span></li>
-							<li><span class="bug">642241 Experiment with better UI presentation methods in GCLI</span></li>
-							<li><span class="bug">642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes</span></li>
-							<li><span class="bug">642400 Ace/Pilot/GCLI doesn't have a good definition of the environment</span></li>
-							<li><span class="bug">642242 GCLI should embed help as commands</span></li>
-							<li><span class="bug">642240 GCLI needs some form of URI for reference to everything</span></li>
-							<li><span class="bug">642239 GCLI should have history retention</span></li>
-							<li><span class="bug">642238 GCLI metadata should have types on return values</span></li>
-							<li><span class="bug">642237 GCLI should display its opening command menu in a hierarchy</span></li>
-							<li><span class="bug">642226 GCLI should support use without an input element</span></li>
-							<li><span class="bug">642196 GCLI should allow JS to be entered using {}</span></li>
-							<li><span class="bug">642189 GCLI should support grouped parameters</span></li>
-						</ul>
-					</section>
-				</div>
-      </section>
-    
-      <section class="project" id="styleinspector">
-        <h2><a href="https://wiki.mozilla.org/DevTools/Features/StyleInspector">Style Inspector</a></h2>
-        <div class="blurb">View an element's style, in style!</div>
-				<div class="status">Planning</div>
-				
-      </section>
-    
-      <section class="project" id="firebug6">
-        <h2>Firebug Platform Improvements</h2>
-        <div class="blurb">Helping Firebug do even more</div>
-				<div class="status">Planning</div>
-      
-        <div class="tabs">
-          <section>
-            <h3>Updates</h3>
-            <ul>
-              <li><span class="date">2011/02/16</span> Support for lastChange operation for querypoint debugging (bug needed)</li>
-            </ul>
-          </section>
-        
-          <section>
-            <h3>Bugs</h3>
-            <ul>
-              <li><span class="bug">580880</span></li>
-              <li><span class="bug">524674</span></li>
-							<li><span class="bug">638075</span></li>
-							<li><span class="bug">634073</span></li>
-							<li><span class="bug">529536</span></li>
-							<li><span class="bug">526207</span></li>
-							<li><span class="bug">641236</span></li>
-							<li><span class="bug">641234</span></li>
-							<li><span class="bug">642136 Debugger access to closure environments</span></li>
-            </ul>
-          </section>
-        </div>
-      </section>
-    
-			<h2 class="tier2">Second Tier</h2>
-			<div id="tier2">
-				<section class="project" id="webconsole6">
-					<h2><a href="https://wiki.mozilla.org/DevTools/Features/WebConsole6">Web Console 6</a></h2>
-					<div class="blurb">Console Cleanup and Integration</div>
-					<div class="status">Planning</div>
-					
-					<section class="people">
-						<h3>People</h3>
-						<ul>
-							<li>ddahl</li>
-						</ul>
-					</section>
-					
-					<div class="tabs">
-						<section>
-							<h3>Bugs</h3>
-							<ul>
-								<li><span class="bug">587757 Implement Browser Console</span></li>
-								<li><span class="bug">592552 History is shared among all Web Console instances</span></li>
-								<li><span class="bug">642112 Web Console checkmarks do not reliably display their state</span></li>
-								<li><span class="bug">622303 Web Console should remember filter settings</span></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-				
-				<section class="project" id="workspaces6">
-	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined">Workspaces Refined</a></h2>
-	        <div class="blurb">The refined, humane way to engage in software development experiments.</div>
-					<div class="status">Prototype</div>
-
-	        <section class="people">
-	          <h3>People</h3>
-	          <ul>
-	            <li>rcampbell</li>
-	            <li>msucan</li>
-	          </ul>
-	        </section>
-
-	        <div class="tabs">
-	          <section>
-	            <h3>Bugs</h3>
-	            <ul>
-	              <li><span class="bug">636727 Add Ace to workspaces</span></li>
-	              <li><span class="bug">636731 Add GCLI commands for Workspaces</span></li>
-								<li><span class="bug">644413 Workspaces should be able to restore their context via mode-line</span></li>
-								<li><span class="bug">644409 Make workspaces save their state across restarts</span></li>
-	            </ul>
-	          </section>
-	        </div>
-	      </section>
-				
-	      <section class="project" id="styledoctor">
-	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/StyleDoctor">Style Doctor</a></h2>
-	        <div class="blurb">The cure for what ails your CSS</div>
-					<div class="status">Planning</div>
-
-	        <section class="people">
-	          <h3>People</h3>
-	          <ul>
-	            <li>jwalker</li>
-	          </ul>
-	        </section>
-	      </section>
-
-	      <section class="project" id="sdk">
-	        <h2><a href="https://wiki.mozilla.org/DevTools/Features/SDK">Devtools SDK 1</a></h2>
-	        <div class="blurb">First bits of customizability</div>
-					<div class="status">Planning</div>
-
-					<section class="people">
-						<h3>People</h3>
-						<ul>
-							<li>rcampbell</li>
-							<li>msucan</li>
-						</ul>
-					</section>
-
-					<div class="tabs">
-						<section>
-							<h3>Updates</h3>
-							<ul>
-							</ul>
-						</section>
-						<section>
-							<h3>Flags</h3>
-							<ul>
-								<li>How do we run our automated tests to ensure that changes in the mozilla-central don't break the SDK?</li>
-							</ul>
-						</section>
-						<section>
-							<h3>Bugs</h3>
-							<ul>
-								<li><span class="bug">639518</span></li>
-								<li><span class="bug">638871</span></li>
-								<li><span class="bug">638131</span></li>
-								<li><span class="bug">638142</span></li>
-								<li><span class="bug">637291</span></li>
-							</ul>
-						</section>
-	      </section>
-
-	      <section class="project" id="incontent">
-	        <h2>In-Content Tools</h2>
-	        <div class="blurb">Improved support for browser content-based tools</div>
-					<div class="status">Planning</div>
-
-	        <div class="tabs">
-	          <section>
-	            <h3>Bugs</h3>
-	            <ul>
-	              <li><span class="bug">638452</span></li>
-	            </ul>
-	          </section>
-	        </div>
-	      </section>
-
-		    <section class="project" id="objectinspector">
-		      <h2>Object Inspector Plus</h2>
-		      <div class="blurb">Take a look inside!</div>
-					<div class="status">Planning</div>
-		    </section>
-			</div>
     </div>
     <!-- end of projects -->
 		
 		<div id="people">
-			<section id="msucan">
-				<h3>Mihai Sucan</h3>
-				<img alt="msucan" title="Mihai Sucan" src="http://a2.twimg.com/profile_images/326719609/avatar_robodesign_v5_reasonably_small.png" class="avatar">
-			</section>
-			
-			<section id="rcampbell">
-				<h3>Rob Campbell</h3>
-				<div><img alt="rcampbell" title="Rob Campbell" src="http://gravatar.com/avatar/34f8f3442a6be7ae2cb26459a2e33fc1" class="avatar"></div>
-			</section>
-			
-			<section id="jwalker">
-				<h3>Joe Walker</h3>
-				<div><img alt="jwalker" title="Joe Walker" src="http://gravatar.com/avatar/8dd47f0c426cd8204b8bf996cb98cb56" class="avatar"></div>
-			</section>
-			
-			<section id="ddahl">
-				<h3>David Dahl</h3>
-				<div><img alt="ddahl" title="David Dahl" src="http://a0.twimg.com/profile_images/1090231487/Selection_001_reasonably_small.png" class="avatar"></div>
-			</section>
-			
-			<section id="dcamp">
-				<h3>Dave Camp</h3>
-				<div><img alt="dcamp" title="Dave Camp" src="http://a1.twimg.com/profile_images/28279492/campd_bigger.png" class="avatar"></div>
-			</section>
-			
-			<section id="kdangoor">
-				<h3>Kevin Dangoor</h3>
-				<div><img alt="kdangoor" title="Kevin Dangoor" src="http://gravatar.com/avatar/f4749cce627b584fb9e59966a5d2c924" class="avatar"></div>
-			</section>
-			
-			<section id="jodvarko">
-				<h3>Jan Odvarko</h3>
-				<div><img alt="jodvarko" title="Jan (Honza) Odvarko" src="http://gravatar.com/avatar/34b251cf082c202fb3160b1afb810001" class="avatar"></div>
-			</section>
-			
-			<section id="jblandy">
-				<h3>Jim Blandy</h3>
-				<div><img alt="jblandy" title="Jim Blandy" src="http://www.red-bean.com/jimb/jimb.jpg" class="avatar"></div>
-			</section>
 		</div>
 		
 		<div class="attribution">Some icons by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a>.</div>
+		
+		<script type="text/x-underscore-template" id="project_template">
+			<section class="project" id="<%= id %>">
+        <h2><a href="<%= url %>"><%= name %></a></h2>
+        <div class="blurb"><%= blurb %></div>
+				<div class="status"><%= status %></div>
+				
+				<% if (people) { %>
+					<section class="people">
+						<h3>People</h3>
+						<ul>
+							<% people.forEach(function(person) { %>
+								<li><%= person %></li>
+							<% }); %>
+						</ul>
+					</section>
+				<% }; %>
+
+				<div class="tabs">
+					<% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>
+						<section>
+							<h3>Updates</h3>
+							<ul>
+								<% updates.forEach(function(update) { %>
+									<li><%= update %></li>
+								<% }); %>
+							</ul>
+						</section>
+					<% }; %>
+					<% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>
+						<section>
+							<h3>Bugs</h3>
+							<ul>
+								<% bugs.forEach(function(bug) { %>
+									<li><span class="bug"><%= bug %></span></li>
+								<% }); %>
+							</ul>
+						</section>
+					<% }; %>
+			</section>
+		</script>
+		
+		<script type="text/x-underscore/template" id="person_template">
+			<section class="person">
+				<h3><%= name %></h3>
+				<div><img alt="<%= id %>" title="%<= name %>" src="<%= avatar %>" class="avatar"></div>
+			</section>
+		</script>
   </body>
 </html>
