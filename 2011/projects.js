@@ -1,8 +1,23 @@
 // This is the project data for the status.html page
 
-(function(container) {
+(function(exports) {
 
-projects = [
+exports.estimates = {
+    "577721": [6, 12, 16],
+    "585991": [1, 2, 4],
+    "637801": [1, 1, 2],
+    "638949": [4, 8, 16],
+    "614586": [8, 16, 24],
+    "646025": [8, 16, 48],
+    "646028": [4, 6, 8],
+    "585956": [8, 16, 24],
+    "637131": [4, 8, 16],
+    "592552": [1, 3, 4],
+    "642112": [2, 4, 8],
+    "622303": [4, 6, 12]
+};
+
+exports.projects = [
     {
         id: "console5",
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsole5",
@@ -225,7 +240,7 @@ projects = [
     }
 ];
 
-container.people = [
+exports.people = [
     {
         id: "muscan",
         name: "Mihai Sucan",
@@ -268,4 +283,4 @@ container.people = [
     }
 ];
 
-})(window);
+})(this);

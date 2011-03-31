@@ -3,20 +3,27 @@
   <head>
     <title>Project Data Updater</title>
     <link rel="stylesheet" href="../styles.css" type="text/css">
-    <script src="../js/require.js"></script>
-		<script src="projects.js"></script>
-    <script>
-      (function() {
-        require({
-          baseUrl: "../js/"
-        });
-        require.ready(function() {
-          require(["specjs/updater"], function(updater) {
-            updater.attachUI();
-          });
-        })
-      })();
-    </script>
+    <script src="../js/script.js"></script>
+		<script>
+			$script("../js/jquery.js", "jquery");
+			$script("../js/underscore.js", "underscore");
+			$script("projects.js", "projects");
+			$script("../js/date.js", "date");
+			$script("../js/time.js", "time");
+			$script.ready(["jquery", "underscore", "date", "time"], function() {
+				$script("../js/buggerall.js", "buggerall");
+			});
+			$script.ready(["jquery", "underscore", "projects"], function() {
+				$script("../js/specjs/status.js", "status");
+			});
+			$script.ready(["buggerall", "status"], function() {
+				$script("../js/specjs/updater.js", "updater");
+			});
+			
+			$script.ready("updater", function() {
+				specjs.updater.attachUI();
+			});
+		</script>
   </head>
   <body>
     <h1>Project Data Updater</h1>

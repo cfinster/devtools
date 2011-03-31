@@ -4,7 +4,7 @@
 //     For all details and documentation:
 //     http://documentcloud.github.com/backbone
 
-define(function(require, exports, module) {
+(function(){
 
   // Initial Setup
   // -------------
@@ -802,7 +802,7 @@ define(function(require, exports, module) {
     // For small amounts of DOM Elements, where a full-blown template isn't
     // needed, use **make** to manufacture elements, one at a time.
     //
-    //     var el = this.make('li', {'class': 'row'}, this.model.get('title'));
+    //     var el = this.make('li', {'class': 'row'}, this.model.escape('title'));
     //
     make : function(tagName, attributes, content) {
       var el = document.createElement(tagName);
@@ -1008,4 +1008,4 @@ define(function(require, exports, module) {
     return string.replace(/&(?!\w+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   };
 
-});
+})();

@@ -1,4 +1,11 @@
-define(function(require, exports, module) {
+(function(win) {
+
+var specjs = win.specjs;
+if (!specjs) {
+    specjs = win.specjs = {};
+}
+
+var exports = specjs.model = {};
 
 exports.Project = function(el) {
     this.el = el;
@@ -97,4 +104,4 @@ exports.Projects = function(el) {
     });
 };
 
-});
+})(this);

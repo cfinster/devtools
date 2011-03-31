@@ -1,10 +1,38 @@
-define(function(require, exports, module) {
+(function(win) {
 
-var Projects = require("./model").Projects;
-var getBugIDandLabel = require("./model").getBugIDandLabel;
-var _ = require("underscore")._;
-var file = require("./file");
-var buggerall = require("buggerall/index");
+var exports = specjs.updater = {};
+
+var Projects = specjs.status.Projects;
+var getBugIDandLabel = specjs.status.getBugIDandLabel;
+
+// Adapted from TiddlyWiki
+
+// Returns null if it can't do it, false if there's an error, true if it saved OK
+var saveFile = function(filePath,content)
+{
+    console.log("Saving to ", filePath);
+	if(window.Components) {
+		try {
+	        console.log("Requesting enhanced privileges");
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+		    
+			var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+			file.initWithPath(filePath);
+			if(!file.exists())
+				file.create(0,0664);
+			var out = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
+			out.init(file,0x20|0x02,00004,null);
+			out.write(content,content.length);
+			out.flush();
+			out.close();
+			console.log("Saved");
+			return true;
+		} catch(ex) {
+			return false;
+		}
+	}
+	return null;
+};
 
 exports.datadir = null;
 exports.bugList = null;
@@ -73,7 +101,7 @@ exports.saveBugData = function() {
     q.run(function(q) {
         exports.bugData = q.result;
         var output = q.serialize();
-        file.saveFile(exports.datadir + "/bugdata.json", output);
+        saveFile(exports.datadir + "/bugdata.json", output);
     });
 };
 
@@ -114,7 +142,7 @@ exports.generateStatusData = function() {
             }
         }
     });
-    file.saveFile(exports.datadir + "/status.json", JSON.stringify(bugs, null, 1));
+    saveFile(exports.datadir + "/status.json", JSON.stringify(bugs, null, 1));
 };
 
-});
+})(this);
