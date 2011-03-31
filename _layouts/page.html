@@ -3,20 +3,6 @@
   <head>
     <title>{{page.title}}</title>
     <link rel="stylesheet" href="../styles.css" type="text/css">
-    <script src="../js/require.js"></script>
-    <script>
-      (function() {
-        require({
-          baseUrl: "../js/"
-        });
-        var modules = "emphasis,{{page.modules}}";
-        if (modules) {
-          require.ready(function() {
-            require(modules.split(","), function() {});
-          });
-        }
-      })();
-    </script>
   </head>
   <body>
     {{content}}
