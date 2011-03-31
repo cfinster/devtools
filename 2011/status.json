@@ -21,7 +21,7 @@
    "review": [],
    "superreview": []
   },
-  "patchSize": 18538
+  "patchSize": 19467
  },
  "587757": {
   "summary": "Implement Browser Console",
@@ -98,6 +98,18 @@
   "status": "NEW",
   "assignedName": "mihai.sucan",
   "whiteboard": "[workspaces]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "646070": {
+  "summary": "Respect chrome developer tools preference in workspace",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspace]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -456,6 +468,18 @@
    "superreview": []
   }
  },
+ "642801": {
+  "summary": "Firefox 4.0 Crash Report [@ SelectorMatches ]  (Mac OSX)",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p1]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "644409": {
   "summary": "Make workspaces save their state across restarts",
   "status": "NEW",
@@ -503,6 +527,18 @@
    "superreview": []
   }
  },
+ "645160": {
+  "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[firebug-p1]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "646025": {
   "summary": "Add file location to console.log, info, debug, etc.",
   "status": "NEW",
@@ -526,11 +562,21 @@
    "superreview": []
   }
  },
- "646070": {
-  "summary": "Respect chrome developer tools preference in workspace",
+ "646504": {
+  "summary": "Global console should have decent display of stack traces",
   "status": "NEW",
   "assignedName": "nobody",
-  "whiteboard": "[workspace]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "646524": {
+  "summary": "Workspace: cache the sandboxes",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -637,19 +683,6 @@
   },
   "patchSize": 20215
  },
- "618311": {
-  "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1][merge-m-c]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 17598
- },
  "632275": {
   "summary": "Web Console: Error message when click on an object to create an inspect window",
   "status": "ASSIGNED",
@@ -668,19 +701,6 @@
   },
   "patchSize": 7942
  },
- "632347": {
-  "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1][merge-m-c]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 1250
- },
  "636727": {
   "summary": "Add Ace to workspaces",
   "status": "ASSIGNED",
@@ -697,7 +717,7 @@
   "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0318]",
+  "whiteboard": "[patchclean:0330]",
   "hasPatch": true,
   "flags": {
    "feedback": [
@@ -768,24 +788,6 @@
    "review": [],
    "superreview": []
   }
- },
- "642108": {
-  "summary": "JS errors from HUD in Error Console",
-  "status": "ASSIGNED",
-  "assignedName": "rcampbell",
-  "whiteboard": "[console-1][merge-m-c]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "dtownsend"
-    }
-   ],
-   "superreview": []
-  },
-  "patchSize": 9966
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -865,19 +867,6 @@
   },
   "patchSize": 7845
  },
- "619598": {
-  "summary": "Up and Down does not retrieve command history in the same way as other consoles",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1][merge-m-c]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 10999
- },
  "638075": {
   "summary": "Memory consumption increases when registering a stream listener.",
   "status": "REOPENED",
@@ -902,6 +891,32 @@
    "superreview": []
   }
  },
+ "618311": {
+  "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
+  "status": "RESOLVED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 17598
+ },
+ "632347": {
+  "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
+  "status": "RESOLVED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 1250
+ },
  "638131": {
   "summary": "Add ability to check if a panel is open or not",
   "status": "RESOLVED",
@@ -925,17 +940,6 @@
    "superreview": []
   }
  },
- "642113": {
-  "summary": "Web Console should remember its configuration",
-  "status": "RESOLVED",
-  "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "645163": {
   "summary": "XUL Panel is closed by menu style toolbar button",
   "status": "RESOLVED",
@@ -947,5 +951,36 @@
    "review": [],
    "superreview": []
   }
+ },
+ "642108": {
+  "summary": "JS errors from HUD in Error Console",
+  "status": "RESOLVED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "dtownsend"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 9966
+ },
+ "619598": {
+  "summary": "Up and Down does not retrieve command history in the same way as other consoles",
+  "status": "RESOLVED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 10999
  }
 }

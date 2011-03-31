@@ -17,7 +17,11 @@ exports.Project = function(el) {
 };
 
 exports.getBugIDandLabel = function(spanEl) {
-    var completeText = $(spanEl).text();
+    if (typeof(spanEl) == "string" || typeof(spanEl) == "number") {
+        completeText = spanEl.toString();
+    } else {
+        var completeText = $(spanEl).text();
+    }
     var match = /^(bug|)\s*(\d+)\s*(.*)/.exec(completeText);
     if (!match) {
         return null;

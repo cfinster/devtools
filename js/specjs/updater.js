@@ -1,6 +1,7 @@
 define(function(require, exports, module) {
 
 var Projects = require("./model").Projects;
+var getBugIDandLabel = require("./model").getBugIDandLabel;
 var _ = require("underscore")._;
 var file = require("./file");
 var buggerall = require("buggerall/index");
@@ -44,31 +45,20 @@ exports.attachUI = function() {
     console.log("UI ready");
 };
 
-var projectsHeader = "<!-- projects follow -->";
-var projectsFooter = "<!-- end of projects -->";
-
 exports.gatherBugList = function(callback) {
-    $.get('status.html?' + new Date().getTime(), function(text) {
-        var headerLocation = text.indexOf(projectsHeader);
-        var footerLocation = text.indexOf(projectsFooter);
-        if (headerLocation == -1 || footerLocation == -1) {
-            alert("Could not find the projects section of status.html!");
+    var bugIds = [];
+    projects.forEach(function(project) {
+        if (!project.bugs) {
             return;
         }
-        text = text.substring(headerLocation + projectsHeader.length, 
-            footerLocation);
-        var projects = new Projects($(text));
-        exports.projects = projects;
-        var bugIds = [];
-        _.values(projects).forEach(function(project) {
-            project.getBugIds().forEach(function(id) {
-                bugIds.push(id);
-            });
+        project.bugs.forEach(function(bug) {
+            bugIds.push(getBugIDandLabel(bug).id);
         });
-        exports.bugList = _.uniq(bugIds);
-        console.log("Bug list from status.html: ", exports.bugList);
-        callback(exports.bugList);
     });
+    
+    exports.bugList = _.uniq(bugIds);
+    console.log("Bug list from projects.js: ", exports.bugList);
+    callback(exports.bugList);
 };
 
 exports.saveBugData = function() {
