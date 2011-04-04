@@ -21,10 +21,17 @@
 				$script("../js/underscore.min.js", "underscore");
 			}
 			$script.ready("code", function() {
-				console.log("codeready");
 				specjs.status.populatePage();
-				console.log("performing jump");
-				specjs.status.jumpToProject();
+				var url = "status.json";
+				if (development) {
+					url += "?" + new Date().getTime();
+				}
+				console.log("loading: ", url);
+				$.getJSON(url, function(data) {
+					console.log("statusdata received");
+					window.statusdata = data;
+					specjs.status.jumpToProject();
+				});
 			});
     </script>
     <title>Mozilla Developer Tools Project Status</title>

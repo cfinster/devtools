@@ -130,55 +130,56 @@ var flagMap = {
 };
 
 var updateBugInformation = function() {
-    $.getJSON('status.json?' + new Date().getTime(), function(data) {
-        exports.statusdata = data;
-        $('span.bug').each(function() {
-            var el = $(this);
-            var info = getBugIDandLabel(el);
-            if (info == null) {
-                return;
-            }
-            var bugid = info.id;
-            var bug = data[bugid];
-            if (!bug) {
-                console.log("Couldn't find data for bug: ", bugid);
-                return;
-            }
-            el.empty();
-            var outer = $('<span/>', {
-                "class": "bug"
-            });
-            $('<a/>', {
-                "class": bug.status == "RESOLVED" ? "bugid resolved" : "bugid",
-                href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
-                target: "_blank",
-                text: bugid
-            }).appendTo(outer);
-            var flags = [];
-            var bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
-            ["feedback", "review", "superreview"].forEach(function(flagType) {
-                var bugFlags = bug.flags[flagType];
-                bugFlags.forEach(function(f) {
-                    bestStatus = flagMap[flagType] + f.status;
-                    if (f.requestee) {
-                        flags.push(flagType + f.status + " " + f.requestee);
-                    } else {
-                        flags.push(flagType + f.status + " " + f.setter);
-                    }
-                });
-            });
-            $('<span/>', {
-                "class": "patchstatus",
-                title: flags.join(", "),
-                html: " " + bestStatus
-            }).appendTo(outer);
-            
-            var summary = info.label || bug.summary;
-            var whiteboard = bug.whiteboard || "";
-            
-            outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard);
-            el.append(outer);
+    if (typeof(statusdata) == "undefined") {
+        return;
+    }
+    var data = statusdata;
+    $('span.bug').each(function() {
+        var el = $(this);
+        var info = getBugIDandLabel(el.text());
+        if (info == null) {
+            return;
+        }
+        var bugid = info.id;
+        var bug = data[bugid];
+        if (!bug) {
+            console.log("Couldn't find data for bug: ", bugid);
+            return;
+        }
+        el.empty();
+        var outer = $('<span/>', {
+            "class": "bug"
         });
+        $('<a/>', {
+            "class": bug.status == "RESOLVED" ? "bugid resolved" : "bugid",
+            href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
+            target: "_blank",
+            text: bugid
+        }).appendTo(outer);
+        var flags = [];
+        var bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
+        ["feedback", "review", "superreview"].forEach(function(flagType) {
+            var bugFlags = bug.flags[flagType];
+            bugFlags.forEach(function(f) {
+                bestStatus = flagMap[flagType] + f.status;
+                if (f.requestee) {
+                    flags.push(flagType + f.status + " " + f.requestee);
+                } else {
+                    flags.push(flagType + f.status + " " + f.setter);
+                }
+            });
+        });
+        $('<span/>', {
+            "class": "patchstatus",
+            title: flags.join(", "),
+            html: " " + bestStatus
+        }).appendTo(outer);
+        
+        var summary = info.label || bug.summary;
+        var whiteboard = bug.whiteboard || "";
+        
+        outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard);
+        el.append(outer);
     });
 };
 
@@ -202,10 +203,10 @@ exports.showProject = function(id) {
         el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
     }).bigtext();
     location.hash = id;
+    updateBugInformation();
 };
 
 exports.populatePage = function() {
-    console.log("populating");
     exports.projectTemplate = _.template(document.getElementById("project_template").innerHTML);
     exports.personTemplate = _.template(document.getElementById("person_template").innerHTML);
     var projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML);
@@ -224,7 +225,6 @@ exports.populatePage = function() {
 };
 
 exports.jumpToProject = function() {
-    console.log("jumping");
     var hash = location.hash.substring(1);
     if (!hash) {
         return;

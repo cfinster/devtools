@@ -180,28 +180,6 @@ section.people {
     display: none;
 }
 
-div.tabs {
-    display: none;
-    font-family: Helvetica, Arial, sans-serif;
-    color: black;
-}
-
-div.tabs.visible {
-    display: block;
-}
-
-
-span.expander {
-    font-family: sans-serif;
-    cursor: pointer;
-    margin-right: 4px;
-    padding-right: 4px;
-}
-
-div#tier2 {
-    display: none;
-}
-
 span.patchstatus {
     font-family: "Inconsolata", "Menlo", "Courier New", monospace;
 }
