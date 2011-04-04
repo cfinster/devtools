@@ -5,6 +5,8 @@ if (!specjs) {
     specjs = win.specjs = {};
 }
 
+console.log("module coming online");
+
 var exports = specjs.status = {};
 
 var Project = exports.Project = function(data) {
@@ -191,20 +193,38 @@ for (var i = 0; i < projects.length; i++) {
 exports.showProject = function(id) {
     var project = projectMap[id];
     var newNode = $(exports.projectTemplate(project));
+    $("#content").children().remove().append(newNode);
     newNode.appendTo($("#content"));
+    $(".status").each(function() {
+        var el = $(this);
+        var status = el.text().replace(/^\s+|\s+$/,"");
+        var statusAbbreviation = status.substring(0, 2).toUpperCase();
+        el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
+    }).bigtext();
+    location.hash = id;
 };
 
 exports.populatePage = function() {
+    console.log("populating");
     exports.projectTemplate = _.template(document.getElementById("project_template").innerHTML);
     exports.personTemplate = _.template(document.getElementById("person_template").innerHTML);
     var projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML);
     projects.forEach(function(project) {
         var newNode = $(projectNavTemplate(project));
-        newNode.appendTo($("#projects"));
+        newNode.appendTo($("#nav"));
+    });
+    $('.maindate').each(function() {
+        var el = $(this);
+        var text = el.text();
+        el.html("<div>" + text.split(" ").join("</div><div>") + "</div>").bigtext();
+    });
+    $("#nav").click(function(e) {
+        exports.showProject($(e.target).attr("data-id"));
     });
 };
 
 exports.jumpToProject = function() {
+    console.log("jumping");
     var hash = location.hash.substring(1);
     if (!hash) {
         return;

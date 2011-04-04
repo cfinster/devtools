@@ -12,6 +12,7 @@
 				$script("../js/bigtext.js", "bigtext");
 			});
 			$script.ready(["jquery", "underscore", "bigtext", "projects"], function() {
+				console.log("everything is set except code");
 				$script("../js/specjs/status.js", "code");
 			});
 			if (development) {
@@ -20,7 +21,9 @@
 				$script("../js/underscore.min.js", "underscore");
 			}
 			$script.ready("code", function() {
+				console.log("codeready");
 				specjs.status.populatePage();
+				console.log("performing jump");
 				specjs.status.jumpToProject();
 			});
     </script>
@@ -28,14 +31,13 @@
   </head>
   <body>
 		<div class="topsummary">
-	    <h1>Mozilla DevTools Project Status</h1>
+	    <h1>Developer Tools Project Status</h1>
 	    <div class="maindate">March 31</div>
 		</div>
     
 		<div id="primary">
 			<div id="nav">
 				<div class="summary">Summary</div>
-				<div id="projects"></div>
 				<div class="people">People</div>
 			</div>
 		
