@@ -134,6 +134,14 @@ exports.projects = [
         people: ["jwalker"]
     },
     {
+        id: "cssedit",
+        name: "CSS Editor",
+        blurb: "Tweak and view!",
+        status: "Planning",
+        people: [],
+        bugs: []
+    },
+    {
         id: "sdk",
         url: "https://wiki.mozilla.org/DevTools/Features/SDK",
         name: "DevTools SDK 1",
@@ -146,6 +154,28 @@ exports.projects = [
 		    638142,
 		    637291
         ]
+    },
+    {
+        id: "viewsource",
+        name: "View Source Reboot",
+        blurb: "The View Source of the Future",
+        status: "Planning",
+        people: [],
+        bugs: [],
+        notes: [
+            "deminification",
+            "insert alert",
+            "view and edit?",
+            "current source vs. original/cached"
+        ]
+    },
+    {
+        id: "gauges",
+        name: "Gauges",
+        blurb: "Page performance at-a-glance",
+        status: "Planning",
+        people: [],
+        bugs: []
     },
     {
         id: "firebug6",

@@ -116,6 +116,11 @@ div.summary div.top h2 {
     -webkit-box-flex: 1;
     margin-bottom: 5px;
     margin-top: 10px;
+    padding-left: 0.5em;
+}
+
+section.project .blurb {
+    padding: 0.5em 0.5em;
 }
 
 div.summary div.top div {
@@ -137,9 +142,8 @@ section.project div.summary div.counts span.bugs {
 }
 
 div.status {
-    width: 70px;
-    line-height: 35px;
-    padding: 20px 10px 0px 10px;
+    line-height: 40px;
+    padding: 30px 10px 0px 10px;
     border-left: 1px solid #00a;
     font-family: "BostonTrafficRegular", Helvetica, Arial, sans-serif;;
 }
@@ -186,4 +190,8 @@ span.patchstatus {
 
 #templates {
     display: none;
+}
+
+div.tabs {
+    padding: 1em;
 }

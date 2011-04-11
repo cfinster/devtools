@@ -18,10 +18,15 @@
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [],
+   "review": [
+    {
+     "status": "-",
+     "setter": "mihai.sucan"
+    }
+   ],
    "superreview": []
   },
-  "patchSize": 19467
+  "patchSize": 26011
  },
  "587757": {
   "summary": "Implement Browser Console",
@@ -42,22 +47,11 @@
   "whiteboard": "[console-1][has-patch]",
   "hasPatch": true,
   "flags": {
-   "feedback": [
-    {
-     "status": "+",
-     "setter": "mihai.sucan"
-    }
-   ],
-   "review": [
-    {
-     "status": "?",
-     "requestee": "gavin.sharp",
-     "setter": "dherman"
-    }
-   ],
+   "feedback": [],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 6912
+  "patchSize": 6910
  },
  "636907": {
   "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
@@ -74,18 +68,6 @@
   "summary": "[gcli] Command registry",
   "status": "NEW",
   "assignedName": "jwalker",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "636725": {
-  "summary": "Unit tests for Workspaces",
-  "status": "NEW",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[workspaces]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -153,18 +135,6 @@
    "superreview": []
   }
  },
- "585956": {
-  "summary": "Implement console.trace() in web console",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[console-1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "592552": {
   "summary": "History is shared among all Web Console instances",
   "status": "NEW",
@@ -181,29 +151,6 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p1]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "637291": {
-  "summary": "Add titlebar and name attributes to Panels",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[devtools]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "638142": {
-  "summary": "Add ability to anchor a panel to a widget",
-  "status": "NEW",
-  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -469,7 +416,7 @@
   }
  },
  "642801": {
-  "summary": "Firefox 4.0 Crash Report [@ SelectorMatches ]  (Mac OSX)",
+  "summary": "Firefox 4.0 Crash Report [@ SelectorMatches ] with Firebug",
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p1]",
@@ -616,11 +563,35 @@
   },
   "patchSize": 17628
  },
+ "638142": {
+  "summary": "Add ability to anchor a panel to a widget",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[papercuts]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "614586": {
   "summary": "Implement string substitution in all console API methods",
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[parity-firebug/webkit] [console-1]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "637291": {
+  "summary": "Add titlebar and name attributes to Panels",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[devtools]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -640,19 +611,6 @@
   },
   "patchSize": 15341
  },
- "526207": {
-  "summary": "Add IP address and port info to nsIHttpActivityObserver",
-  "status": "ASSIGNED",
-  "assignedName": "honzab.moz",
-  "whiteboard": "[firebug-p2]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 17645
- },
  "560314": {
   "summary": "Implement js::dbg2: new C++ JavaScript debugging API, replacing jsd",
   "status": "ASSIGNED",
@@ -664,43 +622,98 @@
    "superreview": []
   }
  },
- "585991": {
-  "summary": "Show a popup listing possible completions",
+ "585956": {
+  "summary": "Implement console.trace() in web console",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[console-2][patchclean:0329]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "?",
-     "requestee": "rcampbell",
-     "setter": "mihai.sucan"
-    }
-   ],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 20215
- },
- "632275": {
-  "summary": "Web Console: Error message when click on an object to create an inspect window",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0314] [console-1]",
+  "whiteboard": "[console-1][patchclean:0408]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
      "status": "?",
-     "requestee": "dcamp",
+     "requestee": "rcampbell",
+     "setter": "mihai.sucan"
+    },
+    {
+     "status": "?",
+     "requestee": "jonas",
+     "setter": "rcampbell"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 21050
+ },
+ "585991": {
+  "summary": "Show a popup listing possible completions",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-2][patchclean:0410]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "rcampbell"
+    },
+    {
+     "status": "?",
+     "requestee": "dtownsend",
+     "setter": "rcampbell"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 38349
+ },
+ "632275": {
+  "summary": "Web Console: Error message when click on an object to create an inspect window",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[patchclean:0401] [console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "dcamp"
+    },
+    {
+     "status": "?",
+     "requestee": "sdwilsh",
      "setter": "mihai.sucan"
     }
    ],
    "superreview": []
   },
-  "patchSize": 8043
+  "patchSize": 8457
+ },
+ "636725": {
+  "summary": "Unit tests for Workspaces",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspaces][patchclean:0406]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "rcampbell"
+    },
+    {
+     "status": "?",
+     "requestee": "sdwilsh",
+     "setter": "mihai.sucan"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 19133
  },
  "636727": {
   "summary": "Add Ace to workspaces",
@@ -718,42 +731,7 @@
   "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0330]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "+",
-     "setter": "rcampbell"
-    }
-   ],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 36150
- },
- "642615": {
-  "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
-  "status": "ASSIGNED",
-  "assignedName": "mihai.sucan",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "+",
-     "setter": "rcampbell"
-    }
-   ],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 5856
- },
- "616742": {
-  "summary": "Implement console.debug() (was: Navigation broken on Citytv website)",
-  "status": "ASSIGNED",
-  "assignedName": "rcampbell",
-  "whiteboard": "[console-3]",
+  "whiteboard": "[patchclean:0408][in-review]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
@@ -764,18 +742,41 @@
     },
     {
      "status": "?",
-     "requestee": "jonas",
-     "setter": "rcampbell"
+     "requestee": "community",
+     "setter": "mihai.sucan"
     },
     {
      "status": "?",
-     "requestee": "gal",
+     "requestee": "sdwilsh",
      "setter": "rcampbell"
     }
    ],
    "superreview": []
   },
-  "patchSize": 3183
+  "patchSize": 47684
+ },
+ "642615": {
+  "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[patchclean:0406]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "rcampbell"
+    },
+    {
+     "status": "?",
+     "requestee": "gavin.sharp",
+     "setter": "rcampbell"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 10197
  },
  "622303": {
   "summary": "Web Console should remember filter settings.",
@@ -811,44 +812,41 @@
   "summary": "Keep track of file:// url 'loadGroups'",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0107][softblocker] [console-1]",
+  "whiteboard": "[patchclean:0401][softblocker][console-1]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
-     "status": "?",
-     "requestee": "dcamp",
-     "setter": "mihai.sucan"
+     "status": "+",
+     "setter": "dcamp"
+    },
+    {
+     "status": "+",
+     "setter": "dolske"
     }
    ],
    "superreview": []
   },
-  "patchSize": 11704
+  "patchSize": 11758
  },
  "626484": {
   "summary": "Incorrect order of lines when copying from web console",
   "status": "ASSIGNED",
   "assignedName": "unusualtears",
-  "whiteboard": "[console-1]",
+  "whiteboard": "[console-1][has-patch]",
   "hasPatch": true,
   "flags": {
-   "feedback": [
-    {
-     "status": "+",
-     "setter": "rcampbell"
-    }
-   ],
+   "feedback": [],
    "review": [
     {
-     "status": "?",
-     "requestee": "gavin.sharp",
-     "setter": "rcampbell"
+     "status": "+",
+     "setter": "mihai.sucan"
     }
    ],
    "superreview": []
   },
-  "patchSize": 4401
+  "patchSize": 5767
  },
  "612252": {
   "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
@@ -892,32 +890,6 @@
    "superreview": []
   }
  },
- "618311": {
-  "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
-  "status": "RESOLVED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 17598
- },
- "632347": {
-  "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
-  "status": "RESOLVED",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 1250
- },
  "638131": {
   "summary": "Add ability to check if a panel is open or not",
   "status": "RESOLVED",
@@ -953,6 +925,28 @@
    "superreview": []
   }
  },
+ "616742": {
+  "summary": "Implement console.debug() (was: Navigation broken on Citytv website)",
+  "status": "RESOLVED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[console-3][has-review]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "ddahl"
+    },
+    {
+     "status": "+",
+     "setter": "jonas"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 3183
+ },
  "642108": {
   "summary": "JS errors from HUD in Error Console",
   "status": "RESOLVED",
@@ -971,9 +965,53 @@
   },
   "patchSize": 9966
  },
+ "526207": {
+  "summary": "Add IP address and port info to nsIHttpActivityObserver",
+  "status": "RESOLVED",
+  "assignedName": "zackw",
+  "whiteboard": "[firebug-p2]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "cbiesinger"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 23584
+ },
+ "618311": {
+  "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
+  "status": "VERIFIED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 17598
+ },
+ "632347": {
+  "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
+  "status": "VERIFIED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 1250
+ },
  "619598": {
   "summary": "Up and Down does not retrieve command history in the same way as other consoles",
-  "status": "RESOLVED",
+  "status": "VERIFIED",
   "assignedName": "mihai.sucan",
   "whiteboard": "[console-1]",
   "hasPatch": true,
