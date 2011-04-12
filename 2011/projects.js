@@ -80,7 +80,13 @@ exports.projects = [
         name: "Memory Tooling Backend",
         blurb: "Data for the future",
         status: "Planning",
-        people: ["dcamp"]
+        people: ["dcamp"],
+        bugs: [
+            646734,
+            646735,
+            646737,
+            646739
+        ]
     },
     {
         id: "highlighter",

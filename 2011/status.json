@@ -10,6 +10,39 @@
    "superreview": []
   }
  },
+ "646734": {
+  "summary": "Heap histogram API",
+  "status": "NEW",
+  "assignedName": "dcamp",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "646737": {
+  "summary": "Heap profiling API - shortest path tree",
+  "status": "NEW",
+  "assignedName": "dcamp",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "646739": {
+  "summary": "Heap profiling API - object graph snapshot for a compartment",
+  "status": "NEW",
+  "assignedName": "dcamp",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "577721": {
   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
   "status": "NEW",
@@ -218,17 +251,6 @@
  },
  "642111": {
   "summary": "Web Console messages should scroll into view automatically",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "642112": {
-  "summary": "Web Console checkmarks do not reliably display their state",
   "status": "NEW",
   "assignedName": "nobody",
   "hasPatch": false,
@@ -479,12 +501,13 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p1]",
-  "hasPatch": false,
+  "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 19783
  },
  "646025": {
   "summary": "Add file location to console.log, info, debug, etc.",
@@ -531,6 +554,17 @@
    "superreview": []
   }
  },
+ "646735": {
+  "summary": "Heap profiling API - dominator tree",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "611032": {
   "summary": "Break out HUDConsoleObserver from HUDService",
   "status": "NEW",
@@ -544,6 +578,10 @@
      "status": "?",
      "requestee": "gavin.sharp",
      "setter": "ddahl"
+    },
+    {
+     "status": "+",
+     "setter": "rcampbell"
     }
    ],
    "superreview": []
@@ -626,25 +664,23 @@
   "summary": "Implement console.trace() in web console",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1][patchclean:0408]",
+  "whiteboard": "[console-1][patchclean:0411]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
-     "status": "?",
-     "requestee": "rcampbell",
-     "setter": "mihai.sucan"
+     "status": "+",
+     "setter": "rcampbell"
     },
     {
-     "status": "?",
-     "requestee": "jonas",
-     "setter": "rcampbell"
+     "status": "+",
+     "setter": "jonas"
     }
    ],
    "superreview": []
   },
-  "patchSize": 21050
+  "patchSize": 21736
  },
  "585991": {
   "summary": "Show a popup listing possible completions",
@@ -683,9 +719,8 @@
      "setter": "dcamp"
     },
     {
-     "status": "?",
-     "requestee": "sdwilsh",
-     "setter": "mihai.sucan"
+     "status": "+",
+     "setter": "sdwilsh"
     }
    ],
    "superreview": []
@@ -904,6 +939,17 @@
  },
  "639518": {
   "summary": "Create a Cross Add-on registry and communication service",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642112": {
+  "summary": "Web Console checkmarks do not reliably display their state",
   "status": "RESOLVED",
   "assignedName": "nobody",
   "hasPatch": false,
