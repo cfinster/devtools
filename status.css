@@ -43,7 +43,7 @@ section.project {
     -webkit-box-flex: 1;
     padding-left: 200px;
     padding-top: 25px;
-    background: url(../images/logo.png) no-repeat;
+    background: url(images/logo.png) no-repeat;
     color: #484848;
 }
 
