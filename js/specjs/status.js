@@ -5,8 +5,6 @@ if (!specjs) {
     specjs = win.specjs = {};
 }
 
-console.log("module coming online");
-
 var exports = specjs.status = {};
 
 var Project = exports.Project = function(data) {

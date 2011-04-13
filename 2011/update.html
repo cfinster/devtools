@@ -3,24 +3,17 @@
   <head>
     <title>Project Data Updater</title>
     <link rel="stylesheet" href="../styles.css" type="text/css">
-    <script src="../js/script.js"></script>
+    <script src="../js/LAB.min.js"></script>
 		<script>
-			$script("../js/jquery.js", "jquery");
-			$script("../js/underscore.js", "underscore");
-			$script("projects.js", "projects");
-			$script("../js/date.js", "date");
-			$script("../js/time.js", "time");
-			$script.ready(["jquery", "underscore", "date", "time"], function() {
-				$script("../js/buggerall.js", "buggerall");
-			});
-			$script.ready(["jquery", "underscore", "projects"], function() {
-				$script("../js/specjs/status.js", "status");
-			});
-			$script.ready(["buggerall", "status"], function() {
-				$script("../js/specjs/updater.js", "updater");
-			});
-			
-			$script.ready("updater", function() {
+			$LAB.script("../js/jquery.js")
+			.script("../js/underscore.js")
+			.script("projects.js")
+			.script("../js/date.js")
+			.script("../js/time.js").wait()
+			.script("../js/buggerall.js")
+			.script("../js/specjs/status.js").wait()
+			.script("../js/specjs/updater.js")
+			.wait(function() {
 				specjs.updater.attachUI();
 			});
 		</script>
