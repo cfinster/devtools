@@ -27,9 +27,7 @@ exports.projects = [
         people: ["ddahl", "msucan"],
         bugs: [
 			"642108 JS errors from HUD in Error Console",
-			"616742 Implement console.debug",
-			645163,
-            "642112 Web Console checkmarks do not reliably display their state"
+			"616742 Implement console.debug"
         ]
     },
     {
@@ -231,6 +229,7 @@ exports.projects = [
             642615,
             646025,
             646028,
+            643184,
             "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
             "585956 Implement console.trace() in web console",
             "644419 Console should have user-settable log limits for each message category",
