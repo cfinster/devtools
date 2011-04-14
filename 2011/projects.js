@@ -27,7 +27,8 @@ exports.projects = [
         people: ["ddahl", "msucan"],
         bugs: [
 			"642108 JS errors from HUD in Error Console",
-			"616742 Implement console.debug"
+			"616742 Implement console.debug",
+            "637801 console.log shouldn't display escaped strings"
         ]
     },
     {
@@ -49,52 +50,14 @@ exports.projects = [
         ]
     },
     {
-        id: "memoryback",
-        url: "https://wiki.mozilla.org/DevTools/Features/Memory",
-        name: "Memory Tooling Backend",
-        blurb: "Data for the future",
-        status: "Planning",
-        people: ["dcamp"],
-        bugs: [
-            646734,
-            646735,
-            646737,
-            646739
-        ]
-    },
-    {
         id: "highlighter",
         url: "https://wiki.mozilla.org/DevTools/Features/Highlighter",
         name: "Highlighter",
         blurb: "Beautiful information about your DOM",
-        status: "Planning",
+        status: "Implementation",
         people: ["rcampbell"],
         bugs: [
             642471
-        ]
-    },
-    {
-        id: "gcli",
-        url: "https://wiki.mozilla.org/DevTools/Features/GCLI",
-        name: "Graphical Command Line Interface",
-        blurb: "The fastest, most discoverable way to control your tools",
-        status: "Prototype",
-        people: ["jwalker"],
-        bugs: [
-		    641903,
-		    642505,
-		    "642231 Prepare GCLI for review",
-		    "642241 Experiment with better UI presentation methods in GCLI",
-		    "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes",
-		    "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment",
-		    "642242 GCLI should embed help as commands",
-		    "642240 GCLI needs some form of URI for reference to everything",
-		    "642239 GCLI should have history retention",
-		    "642238 GCLI metadata should have types on return values",
-		    "642237 GCLI should display its opening command menu in a hierarchy",
-		    "642226 GCLI should support use without an input element",
-		    "642196 GCLI should allow JS to be entered using {}",
-		    "642189 GCLI should support grouped parameters"
         ]
     },
     {
@@ -106,33 +69,66 @@ exports.projects = [
         people: []
     },
     {
-        id: "styledoctor",
-        url: "https://wiki.mozilla.org/DevTools/Features/StyleDoctor",
-        name: "Style Doctor",
-        blurb: "The cure for what ails your CSS",
-        status: "Planning",
-        people: ["jwalker"]
-    },
-    {
-        id: "cssedit",
-        name: "CSS Editor",
-        blurb: "Tweak and view!",
-        status: "Planning",
+        id: "webconsole6",
+        url: "https://wiki.mozilla.org/DevTools/Features/WebConsole6",
+        name: "Web Console 6",
+        blurb: "Console Cleanup and Integration",
+        status: "Implementation",
         people: [],
-        bugs: []
+        bugs: [
+            577721,
+            585991,
+            637801,
+            632347,
+            632275,
+            644596,
+            618311,
+            638949,
+            609890,
+            611032,
+            612658,
+            595223,
+            626484,
+            619598,
+            612252,
+            614586,
+            642615,
+            646025,
+            646028,
+            643184,
+            "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
+            "585956 Implement console.trace() in web console",
+            "644419 Console should have user-settable log limits for each message category",
+            "642109 Web Console REPL 'readline' occasionally stops working right",
+            "642111 Web Console messages should scroll into view automatically",
+            "646504 Global console should have decent display of stack traces",
+            "587757 Implement Browser Console",
+            "592552 History is shared among all Web Console instances",
+            "622303 Web Console should remember filter settings"
+        ]
     },
     {
-        id: "sdk",
-        url: "https://wiki.mozilla.org/DevTools/Features/SDK",
-        name: "DevTools SDK 1",
-        blurb: "First bits of customizability",
-        status: "Planning",
+        id: "gcli",
+        url: "https://wiki.mozilla.org/DevTools/Features/GCLI",
+        name: "Graphical Command Line Interface",
+        blurb: "The fastest, most discoverable way to control your tools",
+        status: "Implementation",
+        people: ["jwalker"],
         bugs: [
-		    639518,
-		    638871,
-		    638131,
-		    638142,
-		    637291
+            641903,
+            642505,
+            "642231 Prepare GCLI for review",
+            "642241 Experiment with better UI presentation methods in GCLI",
+            "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes",
+            "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment",
+            "642242 GCLI should embed help as commands",
+            "642240 GCLI needs some form of URI for reference to everything",
+            "642239 GCLI should have history retention",
+            "642238 GCLI metadata should have types on return values",
+            "642237 GCLI should display its opening command menu in a hierarchy",
+            "642226 GCLI should support use without an input element",
+            "642196 GCLI should allow JS to be entered using {}",
+            "642189 GCLI should support grouped parameters"
         ]
     },
     {
@@ -147,6 +143,58 @@ exports.projects = [
             "insert alert",
             "view and edit?",
             "current source vs. original/cached"
+        ]
+    },
+    {
+        id: "cssedit",
+        name: "CSS Editor",
+        blurb: "Tweak and view!",
+        status: "Planning",
+        people: [],
+        bugs: []
+    },
+    {
+        id: "styledoctor",
+        url: "https://wiki.mozilla.org/DevTools/Features/StyleDoctor",
+        name: "Style Doctor",
+        blurb: "The cure for what ails your CSS",
+        status: "Planning",
+        people: ["jwalker"]
+    },
+    {
+        id: "debugger",
+        url: "https://wiki.mozilla.org/DevTools/Features/Debugger",
+        name: "Debugger",
+        blurb: "A straightforward walk through your code",
+        status: "Planning",
+        people: ["dcamp"]
+    },
+    {
+        id: "sdk",
+        url: "https://wiki.mozilla.org/DevTools/Features/SDK",
+        name: "DevTools SDK 1",
+        blurb: "First bits of customizability",
+        status: "Planning",
+        bugs: [
+            639518,
+            638871,
+            638131,
+            638142,
+            637291
+        ]
+    },
+    {
+        id: "memoryback",
+        url: "https://wiki.mozilla.org/DevTools/Features/Memory",
+        name: "Memory Tooling Backend",
+        blurb: "Data for the future",
+        status: "Planning",
+        people: ["dcamp"],
+        bugs: [
+            646734,
+            646735,
+            646737,
+            646739
         ]
     },
     {
@@ -200,45 +248,6 @@ exports.projects = [
         ],
         updates: [
             "2011/02/24 Quick mockups added"
-        ]
-    },
-    {
-        id: "webconsole6",
-        url: "https://wiki.mozilla.org/DevTools/Features/WebConsole6",
-        name: "Web Console 6",
-        blurb: "Console Cleanup and Integration",
-        status: "Planning",
-        people: [],
-        bugs: [
-            577721,
-            585991,
-            637801,
-            632347,
-            632275,
-            644596,
-            618311,
-            638949,
-            609890,
-            611032,
-            612658,
-            595223,
-            626484,
-            619598,
-            612252,
-            614586,
-            642615,
-            646025,
-            646028,
-            643184,
-            "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
-            "585956 Implement console.trace() in web console",
-            "644419 Console should have user-settable log limits for each message category",
-            "642109 Web Console REPL 'readline' occasionally stops working right",
-            "642111 Web Console messages should scroll into view automatically",
-		    "646504 Global console should have decent display of stack traces",
-		    "587757 Implement Browser Console",
-		    "592552 History is shared among all Web Console instances",
-		    "622303 Web Console should remember filter settings"
         ]
     },
     {
