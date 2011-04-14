@@ -73,19 +73,6 @@
    "superreview": []
   }
  },
- "637801": {
-  "summary": "console.log shouldn't display escaped strings",
-  "status": "NEW",
-  "assignedName": "dherman",
-  "whiteboard": "[console-1][has-patch]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 6910
- },
  "636907": {
   "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
   "status": "NEW",
@@ -97,10 +84,54 @@
    "superreview": []
   }
  },
+ "591212": {
+  "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
+  "status": "NEW",
+  "assignedName": "jwalker",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "592743": {
+  "summary": "Style inspector specificity calculator makes mistakes",
+  "status": "NEW",
+  "assignedName": "jwalker",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "641903": {
   "summary": "[gcli] Command registry",
   "status": "NEW",
   "assignedName": "jwalker",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "586977": {
+  "summary": "Investigate how the inspector style panel works with shorthand properties",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "588941": {
+  "summary": "Computed style for property is sometimes wrong in the new Style panel",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -120,11 +151,11 @@
    "superreview": []
   }
  },
- "646070": {
-  "summary": "Respect chrome developer tools preference in workspace",
+ "643184": {
+  "summary": "Checkbox menu items in a toolbar do not display the check mark when checked in Firefox 4 on Mac OS X",
   "status": "NEW",
-  "assignedName": "mihai.sucan",
-  "whiteboard": "[workspace]",
+  "assignedName": "mstange",
+  "whiteboard": "[4rc2]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -161,6 +192,39 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "586974": {
+  "summary": "Inspector style panel ranks all unmatched rules the same",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "587752": {
+  "summary": "Animations in the new Style panel",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "589375": {
+  "summary": "Inspector: style panel keyboard access",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -496,19 +560,6 @@
    "superreview": []
   }
  },
- "645160": {
-  "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[firebug-p1]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 19783
- },
  "646025": {
   "summary": "Add file location to console.log, info, debug, etc.",
   "status": "NEW",
@@ -558,6 +609,50 @@
   "summary": "Heap profiling API - dominator tree",
   "status": "NEW",
   "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590795": {
+  "summary": "Changes made in the CSS editor aren't reflected in the style panel",
+  "status": "NEW",
+  "assignedName": "pwalton",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590796": {
+  "summary": "Clicking on a rule in the style panel doesn't jump to the correct line in the CSS editor",
+  "status": "NEW",
+  "assignedName": "pwalton",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590797": {
+  "summary": "CSS editor panel should be resizable",
+  "status": "NEW",
+  "assignedName": "pwalton",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "594742": {
+  "summary": "Inspector CSS editor brings back unsaved state when I reopen it",
+  "status": "NEW",
+  "assignedName": "pwalton",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -637,6 +732,19 @@
    "superreview": []
   }
  },
+ "583041": {
+  "summary": "create a css editor for the inspector (milestone 0.6.1)",
+  "status": "ASSIGNED",
+  "assignedName": "cedricv",
+  "whiteboard": "[strings] [patchclean:0830]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 37785
+ },
  "554926": {
   "summary": "Dockable Panels",
   "status": "ASSIGNED",
@@ -660,11 +768,34 @@
    "superreview": []
   }
  },
+ "582596": {
+  "summary": "Style view centered around answering common CSS questions",
+  "status": "ASSIGNED",
+  "assignedName": "jwalker",
+  "whiteboard": "[strings] [patchclean:0827]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [
+    {
+     "status": "+",
+     "setter": "l10n"
+    }
+   ],
+   "review": [
+    {
+     "status": "-",
+     "setter": "dolske"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 79171
+ },
  "585956": {
   "summary": "Implement console.trace() in web console",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[console-1][patchclean:0411]",
+  "whiteboard": "[console-1][patchclean:0411][fixed-in-devtools]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
@@ -709,23 +840,14 @@
   "summary": "Web Console: Error message when click on an object to create an inspect window",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0401] [console-1]",
+  "whiteboard": "[patchclean:0412] [console-1][orange]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "dcamp"
-    },
-    {
-     "status": "+",
-     "setter": "sdwilsh"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 8457
+  "patchSize": 6899
  },
  "636725": {
   "summary": "Unit tests for Workspaces",
@@ -741,9 +863,8 @@
      "setter": "rcampbell"
     },
     {
-     "status": "?",
-     "requestee": "sdwilsh",
-     "setter": "mihai.sucan"
+     "status": "-",
+     "setter": "sdwilsh"
     }
    ],
    "superreview": []
@@ -766,7 +887,7 @@
   "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0408][in-review]",
+  "whiteboard": "[patchclean:0408][in-review][see-comment-26-for-try-build]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
@@ -777,13 +898,12 @@
     },
     {
      "status": "?",
-     "requestee": "community",
-     "setter": "mihai.sucan"
+     "requestee": "l10n",
+     "setter": "sdwilsh"
     },
     {
-     "status": "?",
-     "requestee": "sdwilsh",
-     "setter": "rcampbell"
+     "status": "-",
+     "setter": "sdwilsh"
     }
    ],
    "superreview": []
@@ -813,6 +933,47 @@
   },
   "patchSize": 10197
  },
+ "646070": {
+  "summary": "Respect chrome developer tools preference in workspace",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspace][patchclean:0412]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [
+    {
+     "status": "?",
+     "requestee": "rcampbell",
+     "setter": "mihai.sucan"
+    }
+   ],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 12258
+ },
+ "590307": {
+  "summary": "CSS editor should properly edit inline style sheets",
+  "status": "ASSIGNED",
+  "assignedName": "pwalton",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590799": {
+  "summary": "Styling for the CSS editor panel",
+  "status": "ASSIGNED",
+  "assignedName": "pwalton",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "622303": {
   "summary": "Web Console should remember filter settings.",
   "status": "ASSIGNED",
@@ -824,6 +985,19 @@
    "review": [],
    "superreview": []
   }
+ },
+ "645160": {
+  "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
+  "status": "ASSIGNED",
+  "assignedName": "sphink",
+  "whiteboard": "[firebug-p1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 19783
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -847,23 +1021,14 @@
   "summary": "Keep track of file:// url 'loadGroups'",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0401][softblocker][console-1]",
+  "whiteboard": "[patchclean:0412][softblocker][console-1]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "dcamp"
-    },
-    {
-     "status": "+",
-     "setter": "dolske"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 11758
+  "patchSize": 11805
  },
  "626484": {
   "summary": "Incorrect order of lines when copying from web console",
@@ -875,13 +1040,13 @@
    "feedback": [],
    "review": [
     {
-     "status": "+",
-     "setter": "mihai.sucan"
+     "status": "-",
+     "setter": "gavin.sharp"
     }
    ],
    "superreview": []
   },
-  "patchSize": 5767
+  "patchSize": 5784
  },
  "612252": {
   "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
@@ -925,6 +1090,19 @@
    "superreview": []
   }
  },
+ "637801": {
+  "summary": "console.log shouldn't display escaped strings",
+  "status": "RESOLVED",
+  "assignedName": "dherman",
+  "whiteboard": "[console-1][has-patch]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 6910
+ },
  "638131": {
   "summary": "Add ability to check if a panel is open or not",
   "status": "RESOLVED",
@@ -947,51 +1125,6 @@
    "review": [],
    "superreview": []
   }
- },
- "642112": {
-  "summary": "Web Console checkmarks do not reliably display their state",
-  "status": "RESOLVED",
-  "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "645163": {
-  "summary": "XUL Panel is closed by menu style toolbar button",
-  "status": "RESOLVED",
-  "assignedName": "nobody",
-  "whiteboard": "[blocks-devtools-fx5-patches]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "616742": {
-  "summary": "Implement console.debug() (was: Navigation broken on Citytv website)",
-  "status": "RESOLVED",
-  "assignedName": "rcampbell",
-  "whiteboard": "[console-3][has-review]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "ddahl"
-    },
-    {
-     "status": "+",
-     "setter": "jonas"
-    }
-   ],
-   "superreview": []
-  },
-  "patchSize": 3183
  },
  "642108": {
   "summary": "JS errors from HUD in Error Console",
@@ -1054,6 +1187,28 @@
    "superreview": []
   },
   "patchSize": 1250
+ },
+ "616742": {
+  "summary": "Implement console.debug() (was: Navigation broken on Citytv website)",
+  "status": "VERIFIED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[console-3][has-review]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "ddahl"
+    },
+    {
+     "status": "+",
+     "setter": "jonas"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 3183
  },
  "619598": {
   "summary": "Up and Down does not retrieve command history in the same way as other consoles",

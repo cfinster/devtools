@@ -65,8 +65,18 @@ exports.projects = [
         url: "https://wiki.mozilla.org/DevTools/Features/StyleInspector",
         name: "Style Inspector",
         blurb: "View an element's style, in style!",
-        status: "Planning",
-        people: []
+        status: "Implementation",
+        people: ["mratcliffe"],
+        bugs: [
+            "582596 style view answering common CSS questions",
+            "591212 react to dynamic changes to the stylesheets",
+            "586977 investigate how the panel works with shorthand properties",
+            "588941 computed style for property is sometimes wrong",
+            "586974 all unmatched rules are ranked the same",
+            "587752 animations in the panel",
+            "589375 keyboard access",
+            "592743 specificity calculator makes mistakes"
+        ]
     },
     {
         id: "webconsole6",
@@ -136,7 +146,7 @@ exports.projects = [
         name: "View Source Reboot",
         blurb: "The View Source of the Future",
         status: "Planning",
-        people: [],
+        people: ["msucan", "getify"],
         bugs: [],
         notes: [
             "deminification",
@@ -149,9 +159,17 @@ exports.projects = [
         id: "cssedit",
         name: "CSS Editor",
         blurb: "Tweak and view!",
-        status: "Planning",
-        people: [],
-        bugs: []
+        status: "Implementation",
+        people: ["cvivier"],
+        bugs: [
+            "583041 CSS editor",
+            "590307 inline stylesheet support",
+            "590795 edits should be reflected in the Inspector",
+            "590796 style inspector link to the CSS editor",
+            "590797 resizable editor panel",
+            "590799 CSS editor styling",
+            "594742 unsaved state reappears when the editor is reopened"
+        ]
     },
     {
         id: "styledoctor",
@@ -159,7 +177,8 @@ exports.projects = [
         name: "Style Doctor",
         blurb: "The cure for what ails your CSS",
         status: "Planning",
-        people: ["jwalker"]
+        people: ["jwalker"],
+        bugs: []
     },
     {
         id: "debugger",
@@ -279,7 +298,8 @@ exports.projects = [
         id: "objectinspector",
         name: "Object Inspector Plus",
         blurb: "Take a look inside!",
-        status: "Planning"
+        status: "Planning",
+        bugs: []
     }
 ];
 
@@ -323,6 +343,21 @@ exports.people = [
         id: "jblandy",
         name: "Jim Blandy",
         avatar: "http://www.red-bean.com/jimb/jimb.jpg"
+    },
+    {
+        id: "cvivier",
+        name: "Cedric Vivier",
+        avatar: "http://gravatar.com/avatar/c5216fcabd0916a2447742cd7d0a375d"
+    },
+    {
+        id: "mratcliffe",
+        name: "Mike Ratcliffe",
+        avatar: "http://gravatar.com/avatar/7de9609bb8d1394e8f6236bd0fac2d7b"
+    },
+    {
+        id: "getify",
+        name: "Kyle Simpson",
+        avatar: "http://gravatar.com/avatar/35761e3936deba2f8189c2d20982c771"
     }
 ];
 
