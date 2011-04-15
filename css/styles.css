@@ -19,6 +19,22 @@ body {
 	font-family: Tahoma, Geneva, sans-serif;
 	box-shadow:4px 4px 2em rgba(0,0,0,0.25);
 }
+#gitfork {
+	top: 0;
+	left: 0;
+	border: 0;
+	position: relative;
+}
+#repository {
+	float: right;
+	text-align: right;
+	position: relative;
+	margin-top: 32px;
+	margin-right: 208px;
+	font-weight: bold;
+	color: #666;
+	text-shadow: #ccc 4px 4px 4px;
+}
 #content {
 	position: relative;
 	margin-left: 80px;
@@ -26,6 +42,7 @@ body {
 	padding-bottom: 128px;
 }
 h1 {
+	font-size: 36px;
 	font-family: "BostonTrafficRegular", Helvetica, Arial, sans-serif;
 }
 h2, h3 {
@@ -49,11 +66,9 @@ div.image div {
   background-color: #333;
   padding: 0.5em;
 }
-
 table td, table th {
   border: 1px #ddd solid;
 }
-
 table th {
     text-align: left;
 }
