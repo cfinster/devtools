@@ -41,9 +41,11 @@ exports.projects = [
         bugs: [
             "642176 Integrate Workspace extension into the browser",
             "636725 Unit tests for Workspaces",
-			"646070 Respect chrome developer tools preference in workspace"
+			"646070 Respect chrome developer tools preference in workspace",
+            "646524 Cache the sandboxes"
         ],
         updates: [
+            "2011/04/14 Security review complete",
 		    "2011/03/18 Patch to put the Workspaces in browser",
             "2011/03/01 Prototype is working as a Jetpack",
             "2011/01/05 Initial Prototype Add-On"
@@ -80,9 +82,9 @@ exports.projects = [
     },
     {
         id: "webconsole6",
-        url: "https://wiki.mozilla.org/DevTools/Features/WebConsole6",
-        name: "Web Console 6",
-        blurb: "Console Cleanup and Integration",
+        url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade",
+        name: "Web Console Upgrade",
+        blurb: "Console positioning, service, autocompletion and more",
         status: "Implementation",
         people: [],
         bugs: [
@@ -114,7 +116,8 @@ exports.projects = [
             "646504 Global console should have decent display of stack traces",
             "587757 Implement Browser Console",
             "592552 History is shared among all Web Console instances",
-            "622303 Web Console should remember filter settings"
+            "622303 Web Console should remember filter settings",
+            "649350 Cleanup/reorganize the HUDService observers and listeners"
         ]
     },
     {
@@ -172,9 +175,9 @@ exports.projects = [
         ]
     },
     {
-        id: "styledoctor",
-        url: "https://wiki.mozilla.org/DevTools/Features/StyleDoctor",
-        name: "Style Doctor",
+        id: "cssdoctor",
+        url: "https://wiki.mozilla.org/DevTools/Features/CSSDoctor",
+        name: "CSS Doctor",
         blurb: "The cure for what ails your CSS",
         status: "Planning",
         people: ["jwalker"],
