@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'BostonTrafficRegular';
-    src: url('fonts/boston_traffic-webfont.eot');
-    src: url('fonts/boston_traffic-webfont.eot?iefix') format('eot'),
-         url('fonts/boston_traffic-webfont.woff') format('woff'),
-         url('fonts/boston_traffic-webfont.ttf') format('truetype'),
-         url('fonts/boston_traffic-webfont.svg#webfontpKfzaSWV') format('svg');
+    src: url('../fonts/boston_traffic-webfont.eot');
+    src: url('../fonts/boston_traffic-webfont.eot?iefix') format('eot'),
+         url('../fonts/boston_traffic-webfont.woff') format('woff'),
+         url('../fonts/boston_traffic-webfont.ttf') format('truetype'),
+         url('../fonts/boston_traffic-webfont.svg#webfontpKfzaSWV') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -43,7 +43,7 @@ section.project {
     -webkit-box-flex: 1;
     padding-left: 200px;
     padding-top: 25px;
-    background: url(images/logo.png) no-repeat;
+    background: url(../images/logo.png) no-repeat;
     color: #484848;
 }
 
@@ -132,13 +132,13 @@ div.summary div.top div {
 section.project div.summary div.counts span.flags {
     padding-right: 18px;
     margin-right: 10px;
-    background: url(images/flag.png) no-repeat right;
+    background: url(../images/flag.png) no-repeat right;
 }
 
 section.project div.summary div.counts span.bugs {
     padding-right: 18px;
     margin-right: 10px;
-    background: url(images/bug.png) no-repeat right;
+    background: url(../images/bug.png) no-repeat right;
 }
 
 div.status {
