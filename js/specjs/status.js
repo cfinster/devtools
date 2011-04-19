@@ -1,14 +1,27 @@
-(function(win) {
-
-var specjs = win.specjs;
-if (!specjs) {
-    specjs = win.specjs = {};
-}
-
-var exports = specjs.status = {};
-
-var Project = exports.Project = function(data) {
-    _.extend(this, {
+(function() {
+  var Person, Project, augmentProjects, exports, flagMap, getBugID, getBugIDandLabel, i, project, projectMap, updateBugInformation, _ref, _ref2;
+  this.specjs = (_ref = this.specjs) != null ? _ref : {};
+  this.specjs.status = {};
+  exports = this.specjs.status;
+  getBugID = function(text) {
+    return getBugIDandLabel(text).id;
+  };
+  getBugIDandLabel = function(text) {
+    var match;
+    text = text.toString();
+    match = /^(bug|)\s*(\d+)\s*(.*)/.exec(text);
+    if (!match) {
+      return null;
+    }
+    return {
+      id: match[2],
+      label: match[3]
+    };
+  };
+  Project = (function() {
+    function Project(data) {
+      this.data = data;
+      _.extend(this, {
         id: "",
         url: "",
         name: "",
@@ -18,217 +31,206 @@ var Project = exports.Project = function(data) {
         bugs: [],
         updates: [],
         flags: []
-    }, data);
-};
-
-var getBugIDandLabel = exports.getBugIDandLabel = function(text) {
-    text = text.toString();
-    var match = /^(bug|)\s*(\d+)\s*(.*)/.exec(text);
-    if (!match) {
-        return null;
+      }, data);
     }
-    return {
-        id: match[2],
-        label: match[3]
+    Project.prototype.getBugIds = function() {
+      var bug, _i, _len, _ref, _results;
+      _ref = this.bugs;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        bug = _ref[_i];
+        _results.push(getBugId(bug));
+      }
+      return _results;
     };
-};
-
-var getBugID = function(text) {
-    return getBugIDandLabel(text).id;
-};
-
-exports.Project.prototype = {
-    getBugIds: function() {
-        return this.bugs.map(getBugID);
-    }
-};
-
-exports.Person = function(data) {
-    _.extend(this, {
+    return Project;
+  })();
+  exports.Project = Project;
+  Person = (function() {
+    function Person(data) {
+      _.extend(this, {
         id: "",
         name: "",
         avatar: ""
-    }, data);
-};
-
-exports.projects = {};
-
-var augmentProjects = function() {
-    var latestUpdates = [];
-    _.values(exports.projects).forEach(function(project) {
-        var elem = $('<a/>', {
-            html: "&#9654; ",
-            click: expander,
-            href: "#" + project.id,
-            "class": "expander"
-        });
-        project.expanded = false;
-        elem[0].project = project;
-        $(project.el).find("h2").prepend(elem);
-        
-        var projel = $(project.el);
-        
-        var summary = $('<div/>', {
-            "class": "summary"
-        });
-        var main = $('<div/>', {
-            "class": "main"
-        });
-        summary.append(main);
-        projel.children("div.status").detach().appendTo(summary);
-        
-        var top = $('<div/>', {
-            "class": "top"
-        });
-        var bottom = $('<div/>', {
-            "class": "bottom"
-        });
-        main.append(top);
-        main.append(bottom);
-        projel.children("h2").detach().appendTo(top);
-        
-        var counts = $('<div/>', {
-            "class": "counts"
-        });
-        
-        var flagcount = project.getFlagCount();
-        if (flagcount) {
-            $('<span/>', {
-                "class": "flags",
-                text: flagcount
-            }).appendTo(counts);
-        }
-        
-        var bugcount = project.getBugCount();
+      }, data);
+    }
+    return Person;
+  })();
+  exports.Person = Person;
+  exports.projects = {};
+  augmentProjects = function() {
+    var avatars, bottom, bugcount, counts, elem, flagcount, latestUpdates, main, person, project, projel, summary, top, _i, _j, _len, _len2, _ref, _ref2, _results;
+    latestUpdates = [];
+    _ref = exports.projects;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      project = _ref[_i];
+      elem = $('<a/>', {
+        html: "&#9654; ",
+        click: expander,
+        href: "#" + project.id,
+        "class": "expander"
+      });
+      project.expanded = false;
+      elem[0].project = project;
+      $(project.el).find("h2").prepend(elem);
+      projel = $(project.el);
+      summary = $('<div/>', {
+        "class": "summary"
+      });
+      main = $('<div/>', {
+        "class": "main"
+      });
+      summary.append(main);
+      projel.children("div.status").detach().appendTo(summary);
+      top = $('<div/>', {
+        "class": "top"
+      });
+      bottom = $('<div/>', {
+        "class": "bottom"
+      });
+      main.append(top);
+      main.append(bottom);
+      projel.children("h2").detach().appendTo(top);
+      counts = $('<div/>', {
+        "class": "counts"
+      });
+      flagcount = project.getFlagCount();
+      if (flagcount) {
         $('<span/>', {
-            "class": "bugs",
-            text: bugcount
+          "class": "flags",
+          text: flagcount
         }).appendTo(counts);
-        
-        top.append(counts);
-        
-        var avatars = $('<div/>', {
-            "class": "avatars"
-        });
-        top.append(avatars);
-        
-        project.getPeople().forEach(function(person) {
-            $(person.getAvatar()).clone().appendTo(avatars);
-        });
-        
-        projel.children("div.blurb").detach().appendTo(bottom);
-        projel.prepend(summary);
-    });
-};
-
-var flagMap = {
+      }
+      bugcount = project.getBugCount();
+      $('<span/>', {
+        "class": "bugs",
+        text: bugcount
+      }).appendTo(counts);
+      top.append(counts);
+      avatars = $('<div/>', {
+        "class": "avatars"
+      });
+      top.append(avatars);
+      _ref2 = project.getPeople;
+      for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
+        person = _ref2[_j];
+        $(person.getAvatar()).clone().appendTo(avatars);
+      }
+      projel.children("div.blurb").detach().appendTo(bottom);
+      _results.push(projel.prepend(summary));
+    }
+    return _results;
+  };
+  flagMap = {
     "feedback": "&nbsp;f",
     "review": "&nbsp;r",
     "superreview": "sr"
-};
-
-var updateBugInformation = function() {
-    if (typeof(statusdata) == "undefined") {
-        return;
+  };
+  updateBugInformation = function() {
+    var data;
+    if (!(typeof statusdata != "undefined" && statusdata !== null)) {
+      return;
     }
-    var data = statusdata;
-    $('span.bug').each(function() {
-        var el = $(this);
-        var info = getBugIDandLabel(el.text());
-        if (info == null) {
-            return;
+    data = statusdata;
+    return $('span.bug').each(function() {
+      var bestStatus, bug, bugFlags, bugid, el, f, flagType, flags, info, outer, summary, whiteboard, _i, _j, _len, _len2, _ref;
+      el = $(this);
+      info = getBugIDandLabel(el.text());
+      if (info === null) {
+        return;
+      }
+      bugid = info.id;
+      bug = data[bugid];
+      if (!(bug != null)) {
+        console.log("Couldn't find data for bug: ", bugid);
+        return;
+      }
+      el.empty();
+      outer = $('<span/>', {
+        "class": "bug"
+      });
+      $('<a/>', {
+        "class": bug.status === "RESOLVED" ? "bugid resolved" : "bugid",
+        href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
+        target: "_blank",
+        text: bugid
+      }).appendTo(outer);
+      flags = [];
+      bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
+      _ref = ["feedback", "review", "superreview"];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        flagType = _ref[_i];
+        bugFlags = bug.flags[flagType];
+        for (_j = 0, _len2 = bugFlags.length; _j < _len2; _j++) {
+          f = bugFlags[_j];
+          bestStatus = flagMap[flagType] + f.status;
+          if (f.requestee) {
+            flags.push(flagType + f.status + " " + f.requestee);
+          } else {
+            flags.push(flagType + f.status + " " + f.setter);
+          }
         }
-        var bugid = info.id;
-        var bug = data[bugid];
-        if (!bug) {
-            console.log("Couldn't find data for bug: ", bugid);
-            return;
-        }
-        el.empty();
-        var outer = $('<span/>', {
-            "class": "bug"
-        });
-        $('<a/>', {
-            "class": bug.status == "RESOLVED" ? "bugid resolved" : "bugid",
-            href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
-            target: "_blank",
-            text: bugid
-        }).appendTo(outer);
-        var flags = [];
-        var bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
-        ["feedback", "review", "superreview"].forEach(function(flagType) {
-            var bugFlags = bug.flags[flagType];
-            bugFlags.forEach(function(f) {
-                bestStatus = flagMap[flagType] + f.status;
-                if (f.requestee) {
-                    flags.push(flagType + f.status + " " + f.requestee);
-                } else {
-                    flags.push(flagType + f.status + " " + f.setter);
-                }
-            });
-        });
-        $('<span/>', {
-            "class": "patchstatus",
-            title: flags.join(", "),
-            html: " " + bestStatus
-        }).appendTo(outer);
-        
-        var summary = info.label || bug.summary;
-        var whiteboard = bug.whiteboard || "";
-        
-        outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard);
-        el.append(outer);
+      }
+      $('<span/>', {
+        "class": "patchstatus",
+        title: flags.join(", "),
+        html: " " + bestStatus
+      }).appendTo(outer);
+      summary = info.label || bug.summary;
+      whiteboard = bug.whiteboard || "";
+      outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard);
+      return el.append(outer);
     });
-};
-
-var projectMap = {};
-
-for (var i = 0; i < projects.length; i++) {
-    var project = new Project(projects[i]);
+  };
+  projectMap = {};
+  for (i = 0, _ref2 = projects.length; (0 <= _ref2 ? i <= _ref2 : i >= _ref2); (0 <= _ref2 ? i += 1 : i -= 1)) {
+    project = new Project(projects[i]);
     projects[i] = project;
     projectMap[project.id] = project;
-};
-
-exports.showProject = function(id) {
-    var project = projectMap[id];
-    var newNode = $(exports.projectTemplate(project));
+  }
+  exports.showProject = function(id) {
+    var newNode;
+    project = projectMap[id];
+    newNode = $(exports.projectTemplate(project));
     $("#content").children().remove().append(newNode);
     newNode.appendTo($("#content"));
     $(".status").each(function() {
-        var el = $(this);
-        var status = el.text().replace(/^\s+|\s+$/,"");
-        var statusAbbreviation = status.substring(0, 2).toUpperCase();
-        el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
+      var el, status, statusAbbreviation;
+      el = $(this);
+      status = el.text().replace(/^\s+|\s+$/, "");
+      statusAbbreviation = status.substring(0, 2).toUpperCase();
+      return el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
     }).bigtext();
     location.hash = id;
-    updateBugInformation();
-};
-
-exports.populatePage = function() {
+    return updateBugInformation();
+  };
+  exports.populatePage = function() {
+    var newNode, project, projectNavTemplate, _i, _len;
     exports.projectTemplate = _.template(document.getElementById("project_template").innerHTML);
     exports.personTemplate = _.template(document.getElementById("person_template").innerHTML);
-    var projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML);
-    projects.forEach(function(project) {
-        var newNode = $(projectNavTemplate(project));
-        newNode.appendTo($("#nav"));
-    });
-    $('.maindate').each(function() {
-        var el = $(this);
-        var text = el.text();
-        el.html("<div>" + text.split(" ").join("</div><div>") + "</div>").bigtext();
-    });
-    $("#nav").click(function(e) {
-        exports.showProject($(e.target).attr("data-id"));
-    });
-};
-
-exports.jumpToProject = function() {
-    var hash = location.hash.substring(1);
-    if (!hash) {
-        return;
+    projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML);
+    for (_i = 0, _len = projects.length; _i < _len; _i++) {
+      project = projects[_i];
+      newNode = $(projectNavTemplate(project));
+      newNode.appendTo($("#nav"));
     }
-    
-    exports.showProject(hash);
-};
-
-})(this);
+    $('.maindate').each(function() {
+      var el, text;
+      el = $(this);
+      text = el.text();
+      return el.html("<div>" + text.split(" ").join("</div><div>") + "</div>").bigtext();
+    });
+    return $("#nav").click(function(e) {
+      return exports.showProject($(e.target).attr("data-id"));
+    });
+  };
+  exports.jumpToProject = function() {
+    var hash;
+    hash = location.hash.substring(1);
+    if (!hash) {
+      return;
+    }
+    return exports.showProject(hash);
+  };
+}).call(this);
