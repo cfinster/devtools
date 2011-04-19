@@ -9,7 +9,7 @@ exports = @specjs.status
 getBugID = (text) ->
     getBugIDandLabel(text).id
 
-getBugIDandLabel = (text) ->
+exports.getBugIDandLabel = getBugIDandLabel = (text) ->
     text = text.toString()
     match = /^(bug|)\s*(\d+)\s*(.*)/.exec text
     
@@ -19,7 +19,6 @@ getBugIDandLabel = (text) ->
         id: match[2]
         label: match[3]
     }
-
 
 class Project
     constructor: (@data) ->
@@ -143,7 +142,7 @@ updateBugInformation = () ->
             "class": "bug"
         })
         $('<a/>', {
-            class: if bug.status == "RESOLVED" then "bugid resolved" else "bugid"
+            class: if bug.status == "RESOLVED" or bug.status == "VERIFIED" then "bugid resolved" else "bugid"
             href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid
             target: "_blank"
             text: bugid

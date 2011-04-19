@@ -6,7 +6,7 @@
   getBugID = function(text) {
     return getBugIDandLabel(text).id;
   };
-  getBugIDandLabel = function(text) {
+  exports.getBugIDandLabel = getBugIDandLabel = function(text) {
     var match;
     text = text.toString();
     match = /^(bug|)\s*(\d+)\s*(.*)/.exec(text);
@@ -151,7 +151,7 @@
         "class": "bug"
       });
       $('<a/>', {
-        "class": bug.status === "RESOLVED" ? "bugid resolved" : "bugid",
+        "class": bug.status === "RESOLVED" || bug.status === "VERIFIED" ? "bugid resolved" : "bugid",
         href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
         target: "_blank",
         text: bugid

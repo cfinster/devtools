@@ -42,7 +42,8 @@ exports.projects = [
             "642176 Integrate Workspace extension into the browser",
             "636725 Unit tests for Workspaces",
 			"646070 Respect chrome developer tools preference in workspace",
-            "646524 Cache the sandboxes"
+            "646524 Cache the sandboxes",
+            "650760 Help menu"
         ],
         updates: [
             "2011/04/14 Security review complete",
@@ -59,7 +60,10 @@ exports.projects = [
         status: "Implementation",
         people: ["rcampbell"],
         bugs: [
-            642471
+            642471,
+            "650802 Create some controller UI",
+            "650825 create a content broker",
+            "650794 Strip HTML panel and support code from browser"
         ]
     },
     {
@@ -77,7 +81,8 @@ exports.projects = [
             "586974 all unmatched rules are ranked the same",
             "587752 animations in the panel",
             "589375 keyboard access",
-            "592743 specificity calculator makes mistakes"
+            "592743 specificity calculator makes mistakes",
+            "585563 Allow CSS editing from inspector"
         ]
     },
     {
@@ -117,7 +122,8 @@ exports.projects = [
             "587757 Implement Browser Console",
             "592552 History is shared among all Web Console instances",
             "622303 Web Console should remember filter settings",
-            "649350 Cleanup/reorganize the HUDService observers and listeners"
+            "649350 Cleanup/reorganize the HUDService observers and listeners",
+            "650780 evaluating a null object returns TypeError: aObject is null"
         ]
     },
     {
@@ -141,7 +147,9 @@ exports.projects = [
             "642237 GCLI should display its opening command menu in a hierarchy",
             "642226 GCLI should support use without an input element",
             "642196 GCLI should allow JS to be entered using {}",
-            "642189 GCLI should support grouped parameters"
+            "642189 GCLI should support grouped parameters",
+            "651081 Ensure GCLI commands are executed securely",
+            "651071 Enhance the Web Console with a command-based input system"
         ]
     },
     {
@@ -150,7 +158,10 @@ exports.projects = [
         blurb: "The View Source of the Future",
         status: "Planning",
         people: ["msucan", "getify"],
-        bugs: [],
+        bugs: [
+            "650893 New View Source component",
+            "650895 Initial implementation of the new View Source tool"
+        ],
         notes: [
             "deminification",
             "insert alert",

@@ -10,6 +10,50 @@
    "superreview": []
   }
  },
+ "590795": {
+  "summary": "Changes made in the CSS editor aren't reflected in the style panel",
+  "status": "NEW",
+  "assignedName": "cedricv",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590796": {
+  "summary": "Clicking on a rule in the style panel doesn't jump to the correct line in the CSS editor",
+  "status": "NEW",
+  "assignedName": "cedricv",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590797": {
+  "summary": "CSS editor panel should be resizable",
+  "status": "NEW",
+  "assignedName": "cedricv",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "594742": {
+  "summary": "Inspector CSS editor brings back unsaved state when I reopen it",
+  "status": "NEW",
+  "assignedName": "cedricv",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "646734": {
   "summary": "Heap histogram API",
   "status": "NEW",
@@ -151,6 +195,30 @@
    "superreview": []
   }
  },
+ "650893": {
+  "summary": "new View Source component",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[viewsource][best: 2d, likely: 4d, worst: 1w]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "650895": {
+  "summary": "initial implementation of the new View Source tool",
+  "status": "NEW",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[viewsource][best: 2d, likely: 4d, worst: 1w]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "643184": {
   "summary": "Checkbox menu items in a toolbar do not display the check mark when checked in Firefox 4 on Mac OS X",
   "status": "NEW",
@@ -192,6 +260,17 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[firebug-p2]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "585563": {
+  "summary": "The inspector style panel should link to the CSS editor",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -336,18 +415,6 @@
    "superreview": []
   }
  },
- "642189": {
-  "summary": "GCLI should support grouped parameters",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[estimate:best=2d,likely=3d,worst=10d]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "642196": {
   "summary": "GCLI should allow JS to be entered using {}",
   "status": "NEW",
@@ -360,47 +427,11 @@
    "superreview": []
   }
  },
- "642226": {
-  "summary": "GCLI should support use without an input element",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[estimate:best=2d,likely=3d,worst=10d]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "642231": {
-  "summary": "Prepare GCLI for review",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "642237": {
   "summary": "GCLI should display its opening command menu in a hierarchy",
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "642238": {
-  "summary": "GCLI metadata should have types on return values",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[estimate:best=1d,likely=2d,worst=5d]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -449,28 +480,6 @@
   "status": "NEW",
   "assignedName": "nobody",
   "whiteboard": "[estimate:best=1d,likely=2d,worst=3d]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "642400": {
-  "summary": "Ace/Pilot/GCLI doesn't have a good definition of the environment",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "642401": {
-  "summary": "Ace/Pilot/GCLI doesn't have a good definition of pref scopes",
-  "status": "NEW",
-  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -604,10 +613,10 @@
    "superreview": []
   }
  },
- "590795": {
-  "summary": "Changes made in the CSS editor aren't reflected in the style panel",
+ "650760": {
+  "summary": "Create Help menu for workspace",
   "status": "NEW",
-  "assignedName": "pwalton",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -615,10 +624,10 @@
    "superreview": []
   }
  },
- "590796": {
-  "summary": "Clicking on a rule in the style panel doesn't jump to the correct line in the CSS editor",
+ "650780": {
+  "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
   "status": "NEW",
-  "assignedName": "pwalton",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -626,10 +635,11 @@
    "superreview": []
   }
  },
- "590797": {
-  "summary": "CSS editor panel should be resizable",
+ "650794": {
+  "summary": "Strip HTML panel and support code from browser",
   "status": "NEW",
-  "assignedName": "pwalton",
+  "assignedName": "nobody",
+  "whiteboard": "[highlighter]",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -637,10 +647,45 @@
    "superreview": []
   }
  },
- "594742": {
-  "summary": "Inspector CSS editor brings back unsaved state when I reopen it",
+ "650802": {
+  "summary": "Create some controller UI for the Highlighter",
   "status": "NEW",
-  "assignedName": "pwalton",
+  "assignedName": "nobody",
+  "whiteboard": "[highlighter]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "650825": {
+  "summary": "create a content broker for the highlighter",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[highlighter][e10s]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "651071": {
+  "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "651081": {
+  "summary": "Ensure GCLI commands are executed securely",
+  "status": "NEW",
+  "assignedName": "nobody",
   "hasPatch": false,
   "flags": {
    "feedback": [],
@@ -732,6 +777,28 @@
    "superreview": []
   },
   "patchSize": 37785
+ },
+ "590307": {
+  "summary": "CSS editor should properly edit inline style sheets",
+  "status": "ASSIGNED",
+  "assignedName": "cedricv",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "590799": {
+  "summary": "Styling for the CSS editor panel",
+  "status": "ASSIGNED",
+  "assignedName": "cedricv",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
  },
  "554926": {
   "summary": "Dockable Panels",
@@ -915,16 +982,16 @@
   "whiteboard": "[patchclean:0415]",
   "hasPatch": true,
   "flags": {
-   "feedback": [
+   "feedback": [],
+   "review": [
     {
      "status": "+",
-     "setter": "rcampbell"
+     "setter": "ddahl"
     }
    ],
-   "review": [],
    "superreview": []
   },
-  "patchSize": 13529
+  "patchSize": 13669
  },
  "582596": {
   "summary": "Style view centered around answering common CSS questions",
@@ -949,28 +1016,6 @@
   },
   "patchSize": 79171
  },
- "590307": {
-  "summary": "CSS editor should properly edit inline style sheets",
-  "status": "ASSIGNED",
-  "assignedName": "pwalton",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
- "590799": {
-  "summary": "Styling for the CSS editor panel",
-  "status": "ASSIGNED",
-  "assignedName": "pwalton",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "622303": {
   "summary": "Web Console should remember filter settings.",
   "status": "ASSIGNED",
@@ -988,12 +1033,13 @@
   "status": "ASSIGNED",
   "assignedName": "rcampbell",
   "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][started-3/17]",
-  "hasPatch": false,
+  "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
-  }
+  },
+  "patchSize": 16031
  },
  "645160": {
   "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
@@ -1046,16 +1092,16 @@
   "whiteboard": "[console-1][has-patch]",
   "hasPatch": true,
   "flags": {
-   "feedback": [],
-   "review": [
+   "feedback": [
     {
      "status": "-",
-     "setter": "gavin.sharp"
+     "setter": "mihai.sucan"
     }
    ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 5784
+  "patchSize": 4622
  },
  "612252": {
   "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
@@ -1126,6 +1172,76 @@
  },
  "639518": {
   "summary": "Create a Cross Add-on registry and communication service",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642189": {
+  "summary": "GCLI should support grouped parameters",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=3d,worst=10d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642226": {
+  "summary": "GCLI should support use without an input element",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=3d,worst=10d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642231": {
+  "summary": "Prepare GCLI for review",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642238": {
+  "summary": "GCLI metadata should have types on return values",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "whiteboard": "[estimate:best=1d,likely=2d,worst=5d]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642400": {
+  "summary": "Ace/Pilot/GCLI doesn't have a good definition of the environment",
+  "status": "RESOLVED",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "642401": {
+  "summary": "Ace/Pilot/GCLI doesn't have a good definition of pref scopes",
   "status": "RESOLVED",
   "assignedName": "nobody",
   "hasPatch": false,
