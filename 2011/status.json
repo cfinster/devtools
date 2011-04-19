@@ -478,18 +478,6 @@
    "superreview": []
   }
  },
- "642471": {
-  "summary": "Rewrite PanelHighlighter using transparent xul iframe and canvas",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][started-3/17]",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "642505": {
   "summary": "Embed the GCLI in the Web Console",
   "status": "NEW",
@@ -594,8 +582,8 @@
    "superreview": []
   }
  },
- "646524": {
-  "summary": "Workspace: cache the sandboxes",
+ "646735": {
+  "summary": "Heap profiling API - dominator tree",
   "status": "NEW",
   "assignedName": "nobody",
   "hasPatch": false,
@@ -605,8 +593,8 @@
    "superreview": []
   }
  },
- "646735": {
-  "summary": "Heap profiling API - dominator tree",
+ "649350": {
+  "summary": "Cleanup/reorganize the HUDService observers and listeners",
   "status": "NEW",
   "assignedName": "nobody",
   "hasPatch": false,
@@ -768,29 +756,6 @@
    "superreview": []
   }
  },
- "582596": {
-  "summary": "Style view centered around answering common CSS questions",
-  "status": "ASSIGNED",
-  "assignedName": "jwalker",
-  "whiteboard": "[strings] [patchclean:0827]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [
-    {
-     "status": "+",
-     "setter": "l10n"
-    }
-   ],
-   "review": [
-    {
-     "status": "-",
-     "setter": "dolske"
-    }
-   ],
-   "superreview": []
-  },
-  "patchSize": 79171
- },
  "585956": {
   "summary": "Implement console.trace() in web console",
   "status": "ASSIGNED",
@@ -840,28 +805,24 @@
   "summary": "Web Console: Error message when click on an object to create an inspect window",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0412] [console-1][orange]",
+  "whiteboard": "[patchclean:0412] [console-1][fixed-in-devtools]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
   },
-  "patchSize": 6899
+  "patchSize": 6957
  },
  "636725": {
   "summary": "Unit tests for Workspaces",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[workspaces][patchclean:0406]",
+  "whiteboard": "[workspaces][patchclean:0415]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
-    {
-     "status": "+",
-     "setter": "rcampbell"
-    },
     {
      "status": "-",
      "setter": "sdwilsh"
@@ -869,7 +830,7 @@
    ],
    "superreview": []
   },
-  "patchSize": 19133
+  "patchSize": 13953
  },
  "636727": {
   "summary": "Add Ace to workspaces",
@@ -887,28 +848,24 @@
   "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0408][in-review][see-comment-26-for-try-build]",
+  "whiteboard": "[patchclean:0415][in-review][see-comment-30-for-try-build]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
      "status": "+",
-     "setter": "ddahl"
+     "setter": "sdwilsh"
     },
     {
      "status": "?",
      "requestee": "l10n",
-     "setter": "sdwilsh"
-    },
-    {
-     "status": "-",
-     "setter": "sdwilsh"
+     "setter": "mihai.sucan"
     }
    ],
    "superreview": []
   },
-  "patchSize": 47684
+  "patchSize": 50707
  },
  "642615": {
   "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -937,20 +894,60 @@
   "summary": "Respect chrome developer tools preference in workspace",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[workspace][patchclean:0412]",
+  "whiteboard": "[workspace][patchclean:0415][checkin][requires-dependencies]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "sdwilsh"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 11662
+ },
+ "646524": {
+  "summary": "Workspace: cache the sandboxes",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[patchclean:0415]",
   "hasPatch": true,
   "flags": {
    "feedback": [
     {
-     "status": "?",
-     "requestee": "rcampbell",
-     "setter": "mihai.sucan"
+     "status": "+",
+     "setter": "rcampbell"
     }
    ],
    "review": [],
    "superreview": []
   },
-  "patchSize": 12258
+  "patchSize": 13529
+ },
+ "582596": {
+  "summary": "Style view centered around answering common CSS questions",
+  "status": "ASSIGNED",
+  "assignedName": "mratcliffe",
+  "whiteboard": "[strings] [patchclean:0827]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [
+    {
+     "status": "+",
+     "setter": "l10n"
+    }
+   ],
+   "review": [
+    {
+     "status": "-",
+     "setter": "dolske"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 79171
  },
  "590307": {
   "summary": "CSS editor should properly edit inline style sheets",
@@ -986,6 +983,18 @@
    "superreview": []
   }
  },
+ "642471": {
+  "summary": "Rewrite PanelHighlighter using transparent xul iframe and canvas",
+  "status": "ASSIGNED",
+  "assignedName": "rcampbell",
+  "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][started-3/17]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "645160": {
   "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
   "status": "ASSIGNED",
@@ -997,7 +1006,7 @@
    "review": [],
    "superreview": []
   },
-  "patchSize": 19783
+  "patchSize": 20248
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -1021,14 +1030,14 @@
   "summary": "Keep track of file:// url 'loadGroups'",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0412][softblocker][console-1]",
+  "whiteboard": "[patchclean:0412][softblocker][console-1][fixed-in-devtools]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [],
    "superreview": []
   },
-  "patchSize": 11805
+  "patchSize": 11909
  },
  "626484": {
   "summary": "Incorrect order of lines when copying from web console",
