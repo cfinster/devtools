@@ -1,5 +1,5 @@
 (function() {
-  var Person, Project, augmentProjects, exports, flagMap, getBugID, getBugIDandLabel, i, project, projectMap, updateBugInformation, _ref, _ref2;
+  var Person, Project, augmentProjects, exports, flagMap, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, projectNavTemplate, projectTemplate, updateBugInformation, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
@@ -18,6 +18,9 @@
       label: match[3]
     };
   };
+  projectNavTemplate = _.template("<div data-id=\"<%= id %>\"><%= name %></div>");
+  projectTemplate = _.template("<section class=\"project\" id=\"<%= id %>\">\n    <div class=\"summary\">\n        <div class=\"main\">\n            <div class=\"top\">\n        <h2><a href=\"<%= url %>\"><%= name %></a></h2>\n                <div class=\"counts\">\n                    <span class=\"bugs\"><%= bugs.length %></span>\n                </div>\n                <div class=\"avatars\"></div>\n            </div>\n            <div class=\"bottom\">\n        <div class=\"blurb\"><%= blurb %></div>\n            </div>\n        </div>\n        <div class=\"status\"><%= status %></div>\n    </div>\n    \n    <% if (people) { %>\n        <section class=\"people\">\n            <h3>People</h3>\n            <ul>\n                <% people.forEach(function(person) { %>\n                    <li><%= person %></li>\n                <% }); %>\n            </ul>\n        </section>\n    <% }; %>\n\n    <div class=\"tabs\">\n        <% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>\n            <section>\n                <h3>Updates</h3>\n                <ul>\n                    <% updates.forEach(function(update) { %>\n                        <li><%= update %></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n        <% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>\n            <section>\n                <h3>Bugs</h3>\n                <ul>\n                    <% bugs.forEach(function(bug) { %>\n                        <li><span class=\"bug\"><%= bug %></span></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n</section>");
+  personTemplate = _.template("<section class=\"person\">\n    <h3><%= name %></h3>\n    <div><img id=\"avatar-<%= id %>\" alt=\"<%= id %>\" title=\"%<= name %>\" src=\"<%= avatar %>\" class=\"avatar\"></div>\n</section>");
   Project = (function() {
     function Project(data) {
       this.data = data;
@@ -43,6 +46,19 @@
       }
       return _results;
     };
+    Project.prototype.getPeople = function() {
+      var person, result, _i, _len, _ref;
+      result = [];
+      _ref = this.people;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        person = _ref[_i];
+        person = peopleMap[person];
+        if (person != null) {
+          result.push(person);
+        }
+      }
+      return result;
+    };
     return Project;
   })();
   exports.Project = Project;
@@ -54,10 +70,12 @@
         avatar: ""
       }, data);
     }
+    Person.prototype.getAvatar = function() {
+      return $("#avatar-" + this.id);
+    };
     return Person;
   })();
   exports.Person = Person;
-  exports.projects = {};
   augmentProjects = function() {
     var avatars, bottom, bugcount, counts, elem, flagcount, latestUpdates, main, person, project, projel, summary, top, _i, _j, _len, _len2, _ref, _ref2, _results;
     latestUpdates = [];
@@ -189,10 +207,22 @@
     projects[i] = project;
     projectMap[project.id] = project;
   }
+  peopleMap = {};
+  for (i = 0, _ref3 = people.length; (0 <= _ref3 ? i <= _ref3 : i >= _ref3); (0 <= _ref3 ? i += 1 : i -= 1)) {
+    person = new Person(people[i]);
+    people[i] = person;
+    peopleMap[person.id] = person;
+  }
   exports.showProject = function(id) {
-    var newNode;
+    var avatarNode, newImage, newNode, person, _i, _len, _ref;
+    if (id === "people") {
+      exports.showPeople();
+      return;
+    }
+    $('#content').show();
+    $('#people').hide();
     project = projectMap[id];
-    newNode = $(exports.projectTemplate(project));
+    newNode = $(projectTemplate(project));
     $("#content").children().remove().append(newNode);
     newNode.appendTo($("#content"));
     $(".status").each(function() {
@@ -202,19 +232,38 @@
       statusAbbreviation = status.substring(0, 2).toUpperCase();
       return el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
     }).bigtext();
+    avatarNode = $('.avatars', newNode);
+    _ref = project.getPeople();
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      person = _ref[_i];
+      console.log("Person", person);
+      console.log("Avatar", person.getAvatar());
+      newImage = person.getAvatar().clone();
+      console.log("NI", newImage[0]);
+      newImage.appendTo(avatarNode);
+    }
     location.hash = id;
     return updateBugInformation();
   };
+  exports.showPeople = function() {
+    $('#content').hide();
+    $('#people').show();
+    return location.hash = "#people";
+  };
   exports.populatePage = function() {
-    var newNode, project, projectNavTemplate, _i, _len;
-    exports.projectTemplate = _.template(document.getElementById("project_template").innerHTML);
-    exports.personTemplate = _.template(document.getElementById("person_template").innerHTML);
-    projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML);
+    var contents, newNode, peopleNode, person, project, _i, _j, _len, _len2;
     for (_i = 0, _len = projects.length; _i < _len; _i++) {
       project = projects[_i];
       newNode = $(projectNavTemplate(project));
       newNode.appendTo($("#nav"));
     }
+    peopleNode = $('#people');
+    contents = "";
+    for (_j = 0, _len2 = people.length; _j < _len2; _j++) {
+      person = people[_j];
+      contents += personTemplate(person);
+    }
+    peopleNode.html(contents);
     $('.maindate').each(function() {
       var el, text;
       el = $(this);

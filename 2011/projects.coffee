@@ -121,6 +121,7 @@
             "622303 Web Console should remember filter settings"
             "649350 Cleanup/reorganize the HUDService observers and listeners"
             "650780 evaluating a null object returns TypeError: aObject is null"
+            "630460 command-w doesn't close inspector panels"
         ]
     }
     {
@@ -316,7 +317,7 @@
 
 @people = [
     {
-        id: "muscan"
+        id: "msucan"
         name: "Mihai Sucan"
         avatar: "http://a2.twimg.com/profile_images/326719609/avatar_robodesign_v5_reasonably_small.png"
     }

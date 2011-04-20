@@ -20,6 +20,68 @@ exports.getBugIDandLabel = getBugIDandLabel = (text) ->
         label: match[3]
     }
 
+projectNavTemplate = _.template """<div data-id="<%= id %>"><%= name %></div>"""
+
+projectTemplate = _.template """
+    <section class="project" id="<%= id %>">
+        <div class="summary">
+            <div class="main">
+                <div class="top">
+            <h2><a href="<%= url %>"><%= name %></a></h2>
+                    <div class="counts">
+                        <span class="bugs"><%= bugs.length %></span>
+                    </div>
+                    <div class="avatars"></div>
+                </div>
+                <div class="bottom">
+            <div class="blurb"><%= blurb %></div>
+                </div>
+            </div>
+            <div class="status"><%= status %></div>
+        </div>
+        
+        <% if (people) { %>
+            <section class="people">
+                <h3>People</h3>
+                <ul>
+                    <% people.forEach(function(person) { %>
+                        <li><%= person %></li>
+                    <% }); %>
+                </ul>
+            </section>
+        <% }; %>
+
+        <div class="tabs">
+            <% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>
+                <section>
+                    <h3>Updates</h3>
+                    <ul>
+                        <% updates.forEach(function(update) { %>
+                            <li><%= update %></li>
+                        <% }); %>
+                    </ul>
+                </section>
+            <% }; %>
+            <% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>
+                <section>
+                    <h3>Bugs</h3>
+                    <ul>
+                        <% bugs.forEach(function(bug) { %>
+                            <li><span class="bug"><%= bug %></span></li>
+                        <% }); %>
+                    </ul>
+                </section>
+            <% }; %>
+    </section>
+"""
+
+personTemplate = _.template """
+    <section class="person">
+        <h3><%= name %></h3>
+        <div><img id="avatar-<%= id %>" alt="<%= id %>" title="%<= name %>" src="<%= avatar %>" class="avatar"></div>
+    </section>
+"""
+
 class Project
     constructor: (@data) ->
         _.extend(this, {
@@ -36,6 +98,14 @@ class Project
 
     getBugIds: () ->
         getBugId bug for bug in @bugs
+    
+    getPeople: () ->
+        result = []
+        for person in @people
+            person = peopleMap[person]
+            if person?
+                result.push person
+        result
 
 exports.Project = Project
 
@@ -46,10 +116,11 @@ class Person
             name: ""
             avatar: ""
         }, data)
+    
+    getAvatar: () ->
+        $ "#avatar-#{@id}"
 
 exports.Person = Person
-
-exports.projects = {}
 
 augmentProjects = () ->
     latestUpdates = [];
@@ -171,16 +242,29 @@ updateBugInformation = () ->
         el.append outer
     )
 
-projectMap = {};
+projectMap = {}
 
 for i in [0..projects.length]
     project = new Project projects[i]
     projects[i] = project
     projectMap[project.id] = project
 
+peopleMap = {}
+
+for i in [0..people.length]
+    person = new Person people[i]
+    people[i] = person
+    peopleMap[person.id] = person
+
 exports.showProject = (id) ->
+    if id == "people"
+        exports.showPeople()
+        return
+    
+    $('#content').show()
+    $('#people').hide()
     project = projectMap[id]
-    newNode = $(exports.projectTemplate(project))
+    newNode = $(projectTemplate(project))
     $("#content").children().remove().append(newNode)
     newNode.appendTo($("#content"))
     $(".status").each(() ->
@@ -189,17 +273,37 @@ exports.showProject = (id) ->
         statusAbbreviation = status.substring(0, 2).toUpperCase()
         el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>')
     ).bigtext()
+
+    avatarNode = $ '.avatars', newNode
+    for person in project.getPeople()
+        console.log "Person", person
+        console.log "Avatar", person.getAvatar()
+        newImage = person.getAvatar().clone()
+        console.log "NI", newImage[0]
+        newImage.appendTo(avatarNode)
+
     location.hash = id
     updateBugInformation()
 
+exports.showPeople = () ->
+    $('#content').hide()
+    $('#people').show()
+    location.hash = "#people"
+    
+
 exports.populatePage = () ->
-    exports.projectTemplate = _.template(document.getElementById("project_template").innerHTML)
-    exports.personTemplate = _.template(document.getElementById("person_template").innerHTML)
-    projectNavTemplate = _.template(document.getElementById("project_nav_template").innerHTML)
     for project in projects
         newNode = $(projectNavTemplate(project))
         newNode.appendTo($("#nav"))
     
+    peopleNode = $ '#people'
+
+    contents = ""
+    for person in people
+        contents += personTemplate(person)
+    
+    peopleNode.html contents
+
     $('.maindate').each () ->
         el = $(this)
         text = el.text()
