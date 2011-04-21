@@ -80,6 +80,7 @@
             "589375 keyboard access"
             "592743 specificity calculator makes mistakes"
             "585563 Allow CSS editing from inspector"
+            "651443 Style Panel properties limited to hard coded values"
         ]
     }
     {
@@ -122,6 +123,7 @@
             "649350 Cleanup/reorganize the HUDService observers and listeners"
             "650780 evaluating a null object returns TypeError: aObject is null"
             "630460 command-w doesn't close inspector panels"
+            "651501 document.body properties fail to autocomplete"
         ]
     }
     {

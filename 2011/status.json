@@ -322,6 +322,17 @@
    "superreview": []
   }
  },
+ "630460": {
+  "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "634073": {
   "summary": "\"http-on-modify-request\" is not fired for cached images",
   "status": "NEW",
@@ -624,17 +635,6 @@
    "superreview": []
   }
  },
- "650780": {
-  "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
-  "status": "NEW",
-  "assignedName": "nobody",
-  "hasPatch": false,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  }
- },
  "650794": {
   "summary": "Strip HTML panel and support code from browser",
   "status": "NEW",
@@ -813,7 +813,7 @@
   "patchSize": 15341
  },
  "560314": {
-  "summary": "Implement js::dbg2: new C++ JavaScript debugging API, replacing jsd",
+  "summary": "Implement js::dbg2: new JavaScript debugging API, replacing jsd",
   "status": "ASSIGNED",
   "assignedName": "jimb",
   "hasPatch": false,
@@ -822,6 +822,19 @@
    "review": [],
    "superreview": []
   }
+ },
+ "645160": {
+  "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
+  "status": "ASSIGNED",
+  "assignedName": "jorendorff",
+  "whiteboard": "[firebug-p1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 26946
  },
  "585956": {
   "summary": "Implement console.trace() in web console",
@@ -849,24 +862,19 @@
   "summary": "Show a popup listing possible completions",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[console-2][patchclean:0410]",
+  "whiteboard": "[console-2][patchclean:0421][see-try-build-in-comment-22]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
      "status": "+",
-     "setter": "rcampbell"
-    },
-    {
-     "status": "?",
-     "requestee": "dtownsend",
-     "setter": "rcampbell"
+     "setter": "dtownsend"
     }
    ],
    "superreview": []
   },
-  "patchSize": 38349
+  "patchSize": 45023
  },
  "632275": {
   "summary": "Web Console: Error message when click on an object to create an inspect window",
@@ -885,19 +893,19 @@
   "summary": "Unit tests for Workspaces",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[workspaces][patchclean:0415]",
+  "whiteboard": "[workspaces][patchclean:0420][fixed-in-devtools]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
-     "status": "-",
+     "status": "+",
      "setter": "sdwilsh"
     }
    ],
    "superreview": []
   },
-  "patchSize": 13953
+  "patchSize": 19138
  },
  "636727": {
   "summary": "Add Ace to workspaces",
@@ -915,15 +923,11 @@
   "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0415][in-review][see-comment-30-for-try-build]",
+  "whiteboard": "[patchclean:0420][fixed-in-devtools][see-comment-33-for-try-build][needs-l10n-review][needs-ux-review]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
-    {
-     "status": "+",
-     "setter": "sdwilsh"
-    },
     {
      "status": "?",
      "requestee": "l10n",
@@ -932,7 +936,7 @@
    ],
    "superreview": []
   },
-  "patchSize": 50707
+  "patchSize": 51004
  },
  "642615": {
   "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -961,37 +965,27 @@
   "summary": "Respect chrome developer tools preference in workspace",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[workspace][patchclean:0415][checkin][requires-dependencies]",
+  "whiteboard": "[workspace][patchclean:0420][fixed-in-devtools][requires-dependencies]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "sdwilsh"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 11662
+  "patchSize": 11648
  },
  "646524": {
   "summary": "Workspace: cache the sandboxes",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0415]",
+  "whiteboard": "[workspace][patchclean:0421][fixed-in-devtools][requires-dependencies]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [
-    {
-     "status": "+",
-     "setter": "ddahl"
-    }
-   ],
+   "review": [],
    "superreview": []
   },
-  "patchSize": 13669
+  "patchSize": 14984
  },
  "582596": {
   "summary": "Style view centered around answering common CSS questions",
@@ -1041,18 +1035,26 @@
   },
   "patchSize": 16031
  },
- "645160": {
-  "summary": "[regression] Incorrect jsdIStackFrame for eval() calls",
+ "650780": {
+  "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
   "status": "ASSIGNED",
-  "assignedName": "sphink",
-  "whiteboard": "[firebug-p1]",
+  "assignedName": "rcampbell",
   "hasPatch": true,
   "flags": {
    "feedback": [],
-   "review": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "ddahl"
+    },
+    {
+     "status": "+",
+     "setter": "dtownsend"
+    }
+   ],
    "superreview": []
   },
-  "patchSize": 20248
+  "patchSize": 1634
  },
  "609890": {
   "summary": "Errors from before console is opened don't appear",
@@ -1089,19 +1091,24 @@
   "summary": "Incorrect order of lines when copying from web console",
   "status": "ASSIGNED",
   "assignedName": "unusualtears",
-  "whiteboard": "[console-1][has-patch]",
+  "whiteboard": "[console-1][has-patch][fixed-in-devtools]",
   "hasPatch": true,
   "flags": {
    "feedback": [
     {
-     "status": "-",
+     "status": "+",
      "setter": "mihai.sucan"
     }
    ],
-   "review": [],
+   "review": [
+    {
+     "status": "+",
+     "setter": "gavin.sharp"
+    }
+   ],
    "superreview": []
   },
-  "patchSize": 4622
+  "patchSize": 4439
  },
  "612252": {
   "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
