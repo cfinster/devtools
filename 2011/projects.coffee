@@ -41,6 +41,7 @@
             "646070 Respect chrome developer tools preference in workspace"
             "646524 Cache the sandboxes"
             "650760 Help menu"
+            "651872 access key for menu option"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -124,6 +125,7 @@
             "650780 evaluating a null object returns TypeError: aObject is null"
             "630460 command-w doesn't close inspector panels"
             "651501 document.body properties fail to autocomplete"
+            "616586 Internal console logging API"
         ]
     }
     {
@@ -296,6 +298,8 @@
             "636731 Add GCLI commands for Workspaces"
             "644413 Workspaces should be able to restore their context via mode-line"
             "644409 Make workspaces save their state across restarts"
+            "651941 Persist workspaces across session restarts"
+            "651942 Add recent files to the file menu"
         ]
     }
     {

@@ -693,6 +693,41 @@
    "superreview": []
   }
  },
+ "651501": {
+  "summary": "document.body fails to autocomplete in Web Console",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "651941": {
+  "summary": "Persist workspaces across session restarts",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[workspace]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
+ "651942": {
+  "summary": "Add a list of recently-opened files to the file menu of the workspace",
+  "status": "NEW",
+  "assignedName": "nobody",
+  "whiteboard": "[workspace]",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
+ },
  "611032": {
   "summary": "Break out HUDConsoleObserver from HUDService",
   "status": "NEW",
@@ -740,6 +775,19 @@
    "review": [],
    "superreview": []
   }
+ },
+ "616586": {
+  "summary": "Internal console logging API for use in JSMs and Components",
+  "status": "NEW",
+  "assignedName": "ddahl",
+  "whiteboard": "[console-1]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 5365
  },
  "614586": {
   "summary": "Implement string substitution in all console API methods",
@@ -923,15 +971,14 @@
   "summary": "Integrate Workspace extension into the browser",
   "status": "ASSIGNED",
   "assignedName": "mihai.sucan",
-  "whiteboard": "[patchclean:0420][fixed-in-devtools][see-comment-33-for-try-build][needs-l10n-review][needs-ux-review]",
+  "whiteboard": "[patchclean:0420][fixed-in-devtools][see-comment-33-for-try-build][needs-ux-review]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
    "review": [
     {
-     "status": "?",
-     "requestee": "l10n",
-     "setter": "mihai.sucan"
+     "status": "+",
+     "setter": "l10n"
     }
    ],
    "superreview": []
@@ -987,6 +1034,28 @@
   },
   "patchSize": 14984
  },
+ "651872": {
+  "summary": "Create access key for Workspace menu item",
+  "status": "ASSIGNED",
+  "assignedName": "mihai.sucan",
+  "whiteboard": "[workspace][fixed-in-devtools]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [
+    {
+     "status": "-",
+     "setter": "l10n"
+    },
+    {
+     "status": "+",
+     "setter": "rcampbell"
+    }
+   ],
+   "superreview": []
+  },
+  "patchSize": 2123
+ },
  "582596": {
   "summary": "Style view centered around answering common CSS questions",
   "status": "ASSIGNED",
@@ -1009,6 +1078,17 @@
    "superreview": []
   },
   "patchSize": 79171
+ },
+ "651443": {
+  "summary": "Style Panel CSS properties are limited to hard coded values",
+  "status": "ASSIGNED",
+  "assignedName": "mratcliffe",
+  "hasPatch": false,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  }
  },
  "622303": {
   "summary": "Web Console should remember filter settings.",
@@ -1039,6 +1119,7 @@
   "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
   "status": "ASSIGNED",
   "assignedName": "rcampbell",
+  "whiteboard": "[fixed-in-devtools][console-1]",
   "hasPatch": true,
   "flags": {
    "feedback": [],
@@ -1151,19 +1232,6 @@
    "review": [],
    "superreview": []
   }
- },
- "637801": {
-  "summary": "console.log shouldn't display escaped strings",
-  "status": "RESOLVED",
-  "assignedName": "dherman",
-  "whiteboard": "[console-1][has-patch]",
-  "hasPatch": true,
-  "flags": {
-   "feedback": [],
-   "review": [],
-   "superreview": []
-  },
-  "patchSize": 6910
  },
  "638131": {
   "summary": "Add ability to check if a panel is open or not",
@@ -1293,6 +1361,19 @@
    "superreview": []
   },
   "patchSize": 23584
+ },
+ "637801": {
+  "summary": "console.log shouldn't display escaped strings",
+  "status": "VERIFIED",
+  "assignedName": "dherman",
+  "whiteboard": "[console-1][has-patch]",
+  "hasPatch": true,
+  "flags": {
+   "feedback": [],
+   "review": [],
+   "superreview": []
+  },
+  "patchSize": 6910
  },
  "618311": {
   "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",

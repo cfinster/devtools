@@ -29,7 +29,7 @@
       blurb: "The humane way to monkey with code",
       status: "Implementation",
       people: ["msucan", "rcampbell"],
-      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu"],
+      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option"],
       updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
     }, {
       id: "highlighter",
@@ -54,7 +54,7 @@
       blurb: "Console positioning, service, autocompletion and more",
       status: "Implementation",
       people: [],
-      bugs: [577721, 585991, 637801, 632347, 632275, 644596, 618311, 638949, 609890, 611032, 612658, 595223, 626484, 619598, 612252, 614586, 642615, 646025, 646028, 643184, "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)", "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "646504 Global console should have decent display of stack traces", "587757 Implement Browser Console", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "650780 evaluating a null object returns TypeError: aObject is null", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete"]
+      bugs: [577721, 585991, 637801, 632347, 632275, 644596, 618311, 638949, 609890, 611032, 612658, 595223, 626484, 619598, 612252, 614586, 642615, 646025, 646028, 643184, "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)", "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "646504 Global console should have decent display of stack traces", "587757 Implement Browser Console", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "650780 evaluating a null object returns TypeError: aObject is null", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API"]
     }, {
       id: "gcli",
       url: "https://wiki.mozilla.org/DevTools/Features/GCLI",
@@ -145,7 +145,7 @@
       blurb: "The refined, humane way to engage in software development experiments.",
       status: "Planning",
       people: [],
-      bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make workspaces save their state across restarts"]
+      bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make workspaces save their state across restarts", "651941 Persist workspaces across session restarts", "651942 Add recent files to the file menu"]
     }, {
       id: "incontent",
       name: "In-Content Tools",
