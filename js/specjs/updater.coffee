@@ -115,5 +115,5 @@ exports.generateStatusData = () ->
                             status: flag.status,
                             requestee: flag.requestee && flag.requestee.name,
                             setter: flag.setter && flag.setter.name
-    saveFile exports.datadir + "/status.json", JSON.stringify bugs, null, 1
+    saveFile exports.datadir + "/status.json", JSON.stringify statusdata, null, 1
 

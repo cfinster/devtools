@@ -135,6 +135,6 @@
         }
       }
     }
-    return saveFile(exports.datadir + "/status.json", JSON.stringify(bugs, null, 1));
+    return saveFile(exports.datadir + "/status.json", JSON.stringify(statusdata, null, 1));
   };
 }).call(this);

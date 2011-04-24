@@ -202,7 +202,7 @@ updateBugInformation = () ->
         return if info == null
         
         bugid = info.id
-        bug = data[bugid]
+        bug = data.bugs[bugid]
         if not bug?
             console.log "Couldn't find data for bug: ", bugid
             return

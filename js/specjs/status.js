@@ -159,7 +159,7 @@
         return;
       }
       bugid = info.id;
-      bug = data[bugid];
+      bug = data.bugs[bugid];
       if (!(bug != null)) {
         console.log("Couldn't find data for bug: ", bugid);
         return;
