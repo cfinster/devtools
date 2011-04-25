@@ -88,8 +88,10 @@ exports.saveBugData = () ->
 exports.generateStatusData = () ->
     statusdata = 
         bugs: {}
+        reviewQueues: {}
 
     bugs = statusdata.bugs
+    reviewQueues = statusdata.reviewQueues
     bugData = exports.bugData
     for key of bugData
         bugSummary = bugs[key] = {}
@@ -100,6 +102,25 @@ exports.generateStatusData = () ->
         bugSummary.whiteboard = bug.whiteboard
         bugSummary.hasPatch = false
         
+        if bug.attachments?
+            for attachmentId, attachment of bug.attachments
+                if not attachment.is_patch or attachment.is_obsolete or not attachment.flags?
+                    continue
+                for flag in attachment.flags
+                    if flag.status != "?" or not flag.requestee?
+                        continue
+                    requesteeName = flag.requestee.name
+                    requesteeQueue = reviewQueues[requesteeName]
+                    if not requesteeQueue?
+                        requesteeQueue = reviewQueues[requesteeName] = {}
+                    queueType = requesteeQueue[flag.name]
+                    if not queueType?
+                        queueType = requesteeQueue[flag.name] = {}
+                        queueType.devtoolsSize = 0
+                        queueType.devtoolsCount = 0
+                    queueType.devtoolsCount++
+                    queueType.devtoolsSize += attachment.size
+
         patch = bug.getLatestPatch()
         flags = bugSummary.flags = {}
         flags.feedback = []

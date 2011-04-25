@@ -96,15 +96,10 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "-",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 26011
+   "patchSize": 24164
   },
   "587757": {
    "summary": "Implement Browser Console",
@@ -760,10 +755,29 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "ddahl"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 17008
+  },
+  "588871": {
+   "summary": "Remove ConsoleStorage methods used for log message storage",
+   "status": "NEW",
+   "assignedName": "ddahl",
+   "whiteboard": "[console-1]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
     "review": [],
     "superreview": []
    },
-   "patchSize": 17628
+   "patchSize": 14574
   },
   "638142": {
    "summary": "Add ability to anchor a panel to a widget",
@@ -861,6 +875,24 @@
    },
    "patchSize": 15341
   },
+  "246620": {
+   "summary": "Add line numbers to View Source for Firefox",
+   "status": "ASSIGNED",
+   "assignedName": "geoff",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "bzbarsky",
+      "setter": "geoff"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 7548
+  },
   "560314": {
    "summary": "Implement js::dbg2: new JavaScript debugging API, replacing jsd",
    "status": "ASSIGNED",
@@ -880,10 +912,15 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "jorendorff"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 26946
+   "patchSize": 7391
   },
   "585956": {
    "summary": "Implement console.trace() in web console",
@@ -914,16 +951,23 @@
    "whiteboard": "[console-2][patchclean:0421][see-try-build-in-comment-22]",
    "hasPatch": true,
    "flags": {
-    "feedback": [],
-    "review": [
+    "feedback": [
      {
-      "status": "+",
-      "setter": "dtownsend"
+      "status": "?",
+      "requestee": "bugzilla",
+      "setter": "mihai.sucan"
      }
     ],
-    "superreview": []
+    "review": [],
+    "superreview": [
+     {
+      "status": "?",
+      "requestee": "benjamin",
+      "setter": "mihai.sucan"
+     }
+    ]
    },
-   "patchSize": 45023
+   "patchSize": 46897
   },
   "632275": {
    "summary": "Web Console: Error message when click on an object to create an inspect window",
@@ -1064,24 +1108,25 @@
    "whiteboard": "[strings] [patchclean:0827]",
    "hasPatch": true,
    "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "l10n"
-     }
-    ],
-    "review": [
-     {
-      "status": "-",
-      "setter": "dolske"
-     }
-    ],
+    "feedback": [],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 79171
+   "patchSize": 103443
   },
   "651443": {
    "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "652509": {
+   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "hasPatch": false,
@@ -1154,7 +1199,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 7534
+   "patchSize": 7507
   },
   "595223": {
    "summary": "Keep track of file:// url 'loadGroups'",
@@ -1436,6 +1481,38 @@
     "superreview": []
    },
    "patchSize": 10999
+  }
+ },
+ "reviewQueues": {
+  "gavin.sharp": {
+   "review": {
+    "devtoolsSize": 48739,
+    "devtoolsCount": 3
+   }
+  },
+  "bzbarsky": {
+   "review": {
+    "devtoolsSize": 34846,
+    "devtoolsCount": 3
+   }
+  },
+  "benjamin": {
+   "superreview": {
+    "devtoolsSize": 46897,
+    "devtoolsCount": 1
+   }
+  },
+  "bugzilla": {
+   "feedback": {
+    "devtoolsSize": 46897,
+    "devtoolsCount": 1
+   }
+  },
+  "limi": {
+   "ui-review": {
+    "devtoolsSize": 51004,
+    "devtoolsCount": 1
+   }
   }
  }
 }

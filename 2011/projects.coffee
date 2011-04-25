@@ -82,6 +82,7 @@
             "592743 specificity calculator makes mistakes"
             "585563 Allow CSS editing from inspector"
             "651443 Style Panel properties limited to hard coded values"
+            "652509 Style inspector should skip unsupported styles"
         ]
     }
     {
@@ -126,6 +127,7 @@
             "630460 command-w doesn't close inspector panels"
             "651501 document.body properties fail to autocomplete"
             "616586 Internal console logging API"
+            "588871 Remove ConsoleStorage methods used for log message storage"
         ]
     }
     {
@@ -163,6 +165,7 @@
         bugs: [
             "650893 New View Source component"
             "650895 Initial implementation of the new View Source tool"
+            "246620 Add line numbers to view source"
         ]
         notes: [
             "deminification"
@@ -176,7 +179,7 @@
         name: "CSS Editor"
         blurb: "Tweak and view!"
         status: "Implementation"
-        people: ["cvivier"]
+        people: ["cedricv"]
         bugs: [
             "583041 CSS editor"
             "590307 inline stylesheet support"
@@ -326,55 +329,85 @@
         id: "msucan"
         name: "Mihai Sucan"
         avatar: "http://a2.twimg.com/profile_images/326719609/avatar_robodesign_v5_reasonably_small.png"
+        bugzillaId: "mihai.sucan@gmail.com"
     }
     {
         id: "rcampbell"
         name: "Rob Campbell"
         avatar: "http://gravatar.com/avatar/34f8f3442a6be7ae2cb26459a2e33fc1"
+        bugzillaId: "rcampbell@mozilla.com"
     }
     {
         id: "jwalker"
         name: "Joe Walker"
         avatar: "http://gravatar.com/avatar/8dd47f0c426cd8204b8bf996cb98cb56"
+        bugzillaId: "jwalker@mozilla.com"
     }
     {
         id: "ddahl"
         name: "David Dahl"
         avatar: "http://a0.twimg.com/profile_images/1090231487/Selection_001_reasonably_small.png"
+        bugzillaId: "ddahl@mozilla.com"
     }
     {
         id: "dcamp"
         name: "Dave Camp"
         avatar: "http://a1.twimg.com/profile_images/28279492/campd_bigger.png"
+        bugzillaId: "dcamp@mozilla.com"
     }
     {
         id: "kdangoor"
         name: "Kevin Dangoor"
         avatar: "http://gravatar.com/avatar/f4749cce627b584fb9e59966a5d2c924"
+        bugzillaId: "kdangoor@mozilla.com"
+        reviewCheck: false
     }
     {
         id: "jodvarko"
         name: "Jan Odvarko"
         avatar: "http://gravatar.com/avatar/34b251cf082c202fb3160b1afb810001"
+        reviewCheck: false
     }
     {
         id: "jblandy"
         name: "Jim Blandy"
         avatar: "http://www.red-bean.com/jimb/jimb.jpg"
+        bugzillaId: "jimb@mozilla.com"
     }
     {
-        id: "cvivier"
+        id: "cedricv"
         name: "Cedric Vivier"
         avatar: "http://gravatar.com/avatar/c5216fcabd0916a2447742cd7d0a375d"
+        bugzillaId: "cedricv@neonux.com"
     }
     {
         id: "mratcliffe"
         name: "Mike Ratcliffe"
         avatar: "http://gravatar.com/avatar/7de9609bb8d1394e8f6236bd0fac2d7b"
+        bugzillaId: "mratcliffe@mozilla.com"
     }
     {
         id: "getify"
         name: "Kyle Simpson"
         avatar: "http://gravatar.com/avatar/35761e3936deba2f8189c2d20982c771"
+        bugzillaId: "getify@mozilla.com"
+    }
+    {
+        id: "gavin.sharp"
+        name: "Gavin Sharp"
+        avatar: "http://gravatar.com/avatar/08de945228403cb0598d5906e2407a7d"
+        bugzillaId: "gavin.sharp@gmail.com"
+    }
+    {
+        id: "bugzilla"
+        name: "Gervase Markham"
+        avatar: "http://gravatar.com/avatar/559c3cf31c98a95b23421186b78df500"
+        bugzillaId: "bugzilla@gerv.net"
+    }
+    {
+        id: "benjamin"
+        name: "Benjamin Smedberg"
+        avatar: "http://gravatar.com/avatar/3301a62f3707d6bcef9542d316fb587f"
+        bugzillaId: "benjamin@smedbergs.us"
     }
 ]

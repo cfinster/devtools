@@ -98,11 +98,13 @@
     });
   };
   exports.generateStatusData = function() {
-    var bug, bugData, bugSummary, bugs, flag, flags, key, patch, statusdata, _i, _len, _ref;
+    var attachment, attachmentId, bug, bugData, bugSummary, bugs, flag, flags, key, patch, queueType, requesteeName, requesteeQueue, reviewQueues, statusdata, _i, _j, _len, _len2, _ref, _ref2, _ref3;
     statusdata = {
-      bugs: {}
+      bugs: {},
+      reviewQueues: {}
     };
     bugs = statusdata.bugs;
+    reviewQueues = statusdata.reviewQueues;
     bugData = exports.bugData;
     for (key in bugData) {
       bugSummary = bugs[key] = {};
@@ -112,6 +114,35 @@
       bugSummary.assignedName = bug.assigned_to ? bug.assigned_to.name : null;
       bugSummary.whiteboard = bug.whiteboard;
       bugSummary.hasPatch = false;
+      if (bug.attachments != null) {
+        _ref = bug.attachments;
+        for (attachmentId in _ref) {
+          attachment = _ref[attachmentId];
+          if (!attachment.is_patch || attachment.is_obsolete || !(attachment.flags != null)) {
+            continue;
+          }
+          _ref2 = attachment.flags;
+          for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+            flag = _ref2[_i];
+            if (flag.status !== "?" || !(flag.requestee != null)) {
+              continue;
+            }
+            requesteeName = flag.requestee.name;
+            requesteeQueue = reviewQueues[requesteeName];
+            if (!(requesteeQueue != null)) {
+              requesteeQueue = reviewQueues[requesteeName] = {};
+            }
+            queueType = requesteeQueue[flag.name];
+            if (!(queueType != null)) {
+              queueType = requesteeQueue[flag.name] = {};
+              queueType.devtoolsSize = 0;
+              queueType.devtoolsCount = 0;
+            }
+            queueType.devtoolsCount++;
+            queueType.devtoolsSize += attachment.size;
+          }
+        }
+      }
       patch = bug.getLatestPatch();
       flags = bugSummary.flags = {};
       flags.feedback = [];
@@ -121,9 +152,9 @@
         bugSummary.hasPatch = true;
         bugSummary.patchSize = patch.size;
         if (patch.flags) {
-          _ref = patch.flags;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            flag = _ref[_i];
+          _ref3 = patch.flags;
+          for (_j = 0, _len2 = _ref3.length; _j < _len2; _j++) {
+            flag = _ref3[_j];
             if (flag.name === "review" || flag.name === "feedback" || flag.name === "superreview") {
               flags[flag.name].push({
                 status: flag.status,
