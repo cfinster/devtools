@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../css/styles.css">
+        <link type="text/css" rel="stylesheet" href="../css/mockups.css">
+        <title>Style Fix Workflow</title>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/raphael.js"></script>
+        <script src="../js/specjs/mockups.js"></script>
+    </head>
+    <body>
+        <h1>Style Fix Workflow</h1>
+        <h2>Introduction</h2>
+        <p>Jane Goodeye is a designer first and foremost, but she has managed to work her way around HTML and CSS to get what she wants.</p>
+        <p>Jane has a page with a headline that should be blue but is red.</p>
+        <div class="page">
+            <h1 style="color: red">The Wrong Color</h1>
+            <p>This text is unimportant. It may as well be Lorem.</p>
+        </div>
+
+        <p>Jane gets to the Highlighter via the context menu</p>
+        <div class="page">
+            <h1 style="color: red">The Wrong Color</h1>
+            <ul class="menu" style="position: relative; left: 20px; top: -50px; width: 150px; margin-bottom: -20px">
+                <li>Lorem</li>
+                <li class="selected">Inspect Element</li>
+                <li>Ipsum</li>
+            </ul>
+            <p>This text is unimportant. It may as well be Lorem.</p>
+        </div>
+
+        <p>The Highlighter displays with appropriate annotations and
+        such. There are buttons to display tools for that element.</p>
+
+        <div class="page inspector">
+            <h1 style="color: red" class="inspected">The Wrong Color</h1>
+            <ul class="menu" style="position: relative; left: 20px; top: -10px; width: 150px; margin-bottom: -20px">
+                <li>CSS Inspector</li>
+            </ul>
+            <p>This text is unimportant. It may as well be Lorem.</p>
+        </div>
+
+        <p>With a click, the CSS Inspector is opened while the Highlighter is still visible and Jane quickly
+        zooms in on the rule that wasn't working as she had wanted it
+        to. She opens the text properties and finds that the color
+        property is comign from the wrong stylesheet.</p>
+
+        <div class="page">
+            <div class="dialog">
+                <h1>CSS Inspector</h1>
+                <ul class="tree">
+                    <li>Lorem</li>
+                    <li class="expanded">Text Properties
+                        <ul class="tree">
+                            <li class="expanded">Color: <span>red</span>
+                                <ul class="plain">
+                                    <li>h1 <a href="#">wrongsheet:27</a></li>
+                                    <li>h1 <a href="#">rightsheet:13</a> <span id="yellowButton" style="color:black; background: yellow">?</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+        </div>
+        <p><span data-arrowTo="yellowButton">Jane clicks the CSS Doctor button to get a quick fix to her mismatched rule.</span> Since she has already selected the exact stylesheet/property/value set and element that she wants matched up, the CSS Doctor is able to give her a direct answer about her problem. The CSS Inspector and Highlighter close and the Doctor is presented with the CSS Editor.</p>
+        <div class="page">
+            <div class="dialog" style="width: 600px">
+                <h1>CSS Doctor</h1>
+                <table style="width: 600px">
+                    <tbody>
+                        <tr>
+                            <td >rightsheet.css appears before wrongsheet.css in your HTML page. One solution is to move rightsheet.css to a place in your &lt;head&gt; after wrongsheet.css, or you could make the rule more specific (which is the safer choice, because other rules may be affected by moving rightsheet.css).</td>
+                            <td style="width: 400px">CSS Editor goes here</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

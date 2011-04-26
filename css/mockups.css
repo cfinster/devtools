@@ -1,0 +1,66 @@
+.page {
+    background: white;
+    padding: 15px 5px;
+    margin: 15px 15px;
+    border: 1px solid #333;
+}
+
+.menu {
+    border: 1px solid black;
+    background: white;
+    -moz-box-shadow: 5px 5px 5px #888;
+    z-index: 10;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-left: -1em;
+}
+
+.menu .selected {
+    color: white;
+    background: blue;
+    width: 100%;
+}
+
+div.dialog {
+    border: 1px solid black;
+    -moz-box-shadow: 5px 5px 5px #888;
+    width: 300px;
+    text-align: left;
+}
+
+div.dialog > h1 {
+    background: #333;
+    color: white;
+    margin-top: 0;
+    font-size: 12px;
+    padding-left: 1em;
+}
+
+ul.tree, ul.plain {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.tree > li, ul.plain > li {
+    margin-left: 1em;
+}
+
+ul.tree > li:before {
+    content: "\229E";
+}
+
+ul.tree > li.expanded:before {
+    content: "\229F";
+}
+
+table {
+    margin-left: 0px;
+}
+
+table td, table th {
+    border: none;
+}
