@@ -91,7 +91,7 @@
         name: "Web Console Upgrade"
         blurb: "Console positioning, service, autocompletion and more"
         status: "Implementation"
-        people: []
+        people: ["past", "msucan", "ddahl"]
         bugs: [
             577721
             585991
@@ -409,5 +409,11 @@
         name: "Benjamin Smedberg"
         avatar: "http://gravatar.com/avatar/3301a62f3707d6bcef9542d316fb587f"
         bugzillaId: "benjamin@smedbergs.us"
+    }
+    {
+        id: "past"
+        name: "Panagiotis Astithas"
+        avatar: "http://gravatar.com/avatar/5910c2c56be9598a07535cc361b65a22"
+        bugzillaId: "past@mozilla.com"
     }
 ]

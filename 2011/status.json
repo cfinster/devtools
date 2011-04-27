@@ -135,17 +135,6 @@
     "superreview": []
    }
   },
-  "592743": {
-   "summary": "Style inspector specificity calculator makes mistakes",
-   "status": "NEW",
-   "assignedName": "jwalker",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "641903": {
    "summary": "[gcli] Command registry",
    "status": "NEW",
@@ -564,18 +553,6 @@
     "superreview": []
    }
   },
-  "646025": {
-   "summary": "Add file location to console.log, info, debug, etc.",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[console]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "646028": {
    "summary": "Add a filter item to the Web Developer toolbar dropdown in Web Console",
    "status": "NEW",
@@ -689,17 +666,6 @@
     "superreview": []
    }
   },
-  "651501": {
-   "summary": "document.body fails to autocomplete in Web Console",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "651941": {
    "summary": "Persist workspaces across session restarts",
    "status": "NEW",
@@ -717,6 +683,29 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[workspace]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "646025": {
+   "summary": "Add file location to console.log, info, debug, etc.",
+   "status": "NEW",
+   "assignedName": "past",
+   "whiteboard": "[console]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "651501": {
+   "summary": "document.body fails to autocomplete in Web Console",
+   "status": "NEW",
+   "assignedName": "past",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1272,6 +1261,17 @@
    "status": "REOPENED",
    "assignedName": "nobody",
    "whiteboard": "[console-2]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "592743": {
+   "summary": "Style inspector specificity calculator makes mistakes",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],

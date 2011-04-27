@@ -53,7 +53,7 @@
       name: "Web Console Upgrade",
       blurb: "Console positioning, service, autocompletion and more",
       status: "Implementation",
-      people: [],
+      people: ["past", "msucan", "ddahl"],
       bugs: [577721, 585991, 637801, 632347, 632275, 644596, 618311, 638949, 609890, 611032, 612658, 595223, 626484, 619598, 612252, 614586, 642615, 646025, 646028, 643184, "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)", "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "646504 Global console should have decent display of stack traces", "587757 Implement Browser Console", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "650780 evaluating a null object returns TypeError: aObject is null", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage"]
     }, {
       id: "gcli",
@@ -233,6 +233,11 @@
       name: "Benjamin Smedberg",
       avatar: "http://gravatar.com/avatar/3301a62f3707d6bcef9542d316fb587f",
       bugzillaId: "benjamin@smedbergs.us"
+    }, {
+      id: "past",
+      name: "Panagiotis Astithas",
+      avatar: "http://gravatar.com/avatar/5910c2c56be9598a07535cc361b65a22",
+      bugzillaId: "past@mozilla.com"
     }
   ];
 }).call(this);
