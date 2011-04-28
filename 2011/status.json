@@ -124,6 +124,17 @@
     "superreview": []
    }
   },
+  "583037": {
+   "summary": "better logic for placement of inspector panels",
+   "status": "NEW",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "591212": {
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
@@ -240,6 +251,17 @@
     "superreview": []
    }
   },
+  "574347": {
+   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "580880": {
    "summary": "chrome JS access to setTimeout enumeration",
    "status": "NEW",
@@ -274,6 +296,17 @@
     "superreview": []
    }
   },
+  "586984": {
+   "summary": "[meta] Inspector style panel bugs for firefox4",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "587752": {
    "summary": "Animations in the new Style panel",
    "status": "NEW",
@@ -296,8 +329,74 @@
     "superreview": []
    }
   },
+  "590536": {
+   "summary": "Inspector panels should remember at least size and ideally also position",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591582": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591584": {
+   "summary": "Localize the URLs in csshtmltree",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "592552": {
    "summary": "History is shared among all Web Console instances",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "592981": {
+   "summary": "[meta] Inspector style panel bugs for firefox.next",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "593331": {
+   "summary": "csslogic shortSource can create duplicate names",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "593345": {
+   "summary": "Investigate an advanced test tool for the inspector style panel",
    "status": "NEW",
    "assignedName": "nobody",
    "hasPatch": false,
@@ -1103,8 +1202,8 @@
    },
    "patchSize": 103443
   },
-  "651443": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
+  "652509": {
+   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "hasPatch": false,
@@ -1114,8 +1213,19 @@
     "superreview": []
    }
   },
-  "652509": {
-   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
+  "653082": {
+   "summary": "Style Inspector stylesheet selector should be removed",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653084": {
+   "summary": "Style Inspector should have specificity removed",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "hasPatch": false,
@@ -1261,17 +1371,6 @@
    "status": "REOPENED",
    "assignedName": "nobody",
    "whiteboard": "[console-2]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "592743": {
-   "summary": "Style inspector specificity calculator makes mistakes",
-   "status": "RESOLVED",
-   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
