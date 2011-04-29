@@ -38,7 +38,7 @@
       blurb: "Beautiful information about your DOM",
       status: "Implementation",
       people: ["rcampbell"],
-      bugs: [642471, "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser"]
+      bugs: [642471, "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element"]
     }, {
       id: "styleinspector",
       url: "https://wiki.mozilla.org/DevTools/Features/StyleInspector",

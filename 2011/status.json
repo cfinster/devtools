@@ -1,20 +1,10 @@
 {
  "bugs": {
-  "638452": {
-   "summary": "Can you please help us make the Orion code editor fast on Firefox?",
-   "status": "UNCONFIRMED",
-   "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "590795": {
    "summary": "Changes made in the CSS editor aren't reflected in the style panel",
    "status": "NEW",
    "assignedName": "cedricv",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -26,6 +16,7 @@
    "summary": "Clicking on a rule in the style panel doesn't jump to the correct line in the CSS editor",
    "status": "NEW",
    "assignedName": "cedricv",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -37,6 +28,7 @@
    "summary": "CSS editor panel should be resizable",
    "status": "NEW",
    "assignedName": "cedricv",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -48,6 +40,7 @@
    "summary": "Inspector CSS editor brings back unsaved state when I reopen it",
    "status": "NEW",
    "assignedName": "cedricv",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -59,6 +52,7 @@
    "summary": "Heap histogram API",
    "status": "NEW",
    "assignedName": "dcamp",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -70,6 +64,7 @@
    "summary": "Heap profiling API - shortest path tree",
    "status": "NEW",
    "assignedName": "dcamp",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -81,6 +76,7 @@
    "summary": "Heap profiling API - object graph snapshot for a compartment",
    "status": "NEW",
    "assignedName": "dcamp",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -117,6 +113,7 @@
    "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
    "status": "NEW",
    "assignedName": "jimb",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -128,6 +125,7 @@
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
    "assignedName": "jwalker",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -139,6 +137,7 @@
    "summary": "[gcli] Command registry",
    "status": "NEW",
    "assignedName": "jwalker",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -150,6 +149,7 @@
    "summary": "Investigate how the inspector style panel works with shorthand properties",
    "status": "NEW",
    "assignedName": "mihai.sucan",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -161,6 +161,7 @@
    "summary": "Computed style for property is sometimes wrong in the new Style panel",
    "status": "NEW",
    "assignedName": "mihai.sucan",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -256,6 +257,7 @@
    "summary": "The inspector style panel should link to the CSS editor",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -267,6 +269,7 @@
    "summary": "Inspector style panel ranks all unmatched rules the same",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -278,6 +281,7 @@
    "summary": "Animations in the new Style panel",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -289,6 +293,7 @@
    "summary": "Inspector: style panel keyboard access",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -300,6 +305,7 @@
    "summary": "History is shared among all Web Console instances",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -311,6 +317,7 @@
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -330,10 +337,23 @@
     "superreview": []
    }
   },
+  "638452": {
+   "summary": "Can you please help us make the Orion code editor fast on Firefox?",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "638871": {
    "summary": "API for code evaluation in different processes for Jetpack addons",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -377,21 +397,11 @@
     "superreview": []
    }
   },
-  "642109": {
-   "summary": "Web Console REPL \"readline\" occasionally stops working right",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "642111": {
    "summary": "Web Console messages should scroll into view automatically",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -487,6 +497,7 @@
    "summary": "Embed the GCLI in the Web Console",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -546,6 +557,7 @@
    "summary": "[console] expand console object with missing methods",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -557,6 +569,7 @@
    "summary": "Add a filter item to the Web Developer toolbar dropdown in Web Console",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -568,6 +581,7 @@
    "summary": "Global console should have decent display of stack traces",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -579,6 +593,7 @@
    "summary": "Heap profiling API - dominator tree",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -590,6 +605,7 @@
    "summary": "Cleanup/reorganize the HUDService observers and listeners",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -601,6 +617,7 @@
    "summary": "Create Help menu for workspace",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -648,6 +665,7 @@
    "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -659,6 +677,7 @@
    "summary": "Ensure GCLI commands are executed securely",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -690,6 +709,66 @@
     "superreview": []
    }
   },
+  "653531": {
+   "summary": "Shared knowledge of selected node in highlighter",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][console]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653534": {
+   "summary": "Create basic Annotations feature for the Highlighter",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653545": {
+   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653549": {
+   "summary": "Add a close button to the selected node in the highlighter",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[best: 2h, likely: 4h, worst: 2d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653550": {
+   "summary": "Add a close button to the highlighter",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[best: 1h, likely: 4h, worst: 2d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
    "status": "NEW",
@@ -706,6 +785,19 @@
    "summary": "document.body fails to autocomplete in Web Console",
    "status": "NEW",
    "assignedName": "past",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653528": {
+   "summary": "Strip out Style and DOM panels and support code from Inspector.",
+   "status": "NEW",
+   "assignedName": "rcampbell",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -834,6 +926,7 @@
    "summary": "CSS editor should properly edit inline style sheets",
    "status": "ASSIGNED",
    "assignedName": "cedricv",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -845,6 +938,7 @@
    "summary": "Styling for the CSS editor panel",
    "status": "ASSIGNED",
    "assignedName": "cedricv",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -856,6 +950,7 @@
    "summary": "Dockable Panels",
    "status": "ASSIGNED",
    "assignedName": "enndeakin",
+   "whiteboard": {},
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -868,6 +963,7 @@
    "summary": "Add line numbers to View Source for Firefox",
    "status": "ASSIGNED",
    "assignedName": "geoff",
+   "whiteboard": {},
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -886,6 +982,7 @@
    "summary": "Implement js::dbg2: new JavaScript debugging API, replacing jsd",
    "status": "ASSIGNED",
    "assignedName": "jimb",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1103,10 +1200,11 @@
    },
    "patchSize": 103443
   },
-  "651443": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
+  "652509": {
+   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1114,16 +1212,18 @@
     "superreview": []
    }
   },
-  "652509": {
-   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
+  "587134": {
+   "summary": "Context menu item for Highlight Element (highlighter)",
    "status": "ASSIGNED",
-   "assignedName": "mratcliffe",
-   "hasPatch": false,
+   "assignedName": "rcampbell",
+   "whiteboard": "[strings] [patchbitrot] [parity-chrome]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 14565
   },
   "622303": {
    "summary": "Web Console should remember filter settings.",
@@ -1272,6 +1372,7 @@
    "summary": "Style inspector specificity calculator makes mistakes",
    "status": "RESOLVED",
    "assignedName": "jwalker",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1291,10 +1392,35 @@
     "superreview": []
    }
   },
+  "651443": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "639518": {
    "summary": "Create a Cross Add-on registry and communication service",
    "status": "RESOLVED",
    "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "642109": {
+   "summary": "Web Console REPL \"readline\" occasionally stops working right",
+   "status": "RESOLVED",
+   "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1354,6 +1480,7 @@
    "summary": "Ace/Pilot/GCLI doesn't have a good definition of the environment",
    "status": "RESOLVED",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1365,6 +1492,7 @@
    "summary": "Ace/Pilot/GCLI doesn't have a good definition of pref scopes",
    "status": "RESOLVED",
    "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
