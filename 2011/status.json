@@ -121,6 +121,18 @@
     "superreview": []
    }
   },
+  "583037": {
+   "summary": "better logic for placement of inspector panels",
+   "status": "NEW",
+   "assignedName": "jwalker",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "591212": {
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
@@ -241,6 +253,18 @@
     "superreview": []
    }
   },
+  "574347": {
+   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "580880": {
    "summary": "chrome JS access to setTimeout enumeration",
    "status": "NEW",
@@ -277,6 +301,18 @@
     "superreview": []
    }
   },
+  "586984": {
+   "summary": "[meta] Inspector style panel bugs for firefox4",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "587752": {
    "summary": "Animations in the new Style panel",
    "status": "NEW",
@@ -301,8 +337,80 @@
     "superreview": []
    }
   },
+  "590536": {
+   "summary": "Inspector panels should remember at least size and ideally also position",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591582": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591584": {
+   "summary": "Localize the URLs in csshtmltree",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "592552": {
    "summary": "History is shared among all Web Console instances",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "592981": {
+   "summary": "[meta] Inspector style panel bugs for firefox.next",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "593331": {
+   "summary": "csslogic shortSource can create duplicate names",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "593345": {
+   "summary": "Investigate an advanced test tool for the inspector style panel",
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
@@ -1212,6 +1320,30 @@
     "superreview": []
    }
   },
+  "653082": {
+   "summary": "Style Inspector stylesheet selector should be removed",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653084": {
+   "summary": "Style Inspector should have specificity removed",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
    "status": "ASSIGNED",
@@ -1368,35 +1500,11 @@
     "superreview": []
    }
   },
-  "592743": {
-   "summary": "Style inspector specificity calculator makes mistakes",
-   "status": "RESOLVED",
-   "assignedName": "jwalker",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "638131": {
    "summary": "Add ability to check if a panel is open or not",
    "status": "RESOLVED",
    "assignedName": "mihai.sucan",
    "whiteboard": "[devtools]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "651443": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
-   "status": "RESOLVED",
-   "assignedName": "mratcliffe",
-   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
