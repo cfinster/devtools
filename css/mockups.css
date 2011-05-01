@@ -1,3 +1,50 @@
+.browser {
+    background: white;
+    border: 1px solid black;
+    -moz-border-radius: 5px;
+}
+
+.browser .tabs {
+    background: -moz-linear-gradient(bottom, #9B9B9B 0%, #BCBCBC 100%); /* firefox */
+    width: 100%;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+}
+
+.browser .tabs .tab {
+    background: url(../images/mockups/close.png) no-repeat right, -moz-linear-gradient(bottom, #A1A1A1 0%, #C0C0C0 100%); /* firefox */
+    color: black;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 26px;
+}
+
+.browser .tabs .tab.selected {
+    background: url(../images/mockups/close.png) no-repeat right, -moz-linear-gradient(bottom, #D0D0D0 0%, #EAEAEA 100%); /* firefox */
+}
+
+.browser .toolbar .location {
+    background: url(../images/mockups/favicon.png) no-repeat left, white;
+    padding-left: 16px;
+    padding-right: 10px;
+    margin: 5px 5px;
+    border: 1px solid #8C8C8C;
+    -moz-box-flex: 1;
+    -moz-border-radius: 5px;
+}
+
+.browser .toolbar .backforward {
+    background: url(../images/mockups/backforward.png) no-repeat left;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.browser .toolbar .home {
+    background: url(../images/mockups/home.png) no-repeat left;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
 .page {
     background: white;
     padding: 15px 5px;
@@ -49,7 +96,7 @@ ul.tree > li, ul.plain > li {
     margin-left: 1em;
 }
 
-ul.tree > li:before {
+ul.tree > li.exp:before {
     content: "\229E";
 }
 
@@ -63,4 +110,52 @@ table {
 
 table td, table th {
     border: none;
+}
+
+.editor {
+    width: 500px;
+    height: 250px;
+}
+
+.toolbar {
+    background: -moz-linear-gradient(bottom, #D1D1D1 0%, #E8E8E8 100%); /* firefox */
+    border-bottom: 1px solid #888888;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    width: 100%;
+    text-shadow: none;
+}
+
+.toolbar .switch, .toolbar .button {
+    -moz-border-radius: 3px;
+    border: 1px solid #888888;
+    color: #EEEEEE;
+}
+
+.toolbar .switch, .toolbar .button {
+    background: #AAAAAA;
+}
+
+.toolbar .switch.selected {
+    background: #222222;
+}
+
+.link {
+    text-decoration: underline;
+    color: blue;
+}
+
+.withsidebar {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    width: 100%;
+}
+
+.withsidebar .content {
+/*    -moz-box-flex: 1;
+*/}
+
+.withsidebar .sidebar {
+    width: 400px;
+    border-left: 2px solid black;
 }

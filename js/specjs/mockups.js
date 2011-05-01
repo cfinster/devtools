@@ -2,7 +2,7 @@
   var _ref;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.initializeMockup = function() {
-    var canvas, ctx, el, height, inLeft, inOffset, inTop, inspectedEl, left, top, width, _i, _j, _len, _len2, _ref, _ref2, _ref3;
+    var canvas, ctx, editor, el, elem, height, inLeft, inOffset, inTop, inspectedEl, left, mode, option, options, top, width, _i, _j, _k, _len, _len2, _len3, _ref, _ref2, _ref3, _ref4, _results;
     console.log("initializing mockup");
     _ref = $('.inspector');
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -35,10 +35,44 @@
       }
       $("body").append(canvas);
     }
-    return $("body").drawArrows();
+    $("body").drawArrows();
+    _ref4 = $(".editor");
+    _results = [];
+    for (_k = 0, _len3 = _ref4.length; _k < _len3; _k++) {
+      elem = _ref4[_k];
+      editor = ace.edit(elem);
+      options = elem.getAttribute("data-editor-options");
+      _results.push((function() {
+        var _i, _len, _results;
+        if (options) {
+          options = options.split(',');
+          _results = [];
+          for (_i = 0, _len = options.length; _i < _len; _i++) {
+            option = options[_i];
+            _results.push((function() {
+              switch (option) {
+                case 'html':
+                  mode = require('ace/mode/html').Mode;
+                  return editor.getSession().setMode(new mode());
+                case 'readonly':
+                  return editor.setReadOnly(true);
+                case 'css':
+                  mode = require('ace/mode/css').Mode;
+                  return editor.getSession().setMode(new mode());
+              }
+            })());
+          }
+          return _results;
+        }
+      })());
+    }
+    return _results;
   };
   $.fn.drawArrows = function() {
     var el, height, left, r, top, width, _ref;
+    if (!(typeof Raphael != "undefined" && Raphael !== null)) {
+      return;
+    }
     el = $(this);
     _ref = el.offset(), left = _ref.left, top = _ref.top;
     width = el.outerWidth();

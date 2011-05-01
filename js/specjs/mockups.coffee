@@ -38,9 +38,28 @@
         $("body").append(canvas)
     
     $("body").drawArrows()
+    for elem in $(".editor")
+        editor = ace.edit(elem)
+        options = elem.getAttribute("data-editor-options")
+        if options
+            options = options.split(',')
+            for option in options
+                switch option
+                    when 'html'
+                        mode = require('ace/mode/html').Mode
+                        editor.getSession().setMode(new mode())
+                    when 'readonly'
+                        editor.setReadOnly(true)
+                    when 'css'
+                        mode = require('ace/mode/css').Mode
+                        editor.getSession().setMode(new mode())
+                
 
 
 $.fn.drawArrows = () ->
+    if not Raphael?
+        return
+        
     el = $ @
     {left, top} = el.offset()
     width = el.outerWidth()

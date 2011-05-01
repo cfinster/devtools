@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../css/styles.css">
+        <link type="text/css" rel="stylesheet" href="../css/mockups.css">
+        <title>View Source Wireframe</title>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/ace/ace.js"></script>
+        <script src="../js/ace/mode-html.js"></script>
+        <script src="../js/ace/mode-css.js"></script>
+        <script src="../js/specjs/mockups.js"></script>
+    </head>
+    <body>
+        <h1>View Source Wireframes</h1>
+        <h2>Introduction</h2>
+        <p>"View Source" is the original developer tool. The view source tool of today does more and is more polished than it was originally, but we think it can be a gateway to much more powerful tools.</p>
+        <p>This collection of wireframes is designed to give an impression of how someone can use this new View Source.</p>
+        <h3>The Initial View</h3>
+        <p>To start with, if people don't change their habits at all, View Source will continue to work the way they expected to. A new toolbar will be the only addition.</p>
+        <div class="browser">
+            <div class="tabs">
+                <div class="tab">
+                    Original Page
+                </div>
+                <div class="tab selected">
+                    Source of http://originalpage.url
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="backforward">&nbsp;</div>
+                <div class="location">view-source:http://originalpage.url</div>
+                <div class="home">&nbsp;</div>
+            </div>
+            <div class="contentarea">
+                <div class="toolbar">
+                    <div class="switch selected left">Original Markup</div>
+                    <div class="switch right">Current Markup</div>
+                    <div class="button" style="margin-left: 1em">Find</div>
+                    <div class="button" style="margin-left: 1em">Dock on Side</div>
+                </div>
+                <div class="editor" data-editor-options="html,readonly">&lt;html>
+    &lt;head>
+        &lt;title>The page within a page within a page&lt;/title>
+        &lt;script src="js/foo.js">&lt;/script>
+        &lt;link type="text/css" rel="stylesheet" href="css/styles.css">
+    &lt;/head>
+    &lt;body>
+        &lt;p>A very simple page.&lt;/p>
+    &lt;/body>
+&lt;/html>
+                </div>
+                <!-- hacky! need to save space for Ace -->
+                <div style="position:relative; height: 250px">&nbsp;</div>
+            </div>
+        </div>
+        <p><em>TODO</em> File selection/search is not shown. Should it be file selection specific (like Firebug) or should we embed the Command Line and use its file search capabilities?</p>
+        <p><em>Not shown above:</em> the script src attribute is a link, as is the href attribute of the link tag.</p>
+        <p>From the picture above, we can already see two new but previously requested features for View Source: viewing source in a tab and line numbers. The new gutter area that contains the line numbers will eventually grow to support other features as well.</p>
+        <p>The new toolbar exposes the "Find" command, which has been around for a long time. The Find button opens the find bar at the bottom of the window. One new feature exposed in the toolbar is the ability to jump from the HTML source that was originally downloaded to the markup for the <em>current</em> DOM. Previously, you would have to switch contexts to a completely different tool (like Firebug) to see this and there are still people who are unfamiliar with Firebug.</p>
+        <p>Let's take a look at this new view.</p>
+        <h3>Current Markup View</h3>
+        <div class="browser">
+            <div class="tabs">
+                <div class="tab">
+                    Original Page
+                </div>
+                <div class="tab selected">
+                    Current markup of http://originalpage.url
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="backforward">&nbsp;</div>
+                <div class="location">view-source:http://originalpage.url?current</div>
+                <div class="home">&nbsp;</div>
+            </div>
+            <div class="contentarea">
+                <div class="toolbar">
+                    <div class="switch left">Original Markup</div>
+                    <div class="switch selected right">Current Markup</div>
+                    <div class="button" style="margin-left: 1em">Find</div>
+                    <div class="button" style="margin-left: 1em">Dock on Side</div>
+                </div>
+                <ul class="tree">
+                    <li class="expanded">&lt;html>
+                        <ul class="tree">
+                            <li class="expanded">&lt;head>
+                                <ul class="tree">
+                                    <li>&lt;title>The page within a page within a page&lt;/title></li>
+                                    <li>&lt;script src="<span class="link">js/foo.js</span>">&lt;
+                                    <li>&lt;link type="text/css" rel="stylesheet" href="<span class="link">css/styles.css</span>"></li>
+                                </ul>
+                            </li>
+                            <li class="expanded">&lt;body>
+                                <ul class="tree">
+                                    <li>&lt;p>A very simple page.&lt;/p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu" style="position: relative; left: 80px; top: -30px; width: 150px; margin-bottom: -20px">
+                    <li>Highlight Element</li>
+                </ul>
+            </div>
+        </div>
+        <p><em>Not shown above:</em> the tags are syntax highlighted. <em>TODO</em> how much is expanded initially?</p>
+        <p>The current markup view is the HTML Tree feature. The user can look at and edit the current markup. The context menu for an element will allow the user to invoke the Highlighter feature with that element selected.</p>
+        <p>Note that the view-source URL has a query reflecting that this is the current DOM view.</p>
+        <p>What happens if the user follows the link for the CSS?</p>
+        <h3>CSS View</h3>
+        <div class="browser">
+            <div class="tabs">
+                <div class="tab">
+                    Original Page
+                </div>
+                <div class="tab selected">
+                    Source of http://originalpage.url/css/styles.css
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="backforward">&nbsp;</div>
+                <div class="location">view-source:http://originalpage.url/css/styles.css</div>
+                <div class="home">&nbsp;</div>
+            </div>
+            <div class="contentarea">
+                <div class="toolbar">
+                    <div class="switch left">Edit</div>
+                    <div class="button" style="margin-left: 1em">Find</div>
+                    <div class="button" style="margin-left: 1em">Dock on Side</div>
+                </div>
+                <div class="editor" data-editor-options="css">body {
+    color: #fff;
+    background: #555;
+}
+                </div>
+                <!-- hacky! need to save space for Ace -->
+                <div style="position:relative; height: 250px">&nbsp;</div>
+            </div>
+        </div>
+        <p><em>Not shown above:</em> The toolbar will actually be the toolbar for the CSS Editor feature</p>
+        <p>Firefox 4's View Source allows you to view the CSS that was downloaded. This View Source allows you to view the CSS that was downloaded with line numbers and syntax highlighting, the same as you get with HTML. Additionally, you can click the Edit button and make changes to the CSS that appear live in the page you have open.</p>
+        <p>This editing capability that is present in both the HTML Tree ("current markup") and CSS views are one of the primary factors for allowing the user to open the markup/css in a sidebar and not just in a new tab. When editing the CSS, it is nice to be able to see the changes as they are made.</p>
+        <h3>Docked View</h3>
+        <div class="browser">
+            <div class="tabs">
+                <div class="tab selected">
+                    Original Page
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="backforward">&nbsp;</div>
+                <div class="location">http://originalpage.url/css/styles.css</div>
+                <div class="home">&nbsp;</div>
+            </div>
+            <div class="contentarea">
+                <div class="withsidebar">
+                    <div class="content" style="background: #555; color: #fff; text-shadow: none; width: 100px">
+                        <p>A very simple page.</p>
+                    </div>
+                    <div class="sidebar">
+                        <div class="toolbar">
+                            <div class="backforward">&nbsp;</div>
+                            <div class="switch left">Edit</div>
+                            <div class="button" style="margin-left: 1em">Find</div>
+                            <div class="button" style="margin-left: 1em">Dock on Side</div>
+                        </div>
+                        <div class="editor" data-editor-options="css">body {
+    color: #fff;
+    background: #555;
+}
+                        </div>
+                        <!-- hacky! need to save space for Ace -->
+                        <div style="position:relative; height: 250px">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><em>Note:</em>clearly the sidebar should not be hanging outside of the window.</p>
+        <p>In this view, the sidebar has back and forward buttons on the toolbar so that the user can navigate between source files.</p>
+    </body>
+</html>
