@@ -124,7 +124,7 @@
   "583037": {
    "summary": "better logic for placement of inspector panels",
    "status": "NEW",
-   "assignedName": "jwalker",
+   "assignedName": "joseph.walker+bugzilla",
    "whiteboard": {},
    "hasPatch": false,
    "flags": {
@@ -136,7 +136,7 @@
   "591212": {
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
-   "assignedName": "jwalker",
+   "assignedName": "joseph.walker+bugzilla",
    "whiteboard": {},
    "hasPatch": false,
    "flags": {
@@ -148,7 +148,19 @@
   "641903": {
    "summary": "[gcli] Command registry",
    "status": "NEW",
-   "assignedName": "jwalker",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "651071": {
+   "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
    "whiteboard": {},
    "hasPatch": false,
    "flags": {
@@ -769,18 +781,6 @@
     "superreview": []
    }
   },
-  "651071": {
-   "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "651081": {
    "summary": "Ensure GCLI commands are executed securely",
    "status": "NEW",
@@ -870,6 +870,30 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[best: 1h, likely: 4h, worst: 2d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654068": {
+   "summary": "Style Inspector rows should show visual indicator when unmatched rules exist",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654069": {
+   "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1108,13 +1132,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
+      "status": "?",
+      "requestee": "mrbkap",
       "setter": "jorendorff"
      }
     ],
     "superreview": []
    },
-   "patchSize": 7391
+   "patchSize": 10209
   },
   "585956": {
    "summary": "Implement console.trace() in web console",
@@ -1155,9 +1180,8 @@
     "review": [],
     "superreview": [
      {
-      "status": "?",
-      "requestee": "benjamin",
-      "setter": "mihai.sucan"
+      "status": "-",
+      "setter": "neil"
      }
     ]
    },
@@ -1307,42 +1331,6 @@
     "superreview": []
    },
    "patchSize": 103443
-  },
-  "652509": {
-   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
-   "status": "ASSIGNED",
-   "assignedName": "mratcliffe",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "653082": {
-   "summary": "Style Inspector stylesheet selector should be removed",
-   "status": "ASSIGNED",
-   "assignedName": "mratcliffe",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "653084": {
-   "summary": "Style Inspector should have specificity removed",
-   "status": "ASSIGNED",
-   "assignedName": "mratcliffe",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
   },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
@@ -1505,6 +1493,42 @@
    "status": "RESOLVED",
    "assignedName": "mihai.sucan",
    "whiteboard": "[devtools]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "652509": {
+   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653082": {
+   "summary": "Style Inspector stylesheet selector should be removed",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653084": {
+   "summary": "Style Inspector should have specificity removed",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1732,9 +1756,9 @@
     "devtoolsCount": 3
    }
   },
-  "benjamin": {
-   "superreview": {
-    "devtoolsSize": 46897,
+  "mrbkap": {
+   "review": {
+    "devtoolsSize": 10209,
     "devtoolsCount": 1
    }
   },
