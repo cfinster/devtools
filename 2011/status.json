@@ -121,10 +121,22 @@
     "superreview": []
    }
   },
+  "583037": {
+   "summary": "better logic for placement of inspector panels",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "591212": {
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
-   "assignedName": "jwalker",
+   "assignedName": "joseph.walker+bugzilla",
    "whiteboard": {},
    "hasPatch": false,
    "flags": {
@@ -136,7 +148,19 @@
   "641903": {
    "summary": "[gcli] Command registry",
    "status": "NEW",
-   "assignedName": "jwalker",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "651071": {
+   "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
    "whiteboard": {},
    "hasPatch": false,
    "flags": {
@@ -241,6 +265,18 @@
     "superreview": []
    }
   },
+  "574347": {
+   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "580880": {
    "summary": "chrome JS access to setTimeout enumeration",
    "status": "NEW",
@@ -277,6 +313,18 @@
     "superreview": []
    }
   },
+  "586984": {
+   "summary": "[meta] Inspector style panel bugs for firefox4",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "587752": {
    "summary": "Animations in the new Style panel",
    "status": "NEW",
@@ -301,8 +349,80 @@
     "superreview": []
    }
   },
+  "590536": {
+   "summary": "Inspector panels should remember at least size and ideally also position",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591582": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591584": {
+   "summary": "Localize the URLs in csshtmltree",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "592552": {
    "summary": "History is shared among all Web Console instances",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "592981": {
+   "summary": "[meta] Inspector style panel bugs for firefox.next",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "593331": {
+   "summary": "csslogic shortSource can create duplicate names",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "593345": {
+   "summary": "Investigate an advanced test tool for the inspector style panel",
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
@@ -661,18 +781,6 @@
     "superreview": []
    }
   },
-  "651071": {
-   "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "651081": {
    "summary": "Ensure GCLI commands are executed securely",
    "status": "NEW",
@@ -762,6 +870,30 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[best: 1h, likely: 4h, worst: 2d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654068": {
+   "summary": "Style Inspector rows should show visual indicator when unmatched rules exist",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654069": {
+   "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1000,13 +1132,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
+      "status": "?",
+      "requestee": "mrbkap",
       "setter": "jorendorff"
      }
     ],
     "superreview": []
    },
-   "patchSize": 7391
+   "patchSize": 10209
   },
   "585956": {
    "summary": "Implement console.trace() in web console",
@@ -1047,9 +1180,8 @@
     "review": [],
     "superreview": [
      {
-      "status": "?",
-      "requestee": "benjamin",
-      "setter": "mihai.sucan"
+      "status": "-",
+      "setter": "neil"
      }
     ]
    },
@@ -1199,18 +1331,6 @@
     "superreview": []
    },
    "patchSize": 103443
-  },
-  "652509": {
-   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
-   "status": "ASSIGNED",
-   "assignedName": "mratcliffe",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
   },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
@@ -1368,18 +1488,6 @@
     "superreview": []
    }
   },
-  "592743": {
-   "summary": "Style inspector specificity calculator makes mistakes",
-   "status": "RESOLVED",
-   "assignedName": "jwalker",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "638131": {
    "summary": "Add ability to check if a panel is open or not",
    "status": "RESOLVED",
@@ -1392,8 +1500,32 @@
     "superreview": []
    }
   },
-  "651443": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
+  "652509": {
+   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653082": {
+   "summary": "Style Inspector stylesheet selector should be removed",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653084": {
+   "summary": "Style Inspector should have specificity removed",
    "status": "RESOLVED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1624,9 +1756,9 @@
     "devtoolsCount": 3
    }
   },
-  "benjamin": {
-   "superreview": {
-    "devtoolsSize": 46897,
+  "mrbkap": {
+   "review": {
+    "devtoolsSize": 10209,
     "devtoolsCount": 1
    }
   },
