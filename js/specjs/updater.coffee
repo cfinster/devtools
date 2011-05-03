@@ -85,17 +85,15 @@ exports.saveBugData = () ->
         output = q.serialize()
         saveFile exports.datadir + "/bugdata.json", output
 
-exports.generateStatusData = () ->
-    statusdata = 
-        bugs: {}
-        reviewQueues: {}
-
+addBugData = (statusdata) ->
     bugs = statusdata.bugs
     reviewQueues = statusdata.reviewQueues
     bugData = exports.bugData
     for key of bugData
         bugSummary = bugs[key] = {}
         bug = bugData[key]
+        if not bug?
+            throw new Error("Where's the bug data for #{key}?")
         bugSummary.summary = bug.summary
         bugSummary.status = bug.status
         bugSummary.assignedName = if bug.assigned_to then bug.assigned_to.name else null
@@ -136,5 +134,25 @@ exports.generateStatusData = () ->
                             status: flag.status,
                             requestee: flag.requestee && flag.requestee.name,
                             setter: flag.setter && flag.setter.name
+
+loadCachedBugData = () ->
+    console.log "Reloading cached bugdata"
+    buggerall.getCachedResult("bugdata.json", (data) ->
+        console.log "Bugdata retrieved"
+        exports.bugData = data
+        exports.generateStatusData()
+    )
+
+
+exports.generateStatusData = () ->
+    statusdata = 
+        bugs: {}
+        reviewQueues: {}
+    
+    if not exports.bugData
+        loadCachedBugData()
+        return
+
+    addBugData statusdata
     saveFile exports.datadir + "/status.json", JSON.stringify statusdata, null, 1
 

@@ -84,19 +84,6 @@
     "superreview": []
    }
   },
-  "577721": {
-   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
-   "status": "NEW",
-   "assignedName": "ddahl",
-   "whiteboard": "[console-1]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 24164
-  },
   "587757": {
    "summary": "Implement Browser Console",
    "status": "NEW",
@@ -168,6 +155,19 @@
     "review": [],
     "superreview": []
    }
+  },
+  "577721": {
+   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
+   "status": "NEW",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 24164
   },
   "586977": {
    "summary": "Investigate how the inspector style panel works with shorthand properties",
@@ -906,12 +906,18 @@
    "status": "NEW",
    "assignedName": "past",
    "whiteboard": "[console]",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
-    "feedback": [],
+    "feedback": [
+     {
+      "status": "-",
+      "setter": "mihai.sucan"
+     }
+    ],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 9824
   },
   "651501": {
    "summary": "document.body fails to autocomplete in Web Console",
@@ -1241,12 +1247,12 @@
     "review": [
      {
       "status": "+",
-      "setter": "l10n"
+      "setter": "rcampbell"
      }
     ],
     "superreview": []
    },
-   "patchSize": 51004
+   "patchSize": 1321
   },
   "642615": {
    "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -1327,10 +1333,16 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "mihai.sucan",
+      "setter": "mratcliffe"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 103443
+   "patchSize": 10763
   },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
@@ -1548,18 +1560,6 @@
     "superreview": []
    }
   },
-  "642109": {
-   "summary": "Web Console REPL \"readline\" occasionally stops working right",
-   "status": "RESOLVED",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "642189": {
    "summary": "GCLI should support grouped parameters",
    "status": "RESOLVED",
@@ -1707,6 +1707,18 @@
    },
    "patchSize": 1250
   },
+  "642109": {
+   "summary": "Web Console REPL \"readline\" occasionally stops working right",
+   "status": "VERIFIED",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "616742": {
    "summary": "Implement console.debug() (was: Navigation broken on Citytv website)",
    "status": "VERIFIED",
@@ -1772,6 +1784,12 @@
    "ui-review": {
     "devtoolsSize": 51004,
     "devtoolsCount": 1
+   }
+  },
+  "mihai.sucan": {
+   "review": {
+    "devtoolsSize": 162733,
+    "devtoolsCount": 2
    }
   }
  }

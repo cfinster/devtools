@@ -1,5 +1,5 @@
 (function() {
-  var Projects, checkDataDir, exports, getBugIDandLabel, saveFile;
+  var Projects, addBugData, checkDataDir, exports, getBugIDandLabel, loadCachedBugData, saveFile;
   exports = specjs.updater = {};
   Projects = specjs.status.Projects;
   getBugIDandLabel = specjs.status.getBugIDandLabel;
@@ -97,18 +97,18 @@
       return saveFile(exports.datadir + "/bugdata.json", output);
     });
   };
-  exports.generateStatusData = function() {
-    var attachment, attachmentId, bug, bugData, bugSummary, bugs, flag, flags, key, patch, queueType, requesteeName, requesteeQueue, reviewQueues, statusdata, _i, _j, _len, _len2, _ref, _ref2, _ref3;
-    statusdata = {
-      bugs: {},
-      reviewQueues: {}
-    };
+  addBugData = function(statusdata) {
+    var attachment, attachmentId, bug, bugData, bugSummary, bugs, flag, flags, key, patch, queueType, requesteeName, requesteeQueue, reviewQueues, _i, _len, _ref, _ref2, _results;
     bugs = statusdata.bugs;
     reviewQueues = statusdata.reviewQueues;
     bugData = exports.bugData;
+    _results = [];
     for (key in bugData) {
       bugSummary = bugs[key] = {};
       bug = bugData[key];
+      if (!(bug != null)) {
+        throw new Error("Where's the bug data for " + key + "?");
+      }
       bugSummary.summary = bug.summary;
       bugSummary.status = bug.status;
       bugSummary.assignedName = bug.assigned_to ? bug.assigned_to.name : null;
@@ -148,24 +148,48 @@
       flags.feedback = [];
       flags.review = [];
       flags.superreview = [];
-      if (patch) {
-        bugSummary.hasPatch = true;
-        bugSummary.patchSize = patch.size;
-        if (patch.flags) {
-          _ref3 = patch.flags;
-          for (_j = 0, _len2 = _ref3.length; _j < _len2; _j++) {
-            flag = _ref3[_j];
-            if (flag.name === "review" || flag.name === "feedback" || flag.name === "superreview") {
-              flags[flag.name].push({
+      _results.push((function() {
+        var _i, _len, _ref, _results;
+        if (patch) {
+          bugSummary.hasPatch = true;
+          bugSummary.patchSize = patch.size;
+          if (patch.flags) {
+            _ref = patch.flags;
+            _results = [];
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              flag = _ref[_i];
+              _results.push(flag.name === "review" || flag.name === "feedback" || flag.name === "superreview" ? flags[flag.name].push({
                 status: flag.status,
                 requestee: flag.requestee && flag.requestee.name,
                 setter: flag.setter && flag.setter.name
-              });
+              }) : void 0);
             }
+            return _results;
           }
         }
-      }
+      })());
     }
+    return _results;
+  };
+  loadCachedBugData = function() {
+    console.log("Reloading cached bugdata");
+    return buggerall.getCachedResult("bugdata.json", function(data) {
+      console.log("Bugdata retrieved");
+      exports.bugData = data;
+      return exports.generateStatusData();
+    });
+  };
+  exports.generateStatusData = function() {
+    var statusdata;
+    statusdata = {
+      bugs: {},
+      reviewQueues: {}
+    };
+    if (!exports.bugData) {
+      loadCachedBugData();
+      return;
+    }
+    addBugData(statusdata);
     return saveFile(exports.datadir + "/status.json", JSON.stringify(statusdata, null, 1));
   };
 }).call(this);
