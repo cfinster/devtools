@@ -20,6 +20,7 @@
       name: "Web Console '5'",
       blurb: "Adding awesome to the existing Web Console",
       status: "Aurora",
+      target: "5",
       people: ["ddahl", "msucan"],
       bugs: ["642108 JS errors from HUD in Error Console", "616742 Implement console.debug", "637801 console.log shouldn't display escaped strings"]
     }, {
@@ -28,6 +29,7 @@
       name: "Workspaces First Take",
       blurb: "The humane way to monkey with code",
       status: "Implementation",
+      target: "6",
       people: ["msucan", "rcampbell"],
       bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option"],
       updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
@@ -37,6 +39,7 @@
       name: "Highlighter",
       blurb: "Beautiful information about your DOM",
       status: "Implementation",
+      target: "7",
       people: ["rcampbell"],
       bugs: [642471, "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element"]
     }, {
@@ -45,6 +48,7 @@
       name: "Style Inspector",
       blurb: "View an element's style, in style!",
       status: "Implementation",
+      target: "7",
       people: ["mratcliffe"],
       bugs: ["574347 Opening the HUD with Inspector open causes Style Panel to move", "582596 Style view answering common CSS questions", "583037 Better logic for placement of inspector panels", "585563 The inspector style panel should link to the CSS editor", "586974 All unmatched rules are ranked the same", "586977 Investigate how the panel works with shorthand properties", "587752 Animations in the new Style panel", "588941 Computed style for property is sometimes wrong", "589375 Keyboard access", "590536 Inspector panels should remember at least size and ideally also position", "590796 Clicking on a rule doesn't jump to the correct line in the CSS editor", "591212 React to dynamic changes to the stylesheets", "591582 Style Panel CSS properties are limited to hard coded values", "591584 Localize the URLs in csshtmltree", "593331 Csslogic shortSource can create duplicate names", "593345 Investigate an advanced test tool for the inspector style panel", "652509 Style inspector should skip unsupported styles", "653082 Stylesheet selector should be removed", "653084 Specificity should be removed", "654068 Rows should show visual indicator when unmatched rules exist", "654069 \"Effects and Other\" group should be extracted into more than 1 group", "586984 [meta] Inspector style panel bugs for firefox4", "592981 [meta] Inspector style panel bugs for firefox.next"]
     }, {
@@ -53,6 +57,7 @@
       name: "Web Console Upgrade",
       blurb: "Console positioning, service, autocompletion and more",
       status: "Implementation",
+      target: "6",
       people: ["past", "msucan", "ddahl"],
       bugs: [577721, 585991, 637801, 632347, 632275, 644596, 618311, 638949, 609890, 611032, 612658, 595223, 626484, 619598, 612252, 614586, 642615, 646025, 646028, 643184, "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)", "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "646504 Global console should have decent display of stack traces", "587757 Implement Browser Console", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "650780 evaluating a null object returns TypeError: aObject is null", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage"]
     }, {
@@ -61,6 +66,7 @@
       name: "Graphical Command Line Interface",
       blurb: "The fastest, most discoverable way to control your tools",
       status: "Implementation",
+      target: "6",
       people: ["jwalker"],
       bugs: [641903, 642505, "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system"]
     }, {
@@ -68,6 +74,7 @@
       name: "View Source Reboot",
       blurb: "The View Source of the Future",
       status: "Planning",
+      target: "7",
       people: ["msucan", "getify"],
       bugs: ["650893 New View Source component", "650895 Initial implementation of the new View Source tool", "246620 Add line numbers to view source"],
       notes: ["deminification", "insert alert", "view and edit?", "current source vs. original/cached"]
@@ -76,6 +83,7 @@
       name: "CSS Editor",
       blurb: "Tweak and view!",
       status: "Implementation",
+      target: "7",
       people: ["cedricv"],
       bugs: ["583041 CSS editor", "590307 inline stylesheet support", "590795 edits should be reflected in the Inspector", "590796 style inspector link to the CSS editor", "590797 resizable editor panel", "590799 CSS editor styling", "594742 unsaved state reappears when the editor is reopened"]
     }, {
@@ -84,6 +92,7 @@
       name: "CSS Doctor",
       blurb: "The cure for what ails your CSS",
       status: "Planning",
+      target: "7",
       people: ["jwalker"],
       bugs: []
     }, {
@@ -92,6 +101,7 @@
       name: "Debugger",
       blurb: "A straightforward walk through your code",
       status: "Planning",
+      target: "8",
       people: ["dcamp"]
     }, {
       id: "sdk",
@@ -99,6 +109,7 @@
       name: "DevTools SDK 1",
       blurb: "First bits of customizability",
       status: "Planning",
+      target: "8",
       bugs: [639518, 638871, 638131, 638142, 637291]
     }, {
       id: "memoryback",
@@ -144,6 +155,7 @@
       name: "Workspaces Refined",
       blurb: "The refined, humane way to engage in software development experiments.",
       status: "Planning",
+      target: "7",
       people: [],
       bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make workspaces save their state across restarts", "651941 Persist workspaces across session restarts", "651942 Add recent files to the file menu"]
     }, {

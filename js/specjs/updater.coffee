@@ -78,12 +78,16 @@ exports.saveBugData = () ->
     q = new buggerall.Query
         bugid: exports.bugList.join(","),
         whitespace: true
+        includeHistory: true
+        historyCacheURL: "bughistory/"
     
     console.log "Gathering from bugzilla: ", q.query
     q.run (q) ->
         exports.bugData = q.result
         output = q.serialize()
         saveFile exports.datadir + "/bugdata.json", output
+        for bugId, bug of exports.bugData
+            saveFile  "#{exports.datadir}/bughistory/#{bug.id}.json", bug.history.serialize()
 
 addBugData = (statusdata) ->
     bugs = statusdata.bugs

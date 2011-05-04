@@ -6,6 +6,37 @@
 
 exports = @specjs.status
 
+# Underscore's templates pulled in for convenience.
+# By default, Underscore uses ERB-style template delimiters, change the
+# following template settings to use alternative delimiters.
+templateSettings =
+    evaluate    : /<%([\s\S]+?)%>/g,
+    interpolate : /<%=([\s\S]+?)%>/g
+
+# JavaScript micro-templating, similar to John Resig's implementation.
+# Underscore templating handles arbitrary delimiters, preserves whitespace,
+# and correctly escapes quotes within interpolated code.
+template = `function(str, data) {
+    var c  = templateSettings;
+    var tmpl = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' +
+      'with(obj||{}){__p.push(\'' +
+      str.replace(/\\/g, '\\\\')
+         .replace(/'/g, "\\'")
+         .replace(c.interpolate, function(match, code) {
+           return "'," + code.replace(/\\'/g, "'") + ",'";
+         })
+         .replace(c.evaluate || null, function(match, code) {
+           return "');" + code.replace(/\\'/g, "'")
+                              .replace(/[\r\n\t]/g, ' ') + "__p.push('";
+         })
+         .replace(/\r/g, '\\r')
+         .replace(/\n/g, '\\n')
+         .replace(/\t/g, '\\t')
+         + "');}return __p.join('');";
+    var func = new Function('obj', tmpl);
+    return data ? func(data) : func;
+  };`
+
 getBugID = (text) ->
     getBugIDandLabel(text).id
 
@@ -13,16 +44,14 @@ exports.getBugIDandLabel = getBugIDandLabel = (text) ->
     text = text.toString()
     match = /^(bug|)\s*(\d+)\s*(.*)/.exec text
     
-    return null if !match
-
-    return {
+    if !match then null else {
         id: match[2]
         label: match[3]
     }
 
-projectNavTemplate = _.template """<div data-id="<%= id %>"><%= name %></div>"""
+projectNavTemplate = template """<div data-id="<%= id %>"><%= name %></div>"""
 
-projectTemplate = _.template """
+projectTemplate = template """
     <section class="project" id="<%= id %>">
         <div class="summary">
             <div class="main">
@@ -75,7 +104,7 @@ projectTemplate = _.template """
     </section>
 """
 
-personTemplate = _.template """
+personTemplate = template """
     <section class="person">
         <h3><%= name %></h3>
         <div><img id="avatar-<%= id %>" alt="<%= id %>" title="%<= name %>" src="<%= avatar %>" class="avatar"></div>
@@ -83,18 +112,13 @@ personTemplate = _.template """
 """
 
 class Project
-    constructor: (@data) ->
-        _.extend(this, {
-            id: ""
-            url: ""
-            name: ""
-            blurb: ""
-            stauts: ""
-            people: []
-            bugs: []
-            updates: []
-            flags: []
-        }, data)
+    constructor: (data) ->
+        if not data?
+            return
+        for prop in ["id", "url", "name", "blurb", "status"]
+            @[prop] = if data[prop]? then data[prop] else ""
+        for prop in ["people", "bugs", "updates", "flags"]
+            @[prop] = if data[prop]? then data[prop] else []
 
     getBugIds: () ->
         getBugId bug for bug in @bugs
@@ -111,11 +135,10 @@ exports.Project = Project
 
 class Person
     constructor: (data) ->
-        _.extend(this, {
-            id: ""
-            name: ""
-            avatar: ""
-        }, data)
+        if not data?
+            return
+        for prop in ["id", "url", "name", "blurb", "avatar", "status"]
+            @[prop] = if data[prop]? then data[prop] else ""
     
     getAvatar: () ->
         $ "#avatar-#{@id}"
@@ -244,15 +267,15 @@ updateBugInformation = () ->
 
 projectMap = {}
 
-for i in [0..projects.length]
-    project = new Project projects[i]
+for i in [0..projects.length-1]
+    project = new Project(projects[i])
     projects[i] = project
     projectMap[project.id] = project
 
 peopleMap = {}
 
-for i in [0..people.length]
-    person = new Person people[i]
+for i in [0..people.length-1]
+    person = new Person(people[i])
     people[i] = person
     peopleMap[person.id] = person
 
@@ -276,10 +299,7 @@ exports.showProject = (id) ->
 
     avatarNode = $ '.avatars', newNode
     for person in project.getPeople()
-        console.log "Person", person
-        console.log "Avatar", person.getAvatar()
         newImage = person.getAvatar().clone()
-        console.log "NI", newImage[0]
         newImage.appendTo(avatarNode)
 
     location.hash = id
@@ -300,7 +320,10 @@ exports.populatePage = () ->
 
     contents = ""
     for person in people
-        contents += personTemplate(person)
+        try 
+            contents += personTemplate(person)
+        catch e
+            console.log e
     
     peopleNode.html contents
 

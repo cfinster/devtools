@@ -1,8 +1,32 @@
 (function() {
-  var Person, Project, augmentProjects, exports, flagMap, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, projectNavTemplate, projectTemplate, updateBugInformation, _ref, _ref2, _ref3;
+  var Person, Project, augmentProjects, exports, flagMap, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, projectNavTemplate, projectTemplate, template, templateSettings, updateBugInformation, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
+  templateSettings = {
+    evaluate: /<%([\s\S]+?)%>/g,
+    interpolate: /<%=([\s\S]+?)%>/g
+  };
+  template = function(str, data) {
+    var c  = templateSettings;
+    var tmpl = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' +
+      'with(obj||{}){__p.push(\'' +
+      str.replace(/\\/g, '\\\\')
+         .replace(/'/g, "\\'")
+         .replace(c.interpolate, function(match, code) {
+           return "'," + code.replace(/\\'/g, "'") + ",'";
+         })
+         .replace(c.evaluate || null, function(match, code) {
+           return "');" + code.replace(/\\'/g, "'")
+                              .replace(/[\r\n\t]/g, ' ') + "__p.push('";
+         })
+         .replace(/\r/g, '\\r')
+         .replace(/\n/g, '\\n')
+         .replace(/\t/g, '\\t')
+         + "');}return __p.join('');";
+    var func = new Function('obj', tmpl);
+    return data ? func(data) : func;
+  };;
   getBugID = function(text) {
     return getBugIDandLabel(text).id;
   };
@@ -12,29 +36,32 @@
     match = /^(bug|)\s*(\d+)\s*(.*)/.exec(text);
     if (!match) {
       return null;
+    } else {
+      return {
+        id: match[2],
+        label: match[3]
+      };
     }
-    return {
-      id: match[2],
-      label: match[3]
-    };
   };
-  projectNavTemplate = _.template("<div data-id=\"<%= id %>\"><%= name %></div>");
-  projectTemplate = _.template("<section class=\"project\" id=\"<%= id %>\">\n    <div class=\"summary\">\n        <div class=\"main\">\n            <div class=\"top\">\n        <h2><a href=\"<%= url %>\"><%= name %></a></h2>\n                <div class=\"counts\">\n                    <span class=\"bugs\"><%= bugs.length %></span>\n                </div>\n                <div class=\"avatars\"></div>\n            </div>\n            <div class=\"bottom\">\n        <div class=\"blurb\"><%= blurb %></div>\n            </div>\n        </div>\n        <div class=\"status\"><%= status %></div>\n    </div>\n    \n    <% if (people) { %>\n        <section class=\"people\">\n            <h3>People</h3>\n            <ul>\n                <% people.forEach(function(person) { %>\n                    <li><%= person %></li>\n                <% }); %>\n            </ul>\n        </section>\n    <% }; %>\n\n    <div class=\"tabs\">\n        <% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>\n            <section>\n                <h3>Updates</h3>\n                <ul>\n                    <% updates.forEach(function(update) { %>\n                        <li><%= update %></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n        <% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>\n            <section>\n                <h3>Bugs</h3>\n                <ul>\n                    <% bugs.forEach(function(bug) { %>\n                        <li><span class=\"bug\"><%= bug %></span></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n</section>");
-  personTemplate = _.template("<section class=\"person\">\n    <h3><%= name %></h3>\n    <div><img id=\"avatar-<%= id %>\" alt=\"<%= id %>\" title=\"%<= name %>\" src=\"<%= avatar %>\" class=\"avatar\"></div>\n</section>");
+  projectNavTemplate = template("<div data-id=\"<%= id %>\"><%= name %></div>");
+  projectTemplate = template("<section class=\"project\" id=\"<%= id %>\">\n    <div class=\"summary\">\n        <div class=\"main\">\n            <div class=\"top\">\n        <h2><a href=\"<%= url %>\"><%= name %></a></h2>\n                <div class=\"counts\">\n                    <span class=\"bugs\"><%= bugs.length %></span>\n                </div>\n                <div class=\"avatars\"></div>\n            </div>\n            <div class=\"bottom\">\n        <div class=\"blurb\"><%= blurb %></div>\n            </div>\n        </div>\n        <div class=\"status\"><%= status %></div>\n    </div>\n    \n    <% if (people) { %>\n        <section class=\"people\">\n            <h3>People</h3>\n            <ul>\n                <% people.forEach(function(person) { %>\n                    <li><%= person %></li>\n                <% }); %>\n            </ul>\n        </section>\n    <% }; %>\n\n    <div class=\"tabs\">\n        <% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>\n            <section>\n                <h3>Updates</h3>\n                <ul>\n                    <% updates.forEach(function(update) { %>\n                        <li><%= update %></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n        <% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>\n            <section>\n                <h3>Bugs</h3>\n                <ul>\n                    <% bugs.forEach(function(bug) { %>\n                        <li><span class=\"bug\"><%= bug %></span></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n</section>");
+  personTemplate = template("<section class=\"person\">\n    <h3><%= name %></h3>\n    <div><img id=\"avatar-<%= id %>\" alt=\"<%= id %>\" title=\"%<= name %>\" src=\"<%= avatar %>\" class=\"avatar\"></div>\n</section>");
   Project = (function() {
     function Project(data) {
-      this.data = data;
-      _.extend(this, {
-        id: "",
-        url: "",
-        name: "",
-        blurb: "",
-        stauts: "",
-        people: [],
-        bugs: [],
-        updates: [],
-        flags: []
-      }, data);
+      var prop, _i, _j, _len, _len2, _ref, _ref2;
+      if (!(data != null)) {
+        return;
+      }
+      _ref = ["id", "url", "name", "blurb", "status"];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        prop = _ref[_i];
+        this[prop] = data[prop] != null ? data[prop] : "";
+      }
+      _ref2 = ["people", "bugs", "updates", "flags"];
+      for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
+        prop = _ref2[_j];
+        this[prop] = data[prop] != null ? data[prop] : [];
+      }
     }
     Project.prototype.getBugIds = function() {
       var bug, _i, _len, _ref, _results;
@@ -64,11 +91,15 @@
   exports.Project = Project;
   Person = (function() {
     function Person(data) {
-      _.extend(this, {
-        id: "",
-        name: "",
-        avatar: ""
-      }, data);
+      var prop, _i, _len, _ref;
+      if (!(data != null)) {
+        return;
+      }
+      _ref = ["id", "url", "name", "blurb", "avatar", "status"];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        prop = _ref[_i];
+        this[prop] = data[prop] != null ? data[prop] : "";
+      }
     }
     Person.prototype.getAvatar = function() {
       return $("#avatar-" + this.id);
@@ -202,13 +233,13 @@
     });
   };
   projectMap = {};
-  for (i = 0, _ref2 = projects.length; (0 <= _ref2 ? i <= _ref2 : i >= _ref2); (0 <= _ref2 ? i += 1 : i -= 1)) {
+  for (i = 0, _ref2 = projects.length - 1; (0 <= _ref2 ? i <= _ref2 : i >= _ref2); (0 <= _ref2 ? i += 1 : i -= 1)) {
     project = new Project(projects[i]);
     projects[i] = project;
     projectMap[project.id] = project;
   }
   peopleMap = {};
-  for (i = 0, _ref3 = people.length; (0 <= _ref3 ? i <= _ref3 : i >= _ref3); (0 <= _ref3 ? i += 1 : i -= 1)) {
+  for (i = 0, _ref3 = people.length - 1; (0 <= _ref3 ? i <= _ref3 : i >= _ref3); (0 <= _ref3 ? i += 1 : i -= 1)) {
     person = new Person(people[i]);
     people[i] = person;
     peopleMap[person.id] = person;
@@ -236,10 +267,7 @@
     _ref = project.getPeople();
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       person = _ref[_i];
-      console.log("Person", person);
-      console.log("Avatar", person.getAvatar());
       newImage = person.getAvatar().clone();
-      console.log("NI", newImage[0]);
       newImage.appendTo(avatarNode);
     }
     location.hash = id;
@@ -261,7 +289,11 @@
     contents = "";
     for (_j = 0, _len2 = people.length; _j < _len2; _j++) {
       person = people[_j];
-      contents += personTemplate(person);
+      try {
+        contents += personTemplate(person);
+      } catch (e) {
+        console.log(e);
+      }
     }
     peopleNode.html(contents);
     $('.maindate').each(function() {
