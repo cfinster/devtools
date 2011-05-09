@@ -94,6 +94,7 @@
     console.log("Gathering from bugzilla: ", q.query);
     return q.run(function(q) {
       var bug, bugId, output, _ref, _results;
+      console.log("Saving query results");
       exports.bugData = q.result;
       output = q.serialize();
       saveFile(exports.datadir + "/bugdata.json", output);
@@ -101,6 +102,7 @@
       _results = [];
       for (bugId in _ref) {
         bug = _ref[bugId];
+        console.log("bug", bug.id, " history", bug.history);
         _results.push(saveFile("" + exports.datadir + "/bughistory/" + bug.id + ".json", bug.history.serialize()));
       }
       return _results;

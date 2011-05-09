@@ -361,18 +361,6 @@
     "superreview": []
    }
   },
-  "591582": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "591584": {
    "summary": "Localize the URLs in csshtmltree",
    "status": "NEW",
@@ -474,18 +462,6 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "638949": {
-   "summary": "Please add Copy Location in the context menu for URLs in the web console",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[console-1]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -654,18 +630,6 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[workspace]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "644419": {
-   "summary": "Console should have user-settable log limits for each message category",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[console]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -877,18 +841,6 @@
     "superreview": []
    }
   },
-  "654068": {
-   "summary": "Style Inspector rows should show visual indicator when unmatched rules exist",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "654069": {
    "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
    "status": "NEW",
@@ -901,6 +853,49 @@
     "superreview": []
    }
   },
+  "634406": {
+   "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
+   "status": "NEW",
+   "assignedName": "past",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "638949": {
+   "summary": "Please add Copy Location in the context menu for URLs in the web console",
+   "status": "NEW",
+   "assignedName": "past",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "644419": {
+   "summary": "Console should have user-settable log limits for each message category",
+   "status": "NEW",
+   "assignedName": "past",
+   "whiteboard": "[console]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "past"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 14029
+  },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
    "status": "NEW",
@@ -910,32 +905,26 @@
    "flags": {
     "feedback": [
      {
-      "status": "-",
+      "status": "+",
       "setter": "mihai.sucan"
      }
     ],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "past"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 9824
+   "patchSize": 17355
   },
   "651501": {
    "summary": "document.body fails to autocomplete in Web Console",
    "status": "NEW",
    "assignedName": "past",
    "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "653528": {
-   "summary": "Strip out Style and DOM panels and support code from Inspector.",
-   "status": "NEW",
-   "assignedName": "rcampbell",
-   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1147,82 +1136,24 @@
    },
    "patchSize": 10209
   },
-  "585956": {
-   "summary": "Implement console.trace() in web console",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1][patchclean:0411][fixed-in-devtools]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     },
-     {
-      "status": "+",
-      "setter": "jonas"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 21736
-  },
   "585991": {
    "summary": "Show a popup listing possible completions",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[console-2][patchclean:0421][see-try-build-in-comment-22]",
+   "whiteboard": "[console-2][patchclean:0503][see-try-build-in-comment-22]",
    "hasPatch": true,
    "flags": {
-    "feedback": [
-     {
-      "status": "?",
-      "requestee": "bugzilla",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "feedback": [],
     "review": [],
     "superreview": [
      {
-      "status": "-",
-      "setter": "neil"
+      "status": "?",
+      "requestee": "neil",
+      "setter": "mihai.sucan"
      }
     ]
    },
-   "patchSize": 46897
-  },
-  "632275": {
-   "summary": "Web Console: Error message when click on an object to create an inspect window",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0412] [console-1][fixed-in-devtools]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 6957
-  },
-  "636725": {
-   "summary": "Unit tests for Workspaces",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[workspaces][patchclean:0420][fixed-in-devtools]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "sdwilsh"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 19138
+   "patchSize": 45912
   },
   "636727": {
    "summary": "Add Ace to workspaces",
@@ -1235,24 +1166,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "642176": {
-   "summary": "Integrate Workspace extension into the browser",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0420][fixed-in-devtools][see-comment-33-for-try-build][needs-ux-review]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 1321
   },
   "642615": {
    "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -1277,54 +1190,6 @@
    },
    "patchSize": 10197
   },
-  "646070": {
-   "summary": "Respect chrome developer tools preference in workspace",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[workspace][patchclean:0420][fixed-in-devtools][requires-dependencies]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 11648
-  },
-  "646524": {
-   "summary": "Workspace: cache the sandboxes",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[workspace][patchclean:0421][fixed-in-devtools][requires-dependencies]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 14984
-  },
-  "651872": {
-   "summary": "Create access key for Workspace menu item",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[workspace][fixed-in-devtools]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "-",
-      "setter": "l10n"
-     },
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 2123
-  },
   "582596": {
    "summary": "Style view centered around answering common CSS questions",
    "status": "ASSIGNED",
@@ -1342,7 +1207,43 @@
     ],
     "superreview": []
    },
-   "patchSize": 10763
+   "patchSize": 161791
+  },
+  "591582": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654068": {
+   "summary": "Style Inspector rows should show visual indicator when unmatched rules exist",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "622303": {
+   "summary": "Web Console should remember filter settings.",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[pre-approved by beltzner][console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
@@ -1357,18 +1258,6 @@
    },
    "patchSize": 14565
   },
-  "622303": {
-   "summary": "Web Console should remember filter settings.",
-   "status": "ASSIGNED",
-   "assignedName": "rcampbell",
-   "whiteboard": "[pre-approved by beltzner][console-1]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "642471": {
    "summary": "Rewrite PanelHighlighter using transparent xul iframe and canvas",
    "status": "ASSIGNED",
@@ -1380,29 +1269,26 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 16031
+   "patchSize": 41129
   },
-  "650780": {
-   "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
+  "653528": {
+   "summary": "Strip out Style and DOM panels and support code from Inspector.",
    "status": "ASSIGNED",
    "assignedName": "rcampbell",
-   "whiteboard": "[fixed-in-devtools][console-1]",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "+",
-      "setter": "ddahl"
-     },
-     {
-      "status": "+",
-      "setter": "dtownsend"
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "rcampbell"
      }
     ],
     "superreview": []
    },
-   "patchSize": 1634
+   "patchSize": 55506
   },
   "609890": {
    "summary": "Errors from before console is opened don't appear",
@@ -1421,42 +1307,6 @@
     "superreview": []
    },
    "patchSize": 7507
-  },
-  "595223": {
-   "summary": "Keep track of file:// url 'loadGroups'",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0412][softblocker][console-1][fixed-in-devtools]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 11909
-  },
-  "626484": {
-   "summary": "Incorrect order of lines when copying from web console",
-   "status": "ASSIGNED",
-   "assignedName": "unusualtears",
-   "whiteboard": "[console-1][has-patch][fixed-in-devtools]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "mihai.sucan"
-     }
-    ],
-    "review": [
-     {
-      "status": "+",
-      "setter": "gavin.sharp"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 4439
   },
   "612252": {
    "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
@@ -1500,6 +1350,59 @@
     "superreview": []
    }
   },
+  "585956": {
+   "summary": "Implement console.trace() in web console",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][patchclean:0411][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "+",
+      "setter": "jonas"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 21736
+  },
+  "632275": {
+   "summary": "Web Console: Error message when click on an object to create an inspect window",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[patchclean:0412] [console-1][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 6957
+  },
+  "636725": {
+   "summary": "Unit tests for Workspaces",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[workspaces][patchclean:0420][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "sdwilsh"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 19138
+  },
   "638131": {
    "summary": "Add ability to check if a panel is open or not",
    "status": "RESOLVED",
@@ -1511,6 +1414,72 @@
     "review": [],
     "superreview": []
    }
+  },
+  "642176": {
+   "summary": "Integrate Workspace extension into the browser",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1321
+  },
+  "646070": {
+   "summary": "Respect chrome developer tools preference in workspace",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[workspace][patchclean:0420][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 11648
+  },
+  "646524": {
+   "summary": "Workspace: cache the sandboxes",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[workspace][patchclean:0421][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 14984
+  },
+  "651872": {
+   "summary": "Create access key for Workspace menu item",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[workspace][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "-",
+      "setter": "l10n"
+     },
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 2123
   },
   "652509": {
    "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
@@ -1650,6 +1619,28 @@
    },
    "patchSize": 9966
   },
+  "650780": {
+   "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
+   "status": "RESOLVED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[fixed-in-devtools][console-1][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "ddahl"
+     },
+     {
+      "status": "+",
+      "setter": "dtownsend"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1634
+  },
   "526207": {
    "summary": "Add IP address and port info to nsIHttpActivityObserver",
    "status": "RESOLVED",
@@ -1667,6 +1658,42 @@
     "superreview": []
    },
    "patchSize": 23584
+  },
+  "595223": {
+   "summary": "Keep track of file:// url 'loadGroups'",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[patchclean:0412][softblocker][console-1][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 11909
+  },
+  "626484": {
+   "summary": "Incorrect order of lines when copying from web console",
+   "status": "RESOLVED",
+   "assignedName": "unusualtears",
+   "whiteboard": "[console-1][has-patch][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "+",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "review": [
+     {
+      "status": "+",
+      "setter": "gavin.sharp"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 4439
   },
   "637801": {
    "summary": "console.log shouldn't display escaped strings",
@@ -1756,10 +1783,16 @@
   }
  },
  "reviewQueues": {
+  "rcampbell": {
+   "feedback": {
+    "devtoolsSize": 14029,
+    "devtoolsCount": 1
+   }
+  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 48739,
-    "devtoolsCount": 3
+    "devtoolsSize": 121600,
+    "devtoolsCount": 5
    }
   },
   "bzbarsky": {
@@ -1774,22 +1807,22 @@
     "devtoolsCount": 1
    }
   },
-  "bugzilla": {
-   "feedback": {
-    "devtoolsSize": 46897,
+  "neil": {
+   "superreview": {
+    "devtoolsSize": 45912,
     "devtoolsCount": 1
+   }
+  },
+  "mihai.sucan": {
+   "review": {
+    "devtoolsSize": 176843,
+    "devtoolsCount": 3
    }
   },
   "limi": {
    "ui-review": {
     "devtoolsSize": 51004,
     "devtoolsCount": 1
-   }
-  },
-  "mihai.sucan": {
-   "review": {
-    "devtoolsSize": 162733,
-    "devtoolsCount": 2
    }
   }
  }

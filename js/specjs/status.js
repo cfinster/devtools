@@ -1,5 +1,5 @@
 (function() {
-  var Person, Project, augmentProjects, exports, flagMap, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, projectNavTemplate, projectTemplate, template, templateSettings, updateBugInformation, _ref, _ref2, _ref3;
+  var Person, Project, exports, flagMap, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, projectNavTemplate, projectTemplate, template, templateSettings, updateBugInformation, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
@@ -107,70 +107,6 @@
     return Person;
   })();
   exports.Person = Person;
-  augmentProjects = function() {
-    var avatars, bottom, bugcount, counts, elem, flagcount, latestUpdates, main, person, project, projel, summary, top, _i, _j, _len, _len2, _ref, _ref2, _results;
-    latestUpdates = [];
-    _ref = exports.projects;
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      project = _ref[_i];
-      elem = $('<a/>', {
-        html: "&#9654; ",
-        click: expander,
-        href: "#" + project.id,
-        "class": "expander"
-      });
-      project.expanded = false;
-      elem[0].project = project;
-      $(project.el).find("h2").prepend(elem);
-      projel = $(project.el);
-      summary = $('<div/>', {
-        "class": "summary"
-      });
-      main = $('<div/>', {
-        "class": "main"
-      });
-      summary.append(main);
-      projel.children("div.status").detach().appendTo(summary);
-      top = $('<div/>', {
-        "class": "top"
-      });
-      bottom = $('<div/>', {
-        "class": "bottom"
-      });
-      main.append(top);
-      main.append(bottom);
-      projel.children("h2").detach().appendTo(top);
-      counts = $('<div/>', {
-        "class": "counts"
-      });
-      flagcount = project.getFlagCount();
-      if (flagcount) {
-        $('<span/>', {
-          "class": "flags",
-          text: flagcount
-        }).appendTo(counts);
-      }
-      bugcount = project.getBugCount();
-      $('<span/>', {
-        "class": "bugs",
-        text: bugcount
-      }).appendTo(counts);
-      top.append(counts);
-      avatars = $('<div/>', {
-        "class": "avatars"
-      });
-      top.append(avatars);
-      _ref2 = project.getPeople;
-      for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
-        person = _ref2[_j];
-        $(person.getAvatar()).clone().appendTo(avatars);
-      }
-      projel.children("div.blurb").detach().appendTo(bottom);
-      _results.push(projel.prepend(summary));
-    }
-    return _results;
-  };
   flagMap = {
     "feedback": "&nbsp;f",
     "review": "&nbsp;r",
@@ -249,6 +185,9 @@
     if (id === "people") {
       exports.showPeople();
       return;
+    } else if (id === "summary") {
+      exports.showSummary();
+      return;
     }
     $('#content').show();
     $('#people').hide();
@@ -277,6 +216,45 @@
     $('#content').hide();
     $('#people').show();
     return location.hash = "#people";
+  };
+  exports.showSummary = function() {
+    var content, firstRelease, i, lastRelease, project, release, releases, target, _i, _j, _len, _len2;
+    $('#content').show();
+    $('#people').hide();
+    releases = [];
+    firstRelease = Infinity;
+    lastRelease = -1;
+    for (_i = 0, _len = projects.length; _i < _len; _i++) {
+      project = projects[_i];
+      target = project.target;
+      if (!(target != null)) {
+        continue;
+      }
+      if (!(releases[target] != null)) {
+        releases[target] = [];
+      }
+      releases[target].push(project);
+      if (target < firstRelease) {
+        firstRelease = target;
+      }
+      if (target > lastRelease) {
+        lastRelease = target;
+      }
+    }
+    content = "<section class=\"release_tracking\">\n<h2>Release Tracking</h2>";
+    for (i = firstRelease; (firstRelease <= lastRelease ? i <= lastRelease : i >= lastRelease); (firstRelease <= lastRelease ? i += 1 : i -= 1)) {
+      release = releases[i];
+      if (!(release != null)) {
+        continue;
+      }
+      content += "<h3>Firefox " + i + "</h3>\n<table>\n    <thead>\n        <tr>\n            <th>Feature</th>\n            <th>Open Bugs</th>\n            <th>with Patches</th>\n        </tr>\n    </thead>\n    <tbody>";
+      for (_j = 0, _len2 = release.length; _j < _len2; _j++) {
+        project = release[_j];
+        content += "<tr><td>${project.name}</td><td>&nbsp;</td><td>&nbsp;</td>";
+      }
+    }
+    content += "</section>";
+    return $("#content").children().remove().append($(content));
   };
   exports.populatePage = function() {
     var contents, newNode, peopleNode, person, project, _i, _j, _len, _len2;

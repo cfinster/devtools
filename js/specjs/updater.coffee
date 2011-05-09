@@ -83,10 +83,12 @@ exports.saveBugData = () ->
     
     console.log "Gathering from bugzilla: ", q.query
     q.run (q) ->
+        console.log "Saving query results"
         exports.bugData = q.result
         output = q.serialize()
         saveFile exports.datadir + "/bugdata.json", output
         for bugId, bug of exports.bugData
+            console.log "bug", bug.id, " history", bug.history
             saveFile  "#{exports.datadir}/bughistory/#{bug.id}.json", bug.history.serialize()
 
 addBugData = (statusdata) ->

@@ -21,7 +21,7 @@
         name: "Web Console '5'"
         blurb: "Adding awesome to the existing Web Console"
         status: "Aurora"
-        target: "5"
+        target: 5
         people: ["ddahl", "msucan"]
         bugs: [
             "642108 JS errors from HUD in Error Console"
@@ -35,7 +35,7 @@
         name: "Workspaces First Take"
         blurb: "The humane way to monkey with code"
         status: "Implementation"
-        target: "6"
+        target: 6
         people: ["msucan", "rcampbell"]
         bugs: [
             "642176 Integrate Workspace extension into the browser"
@@ -58,7 +58,7 @@
         name: "Highlighter"
         blurb: "Beautiful information about your DOM"
         status: "Implementation"
-        target: "7"
+        target: 7
         people: ["rcampbell"]
         bugs: [
             642471
@@ -81,7 +81,7 @@
         name: "Style Inspector"
         blurb: "View an element's style, in style!"
         status: "Implementation"
-        target: "7"
+        target: 7
         people: ["mratcliffe"]
         bugs: [
             "574347 Opening the HUD with Inspector open causes Style Panel to move"
@@ -115,7 +115,7 @@
         name: "Web Console Upgrade"
         blurb: "Console positioning, service, autocompletion and more"
         status: "Implementation"
-        target: "6"
+        target: 6
         people: ["past", "msucan", "ddahl"]
         bugs: [
             577721
@@ -153,6 +153,7 @@
             "651501 document.body properties fail to autocomplete"
             "616586 Internal console logging API"
             "588871 Remove ConsoleStorage methods used for log message storage"
+            "634406 Select All unexpectedly results in multi-line input"
         ]
     }
     {
@@ -161,7 +162,7 @@
         name: "Graphical Command Line Interface"
         blurb: "The fastest, most discoverable way to control your tools"
         status: "Implementation"
-        target: "6"
+        target: 6
         people: ["jwalker"]
         bugs: [
             641903
@@ -187,7 +188,7 @@
         name: "View Source Reboot"
         blurb: "The View Source of the Future"
         status: "Planning"
-        target: "7"
+        target: 7
         people: ["msucan", "getify"]
         bugs: [
             "650893 New View Source component"
@@ -206,7 +207,7 @@
         name: "CSS Editor"
         blurb: "Tweak and view!"
         status: "Implementation"
-        target: "7"
+        target: 7
         people: ["cedricv"]
         bugs: [
             "583041 CSS editor"
@@ -224,7 +225,7 @@
         name: "CSS Doctor"
         blurb: "The cure for what ails your CSS"
         status: "Planning"
-        target: "7"
+        target: 7
         people: ["jwalker"]
         bugs: []
     }
@@ -234,7 +235,7 @@
         name: "Debugger"
         blurb: "A straightforward walk through your code"
         status: "Planning"
-        target: "8"
+        target: 8
         people: ["dcamp"]
     }
     {
@@ -243,7 +244,7 @@
         name: "DevTools SDK 1"
         blurb: "First bits of customizability"
         status: "Planning"
-        target: "8"
+        target: 8
         bugs: [
             639518
             638871
@@ -325,7 +326,7 @@
         name: "Workspaces Refined"
         blurb: "The refined, humane way to engage in software development experiments."
         status: "Planning"
-        target: "7"
+        target: 7
         people: []
         bugs: [
             "646524 cache the sandboxes"

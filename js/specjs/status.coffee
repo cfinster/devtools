@@ -145,70 +145,6 @@ class Person
 
 exports.Person = Person
 
-augmentProjects = () ->
-    latestUpdates = [];
-    for project in exports.projects
-        elem = $('<a/>', {
-            html: "&#9654; "
-            click: expander
-            href: "#" + project.id
-            "class": "expander"
-        })
-        project.expanded = false
-        elem[0].project = project
-        $(project.el).find("h2").prepend(elem)
-        
-        projel = $(project.el)
-        
-        summary = $('<div/>', {
-            "class": "summary"
-        })
-        main = $('<div/>', {
-            "class": "main"
-        })
-        summary.append(main)
-        projel.children("div.status").detach().appendTo(summary)
-        
-        top = $('<div/>', {
-            "class": "top"
-        })
-        bottom = $('<div/>', {
-            "class": "bottom"
-        })
-        main.append top
-        main.append bottom
-        projel.children("h2").detach().appendTo(top)
-        
-        counts = $('<div/>', {
-            "class": "counts"
-        })
-        
-        flagcount = project.getFlagCount()
-        if flagcount
-            $('<span/>', {
-                "class": "flags"
-                text: flagcount
-            }).appendTo(counts)
-        
-        bugcount = project.getBugCount()
-        $('<span/>', {
-            "class": "bugs"
-            text: bugcount
-        }).appendTo(counts)
-        
-        top.append(counts)
-        
-        avatars = $('<div/>', {
-            "class": "avatars"
-        })
-        top.append(avatars)
-        
-        for person in project.getPeople
-            $(person.getAvatar()).clone().appendTo(avatars)
-        
-        projel.children("div.blurb").detach().appendTo(bottom)
-        projel.prepend(summary)
-
 flagMap = 
     "feedback": "&nbsp;f"
     "review": "&nbsp;r"
@@ -283,6 +219,9 @@ exports.showProject = (id) ->
     if id == "people"
         exports.showPeople()
         return
+    else if id == "summary"
+        exports.showSummary()
+        return
     
     $('#content').show()
     $('#people').hide()
@@ -310,6 +249,49 @@ exports.showPeople = () ->
     $('#people').show()
     location.hash = "#people"
     
+exports.showSummary = () ->
+    $('#content').show()
+    $('#people').hide()
+    releases = []
+    firstRelease = Infinity
+    lastRelease = -1
+    for project in projects
+        target = project.target
+        if not target?
+            continue
+        if not releases[target]?
+            releases[target] = []
+        releases[target].push(project)
+        firstRelease = target if target < firstRelease
+        lastRelease = target if target > lastRelease
+    
+    content = """<section class="release_tracking">
+<h2>Release Tracking</h2>
+"""
+    for i in [firstRelease..lastRelease]
+        release = releases[i]
+        if not release?
+            continue
+        content += """<h3>Firefox #{i}</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Open Bugs</th>
+            <th>with Patches</th>
+        </tr>
+    </thead>
+    <tbody>
+"""
+        for project in release
+            content += """
+        <tr><td>${project.name}</td><td>&nbsp;</td><td>&nbsp;</td>
+"""
+    
+    content += """
+</section>
+"""
+    $("#content").children().remove().append($(content))
 
 exports.populatePage = () ->
     for project in projects
