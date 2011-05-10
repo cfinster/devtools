@@ -103,8 +103,9 @@
             "652509 Style inspector should skip unsupported styles"
             "653082 Stylesheet selector should be removed"
             "653084 Specificity should be removed"
-            "654068 Rows should show visual indicator when unmatched rules exist"
+            "654068 Show visual indicator when there are unmatched rules but not matched rules"
             "654069 \"Effects and Other\" group should be extracted into more than 1 group"
+            "654430 Unmatched rules do not work for string values"
             "586984 [meta] Inspector style panel bugs for firefox4"
             "592981 [meta] Inspector style panel bugs for firefox.next"
         ]

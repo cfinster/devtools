@@ -853,49 +853,6 @@
     "superreview": []
    }
   },
-  "634406": {
-   "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console-1]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "638949": {
-   "summary": "Please add Copy Location in the context menu for URLs in the web console",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console-1]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "644419": {
-   "summary": "Console should have user-settable log limits for each message category",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [
-     {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "past"
-     }
-    ],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 14029
-  },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
    "status": "NEW",
@@ -911,26 +868,13 @@
     ],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "past"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
    },
    "patchSize": 17355
-  },
-  "651501": {
-   "summary": "document.body fails to autocomplete in Web Console",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
   },
   "611032": {
    "summary": "Break out HUDConsoleObserver from HUDService",
@@ -1127,9 +1071,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "mrbkap",
-      "setter": "jorendorff"
+      "status": "+",
+      "setter": "mrbkap"
      }
     ],
     "superreview": []
@@ -1222,7 +1165,7 @@
    }
   },
   "654068": {
-   "summary": "Style Inspector rows should show visual indicator when unmatched rules exist",
+   "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1238,6 +1181,61 @@
    "status": "ASSIGNED",
    "assignedName": "past",
    "whiteboard": "[pre-approved by beltzner][console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "634406": {
+   "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "638949": {
+   "summary": "Please add Copy Location in the context menu for URLs in the web console",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "644419": {
+   "summary": "Console should have user-settable log limits for each message category",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "past"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 14029
+  },
+  "651501": {
+   "summary": "document.body fails to autocomplete in Web Console",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1517,6 +1515,18 @@
     "superreview": []
    }
   },
+  "654430": {
+   "summary": "Style Inspector - unmatched rules do not work for string values",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "639518": {
    "summary": "Create a Cross Add-on registry and communication service",
    "status": "RESOLVED",
@@ -1783,28 +1793,16 @@
   }
  },
  "reviewQueues": {
-  "rcampbell": {
-   "feedback": {
-    "devtoolsSize": 14029,
-    "devtoolsCount": 1
-   }
-  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 121600,
-    "devtoolsCount": 5
+    "devtoolsSize": 104245,
+    "devtoolsCount": 4
    }
   },
   "bzbarsky": {
    "review": {
     "devtoolsSize": 34846,
     "devtoolsCount": 3
-   }
-  },
-  "mrbkap": {
-   "review": {
-    "devtoolsSize": 10209,
-    "devtoolsCount": 1
    }
   },
   "neil": {
@@ -1817,6 +1815,12 @@
    "review": {
     "devtoolsSize": 176843,
     "devtoolsCount": 3
+   }
+  },
+  "rcampbell": {
+   "feedback": {
+    "devtoolsSize": 14029,
+    "devtoolsCount": 1
    }
   },
   "limi": {
