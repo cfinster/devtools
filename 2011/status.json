@@ -169,30 +169,6 @@
    },
    "patchSize": 24164
   },
-  "586977": {
-   "summary": "Investigate how the inspector style panel works with shorthand properties",
-   "status": "NEW",
-   "assignedName": "mihai.sucan",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "588941": {
-   "summary": "Computed style for property is sometimes wrong in the new Style panel",
-   "status": "NEW",
-   "assignedName": "mihai.sucan",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "636731": {
    "summary": "Add GCLI commands for Workspaces",
    "status": "NEW",
@@ -337,6 +313,18 @@
     "superreview": []
    }
   },
+  "589264": {
+   "summary": "Inspector: be able to choose an alternative media type",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "589375": {
    "summary": "Inspector: style panel keyboard access",
    "status": "NEW",
@@ -363,6 +351,18 @@
   },
   "591584": {
    "summary": "Localize the URLs in csshtmltree",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591902": {
+   "summary": "Automatic display of localized content",
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
@@ -841,41 +841,6 @@
     "superreview": []
    }
   },
-  "654069": {
-   "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "646025": {
-   "summary": "Add file location to console.log, info, debug, etc.",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "mihai.sucan"
-     }
-    ],
-    "review": [
-     {
-      "status": "-",
-      "setter": "gavin.sharp"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 17355
-  },
   "611032": {
    "summary": "Break out HUDConsoleObserver from HUDService",
    "status": "NEW",
@@ -1152,20 +1117,21 @@
    },
    "patchSize": 161791
   },
-  "591582": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
+  "654068": {
+   "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 5638
   },
-  "654068": {
-   "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
+  "656027": {
+   "summary": "It should be possible to pref out the Style Inspector",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1230,6 +1196,25 @@
     "superreview": []
    },
    "patchSize": 14029
+  },
+  "646025": {
+   "summary": "Add file location to console.log, info, debug, etc.",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "past"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 17124
   },
   "651501": {
    "summary": "document.body fails to autocomplete in Web Console",
@@ -1479,6 +1464,42 @@
    },
    "patchSize": 2123
   },
+  "586977": {
+   "summary": "Investigate how the inspector style panel works with shorthand properties",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "588941": {
+   "summary": "Computed style for property is sometimes wrong in the new Style panel",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591582": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "652509": {
    "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
    "status": "RESOLVED",
@@ -1505,6 +1526,18 @@
   },
   "653084": {
    "summary": "Style Inspector should have specificity removed",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654069": {
+   "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
    "status": "RESOLVED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1795,8 +1828,8 @@
  "reviewQueues": {
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 104245,
-    "devtoolsCount": 4
+    "devtoolsSize": 121369,
+    "devtoolsCount": 5
    }
   },
   "bzbarsky": {
