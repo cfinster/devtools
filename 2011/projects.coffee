@@ -44,6 +44,7 @@
             "646524 Cache the sandboxes"
             "650760 Help menu"
             "651872 access key for menu option"
+            "656021 Update Scratchpad menu access key to S"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -105,8 +106,7 @@
             "653084 Specificity should be removed"
             "654068 Rows should show visual indicator when unmatched rules exist"
             "654069 \"Effects and Other\" group should be extracted into more than 1 group"
-            "586984 [meta] Inspector style panel bugs for firefox4"
-            "592981 [meta] Inspector style panel bugs for firefox.next"
+            "656027 It should be possible to pref out the Style Inspector"
         ]
     }
     {
@@ -237,6 +237,18 @@
         status: "Planning"
         target: 8
         people: ["dcamp"]
+    }
+    {
+        id: "webconsole7"
+        url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7"
+        name: "Console Refinement"
+        blurb: "The latest in a neverending sequence"
+        status: "Planning"
+        target: 7
+        people: []
+        bugs: [
+            "655700 More visual separation between requests"
+        ]
     }
     {
         id: "sdk"

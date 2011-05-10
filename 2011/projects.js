@@ -31,7 +31,7 @@
       status: "Implementation",
       target: 6,
       people: ["msucan", "rcampbell"],
-      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option"],
+      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S"],
       updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
     }, {
       id: "highlighter",
@@ -50,7 +50,7 @@
       status: "Implementation",
       target: 7,
       people: ["mratcliffe"],
-      bugs: ["574347 Opening the HUD with Inspector open causes Style Panel to move", "582596 Style view answering common CSS questions", "583037 Better logic for placement of inspector panels", "585563 The inspector style panel should link to the CSS editor", "586974 All unmatched rules are ranked the same", "586977 Investigate how the panel works with shorthand properties", "587752 Animations in the new Style panel", "588941 Computed style for property is sometimes wrong", "589375 Keyboard access", "590536 Inspector panels should remember at least size and ideally also position", "590796 Clicking on a rule doesn't jump to the correct line in the CSS editor", "591212 React to dynamic changes to the stylesheets", "591582 Style Panel CSS properties are limited to hard coded values", "591584 Localize the URLs in csshtmltree", "593331 Csslogic shortSource can create duplicate names", "593345 Investigate an advanced test tool for the inspector style panel", "652509 Style inspector should skip unsupported styles", "653082 Stylesheet selector should be removed", "653084 Specificity should be removed", "654068 Rows should show visual indicator when unmatched rules exist", "654069 \"Effects and Other\" group should be extracted into more than 1 group", "586984 [meta] Inspector style panel bugs for firefox4", "592981 [meta] Inspector style panel bugs for firefox.next"]
+      bugs: ["574347 Opening the HUD with Inspector open causes Style Panel to move", "582596 Style view answering common CSS questions", "583037 Better logic for placement of inspector panels", "585563 The inspector style panel should link to the CSS editor", "586974 All unmatched rules are ranked the same", "586977 Investigate how the panel works with shorthand properties", "587752 Animations in the new Style panel", "588941 Computed style for property is sometimes wrong", "589375 Keyboard access", "590536 Inspector panels should remember at least size and ideally also position", "590796 Clicking on a rule doesn't jump to the correct line in the CSS editor", "591212 React to dynamic changes to the stylesheets", "591582 Style Panel CSS properties are limited to hard coded values", "591584 Localize the URLs in csshtmltree", "593331 Csslogic shortSource can create duplicate names", "593345 Investigate an advanced test tool for the inspector style panel", "652509 Style inspector should skip unsupported styles", "653082 Stylesheet selector should be removed", "653084 Specificity should be removed", "654068 Rows should show visual indicator when unmatched rules exist", "654069 \"Effects and Other\" group should be extracted into more than 1 group", "656027 It should be possible to pref out the Style Inspector"]
     }, {
       id: "webconsole6",
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade",
@@ -103,6 +103,15 @@
       status: "Planning",
       target: 8,
       people: ["dcamp"]
+    }, {
+      id: "webconsole7",
+      url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7",
+      name: "Console Refinement",
+      blurb: "The latest in a neverending sequence",
+      status: "Planning",
+      target: 7,
+      people: [],
+      bugs: ["655700 More visual separation between requests"]
     }, {
       id: "sdk",
       url: "https://wiki.mozilla.org/DevTools/Features/SDK",

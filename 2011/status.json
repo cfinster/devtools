@@ -169,30 +169,6 @@
    },
    "patchSize": 24164
   },
-  "586977": {
-   "summary": "Investigate how the inspector style panel works with shorthand properties",
-   "status": "NEW",
-   "assignedName": "mihai.sucan",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "588941": {
-   "summary": "Computed style for property is sometimes wrong in the new Style panel",
-   "status": "NEW",
-   "assignedName": "mihai.sucan",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "636731": {
    "summary": "Add GCLI commands for Workspaces",
    "status": "NEW",
@@ -313,18 +289,6 @@
     "superreview": []
    }
   },
-  "586984": {
-   "summary": "[meta] Inspector style panel bugs for firefox4",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "587752": {
    "summary": "Animations in the new Style panel",
    "status": "NEW",
@@ -375,18 +339,6 @@
   },
   "592552": {
    "summary": "History is shared among all Web Console instances",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "592981": {
-   "summary": "[meta] Inspector style panel bugs for firefox.next",
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
@@ -841,89 +793,10 @@
     "superreview": []
    }
   },
-  "654069": {
-   "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
+  "655700": {
+   "summary": "Console should visually obsolete output from previous contexts",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": {},
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "634406": {
-   "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console-1]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "638949": {
-   "summary": "Please add Copy Location in the context menu for URLs in the web console",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console-1]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "644419": {
-   "summary": "Console should have user-settable log limits for each message category",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [
-     {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "past"
-     }
-    ],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 14029
-  },
-  "646025": {
-   "summary": "Add file location to console.log, info, debug, etc.",
-   "status": "NEW",
-   "assignedName": "past",
-   "whiteboard": "[console]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "mihai.sucan"
-     }
-    ],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "past"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 17355
-  },
-  "651501": {
-   "summary": "document.body fails to autocomplete in Web Console",
-   "status": "NEW",
-   "assignedName": "past",
    "whiteboard": {},
    "hasPatch": false,
    "flags": {
@@ -1127,9 +1000,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "mrbkap",
-      "setter": "jorendorff"
+      "status": "+",
+      "setter": "mrbkap"
      }
     ],
     "superreview": []
@@ -1209,20 +1081,21 @@
    },
    "patchSize": 161791
   },
-  "591582": {
-   "summary": "Style Panel CSS properties are limited to hard coded values",
+  "654068": {
+   "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 5638
   },
-  "654068": {
-   "summary": "Style Inspector rows should show visual indicator when unmatched rules exist",
+  "656027": {
+   "summary": "It should be possible to pref out the Style Inspector",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1238,6 +1111,79 @@
    "status": "ASSIGNED",
    "assignedName": "past",
    "whiteboard": "[pre-approved by beltzner][console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "634406": {
+   "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "638949": {
+   "summary": "Please add Copy Location in the context menu for URLs in the web console",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "644419": {
+   "summary": "Console should have user-settable log limits for each message category",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "past"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 14029
+  },
+  "646025": {
+   "summary": "Add file location to console.log, info, debug, etc.",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[console]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "gavin.sharp"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 17124
+  },
+  "651501": {
+   "summary": "document.body fails to autocomplete in Web Console",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1481,6 +1427,42 @@
    },
    "patchSize": 2123
   },
+  "586977": {
+   "summary": "Investigate how the inspector style panel works with shorthand properties",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "588941": {
+   "summary": "Computed style for property is sometimes wrong in the new Style panel",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591582": {
+   "summary": "Style Panel CSS properties are limited to hard coded values",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "652509": {
    "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
    "status": "RESOLVED",
@@ -1507,6 +1489,18 @@
   },
   "653084": {
    "summary": "Style Inspector should have specificity removed",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654069": {
+   "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
    "status": "RESOLVED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1640,6 +1634,28 @@
     "superreview": []
    },
    "patchSize": 1634
+  },
+  "656021": {
+   "summary": "Update Scratchpad menu access key to S",
+   "status": "RESOLVED",
+   "assignedName": "rcampbell",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "+",
+      "setter": "l10n"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1134
   },
   "526207": {
    "summary": "Add IP address and port info to nsIHttpActivityObserver",
@@ -1783,28 +1799,16 @@
   }
  },
  "reviewQueues": {
-  "rcampbell": {
-   "feedback": {
-    "devtoolsSize": 14029,
-    "devtoolsCount": 1
-   }
-  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 121600,
-    "devtoolsCount": 5
+    "devtoolsSize": 104245,
+    "devtoolsCount": 4
    }
   },
   "bzbarsky": {
    "review": {
     "devtoolsSize": 34846,
     "devtoolsCount": 3
-   }
-  },
-  "mrbkap": {
-   "review": {
-    "devtoolsSize": 10209,
-    "devtoolsCount": 1
    }
   },
   "neil": {
@@ -1817,6 +1821,12 @@
    "review": {
     "devtoolsSize": 176843,
     "devtoolsCount": 3
+   }
+  },
+  "rcampbell": {
+   "feedback": {
+    "devtoolsSize": 14029,
+    "devtoolsCount": 1
    }
   },
   "limi": {

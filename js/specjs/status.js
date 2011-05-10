@@ -186,7 +186,6 @@
       exports.showPeople();
       return;
     } else if (id === "summary") {
-      exports.showSummary();
       return;
     }
     $('#content').show();

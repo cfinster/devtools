@@ -220,7 +220,8 @@ exports.showProject = (id) ->
         exports.showPeople()
         return
     else if id == "summary"
-        exports.showSummary()
+        # summary turned off for now due to breakage
+        #exports.showSummary()
         return
     
     $('#content').show()
