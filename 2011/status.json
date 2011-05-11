@@ -156,6 +156,42 @@
     "superreview": []
    }
   },
+  "654970": {
+   "summary": "GCLI user interface needs tweaks",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654985": {
+   "summary": "GCLI help should sort commands alphabetically (according to locale)",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654986": {
+   "summary": "Initial GCLI screen lists only some of the available commands - it should list them all",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "577721": {
    "summary": "allow repositioning of the web console: above, below and out into a panel/window",
    "status": "NEW",
@@ -164,10 +200,21 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "mihai.sucan"
+     },
+     {
+      "status": "?",
+      "requestee": "sdwilsh",
+      "setter": "mihai.sucan"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 24164
+   "patchSize": 35072
   },
   "636731": {
    "summary": "Add GCLI commands for Workspaces",
@@ -205,6 +252,18 @@
     "superreview": []
    }
   },
+  "656220": {
+   "summary": "Style Inspector should cache cssLogic and cssHtmlTree outside the Highlighter",
+   "status": "NEW",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "643184": {
    "summary": "Checkbox menu items in a toolbar do not display the check mark when checked in Firefox 4 on Mac OS X",
    "status": "NEW",
@@ -234,18 +293,6 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[firebug-p2]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "574347": {
-   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -301,6 +348,18 @@
     "superreview": []
    }
   },
+  "589264": {
+   "summary": "Inspector: be able to choose an alternative media type",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "589375": {
    "summary": "Inspector: style panel keyboard access",
    "status": "NEW",
@@ -327,6 +386,18 @@
   },
   "591584": {
    "summary": "Localize the URLs in csshtmltree",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "591902": {
+   "summary": "Automatic display of localized content",
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
@@ -805,6 +876,18 @@
     "superreview": []
    }
   },
+  "656273": {
+   "summary": "Create a toolbar for Scratchpad",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[scratchpad]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "611032": {
    "summary": "Break out HUDConsoleObserver from HUDService",
    "status": "NEW",
@@ -818,15 +901,11 @@
       "status": "?",
       "requestee": "gavin.sharp",
       "setter": "ddahl"
-     },
-     {
-      "status": "+",
-      "setter": "rcampbell"
      }
     ],
     "superreview": []
    },
-   "patchSize": 21534
+   "patchSize": 20711
   },
   "612658": {
    "summary": "Implement ConsoleStorageService",
@@ -838,9 +917,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "ddahl"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -1072,14 +1150,13 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "mihai.sucan",
-      "setter": "mratcliffe"
+      "status": "+",
+      "setter": "mihai.sucan"
      }
     ],
     "superreview": []
    },
-   "patchSize": 161791
+   "patchSize": 10761
   },
   "654068": {
    "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
@@ -1092,7 +1169,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 5638
+   "patchSize": 5570
   },
   "656027": {
    "summary": "It should be possible to pref out the Style Inspector",
@@ -1159,37 +1236,33 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 14029
+   "patchSize": 17257
   },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
    "status": "ASSIGNED",
    "assignedName": "past",
-   "whiteboard": "[console]",
+   "whiteboard": "[console][checkin-needed]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "gavin.sharp"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 17124
+   "patchSize": 18931
   },
   "651501": {
    "summary": "document.body fails to autocomplete in Web Console",
    "status": "ASSIGNED",
    "assignedName": "past",
    "whiteboard": {},
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 948
   },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
@@ -1252,7 +1325,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 7507
+   "patchSize": 7537
   },
   "612252": {
    "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
@@ -1427,6 +1500,18 @@
    },
    "patchSize": 2123
   },
+  "574347": {
+   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "586977": {
    "summary": "Investigate how the inspector style panel works with shorthand properties",
    "status": "RESOLVED",
@@ -1501,6 +1586,18 @@
   },
   "654069": {
    "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654430": {
+   "summary": "Style Inspector - unmatched rules do not work for string values",
    "status": "RESOLVED",
    "assignedName": "mratcliffe",
    "whiteboard": {},
@@ -1799,10 +1896,26 @@
   }
  },
  "reviewQueues": {
+  "rcampbell": {
+   "review": {
+    "devtoolsSize": 35072,
+    "devtoolsCount": 1
+   },
+   "feedback": {
+    "devtoolsSize": 17257,
+    "devtoolsCount": 1
+   }
+  },
+  "sdwilsh": {
+   "review": {
+    "devtoolsSize": 35072,
+    "devtoolsCount": 1
+   }
+  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 104245,
-    "devtoolsCount": 4
+    "devtoolsSize": 86414,
+    "devtoolsCount": 3
    }
   },
   "bzbarsky": {
@@ -1819,13 +1932,7 @@
   },
   "mihai.sucan": {
    "review": {
-    "devtoolsSize": 176843,
-    "devtoolsCount": 3
-   }
-  },
-  "rcampbell": {
-   "feedback": {
-    "devtoolsSize": 14029,
+    "devtoolsSize": 161791,
     "devtoolsCount": 1
    }
   },
