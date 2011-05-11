@@ -205,6 +205,18 @@
     "superreview": []
    }
   },
+  "656220": {
+   "summary": "Style Inspector should cache cssLogic and cssHtmlTree outside the Highlighter",
+   "status": "NEW",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "643184": {
    "summary": "Checkbox menu items in a toolbar do not display the check mark when checked in Firefox 4 on Mac OS X",
    "status": "NEW",
@@ -234,18 +246,6 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[firebug-p2]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "574347": {
-   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": {},
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -854,15 +854,11 @@
       "status": "?",
       "requestee": "gavin.sharp",
       "setter": "ddahl"
-     },
-     {
-      "status": "+",
-      "setter": "rcampbell"
      }
     ],
     "superreview": []
    },
-   "patchSize": 21534
+   "patchSize": 20711
   },
   "612658": {
    "summary": "Implement ConsoleStorageService",
@@ -874,9 +870,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "ddahl"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -1128,7 +1123,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 5638
+   "patchSize": 5570
   },
   "656027": {
    "summary": "It should be possible to pref out the Style Inspector",
@@ -1195,7 +1190,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 14029
+   "patchSize": 17257
   },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
@@ -1207,9 +1202,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "past"
+      "status": "+",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -1289,7 +1283,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 7507
+   "patchSize": 7537
   },
   "612252": {
    "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
@@ -1463,6 +1457,18 @@
     "superreview": []
    },
    "patchSize": 2123
+  },
+  "574347": {
+   "summary": "Opening the HUD with Inspector open causes Style Panel to move",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "586977": {
    "summary": "Investigate how the inspector style panel works with shorthand properties",
@@ -1828,8 +1834,8 @@
  "reviewQueues": {
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 121369,
-    "devtoolsCount": 5
+    "devtoolsSize": 86414,
+    "devtoolsCount": 3
    }
   },
   "bzbarsky": {
@@ -1852,7 +1858,7 @@
   },
   "rcampbell": {
    "feedback": {
-    "devtoolsSize": 14029,
+    "devtoolsSize": 17257,
     "devtoolsCount": 1
    }
   },
