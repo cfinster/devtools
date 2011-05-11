@@ -68,7 +68,7 @@
       status: "Implementation",
       target: 6,
       people: ["jwalker"],
-      bugs: [641903, 642505, "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system"]
+      bugs: [641903, 642505, "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks"]
     }, {
       id: "viewsource",
       name: "View Source Reboot",
@@ -166,7 +166,7 @@
       status: "Planning",
       target: 7,
       people: [],
-      bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make workspaces save their state across restarts", "651941 Persist workspaces across session restarts", "651942 Add recent files to the file menu"]
+      bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make workspaces save their state across restarts", "651941 Persist workspaces across session restarts", "651942 Add recent files to the file menu", "656273 Add a toolbar"]
     }, {
       id: "incontent",
       name: "In-Content Tools",

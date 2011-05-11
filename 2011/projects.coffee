@@ -181,6 +181,9 @@
             "642189 GCLI should support grouped parameters"
             "651081 Ensure GCLI commands are executed securely"
             "651071 Enhance the Web Console with a command-based input system"
+            "654986 lists only some of the available commands - it should list them all"
+            "654985 help should sort commands alphabetically (according to locale)"
+            "654970 UI tweaks"
         ]
     }
     {
@@ -348,6 +351,7 @@
             "644409 Make workspaces save their state across restarts"
             "651941 Persist workspaces across session restarts"
             "651942 Add recent files to the file menu"
+            "656273 Add a toolbar"
         ]
     }
     {
