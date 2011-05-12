@@ -52,7 +52,7 @@
       if (!(data != null)) {
         return;
       }
-      _ref = ["id", "url", "name", "blurb", "status"];
+      _ref = ["id", "url", "name", "blurb", "status", "target"];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         prop = _ref[_i];
         this[prop] = data[prop] != null ? data[prop] : "";
@@ -69,7 +69,7 @@
       _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         bug = _ref[_i];
-        _results.push(getBugId(bug));
+        _results.push(getBugID(bug));
       }
       return _results;
     };
@@ -85,6 +85,30 @@
         }
       }
       return result;
+    };
+    Project.prototype.getBugCounts = function() {
+      var bug, bugdata, counts, status, _i, _len, _ref;
+      counts = {
+        open: this.bugs.length,
+        withPatches: 0
+      };
+      if (!(typeof statusdata != "undefined" && statusdata !== null)) {
+        return counts;
+      }
+      bugdata = statusdata.bugs;
+      _ref = this.getBugIds();
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        bug = _ref[_i];
+        status = bugdata[bug].status;
+        if (status === 'RESOLVED' || status === 'VERIFIED') {
+          counts.open--;
+          continue;
+        }
+        if (bugdata[bug].hasPatch) {
+          counts.withPatches++;
+        }
+      }
+      return counts;
     };
     return Project;
   })();
@@ -186,6 +210,7 @@
       exports.showPeople();
       return;
     } else if (id === "summary") {
+      exports.showSummary();
       return;
     }
     $('#content').show();
@@ -217,7 +242,7 @@
     return location.hash = "#people";
   };
   exports.showSummary = function() {
-    var content, firstRelease, i, lastRelease, project, release, releases, target, _i, _j, _len, _len2;
+    var container, content, counts, firstRelease, i, lastRelease, project, release, releases, target, _i, _j, _len, _len2;
     $('#content').show();
     $('#people').hide();
     releases = [];
@@ -226,7 +251,7 @@
     for (_i = 0, _len = projects.length; _i < _len; _i++) {
       project = projects[_i];
       target = project.target;
-      if (!(target != null)) {
+      if (!(target != null) || !target) {
         continue;
       }
       if (!(releases[target] != null)) {
@@ -240,20 +265,28 @@
         lastRelease = target;
       }
     }
+    if (firstRelease === Infinity || lastRelease === -1) {
+      return;
+    }
     content = "<section class=\"release_tracking\">\n<h2>Release Tracking</h2>";
     for (i = firstRelease; (firstRelease <= lastRelease ? i <= lastRelease : i >= lastRelease); (firstRelease <= lastRelease ? i += 1 : i -= 1)) {
       release = releases[i];
       if (!(release != null)) {
         continue;
       }
-      content += "<h3>Firefox " + i + "</h3>\n<table>\n    <thead>\n        <tr>\n            <th>Feature</th>\n            <th>Open Bugs</th>\n            <th>with Patches</th>\n        </tr>\n    </thead>\n    <tbody>";
+      content += "<h3>Firefox " + i + "</h3>\n<table>\n    <thead>\n        <tr>\n            <th>Feature</th>\n            <th>Status</th>\n            <th>Open Bugs</th>\n            <th>with Patches</th>\n        </tr>\n    </thead>\n    <tbody>";
       for (_j = 0, _len2 = release.length; _j < _len2; _j++) {
         project = release[_j];
-        content += "<tr><td>${project.name}</td><td>&nbsp;</td><td>&nbsp;</td>";
+        counts = project.getBugCounts();
+        content += "<tr><td>" + project.name + "</td><td>" + project.status + "</td><td>" + counts.open + "</td><td>" + counts.withPatches + "</td>";
       }
+      content += "</tbody>\n</table>";
     }
     content += "</section>";
-    return $("#content").children().remove().append($(content));
+    container = $("#content");
+    container.children().remove();
+    container.append($(content));
+    return location.hash = "#summary";
   };
   exports.populatePage = function() {
     var contents, newNode, peopleNode, person, project, _i, _j, _len, _len2;
@@ -287,7 +320,7 @@
     var hash;
     hash = location.hash.substring(1);
     if (!hash) {
-      return;
+      hash = "summary";
     }
     return exports.showProject(hash);
   };

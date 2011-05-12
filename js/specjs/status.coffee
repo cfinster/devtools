@@ -115,13 +115,13 @@ class Project
     constructor: (data) ->
         if not data?
             return
-        for prop in ["id", "url", "name", "blurb", "status"]
+        for prop in ["id", "url", "name", "blurb", "status", "target"]
             @[prop] = if data[prop]? then data[prop] else ""
         for prop in ["people", "bugs", "updates", "flags"]
             @[prop] = if data[prop]? then data[prop] else []
 
     getBugIds: () ->
-        getBugId bug for bug in @bugs
+        getBugID bug for bug in @bugs
     
     getPeople: () ->
         result = []
@@ -130,6 +130,25 @@ class Project
             if person?
                 result.push person
         result
+    
+    getBugCounts: () ->
+        counts = 
+            open: @bugs.length
+            withPatches: 0
+        
+        if not statusdata?
+            return counts
+        
+        bugdata = statusdata.bugs
+        for bug in @getBugIds()
+            status = bugdata[bug].status
+            if status == 'RESOLVED' or status == 'VERIFIED'
+                counts.open--
+                continue
+            if bugdata[bug].hasPatch
+                counts.withPatches++
+        
+        counts
 
 exports.Project = Project
 
@@ -221,7 +240,7 @@ exports.showProject = (id) ->
         return
     else if id == "summary"
         # summary turned off for now due to breakage
-        #exports.showSummary()
+        exports.showSummary()
         return
     
     $('#content').show()
@@ -258,7 +277,7 @@ exports.showSummary = () ->
     lastRelease = -1
     for project in projects
         target = project.target
-        if not target?
+        if not target? or not target
             continue
         if not releases[target]?
             releases[target] = []
@@ -266,6 +285,10 @@ exports.showSummary = () ->
         firstRelease = target if target < firstRelease
         lastRelease = target if target > lastRelease
     
+    if firstRelease == Infinity or lastRelease == -1
+        return
+
+
     content = """<section class="release_tracking">
 <h2>Release Tracking</h2>
 """
@@ -278,6 +301,7 @@ exports.showSummary = () ->
     <thead>
         <tr>
             <th>Feature</th>
+            <th>Status</th>
             <th>Open Bugs</th>
             <th>with Patches</th>
         </tr>
@@ -285,14 +309,22 @@ exports.showSummary = () ->
     <tbody>
 """
         for project in release
+            counts = project.getBugCounts()
             content += """
-        <tr><td>${project.name}</td><td>&nbsp;</td><td>&nbsp;</td>
+        <tr><td>#{project.name}</td><td>#{project.status}</td><td>#{counts.open}</td><td>#{counts.withPatches}</td>
+"""
+        content += """
+    </tbody>
+</table>
 """
     
     content += """
 </section>
 """
-    $("#content").children().remove().append($(content))
+    container = $("#content")
+    container.children().remove()
+    container.append($(content))
+    location.hash = "#summary"
 
 exports.populatePage = () ->
     for project in projects
@@ -321,6 +353,7 @@ exports.populatePage = () ->
     
 exports.jumpToProject = () ->
     hash = location.hash.substring(1)
-    return if !hash
+    if not hash
+        hash = "summary"
     
     exports.showProject hash

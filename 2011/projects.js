@@ -89,7 +89,7 @@
       notes: ["deminification", "insert alert", "view and edit?", "current source vs. original/cached"]
     }, {
       id: "cssedit",
-      name: "CSS Editor",
+      name: "Style Editor",
       blurb: "Tweak and view!",
       status: "Implementation",
       target: 7,
@@ -98,9 +98,9 @@
     }, {
       id: "cssdoctor",
       url: "https://wiki.mozilla.org/DevTools/Features/CSSDoctor",
-      name: "CSS Doctor",
+      name: "Style Doctor",
       blurb: "The cure for what ails your CSS",
-      status: "Planning",
+      status: "Implementation",
       target: 7,
       people: ["jwalker"],
       bugs: []

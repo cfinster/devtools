@@ -195,3 +195,7 @@ span.patchstatus {
 div.tabs {
     padding: 1em;
 }
+
+section.release_tracking table {
+    width: 100%;
+}
