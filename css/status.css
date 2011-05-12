@@ -199,3 +199,8 @@ div.tabs {
 section.release_tracking table {
     width: 100%;
 }
+
+section.release_tracking table td.project {
+    text-decoration: underline;
+    cursor: pointer;
+}

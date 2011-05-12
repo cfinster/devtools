@@ -278,7 +278,7 @@
       for (_j = 0, _len2 = release.length; _j < _len2; _j++) {
         project = release[_j];
         counts = project.getBugCounts();
-        content += "<tr><td>" + project.name + "</td><td>" + project.status + "</td><td>" + counts.open + "</td><td>" + counts.withPatches + "</td>";
+        content += "<tr><td class=\"project\" data-id=\"" + project.id + "\">" + project.name + "</td><td>" + project.status + "</td><td>" + counts.open + "</td><td>" + counts.withPatches + "</td>";
       }
       content += "</tbody>\n</table>";
     }
@@ -286,6 +286,9 @@
     container = $("#content");
     container.children().remove();
     container.append($(content));
+    $("td.project", container).click(function(e) {
+      return exports.showProject($(e.target).attr("data-id"));
+    });
     return location.hash = "#summary";
   };
   exports.populatePage = function() {

@@ -311,7 +311,7 @@ exports.showSummary = () ->
         for project in release
             counts = project.getBugCounts()
             content += """
-        <tr><td>#{project.name}</td><td>#{project.status}</td><td>#{counts.open}</td><td>#{counts.withPatches}</td>
+        <tr><td class="project" data-id="#{project.id}">#{project.name}</td><td>#{project.status}</td><td>#{counts.open}</td><td>#{counts.withPatches}</td>
 """
         content += """
     </tbody>
@@ -324,6 +324,10 @@ exports.showSummary = () ->
     container = $("#content")
     container.children().remove()
     container.append($(content))
+
+    $("td.project", container).click (e) ->
+        exports.showProject($(e.target).attr("data-id"))
+
     location.hash = "#summary"
 
 exports.populatePage = () ->
