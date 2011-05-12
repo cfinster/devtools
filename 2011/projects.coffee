@@ -32,7 +32,7 @@
     {
         id: "workspaces"
         url: "https://wiki.mozilla.org/DevTools/Features/Workspaces"
-        name: "Workspaces First Take"
+        name: "Scratchpad First Take"
         blurb: "The humane way to monkey with code"
         status: "Implementation"
         target: 6
@@ -45,12 +45,31 @@
             "650760 Help menu"
             "651872 access key for menu option"
             "656021 Update Scratchpad menu access key to S"
+            "653108 workspace is tied to the tab it was first run in"
+            "653423 Undo option is grayed out although action is applicable"
+            "653427 No save dialog displayed before closing window"
+            "654023 Adding 'Tools' menu item to error console"
+            "656544 More intuitive keyboard shortcuts"
         ]
         updates: [
             "2011/04/14 Security review complete"
             "2011/03/18 Patch to put the Workspaces in browser"
             "2011/03/01 Prototype is working as a Jetpack"
             "2011/01/05 Initial Prototype Add-On"
+        ]
+    }
+    {
+        id: "webdevmenu"
+        url: "https://wiki.mozilla.org/DevTools/Features/WebDeveloperMenu"
+        name: "Web Developer Menu"
+        blurb: "New home for web developer tools"
+        status: "Implementation"
+        target: 6
+        people: ["rcampbell", "msucan"]
+        bugs: [
+            "653221 Web Developer Menu"
+            "655776 Get More Tools menu item"
+            "656360 access key problem"
         ]
     }
     {
@@ -123,7 +142,7 @@
         people: ["past", "msucan", "ddahl"]
         bugs: [
             577721
-            585991
+            "585991 Show a popup listing possible completions"
             637801
             632347
             632275
@@ -158,6 +177,8 @@
             "616586 Internal console logging API"
             "588871 Remove ConsoleStorage methods used for log message storage"
             "634406 Select All unexpectedly results in multi-line input"
+            "653110 undefined appended after pasted text"
+            "656461 Web Console calls getters when displaying an object"
         ]
     }
     {
@@ -169,8 +190,13 @@
         target: 6
         people: ["jwalker"]
         bugs: [
+            "654962 GCLI demo"
+            "653142 Create pilot.jsm required for Command Line"
+            "653140 Pilot/Command Line need a CommonJS require"
+            "656296 console.jsm from pilot should send reports to web "
             641903
             642505
+            "653978 Command Line should be prefed out"
             "642231 Prepare GCLI for review"
             "642241 Experiment with better UI presentation methods in GCLI"
             "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes"
@@ -188,6 +214,9 @@
             "654986 lists only some of the available commands - it should list them all"
             "654985 help should sort commands alphabetically (according to locale)"
             "654970 UI tweaks"
+            "653979 UI to switch web console between JS and Command Line modes"
+            "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often"
+            "653567 GCLI should be checked for accessibility"
         ]
     }
     {
@@ -255,6 +284,18 @@
         people: []
         bugs: [
             "655700 More visual separation between requests"
+            "656231 cleanup the HUD object properties"
+        ]
+    }
+    {
+        id: "tilt"
+        name: "Tilt"
+        blurb: "WebGL DOM inspection awesomeness"
+        url: "https://wiki.mozilla.org/Tilt_Project_Page"
+        status: "Implementation"
+        people: ["victor.porof"]
+        bugs: [
+            "653658 JavaScript implementation of MOZ_dom_element_texture extension"
         ]
     }
     {
@@ -356,6 +397,7 @@
             "651941 Persist workspaces across session restarts"
             "651942 Add recent files to the file menu"
             "656273 Add a toolbar"
+            "656330 make ctrl/cmd+enter execute command"
         ]
     }
     {
@@ -468,5 +510,11 @@
         name: "Panagiotis Astithas"
         avatar: "http://gravatar.com/avatar/5910c2c56be9598a07535cc361b65a22"
         bugzillaId: "past@mozilla.com"
+    }
+    {
+        id: "victor.porof"
+        name: "Victor Porof"
+        avatar: "http://gravatar.com/avatar/c0e3ca110aaf63386c3e520e614527c4"
+        bugzillaId: "victor.porof@gmail.com"
     }
 ]

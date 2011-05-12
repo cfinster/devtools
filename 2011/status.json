@@ -1,5 +1,17 @@
 {
  "bugs": {
+  "656330": {
+   "summary": "Make ctrl/cmd + enter execute command in scratchpad",
+   "status": "UNCONFIRMED",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "590795": {
    "summary": "Changes made in the CSS editor aren't reflected in the style panel",
    "status": "NEW",
@@ -156,6 +168,79 @@
     "superreview": []
    }
   },
+  "653140": {
+   "summary": "Pilot/Ace/GCLI need a commonjs require system",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "joseph.walker+bugzilla"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 14366
+  },
+  "653142": {
+   "summary": "Create a pilot.jsm javascript module for use with GCLI/Ace",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "-",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 18754
+  },
+  "653567": {
+   "summary": "GCLI should be checked for accessibility",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653568": {
+   "summary": "GCLI re-creates nodes in the RequestView/ArgFetcher too often",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "654962": {
+   "summary": "GCLI needs a demo",
+   "status": "NEW",
+   "assignedName": "joseph.walker+bugzilla",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "654970": {
    "summary": "GCLI user interface needs tweaks",
    "status": "NEW",
@@ -191,30 +276,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "577721": {
-   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
-   "status": "NEW",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "mihai.sucan"
-     },
-     {
-      "status": "?",
-      "requestee": "sdwilsh",
-      "setter": "mihai.sucan"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 35072
   },
   "636731": {
    "summary": "Add GCLI commands for Workspaces",
@@ -804,6 +865,43 @@
     "superreview": []
    }
   },
+  "653108": {
+   "summary": "workspace is tied to the tab it was first run in",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[scratchpad]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653423": {
+   "summary": "Undo option is grayed out although action is applicable",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[workspaces]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 2520
+  },
+  "653427": {
+   "summary": "No save dialog is displayed before closing workspaces window",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[workspaces]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "653531": {
    "summary": "Shared knowledge of selected node in highlighter",
    "status": "NEW",
@@ -864,8 +962,56 @@
     "superreview": []
    }
   },
+  "653658": {
+   "summary": "JavaScript implementation of WebGL MOZ_dom_element_texture extension",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[tilt]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653978": {
+   "summary": "GCLI should be prefed out",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "653979": {
+   "summary": "WebConsole UI should have toggle to switch from JS mode to command mode (GCLI)",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "655700": {
    "summary": "Console should visually obsolete output from previous contexts",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "656231": {
+   "summary": "Cleanup the HUD object properties, add xul:tab reference",
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": {},
@@ -887,6 +1033,67 @@
     "review": [],
     "superreview": []
    }
+  },
+  "656296": {
+   "summary": "console.jsm from Pilot should send reports to the web console",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "656544": {
+   "summary": "Make all of Scratchpad's keyboard shortcuts more intuitive.",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "kwierso"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 3074
+  },
+  "653110": {
+   "summary": "WebConsole appends \"undefined\" after a pasted text when right arrow is pressed",
+   "status": "NEW",
+   "assignedName": "past",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "656360": {
+   "summary": "webDeveloperMenu.accesskey can not be localized",
+   "status": "NEW",
+   "assignedName": "unghost",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "dao"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1180
   },
   "611032": {
    "summary": "Break out HUDConsoleObserver from HUDService",
@@ -923,7 +1130,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 17008
+   "patchSize": 17736
   },
   "588871": {
    "summary": "Remove ConsoleStorage methods used for log message storage",
@@ -1037,6 +1244,28 @@
    },
    "patchSize": 15341
   },
+  "654023": {
+   "summary": "Adding the Workspace 'Tools' menu item to the Error Console",
+   "status": "ASSIGNED",
+   "assignedName": "erikvvold",
+   "whiteboard": "[workspaces]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "-",
+      "setter": "dtownsend"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 2520
+  },
   "246620": {
    "summary": "Add line numbers to View Source for Firefox",
    "status": "ASSIGNED",
@@ -1086,11 +1315,34 @@
    },
    "patchSize": 10209
   },
+  "577721": {
+   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "?",
+      "requestee": "sdwilsh",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 35072
+  },
   "585991": {
    "summary": "Show a popup listing possible completions",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[console-2][patchclean:0503][see-try-build-in-comment-22]",
+   "whiteboard": "[console-2][patchclean:0512][see-try-build-in-comment-22]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1103,7 +1355,7 @@
      }
     ]
    },
-   "patchSize": 45912
+   "patchSize": 45438
   },
   "636727": {
    "summary": "Add Ace to workspaces",
@@ -1121,24 +1373,39 @@
    "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0406]",
+   "whiteboard": "[patchclean:0512]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "+",
-      "setter": "rcampbell"
-     },
-     {
       "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "rcampbell"
+      "requestee": "dtownsend",
+      "setter": "mihai.sucan"
      }
     ],
     "superreview": []
    },
-   "patchSize": 10197
+   "patchSize": 12456
+  },
+  "655776": {
+   "summary": "Web Developer > Get More Tools menu item",
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 4468
   },
   "582596": {
    "summary": "Style view centered around answering common CSS questions",
@@ -1150,13 +1417,13 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
+      "status": "-",
       "setter": "mihai.sucan"
      }
     ],
     "superreview": []
    },
-   "patchSize": 10761
+   "patchSize": 161791
   },
   "654068": {
    "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
@@ -1226,23 +1493,23 @@
    "whiteboard": "[console]",
    "hasPatch": true,
    "flags": {
-    "feedback": [
+    "feedback": [],
+    "review": [
      {
       "status": "?",
       "requestee": "rcampbell",
       "setter": "past"
      }
     ],
-    "review": [],
     "superreview": []
    },
-   "patchSize": 17257
+   "patchSize": 18792
   },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
    "status": "ASSIGNED",
    "assignedName": "past",
-   "whiteboard": "[console][checkin-needed]",
+   "whiteboard": "[console][fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1259,10 +1526,27 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "-",
+      "setter": "rcampbell"
+     }
+    ],
     "superreview": []
    },
    "patchSize": 948
+  },
+  "656461": {
+   "summary": "Web Console calls getters when displaying an object",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": {},
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
@@ -1369,41 +1653,6 @@
     "superreview": []
    }
   },
-  "585956": {
-   "summary": "Implement console.trace() in web console",
-   "status": "RESOLVED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1][patchclean:0411][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     },
-     {
-      "status": "+",
-      "setter": "jonas"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 21736
-  },
-  "632275": {
-   "summary": "Web Console: Error message when click on an object to create an inspect window",
-   "status": "RESOLVED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0412] [console-1][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 6957
-  },
   "636725": {
    "summary": "Unit tests for Workspaces",
    "status": "RESOLVED",
@@ -1433,24 +1682,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "642176": {
-   "summary": "Integrate Workspace extension into the browser",
-   "status": "RESOLVED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 1321
   },
   "646070": {
    "summary": "Respect chrome developer tools preference in workspace",
@@ -1710,49 +1941,23 @@
    },
    "patchSize": 9966
   },
-  "650780": {
-   "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
+  "653221": {
+   "summary": "Create Web Developer Sub-menu in the Tools menu",
    "status": "RESOLVED",
    "assignedName": "rcampbell",
-   "whiteboard": "[fixed-in-devtools][console-1][merged-to-mozilla-central]",
+   "whiteboard": "[fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
       "status": "+",
-      "setter": "ddahl"
-     },
-     {
-      "status": "+",
-      "setter": "dtownsend"
+      "setter": "dao"
      }
     ],
     "superreview": []
    },
-   "patchSize": 1634
-  },
-  "656021": {
-   "summary": "Update Scratchpad menu access key to S",
-   "status": "RESOLVED",
-   "assignedName": "rcampbell",
-   "whiteboard": {},
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "setter": "rcampbell"
-     },
-     {
-      "status": "+",
-      "setter": "l10n"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 1134
+   "patchSize": 8501
   },
   "526207": {
    "summary": "Add IP address and port info to nsIHttpActivityObserver",
@@ -1785,29 +1990,6 @@
    },
    "patchSize": 11909
   },
-  "626484": {
-   "summary": "Incorrect order of lines when copying from web console",
-   "status": "RESOLVED",
-   "assignedName": "unusualtears",
-   "whiteboard": "[console-1][has-patch][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "mihai.sucan"
-     }
-    ],
-    "review": [
-     {
-      "status": "+",
-      "setter": "gavin.sharp"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 4439
-  },
   "637801": {
    "summary": "console.log shouldn't display escaped strings",
    "status": "VERIFIED",
@@ -1820,6 +2002,28 @@
     "superreview": []
    },
    "patchSize": 6910
+  },
+  "585956": {
+   "summary": "Implement console.trace() in web console",
+   "status": "VERIFIED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][patchclean:0411][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "+",
+      "setter": "jonas"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 21736
   },
   "618311": {
    "summary": "Inspect Network Request window persists on close of Web Console - PB data leak",
@@ -1834,6 +2038,19 @@
    },
    "patchSize": 17598
   },
+  "632275": {
+   "summary": "Web Console: Error message when click on an object to create an inspect window",
+   "status": "VERIFIED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[patchclean:0412] [console-1][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 6957
+  },
   "632347": {
    "summary": "Expanding a property in the Object Inspector whose type is Generator causes lockup",
    "status": "VERIFIED",
@@ -1846,6 +2063,24 @@
     "superreview": []
    },
    "patchSize": 1250
+  },
+  "642176": {
+   "summary": "Integrate Workspace extension into the browser",
+   "status": "VERIFIED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1321
   },
   "642109": {
    "summary": "Web Console REPL \"readline\" occasionally stops working right",
@@ -1881,6 +2116,73 @@
    },
    "patchSize": 3183
   },
+  "650780": {
+   "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
+   "status": "VERIFIED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[fixed-in-devtools][console-1][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "ddahl"
+     },
+     {
+      "status": "+",
+      "setter": "dtownsend"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1634
+  },
+  "656021": {
+   "summary": "Update Scratchpad menu access key to S",
+   "status": "VERIFIED",
+   "assignedName": "rcampbell",
+   "whiteboard": {},
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "+",
+      "setter": "l10n"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1134
+  },
+  "626484": {
+   "summary": "Incorrect order of lines when copying from web console",
+   "status": "VERIFIED",
+   "assignedName": "unusualtears",
+   "whiteboard": "[console-1][has-patch][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "+",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "review": [
+     {
+      "status": "+",
+      "setter": "gavin.sharp"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 4439
+  },
   "619598": {
    "summary": "Up and Down does not retrieve command history in the same way as other consoles",
    "status": "VERIFIED",
@@ -1898,24 +2200,18 @@
  "reviewQueues": {
   "rcampbell": {
    "review": {
-    "devtoolsSize": 35072,
-    "devtoolsCount": 1
+    "devtoolsSize": 36232,
+    "devtoolsCount": 3
    },
    "feedback": {
-    "devtoolsSize": 17257,
-    "devtoolsCount": 1
-   }
-  },
-  "sdwilsh": {
-   "review": {
-    "devtoolsSize": 35072,
+    "devtoolsSize": 4468,
     "devtoolsCount": 1
    }
   },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 86414,
-    "devtoolsCount": 3
+    "devtoolsSize": 76217,
+    "devtoolsCount": 2
    }
   },
   "bzbarsky": {
@@ -1924,15 +2220,21 @@
     "devtoolsCount": 3
    }
   },
-  "neil": {
-   "superreview": {
-    "devtoolsSize": 45912,
+  "sdwilsh": {
+   "review": {
+    "devtoolsSize": 35072,
     "devtoolsCount": 1
    }
   },
-  "mihai.sucan": {
+  "neil": {
+   "superreview": {
+    "devtoolsSize": 45438,
+    "devtoolsCount": 1
+   }
+  },
+  "dtownsend": {
    "review": {
-    "devtoolsSize": 161791,
+    "devtoolsSize": 12456,
     "devtoolsCount": 1
    }
   },
