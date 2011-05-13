@@ -5,9 +5,6 @@
         <link type="text/css" rel="stylesheet" href="../css/mockups.css">
         <title>View Source Wireframe</title>
         <script src="../js/jquery.js"></script>
-        <script src="../js/ace/ace.js"></script>
-        <script src="../js/ace/mode-html.js"></script>
-        <script src="../js/ace/mode-css.js"></script>
         <script src="../js/specjs/mockups.js"></script>
     </head>
     <body>
@@ -38,7 +35,7 @@
                     <div class="button" style="margin-left: 1em">Find</div>
                     <div class="button" style="margin-left: 1em">Dock on Side</div>
                 </div>
-                <div class="editor" data-editor-options="html,readonly">&lt;html>
+                <div><pre><code>&lt;html>
     &lt;head>
         &lt;title>The page within a page within a page&lt;/title>
         &lt;script src="js/foo.js">&lt;/script>
@@ -48,9 +45,7 @@
         &lt;p>A very simple page.&lt;/p>
     &lt;/body>
 &lt;/html>
-                </div>
-                <!-- hacky! need to save space for Ace -->
-                <div style="position:relative; height: 250px">&nbsp;</div>
+                </code></ore></div>
             </div>
         </div>
         <p><em>TODO</em> File selection/search is not shown. Should it be file selection specific (like Firebug) or should we embed the Command Line and use its file search capabilities?</p>
@@ -128,13 +123,11 @@
                     <div class="button" style="margin-left: 1em">Find</div>
                     <div class="button" style="margin-left: 1em">Dock on Side</div>
                 </div>
-                <div class="editor" data-editor-options="css">body {
+                <div><pre><code>body {
     color: #fff;
     background: #555;
 }
-                </div>
-                <!-- hacky! need to save space for Ace -->
-                <div style="position:relative; height: 250px">&nbsp;</div>
+                </code></pre></div>
             </div>
         </div>
         <p><em>Not shown above:</em> The toolbar will actually be the toolbar for the CSS Editor feature</p>
@@ -157,25 +150,23 @@
                     <div class="content" style="background: #555; color: #fff; text-shadow: none; width: 100px">
                         <p>A very simple page.</p>
                     </div>
-                    <div class="sidebar">
+                    <div class="sidebar" style="width: 400px">
                         <div class="toolbar">
                             <div class="backforward">&nbsp;</div>
                             <div class="switch left">Edit</div>
                             <div class="button" style="margin-left: 1em">Find</div>
                             <div class="button" style="margin-left: 1em">Dock on Side</div>
                         </div>
-                        <div class="editor" data-editor-options="css">body {
+                        <div><pre><code>body {
     color: #fff;
     background: #555;
 }
-                        </div>
-                        <!-- hacky! need to save space for Ace -->
-                        <div style="position:relative; height: 250px">&nbsp;</div>
+                        </code></pre></div>
                     </div>
                 </div>
             </div>
         </div>
-        <p><em>Note:</em>clearly the sidebar should not be hanging outside of the window.</p>
+        <p><em>Note:</em> clearly the sidebar shouldn't be hanging out of the window :)</p>
         <p>In this view, the sidebar has back and forward buttons on the toolbar so that the user can navigate between source files.</p>
     </body>
 </html>
