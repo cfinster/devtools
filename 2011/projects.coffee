@@ -50,6 +50,7 @@
             "653427 No save dialog displayed before closing window"
             "654023 Adding 'Tools' menu item to error console"
             "656544 More intuitive keyboard shortcuts"
+            "656701 Scratchpad missing a menu overlay"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -217,6 +218,8 @@
             "653979 UI to switch web console between JS and Command Line modes"
             "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often"
             "653567 GCLI should be checked for accessibility"
+            "656668 Export from GCLI to JSM"
+            "656666 Update HudService.jsm to allow GCLI integration"
         ]
     }
     {
@@ -263,7 +266,9 @@
         status: "Implementation"
         target: 7
         people: ["jwalker"]
-        bugs: []
+        bugs: [
+            "656863 getShortSource() should guarantee uniqueness"
+        ]
     }
     {
         id: "debugger"
@@ -285,6 +290,7 @@
         bugs: [
             "655700 More visual separation between requests"
             "656231 cleanup the HUD object properties"
+            "656709 Net toggle isn't tab-specific"
         ]
     }
     {

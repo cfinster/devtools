@@ -31,7 +31,7 @@
       status: "Implementation",
       target: 6,
       people: ["msucan", "rcampbell"],
-      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts"],
+      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts", "656701 Scratchpad missing a menu overlay"],
       updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
     }, {
       id: "webdevmenu",
@@ -77,7 +77,7 @@
       status: "Implementation",
       target: 6,
       people: ["jwalker"],
-      bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility"]
+      bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility", "656668 Export from GCLI to JSM", "656666 Update HudService.jsm to allow GCLI integration"]
     }, {
       id: "viewsource",
       name: "View Source Reboot",
@@ -103,7 +103,7 @@
       status: "Implementation",
       target: 7,
       people: ["jwalker"],
-      bugs: []
+      bugs: ["656863 getShortSource() should guarantee uniqueness"]
     }, {
       id: "debugger",
       url: "https://wiki.mozilla.org/DevTools/Features/Debugger",
@@ -120,7 +120,7 @@
       status: "Planning",
       target: 7,
       people: [],
-      bugs: ["655700 More visual separation between requests", "656231 cleanup the HUD object properties"]
+      bugs: ["655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific"]
     }, {
       id: "tilt",
       name: "Tilt",

@@ -152,8 +152,8 @@ table td, table th {
 }
 
 .withsidebar .content {
-/*    -moz-box-flex: 1;
-*/}
+    -moz-box-flex: 1;
+}
 
 .withsidebar .sidebar {
     width: 400px;
