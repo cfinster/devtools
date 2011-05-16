@@ -77,7 +77,6 @@
       }
     }
     exports.bugList = _.uniq(bugIds);
-    console.log("Bug list from projects.js: ", exports.bugList);
     return callback(exports.bugList);
   };
   exports.saveBugData = function() {

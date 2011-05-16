@@ -103,7 +103,7 @@
       status: "Implementation",
       target: 7,
       people: ["jwalker"],
-      bugs: ["656863 getShortSource() should guarantee uniqueness"]
+      bugs: ["656863 getShortSource() should guarantee uniqueness", "657350 'rule overridden by other rule' diagnosis"]
     }, {
       id: "debugger",
       url: "https://wiki.mozilla.org/DevTools/Features/Debugger",
@@ -157,7 +157,7 @@
       name: "Firebug Platform Improvements",
       status: "Planning",
       people: [],
-      bugs: [580880, 524674, 638075, 634073, 529536, 526207, 641236, 641234, "642136 Debugger access to closure environments", "642801 Firefox 4.0 Crash Report [@ SelectorMatches ]", "645160 [regression] Incorrect jsdIStackFrame for eval() calls (breaks Dojo)"]
+      bugs: [580880, 524674, 638075, 634073, 529536, 526207, 641236, 641234, "642136 Debugger access to closure environments", "642801 Firefox 4.0 Crash Report [@ SelectorMatches ]", "645160 [regression] Incorrect jsdIStackFrame for eval() calls (breaks Dojo)", "657292 New Compartments crash"]
     }, {
       id: "jsd2",
       url: "https://wiki.mozilla.org/DevTools/Features/JSD2",
@@ -178,12 +178,12 @@
     }, {
       id: "workspaces6",
       url: "https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined",
-      name: "Workspaces Refined",
+      name: "Scratchpad Refined",
       blurb: "The refined, humane way to engage in software development experiments.",
       status: "Planning",
       target: 7,
       people: [],
-      bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make workspaces save their state across restarts", "651941 Persist workspaces across session restarts", "651942 Add recent files to the file menu", "656273 Add a toolbar", "656330 make ctrl/cmd+enter execute command"]
+      bugs: ["646524 cache the sandboxes", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make scratchpads save their state across restarts", "651942 Add recent files to the file menu", "656273 Add a toolbar", "656330 make ctrl/cmd+enter execute command", "657303 F4 and esc should close the scratchpad window", "657136 Rename top-level Context menu to something less confusing", "657132 Create a popup equivalent to the context menu in the status bar", "657131 Create an Execute menu"]
     }, {
       id: "incontent",
       name: "In-Content Tools",

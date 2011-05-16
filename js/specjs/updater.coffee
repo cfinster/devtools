@@ -69,20 +69,49 @@ exports.gatherBugList = (callback) ->
             bugIds.push getBugIDandLabel(bug).id
     
     exports.bugList = _.uniq bugIds
-    console.log "Bug list from projects.js: ", exports.bugList
     callback exports.bugList
 
-exports.saveBugData = () ->
-    if !exports.bugList
-        return
-    q = new buggerall.Query
-        bugid: exports.bugList.join(","),
-        whitespace: true
-        includeHistory: true
-        historyCacheURL: "bughistory/"
+class BugDataCollector
+    constructor: () ->
+        @mainQuery = new buggerall.Query
+            bugid: exports.bugList.join(","),
+            whitespace: true
+            includeHistory: true
+            historyCacheURL: "bughistory/"
+
+        @queryCount = 0
+        @reviewBugs = []
     
-    console.log "Gathering from bugzilla: ", q.query
-    q.run (q) ->
+    queryDone: () ->
+        @queryCount--
+        if queryCount == 0
+            @saveData()
+    
+    run: () ->
+        @queryCount++
+        console.log "Gathering data from bugzilla"
+        @mainQuery.run (q) =>
+            console.log "finished with main query"
+            @queryDone()
+        
+        return
+        for person in people:
+            if not person.reviewCheck
+                continue
+            
+            # do a search for people who have review requests
+            # for patches that are not obsolete
+            # TODO: expand to also include feedback requests
+            q = new buggerall.Query
+                query: "field0-3-0=requestees.login_name&type0-1-0=notequals&field0-1-0=attachments.isobsolete&field0-0-0=attachments.ispatch&resolution=---&value0-3-0=#{person.bugzillaId}&query_format=advanced&value0-2-0=review&value0-1-0=1&type0-3-0=equals&field0-2-0=flagtypes.name&type0-0-0=equals&value0-0-0=1&type0-2-0=substring"
+                fields: "id"
+            
+            q.run 
+            
+    reviewQueueResult: (q) ->
+        # do something
+    
+    saveData: () ->
         console.log "Saving query results"
         exports.bugData = q.result
         output = q.serialize()
@@ -90,6 +119,15 @@ exports.saveBugData = () ->
         for bugId, bug of exports.bugData
             console.log "bug", bug.id, " history", bug.history
             saveFile  "#{exports.datadir}/bughistory/#{bug.id}.json", bug.history.serialize()
+        
+
+exports.saveBugData = () ->
+    if !exports.bugList
+        return
+    
+    bdc = new BugDataCollector()
+    bdc.run()
+    
 
 addBugData = (statusdata) ->
     bugs = statusdata.bugs
