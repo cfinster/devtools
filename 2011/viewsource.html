@@ -3,9 +3,33 @@
     <head>
         <link type="text/css" rel="stylesheet" href="../css/styles.css">
         <link type="text/css" rel="stylesheet" href="../css/mockups.css">
+        <link type="text/css" rel="stylesheet" href="../css/sh/shCoreDefault.css">
+        <style>
+            .file_link {
+                text-decoration: underline;
+            }
+        </style>
         <title>View Source Wireframe</title>
-        <script src="../js/jquery.js"></script>
-        <script src="../js/specjs/mockups.js"></script>
+        <script src="../js/LAB.min.js"></script>
+        <script>
+            $LAB
+            .script("../js/jquery.js")
+            .script("../js/specjs/mockups.js")
+            .script("../js/sh/shCore.js")
+            .script("../js/sh/shBrushXml.js")
+            .wait(function() {
+                SyntaxHighlighter.all();
+                setTimeout(function() {
+                    var fileToLink = /\.(js|css)"$/;
+                    $('code.html.string').each(function() {
+                        var e = $(this);
+                        if (fileToLink.exec(e.text())) {
+                            e.addClass("file_link");
+                        }
+                    });
+                }, 50);
+            });
+        </script>
     </head>
     <body>
         <h1>View Source Wireframes</h1>
@@ -35,7 +59,7 @@
                     <div class="button" style="margin-left: 1em">Find</div>
                     <div class="button" style="margin-left: 1em">Dock on Side</div>
                 </div>
-                <div><pre><code>&lt;html>
+                <div><pre class=" brush: html; toolbar: false;">&lt;html>
     &lt;head>
         &lt;title>The page within a page within a page&lt;/title>
         &lt;script src="js/foo.js">&lt;/script>
@@ -45,13 +69,14 @@
         &lt;p>A very simple page.&lt;/p>
     &lt;/body>
 &lt;/html>
-                </code></ore></div>
+                </ore></div>
             </div>
         </div>
         <p><em>TODO</em> File selection/search is not shown. Should it be file selection specific (like Firebug) or should we embed the Command Line and use its file search capabilities?</p>
-        <p><em>Not shown above:</em> the script src attribute is a link, as is the href attribute of the link tag.</p>
         <p>From the picture above, we can already see two new but previously requested features for View Source: viewing source in a tab and line numbers. The new gutter area that contains the line numbers will eventually grow to support other features as well.</p>
-        <p>The new toolbar exposes the "Find" command, which has been around for a long time. The Find button opens the find bar at the bottom of the window. One new feature exposed in the toolbar is the ability to jump from the HTML source that was originally downloaded to the markup for the <em>current</em> DOM. Previously, you would have to switch contexts to a completely different tool (like Firebug) to see this and there are still people who are unfamiliar with Firebug.</p>
+        <p>The new toolbar exposes the "Find" command, which has been around for a long time. The Find button opens the find bar at the bottom of the window.</p>
+        <p>When debugging features are available, we can allow users to set breakpoints in the gutter and work with the debugger right from this view.</p>
+        <p> One new feature exposed in the toolbar is the ability to jump from the HTML source that was originally downloaded to the markup for the <em>current</em> DOM. Previously, you would have to switch contexts to a completely different tool (like Firebug) to see this and there are still people who are unfamiliar with Firebug.</p>
         <p>Let's take a look at this new view.</p>
         <h3>Current Markup View</h3>
         <div class="browser">
