@@ -84,19 +84,19 @@ class BugDataCollector
     
     queryDone: () ->
         @queryCount--
-        if queryCount == 0
+        if @queryCount == 0
             @saveData()
     
     run: () ->
-        @queryCount++
-        console.log "Gathering data from bugzilla"
-        @mainQuery.run (q) =>
-            console.log "finished with main query"
-            @queryDone()
+        if false
+            @queryCount++
+            console.log "Gathering data from bugzilla"
+            @mainQuery.run (q) =>
+                console.log "finished with main query"
+                @queryDone()
         
-        return
-        for person in people:
-            if not person.reviewCheck
+        for person in people
+            if person.reviewCheck == false
                 continue
             
             # do a search for people who have review requests
@@ -106,13 +106,24 @@ class BugDataCollector
                 query: "field0-3-0=requestees.login_name&type0-1-0=notequals&field0-1-0=attachments.isobsolete&field0-0-0=attachments.ispatch&resolution=---&value0-3-0=#{person.bugzillaId}&query_format=advanced&value0-2-0=review&value0-1-0=1&type0-3-0=equals&field0-2-0=flagtypes.name&type0-0-0=equals&value0-0-0=1&type0-2-0=substring"
                 fields: "id"
             
-            q.run 
+            console.log "Query: ", q.query
+            @queryCount++
+            q.run this.reviewQueueResult
             
-    reviewQueueResult: (q) ->
-        # do something
+    reviewQueueResult: (q) =>
+        console.log "Finished with review queue query", @queryCount
+        for id in q.result
+            console.log "id: ", id
+        @queryDone()
     
     saveData: () ->
         console.log "Saving query results"
+
+        q = @mainQuery
+        if not q.result
+            console.log "No bugzilla results - not saving"
+            return
+
         exports.bugData = q.result
         output = q.serialize()
         saveFile exports.datadir + "/bugdata.json", output
@@ -125,6 +136,7 @@ exports.saveBugData = () ->
     if !exports.bugList
         return
     
+    console.log "setting up bugzilla collector"
     bdc = new BugDataCollector()
     bdc.run()
     

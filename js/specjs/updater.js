@@ -1,5 +1,6 @@
 (function() {
-  var Projects, addBugData, checkDataDir, exports, getBugIDandLabel, loadCachedBugData, saveFile;
+  var BugDataCollector, Projects, addBugData, checkDataDir, exports, getBugIDandLabel, loadCachedBugData, saveFile;
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   exports = specjs.updater = {};
   Projects = specjs.status.Projects;
   getBugIDandLabel = specjs.status.getBugIDandLabel;
@@ -79,21 +80,67 @@
     exports.bugList = _.uniq(bugIds);
     return callback(exports.bugList);
   };
-  exports.saveBugData = function() {
-    var q;
-    if (!exports.bugList) {
-      return;
+  BugDataCollector = (function() {
+    function BugDataCollector() {
+      this.reviewQueueResult = __bind(this.reviewQueueResult, this);;      this.mainQuery = new buggerall.Query({
+        bugid: exports.bugList.join(","),
+        whitespace: true,
+        includeHistory: true,
+        historyCacheURL: "bughistory/"
+      });
+      this.queryCount = 0;
+      this.reviewBugs = [];
     }
-    q = new buggerall.Query({
-      bugid: exports.bugList.join(","),
-      whitespace: true,
-      includeHistory: true,
-      historyCacheURL: "bughistory/"
-    });
-    console.log("Gathering from bugzilla: ", q.query);
-    return q.run(function(q) {
-      var bug, bugId, output, _ref, _results;
+    BugDataCollector.prototype.queryDone = function() {
+      this.queryCount--;
+      if (this.queryCount === 0) {
+        return this.saveData();
+      }
+    };
+    BugDataCollector.prototype.run = function() {
+      var person, q, _i, _len, _results;
+      if (false) {
+        this.queryCount++;
+        console.log("Gathering data from bugzilla");
+        this.mainQuery.run(__bind(function(q) {
+          console.log("finished with main query");
+          return this.queryDone();
+        }, this));
+      }
+      _results = [];
+      for (_i = 0, _len = people.length; _i < _len; _i++) {
+        person = people[_i];
+        if (person.reviewCheck === false) {
+          continue;
+        }
+        q = new buggerall.Query({
+          query: "field0-3-0=requestees.login_name&type0-1-0=notequals&field0-1-0=attachments.isobsolete&field0-0-0=attachments.ispatch&resolution=---&value0-3-0=" + person.bugzillaId + "&query_format=advanced&value0-2-0=review&value0-1-0=1&type0-3-0=equals&field0-2-0=flagtypes.name&type0-0-0=equals&value0-0-0=1&type0-2-0=substring",
+          fields: "id"
+        });
+        console.log("Query: ", q.query);
+        this.queryCount++;
+        _results.push(q.run(this.reviewQueueResult));
+      }
+      return _results;
+    };
+    BugDataCollector.prototype.reviewQueueResult = function(q) {
+      var id, _i, _len, _ref;
+      console.log("Finished with review queue query", this.queryCount);
+      _ref = q.result;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        id = _ref[_i];
+        console.log("id: ", id);
+      }
+      return this.queryDone();
+    };
+    BugDataCollector.prototype.saveData = function() {
+      var bug, bugId, output, q, _ref, _results;
       console.log("Saving query results");
+      q = this.mainQuery;
+      if (!q.result) {
+        console.log("No bugzilla results - not saving");
+        return;
+      }
       exports.bugData = q.result;
       output = q.serialize();
       saveFile(exports.datadir + "/bugdata.json", output);
@@ -105,7 +152,17 @@
         _results.push(saveFile("" + exports.datadir + "/bughistory/" + bug.id + ".json", bug.history.serialize()));
       }
       return _results;
-    });
+    };
+    return BugDataCollector;
+  })();
+  exports.saveBugData = function() {
+    var bdc;
+    if (!exports.bugList) {
+      return;
+    }
+    console.log("setting up bugzilla collector");
+    bdc = new BugDataCollector();
+    return bdc.run();
   };
   addBugData = function(statusdata) {
     var attachment, attachmentId, bug, bugData, bugSummary, bugs, flag, flags, key, patch, queueType, requesteeName, requesteeQueue, reviewQueues, _i, _len, _ref, _ref2, _results;
