@@ -19,7 +19,7 @@
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsole5",
       name: "Web Console '5'",
       blurb: "Adding awesome to the existing Web Console",
-      status: "Aurora",
+      status: "Beta",
       target: 5,
       people: ["ddahl", "msucan"],
       bugs: ["642108 JS errors from HUD in Error Console", "616742 Implement console.debug", "637801 console.log shouldn't display escaped strings"]
@@ -31,7 +31,7 @@
       status: "Implementation",
       target: 6,
       people: ["msucan", "rcampbell"],
-      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts", "656701 Scratchpad missing a menu overlay"],
+      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "650760 Help menu", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts", "656701 Scratchpad missing a menu overlay", "658006 Scratchpad breaks if you close the tab it's running in"],
       updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
     }, {
       id: "webdevmenu",
@@ -103,7 +103,7 @@
       status: "Implementation",
       target: 7,
       people: ["jwalker"],
-      bugs: ["656863 getShortSource() should guarantee uniqueness", "657350 'rule overridden by other rule' diagnosis"]
+      bugs: ["656863 getShortSource() should guarantee uniqueness", "657350 'rule overridden by other rule' diagnosis", "658202 needs a way to select inline styles"]
     }, {
       id: "debugger",
       url: "https://wiki.mozilla.org/DevTools/Features/Debugger",

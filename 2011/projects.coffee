@@ -20,7 +20,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsole5"
         name: "Web Console '5'"
         blurb: "Adding awesome to the existing Web Console"
-        status: "Aurora"
+        status: "Beta"
         target: 5
         people: ["ddahl", "msucan"]
         bugs: [
@@ -51,6 +51,7 @@
             "654023 Adding 'Tools' menu item to error console"
             "656544 More intuitive keyboard shortcuts"
             "656701 Scratchpad missing a menu overlay"
+            "658006 Scratchpad breaks if you close the tab it's running in"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -269,6 +270,7 @@
         bugs: [
             "656863 getShortSource() should guarantee uniqueness"
             "657350 'rule overridden by other rule' diagnosis"
+            "658202 needs a way to select inline styles"
         ]
     }
     {
