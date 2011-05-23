@@ -1,5 +1,5 @@
 (function() {
-  var Person, Project, exports, flagMap, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, projectNavTemplate, projectTemplate, template, templateSettings, updateBugInformation, _ref, _ref2, _ref3;
+  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, updateBugInformation, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
@@ -43,8 +43,6 @@
       };
     }
   };
-  projectNavTemplate = template("<div data-id=\"<%= id %>\"><%= name %></div>");
-  projectTemplate = template("<section class=\"project\" id=\"<%= id %>\">\n    <div class=\"summary\">\n        <div class=\"main\">\n            <div class=\"top\">\n        <h2><a href=\"<%= url %>\"><%= name %></a></h2>\n                <div class=\"counts\">\n                    <span class=\"bugs\"><%= bugs.length %></span>\n                </div>\n                <div class=\"avatars\"></div>\n            </div>\n            <div class=\"bottom\">\n        <div class=\"blurb\"><%= blurb %></div>\n            </div>\n        </div>\n        <div class=\"status\"><%= status %></div>\n    </div>\n    \n    <% if (people) { %>\n        <section class=\"people\">\n            <h3>People</h3>\n            <ul>\n                <% people.forEach(function(person) { %>\n                    <li><%= person %></li>\n                <% }); %>\n            </ul>\n        </section>\n    <% }; %>\n\n    <div class=\"tabs\">\n        <% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>\n            <section>\n                <h3>Updates</h3>\n                <ul>\n                    <% updates.forEach(function(update) { %>\n                        <li><%= update %></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n        <% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>\n            <section>\n                <h3>Bugs</h3>\n                <ul>\n                    <% bugs.forEach(function(bug) { %>\n                        <li><span class=\"bug\"><%= bug %></span></li>\n                    <% }); %>\n                </ul>\n            </section>\n        <% }; %>\n</section>");
   personTemplate = template("<section class=\"person\">\n    <h3><%= name %></h3>\n    <div><img id=\"avatar-<%= id %>\" alt=\"<%= id %>\" title=\"%<= name %>\" src=\"<%= avatar %>\" class=\"avatar\"></div>\n</section>");
   Project = (function() {
     function Project(data) {
@@ -204,8 +202,56 @@
     people[i] = person;
     peopleMap[person.id] = person;
   }
+  formatDefaultBugRow = function(bugStr) {
+    return "<tr>\n    <td colspan=\"6\">" + bugStr + "</td>\n</tr>";
+  };
+  createBugTable = function(project) {
+    var bestStatus, bug, bugFlags, bugStr, bugid, buglink, f, flagType, flags, i, info, patchInfo, result, _i, _j, _len, _len2, _len3, _ref, _ref2;
+    result = "<section>\n    <h3>Bugs</h3>\n    <table>\n        <thead>\n            <tr>\n                <th>#</th>\n                <th>Bug #</th>\n                <th>Patch<br>Status</th>\n                <th>Summary</th>\n                <th>Assigned</th>\n                <th>Whiteboard</th>\n            </tr>\n        </thead>\n        <tbody>";
+    _ref = project.bugs;
+    for (i = 0, _len = _ref.length; i < _len; i++) {
+      bugStr = _ref[i];
+      if (!statusdata) {
+        result += formatDefaultBugRow(bugStr);
+        continue;
+      }
+      info = getBugIDandLabel(bugStr);
+      if (info === null) {
+        result += formatDefaultBugRow(bugStr);
+        continue;
+      }
+      bugid = info.id;
+      bug = statusdata.bugs[bugid];
+      if (!(bug != null)) {
+        console.log("Couldn't find data for bug: ", bugid);
+        result += formatDefaultBugRow(bugStr);
+        continue;
+      }
+      buglink = "<a class=\"" + (bug.status === "RESOLVED" || bug.status === "VERIFIED" ? "bugid resolved" : "bugid") + "\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid + "\" target=\"_blank\">" + bugid + "</a>";
+      flags = [];
+      bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
+      _ref2 = ["feedback", "review", "superreview"];
+      for (_i = 0, _len2 = _ref2.length; _i < _len2; _i++) {
+        flagType = _ref2[_i];
+        bugFlags = bug.flags[flagType];
+        for (_j = 0, _len3 = bugFlags.length; _j < _len3; _j++) {
+          f = bugFlags[_j];
+          bestStatus = flagMap[flagType] + f.status;
+          if (f.requestee) {
+            flags.push(flagType + f.status + " " + f.requestee);
+          } else {
+            flags.push(flagType + f.status + " " + f.setter);
+          }
+        }
+      }
+      patchInfo = "<span class=\"patchstatus\" title=\"" + (flags.join(", ")) + "\">" + bestStatus + "</span>";
+      console.log("bug: ", bug);
+      result += "<tr>\n    <td>" + (i + 1) + "</td>\n    <td>" + buglink + "</td>\n    <td>" + patchInfo + "</td>\n    <td>" + bug.summary + "</td>\n    <td>" + bug.assignedName + "</td>\n    <td>" + (bug.whiteboard != null ? bug.whiteboard : "") + "</td>\n</tr>";
+    }
+    return result += "        </tbody>\n    </table>\n</section>";
+  };
   exports.showProject = function(id) {
-    var avatarNode, newImage, newNode, person, _i, _len, _ref;
+    var avatarNode, newImage, newNode, person, projectStr, update, _i, _j, _k, _len, _len2, _len3, _ref, _ref2;
     if (id === "people") {
       exports.showPeople();
       return;
@@ -216,7 +262,30 @@
     $('#content').show();
     $('#people').hide();
     project = projectMap[id];
-    newNode = $(projectTemplate(project));
+    projectStr = "<section class=\"project\" id=\"" + project.id + "\">\n    <div class=\"summary\">\n        <div class=\"main\">\n            <div class=\"top\">\n        <h2><a href=\"" + project.url + "\">" + project.name + "</a></h2>\n                <div class=\"counts\">\n                    <span class=\"bugs\">" + project.bugs.length + "</span>\n                </div>\n                <div class=\"avatars\"></div>\n            </div>\n            <div class=\"bottom\">\n        <div class=\"blurb\">" + project.blurb + "</div>\n            </div>\n        </div>\n        <div class=\"status\">" + project.status + "</div>\n    </div>";
+    if (project.people) {
+      projectStr += "<section class=\"people\">\n    <h3>People</h3>\n    <ul>";
+      for (_i = 0, _len = people.length; _i < _len; _i++) {
+        person = people[_i];
+        projectStr += "<li>" + person + "</li>";
+      }
+      projectStr += "    </ul>\n</section>";
+    }
+    projectStr += "<div class=\"tabs\">";
+    if ((project.updates != null) && project.updates.length > 0) {
+      projectStr += "<section>\n    <h3>Updates</h3>\n    <ul>";
+      _ref = project.updates;
+      for (_j = 0, _len2 = _ref.length; _j < _len2; _j++) {
+        update = _ref[_j];
+        projectStr += "<li>" + update + "</li>";
+      }
+      projectStr += "    </ul>\n</section>";
+    }
+    if ((project.bugs != null) && project.bugs.length > 0) {
+      projectStr += createBugTable(project);
+    }
+    projectStr += "</section>";
+    newNode = $(projectStr);
     $("#content").children().remove().append(newNode);
     newNode.appendTo($("#content"));
     $(".status").each(function() {
@@ -227,14 +296,13 @@
       return el.html('<div>' + statusAbbreviation + '</div><div>' + status + '</div>');
     }).bigtext();
     avatarNode = $('.avatars', newNode);
-    _ref = project.getPeople();
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      person = _ref[_i];
+    _ref2 = project.getPeople();
+    for (_k = 0, _len3 = _ref2.length; _k < _len3; _k++) {
+      person = _ref2[_k];
       newImage = person.getAvatar().clone();
       newImage.appendTo(avatarNode);
     }
-    location.hash = id;
-    return updateBugInformation();
+    return location.hash = id;
   };
   exports.showPeople = function() {
     $('#content').hide();
@@ -295,7 +363,7 @@
     var contents, newNode, peopleNode, person, project, _i, _j, _len, _len2;
     for (_i = 0, _len = projects.length; _i < _len; _i++) {
       project = projects[_i];
-      newNode = $(projectNavTemplate(project));
+      newNode = $("<div data-id=\"" + project.id + "\">" + project.name + "</div>");
       newNode.appendTo($("#nav"));
     }
     peopleNode = $('#people');

@@ -22,7 +22,7 @@
       status: "Beta",
       target: 5,
       people: ["ddahl", "msucan"],
-      bugs: ["642108 JS errors from HUD in Error Console", "616742 Implement console.debug", "637801 console.log shouldn't display escaped strings"]
+      bugs: ["642108 JS errors from HUD in Error Console", "616742 Implement console.debug", "637801 console.log shouldn't display escaped strings", 618311]
     }, {
       id: "workspaces",
       url: "https://wiki.mozilla.org/DevTools/Features/Workspaces",
@@ -50,7 +50,7 @@
       status: "Implementation",
       target: 7,
       people: ["rcampbell"],
-      bugs: [642471, "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element"]
+      bugs: [642471, "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element", "566084 disabled when navigating to new pages", "566085 tracking DOM changes"]
     }, {
       id: "styleinspector",
       url: "https://wiki.mozilla.org/DevTools/Features/StyleInspector",
@@ -63,12 +63,12 @@
     }, {
       id: "webconsole6",
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade",
-      name: "Web Console Upgrade",
+      name: "Web Console 6",
       blurb: "Console positioning, service, autocompletion and more",
       status: "Implementation",
       target: 6,
       people: ["past", "msucan", "ddahl"],
-      bugs: [577721, "585991 Show a popup listing possible completions", 637801, 632347, 632275, 644596, 618311, 638949, 609890, 611032, 612658, 595223, 626484, 619598, 612252, 614586, 642615, 646025, 646028, 643184, "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)", "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "646504 Global console should have decent display of stack traces", "587757 Implement Browser Console", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "650780 evaluating a null object returns TypeError: aObject is null", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object"]
+      bugs: [577721, "585991 Show a popup listing possible completions", 637801, 632347, 632275, 644596, 638949, 609890, 611032, 612658, 595223, 626484, 619598, 612252, 614586, 642615, 646025, 646028, 643184, "637131 Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)", "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "646504 Global console should have decent display of stack traces", "587757 Implement Browser Console", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "650780 evaluating a null object returns TypeError: aObject is null", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object"]
     }, {
       id: "gcli",
       url: "https://wiki.mozilla.org/DevTools/Features/GCLI",
@@ -77,7 +77,7 @@
       status: "Implementation",
       target: 6,
       people: ["jwalker"],
-      bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility", "656668 Export from GCLI to JSM", "656666 Update HudService.jsm to allow GCLI integration", "657678 remove dependency on Pilot", "657677 Require.jsm unit tests"]
+      bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility", "656668 Export from GCLI to JSM", "656666 Update HudService.jsm to allow GCLI integration", "657678 remove dependency on Pilot", "657677 Require.jsm unit tests", "658756 Experiment with popup UI for GCLI"]
     }, {
       id: "viewsource",
       name: "View Source Reboot",
@@ -115,7 +115,7 @@
     }, {
       id: "webconsole7",
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7",
-      name: "Console Refinement",
+      name: "Console 7",
       blurb: "The latest in a neverending sequence",
       status: "Planning",
       target: 7,

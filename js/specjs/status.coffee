@@ -49,61 +49,6 @@ exports.getBugIDandLabel = getBugIDandLabel = (text) ->
         label: match[3]
     }
 
-projectNavTemplate = template """<div data-id="<%= id %>"><%= name %></div>"""
-
-projectTemplate = template """
-    <section class="project" id="<%= id %>">
-        <div class="summary">
-            <div class="main">
-                <div class="top">
-            <h2><a href="<%= url %>"><%= name %></a></h2>
-                    <div class="counts">
-                        <span class="bugs"><%= bugs.length %></span>
-                    </div>
-                    <div class="avatars"></div>
-                </div>
-                <div class="bottom">
-            <div class="blurb"><%= blurb %></div>
-                </div>
-            </div>
-            <div class="status"><%= status %></div>
-        </div>
-        
-        <% if (people) { %>
-            <section class="people">
-                <h3>People</h3>
-                <ul>
-                    <% people.forEach(function(person) { %>
-                        <li><%= person %></li>
-                    <% }); %>
-                </ul>
-            </section>
-        <% }; %>
-
-        <div class="tabs">
-            <% if (typeof(updates) !== 'undefined' && updates.length > 0) { %>
-                <section>
-                    <h3>Updates</h3>
-                    <ul>
-                        <% updates.forEach(function(update) { %>
-                            <li><%= update %></li>
-                        <% }); %>
-                    </ul>
-                </section>
-            <% }; %>
-            <% if (typeof(bugs) != 'undefined' && bugs.length > 0) { %>
-                <section>
-                    <h3>Bugs</h3>
-                    <ul>
-                        <% bugs.forEach(function(bug) { %>
-                            <li><span class="bug"><%= bug %></span></li>
-                        <% }); %>
-                    </ul>
-                </section>
-            <% }; %>
-    </section>
-"""
-
 personTemplate = template """
     <section class="person">
         <h3><%= name %></h3>
@@ -234,6 +179,78 @@ for i in [0..people.length-1]
     people[i] = person
     peopleMap[person.id] = person
 
+formatDefaultBugRow = (bugStr) ->
+    """
+                            <tr>
+                                <td colspan="6">#{bugStr}</td>
+                            </tr>
+"""
+
+
+createBugTable = (project) ->
+    result = """
+            <section>
+                <h3>Bugs</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Bug #</th>
+                            <th>Patch<br>Status</th>
+                            <th>Summary</th>
+                            <th>Assigned</th>
+                            <th>Whiteboard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+"""
+    for bugStr, i in project.bugs
+        if not statusdata
+            result += formatDefaultBugRow bugStr
+            continue
+        info = getBugIDandLabel bugStr
+        if info == null
+            result += formatDefaultBugRow bugStr
+            continue
+        
+        bugid = info.id
+        bug = statusdata.bugs[bugid]
+        if not bug?
+            console.log "Couldn't find data for bug: ", bugid
+            result += formatDefaultBugRow bugStr
+            continue
+
+        buglink = """<a class="#{if bug.status == "RESOLVED" or bug.status == "VERIFIED" then "bugid resolved" else "bugid"}" href="https://bugzilla.mozilla.org/show_bug.cgi?id=#{bugid}" target="_blank">#{bugid}</a>"""
+        flags = []
+        bestStatus = if bug.hasPatch then "&nbsp;p&nbsp;" else "&nbsp;&nbsp;&nbsp;"
+        for flagType in ["feedback", "review", "superreview"]
+            bugFlags = bug.flags[flagType]
+            for f in bugFlags
+                bestStatus = flagMap[flagType] + f.status
+                if f.requestee
+                    flags.push flagType + f.status + " " + f.requestee
+                else
+                    flags.push flagType + f.status + " " + f.setter
+        
+        patchInfo = """<span class="patchstatus" title="#{flags.join(", ")}">#{bestStatus}</span>"""
+        console.log "bug: ", bug
+        result += """
+                            <tr>
+                                <td>#{i+1}</td>
+                                <td>#{buglink}</td>
+                                <td>#{patchInfo}</td>
+                                <td>#{bug.summary}</td>
+                                <td>#{bug.assignedName}</td>
+                                <td>#{if bug.whiteboard? then bug.whiteboard else ""}</td>
+                            </tr>
+"""
+    result += """
+                    </tbody>
+                </table>
+            </section>
+    """
+
+
 exports.showProject = (id) ->
     if id == "people"
         exports.showPeople()
@@ -246,7 +263,61 @@ exports.showProject = (id) ->
     $('#content').show()
     $('#people').hide()
     project = projectMap[id]
-    newNode = $(projectTemplate(project))
+    projectStr = """
+    <section class="project" id="#{project.id}">
+        <div class="summary">
+            <div class="main">
+                <div class="top">
+            <h2><a href="#{project.url}">#{project.name}</a></h2>
+                    <div class="counts">
+                        <span class="bugs">#{project.bugs.length}</span>
+                    </div>
+                    <div class="avatars"></div>
+                </div>
+                <div class="bottom">
+            <div class="blurb">#{project.blurb}</div>
+                </div>
+            </div>
+            <div class="status">#{project.status}</div>
+        </div>
+    """
+    if project.people
+        projectStr += """
+            <section class="people">
+                <h3>People</h3>
+                <ul>
+"""
+        for person in people
+            projectStr += """
+                        <li>#{person}</li>
+"""
+        projectStr += """
+                </ul>
+            </section>
+"""
+    projectStr += """
+        <div class="tabs">
+"""
+    if project.updates? and project.updates.length > 0
+        projectStr += """
+                <section>
+                    <h3>Updates</h3>
+                    <ul>
+"""
+        for update in project.updates
+            projectStr += """
+                            <li>#{update}</li>
+"""
+        projectStr += """
+                    </ul>
+                </section>
+"""
+    if project.bugs? and project.bugs.length > 0
+        projectStr += createBugTable project
+    projectStr += """
+    </section>
+"""
+    newNode = $(projectStr)
     $("#content").children().remove().append(newNode)
     newNode.appendTo($("#content"))
     $(".status").each(() ->
@@ -262,7 +333,6 @@ exports.showProject = (id) ->
         newImage.appendTo(avatarNode)
 
     location.hash = id
-    updateBugInformation()
 
 exports.showPeople = () ->
     $('#content').hide()
@@ -332,7 +402,7 @@ exports.showSummary = () ->
 
 exports.populatePage = () ->
     for project in projects
-        newNode = $(projectNavTemplate(project))
+        newNode = $("""<div data-id="#{project.id}">#{project.name}</div>""")
         newNode.appendTo($("#nav"))
     
     peopleNode = $ '#people'

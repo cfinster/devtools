@@ -27,6 +27,7 @@
             "642108 JS errors from HUD in Error Console"
             "616742 Implement console.debug"
             "637801 console.log shouldn't display escaped strings"
+            618311
         ]
     }
     {
@@ -96,6 +97,8 @@
             "653549 Add a close button to the selected node"
             "653550 Add a close button"
             "587134 Context menu item for Highlight Element"
+            "566084 disabled when navigating to new pages"
+            "566085 tracking DOM changes"
         ]
     }
     {
@@ -138,7 +141,7 @@
     {
         id: "webconsole6"
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade"
-        name: "Web Console Upgrade"
+        name: "Web Console 6"
         blurb: "Console positioning, service, autocompletion and more"
         status: "Implementation"
         target: 6
@@ -150,7 +153,6 @@
             632347
             632275
             644596
-            618311
             638949
             609890
             611032
@@ -224,6 +226,7 @@
             "656666 Update HudService.jsm to allow GCLI integration"
             "657678 remove dependency on Pilot"
             "657677 Require.jsm unit tests"
+            "658756 Experiment with popup UI for GCLI"
         ]
     }
     {
@@ -288,7 +291,7 @@
     {
         id: "webconsole7"
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7"
-        name: "Console Refinement"
+        name: "Console 7"
         blurb: "The latest in a neverending sequence"
         status: "Planning"
         target: 7
