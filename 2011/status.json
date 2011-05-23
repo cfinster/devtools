@@ -19,25 +19,19 @@
    "patchSize": 19138
   },
   "653140": {
-   "summary": "Pilot/Ace/GCLI need a commonjs require system",
-   "status": "NEW",
+   "summary": "GCLI needs a commonjs require system",
+   "status": "ASSIGNED",
    "assignedName": "jwalker",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "jwalker"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 14366
+   "patchSize": 19888
   },
   "646028": {
-   "summary": "Add a filter item to the Web Developer toolbar dropdown in Web Console",
+   "summary": "Add debug filter item to the Web Developer toolbar dropdown in Web Console",
    "status": "NEW",
    "assignedName": "nobody",
    "hasPatch": false,
@@ -185,11 +179,11 @@
     "superreview": []
    }
   },
-  "650794": {
-   "summary": "Strip HTML panel and support code from browser",
+  "641903": {
+   "summary": "[meta] GCLI needs a command registry",
    "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[highlighter]",
+   "assignedName": "jwalker",
+   "whiteboard": "[GCLI-META]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -197,10 +191,11 @@
     "superreview": []
    }
   },
-  "641903": {
-   "summary": "[gcli] Command registry",
+  "650794": {
+   "summary": "Strip HTML panel and support code from browser",
    "status": "NEW",
-   "assignedName": "jwalker",
+   "assignedName": "nobody",
+   "whiteboard": "[highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -498,16 +493,17 @@
    "assignedName": "past",
    "hasPatch": true,
    "flags": {
-    "feedback": [
+    "feedback": [],
+    "review": [
      {
-      "status": "+",
-      "setter": "mihai.sucan"
+      "status": "?",
+      "requestee": "mihai.sucan",
+      "setter": "past"
      }
     ],
-    "review": [],
     "superreview": []
    },
-   "patchSize": 4675
+   "patchSize": 16146
   },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
@@ -539,8 +535,8 @@
    },
    "patchSize": 13990
   },
-  "590536": {
-   "summary": "Inspector panels should remember at least size and ideally also position",
+  "589375": {
+   "summary": "Inspector: style panel keyboard access",
    "status": "NEW",
    "assignedName": "nobody",
    "hasPatch": false,
@@ -550,8 +546,8 @@
     "superreview": []
    }
   },
-  "589375": {
-   "summary": "Inspector: style panel keyboard access",
+  "590536": {
+   "summary": "Inspector panels should remember at least size and ideally also position",
    "status": "NEW",
    "assignedName": "nobody",
    "hasPatch": false,
@@ -746,7 +742,7 @@
   },
   "657677": {
    "summary": "Require.jsm needs unit tests before it can be used by GCLI",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
@@ -1143,22 +1139,21 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 14029
+   "patchSize": 14856
   },
   "655776": {
    "summary": "Web Developer > Get More Tools menu item",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "mihai.sucan",
    "hasPatch": true,
    "flags": {
-    "feedback": [
+    "feedback": [],
+    "review": [
      {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "mihai.sucan"
+      "status": "+",
+      "setter": "sdwilsh"
      }
     ],
-    "review": [],
     "superreview": []
    },
    "patchSize": 4468
@@ -1367,7 +1362,7 @@
   },
   "653978": {
    "summary": "GCLI should be prefed out",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -1490,18 +1485,6 @@
     "superreview": []
    }
   },
-  "656668": {
-   "summary": "Create Export from GCLI project to JSM",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 227296
-  },
   "653110": {
    "summary": "WebConsole appends \"undefined\" after a pasted text when right arrow is pressed",
    "status": "NEW",
@@ -1525,6 +1508,18 @@
     "superreview": []
    },
    "patchSize": 14574
+  },
+  "656668": {
+   "summary": "Create Export from GCLI project to JSM",
+   "status": "ASSIGNED",
+   "assignedName": "nobody",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 243154
   },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
@@ -1566,19 +1561,6 @@
    },
    "patchSize": 1180
   },
-  "577721": {
-   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
-   "status": "RESOLVED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 36200
-  },
   "636907": {
    "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
    "status": "NEW",
@@ -1612,6 +1594,19 @@
     "review": [],
     "superreview": []
    }
+  },
+  "577721": {
+   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 36200
   },
   "656027": {
    "summary": "It should be possible to pref out the Style Inspector",
@@ -1933,18 +1928,6 @@
     "superreview": []
    }
   },
-  "642239": {
-   "summary": "GCLI should have history retention",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[estimate:best=2d,likely=3d,worst=8d]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "653531": {
    "summary": "Shared knowledge of selected node in highlighter",
    "status": "NEW",
@@ -1957,9 +1940,21 @@
     "superreview": []
    }
   },
+  "642239": {
+   "summary": "GCLI should have history retention",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[estimate:best=2d,likely=3d,worst=8d]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "642111": {
    "summary": "Web Console messages should scroll into view automatically",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
@@ -2071,7 +2066,7 @@
   },
   "657136": {
    "summary": "Rename top-level Context menu to something less confusing in Scratchpad",
-   "status": "REOPENED",
+   "status": "RESOLVED",
    "assignedName": "rcampbell",
    "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -2340,20 +2335,16 @@
   }
  },
  "reviewQueues": {
-  "rcampbell": {
-   "review": {
-    "devtoolsSize": 17440,
-    "devtoolsCount": 2
-   },
-   "feedback": {
-    "devtoolsSize": 4468,
-    "devtoolsCount": 1
-   }
-  },
   "bzbarsky": {
    "review": {
     "devtoolsSize": 34846,
     "devtoolsCount": 3
+   }
+  },
+  "mihai.sucan": {
+   "review": {
+    "devtoolsSize": 16146,
+    "devtoolsCount": 1
    }
   },
   "gal": {
@@ -2371,6 +2362,12 @@
   "limi": {
    "ui-review": {
     "devtoolsSize": 51004,
+    "devtoolsCount": 1
+   }
+  },
+  "rcampbell": {
+   "review": {
+    "devtoolsSize": 3074,
     "devtoolsCount": 1
    }
   }

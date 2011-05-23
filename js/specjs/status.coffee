@@ -86,6 +86,9 @@ class Project
         
         bugdata = statusdata.bugs
         for bug in @getBugIds()
+            bd = bugdata[bug]
+            if not bd
+                continue
             status = bugdata[bug].status
             if status == 'RESOLVED' or status == 'VERIFIED'
                 counts.open--
@@ -113,57 +116,6 @@ flagMap =
     "feedback": "&nbsp;f"
     "review": "&nbsp;r"
     "superreview": "sr"
-
-updateBugInformation = () ->
-    return if not statusdata?
-    
-    data = statusdata
-    
-    $('span.bug').each(() ->
-        el = $(this);
-        info = getBugIDandLabel el.text()
-        return if info == null
-        
-        bugid = info.id
-        bug = data.bugs[bugid]
-        if not bug?
-            console.log "Couldn't find data for bug: ", bugid
-            return
-        
-        el.empty()
-        
-        outer = $('<span/>', {
-            "class": "bug"
-        })
-        $('<a/>', {
-            class: if bug.status == "RESOLVED" or bug.status == "VERIFIED" then "bugid resolved" else "bugid"
-            href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid
-            target: "_blank"
-            text: bugid
-        }).appendTo(outer)
-        flags = []
-        bestStatus = if bug.hasPatch then "&nbsp;p&nbsp;" else "&nbsp;&nbsp;&nbsp;"
-        for flagType in ["feedback", "review", "superreview"]
-            bugFlags = bug.flags[flagType]
-            for f in bugFlags
-                bestStatus = flagMap[flagType] + f.status
-                if f.requestee
-                    flags.push flagType + f.status + " " + f.requestee
-                else
-                    flags.push flagType + f.status + " " + f.setter
-        
-        $('<span/>', {
-            "class": "patchstatus"
-            title: flags.join(", ")
-            html: " " + bestStatus
-        }).appendTo(outer)
-        
-        summary = info.label || bug.summary
-        whiteboard = bug.whiteboard || ""
-        
-        outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard)
-        el.append outer
-    )
 
 projectMap = {}
 

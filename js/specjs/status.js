@@ -1,5 +1,5 @@
 (function() {
-  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, updateBugInformation, _ref, _ref2, _ref3;
+  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
@@ -85,7 +85,7 @@
       return result;
     };
     Project.prototype.getBugCounts = function() {
-      var bug, bugdata, counts, status, _i, _len, _ref;
+      var bd, bug, bugdata, counts, status, _i, _len, _ref;
       counts = {
         open: this.bugs.length,
         withPatches: 0
@@ -97,6 +97,10 @@
       _ref = this.getBugIds();
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         bug = _ref[_i];
+        bd = bugdata[bug];
+        if (!bd) {
+          continue;
+        }
         status = bugdata[bug].status;
         if (status === 'RESOLVED' || status === 'VERIFIED') {
           counts.open--;
@@ -133,62 +137,6 @@
     "feedback": "&nbsp;f",
     "review": "&nbsp;r",
     "superreview": "sr"
-  };
-  updateBugInformation = function() {
-    var data;
-    if (!(typeof statusdata != "undefined" && statusdata !== null)) {
-      return;
-    }
-    data = statusdata;
-    return $('span.bug').each(function() {
-      var bestStatus, bug, bugFlags, bugid, el, f, flagType, flags, info, outer, summary, whiteboard, _i, _j, _len, _len2, _ref;
-      el = $(this);
-      info = getBugIDandLabel(el.text());
-      if (info === null) {
-        return;
-      }
-      bugid = info.id;
-      bug = data.bugs[bugid];
-      if (!(bug != null)) {
-        console.log("Couldn't find data for bug: ", bugid);
-        return;
-      }
-      el.empty();
-      outer = $('<span/>', {
-        "class": "bug"
-      });
-      $('<a/>', {
-        "class": bug.status === "RESOLVED" || bug.status === "VERIFIED" ? "bugid resolved" : "bugid",
-        href: "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid,
-        target: "_blank",
-        text: bugid
-      }).appendTo(outer);
-      flags = [];
-      bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
-      _ref = ["feedback", "review", "superreview"];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        flagType = _ref[_i];
-        bugFlags = bug.flags[flagType];
-        for (_j = 0, _len2 = bugFlags.length; _j < _len2; _j++) {
-          f = bugFlags[_j];
-          bestStatus = flagMap[flagType] + f.status;
-          if (f.requestee) {
-            flags.push(flagType + f.status + " " + f.requestee);
-          } else {
-            flags.push(flagType + f.status + " " + f.setter);
-          }
-        }
-      }
-      $('<span/>', {
-        "class": "patchstatus",
-        title: flags.join(", "),
-        html: " " + bestStatus
-      }).appendTo(outer);
-      summary = info.label || bug.summary;
-      whiteboard = bug.whiteboard || "";
-      outer.append(" " + summary + " (" + bug.assignedName + ") " + whiteboard);
-      return el.append(outer);
-    });
   };
   projectMap = {};
   for (i = 0, _ref2 = projects.length - 1; (0 <= _ref2 ? i <= _ref2 : i >= _ref2); (0 <= _ref2 ? i += 1 : i -= 1)) {
