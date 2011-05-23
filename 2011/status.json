@@ -21,7 +21,7 @@
   "653140": {
    "summary": "Pilot/Ace/GCLI need a commonjs require system",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -29,7 +29,7 @@
      {
       "status": "?",
       "requestee": "rcampbell",
-      "setter": "joseph.walker+bugzilla"
+      "setter": "jwalker"
      }
     ],
     "superreview": []
@@ -107,16 +107,16 @@
    "assignedName": "past",
    "hasPatch": true,
    "flags": {
-    "feedback": [],
-    "review": [
+    "feedback": [
      {
-      "status": "-",
-      "setter": "rcampbell"
+      "status": "+",
+      "setter": "mihai.sucan"
      }
     ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 948
+   "patchSize": 2833
   },
   "630460": {
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
@@ -140,6 +140,17 @@
     "superreview": []
    }
   },
+  "654962": {
+   "summary": "GCLI needs a demo",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "654068": {
    "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
    "status": "ASSIGNED",
@@ -152,10 +163,10 @@
    },
    "patchSize": 5570
   },
-  "654962": {
-   "summary": "GCLI needs a demo",
+  "653568": {
+   "summary": "GCLI re-creates nodes in the RequestView/ArgFetcher too often",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -163,10 +174,10 @@
     "superreview": []
    }
   },
-  "653568": {
-   "summary": "GCLI re-creates nodes in the RequestView/ArgFetcher too often",
-   "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+  "657678": {
+   "summary": "Remove GCLI dependency on Pilot",
+   "status": "RESOLVED",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -189,7 +200,18 @@
   "641903": {
    "summary": "[gcli] Command registry",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "658202": {
+   "summary": "CSS Doctor needs a way to select inline rules to ask why they don't work",
+   "status": "NEW",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -267,10 +289,10 @@
     "superreview": []
    }
   },
-  "653979": {
-   "summary": "WebConsole UI should have toggle to switch from JS mode to command mode (GCLI)",
-   "status": "NEW",
-   "assignedName": "nobody",
+  "653142": {
+   "summary": "Create a pilot.jsm javascript module for use with GCLI/Ace",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -278,10 +300,10 @@
     "superreview": []
    }
   },
-  "653142": {
-   "summary": "Create a pilot.jsm javascript module for use with GCLI/Ace",
+  "653979": {
+   "summary": "WebConsole UI should have toggle to switch from JS mode to command mode (GCLI)",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -470,6 +492,23 @@
     "superreview": []
    }
   },
+  "658368": {
+   "summary": "Expand console object with time and timeEnd methods",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "+",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 4675
+  },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
    "status": "NEW",
@@ -489,14 +528,13 @@
    "whiteboard": "[has review][new patch attached][softblocker][console-1]",
    "hasPatch": true,
    "flags": {
-    "feedback": [
+    "feedback": [],
+    "review": [
      {
-      "status": "?",
-      "requestee": "mihai.sucan",
+      "status": "+",
       "setter": "ddahl"
      }
     ],
-    "review": [],
     "superreview": []
    },
    "patchSize": 13990
@@ -526,7 +564,7 @@
   "651071": {
    "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -536,8 +574,8 @@
   },
   "614586": {
    "summary": "Implement string substitution in all console API methods",
-   "status": "NEW",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "past",
    "whiteboard": "[parity-firebug/webkit] [console-1]",
    "hasPatch": false,
    "flags": {
@@ -640,6 +678,17 @@
     "superreview": []
    }
   },
+  "657932": {
+   "summary": "Web Console lacks symmetry in the handling of enter and escape keys during autocompletion",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "637801": {
    "summary": "console.log shouldn't display escaped strings",
    "status": "VERIFIED",
@@ -654,16 +703,23 @@
    "patchSize": 6910
   },
   "657292": {
-   "summary": "Firefox 6.0a1 Crash Report [@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder(JSContext*, JSObject*, JSObject*) ]",
+   "summary": "Firefox 6.0a1 Crash Report [@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder(JSContext*, JSObject*, JSObject*) ][@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder ]",
    "status": "NEW",
-   "assignedName": "nobody",
+   "assignedName": "mrbkap",
    "whiteboard": "[firebug-p1]",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "gal",
+      "setter": "mrbkap"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 2552
   },
   "622303": {
    "summary": "Web Console should remember filter settings.",
@@ -688,9 +744,20 @@
     "superreview": []
    }
   },
+  "657677": {
+   "summary": "Require.jsm needs unit tests before it can be used by GCLI",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "656220": {
    "summary": "Style Inspector should cache cssLogic and cssHtmlTree outside the Highlighter",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "mratcliffe",
    "hasPatch": false,
    "flags": {
@@ -749,7 +816,7 @@
   "654985": {
    "summary": "GCLI help should sort commands alphabetically (according to locale)",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -759,22 +826,21 @@
   },
   "585991": {
    "summary": "Show a popup listing possible completions",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[console-2][patchclean:0512][see-try-build-in-comment-22]",
+   "whiteboard": "[console-2][patchclean:0517][see-try-build-in-comment-42][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
-    "superreview": [
+    "review": [
      {
-      "status": "?",
-      "requestee": "neil",
-      "setter": "mihai.sucan"
+      "status": "+",
+      "setter": "rcampbell"
      }
-    ]
+    ],
+    "superreview": []
    },
-   "patchSize": 45114
+   "patchSize": 1202
   },
   "650895": {
    "summary": "initial implementation of the new View Source tool",
@@ -790,8 +856,8 @@
   },
   "654970": {
    "summary": "GCLI user interface needs tweaks",
-   "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -811,7 +877,7 @@
    }
   },
   "656330": {
-   "summary": "Make ctrl/cmd + enter execute command in scratchpad",
+   "summary": "Make ctrl/cmd + enter execute command in Scratchpad to match Firebug",
    "status": "UNCONFIRMED",
    "assignedName": "nobody",
    "hasPatch": false,
@@ -824,7 +890,18 @@
   "591212": {
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "658006": {
+   "summary": "Scratchpad breaks if you close the tab is was running in",
+   "status": "NEW",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -931,9 +1008,9 @@
   },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "past",
-   "whiteboard": "[console][fixed-in-devtools]",
+   "whiteboard": "[console][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -952,6 +1029,19 @@
     "review": [],
     "superreview": []
    }
+  },
+  "658344": {
+   "summary": "Create some useful introductory text for the Scratchpad",
+   "status": "RESOLVED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 4304
   },
   "652509": {
    "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
@@ -1120,8 +1210,8 @@
   },
   "644596": {
    "summary": "[console] expand console object with missing methods",
-   "status": "NEW",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "past",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1154,8 +1244,8 @@
   },
   "653658": {
    "summary": "JavaScript implementation of WebGL MOZ_dom_element_texture extension",
-   "status": "NEW",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "victor.porof",
    "whiteboard": "[tilt]",
    "hasPatch": false,
    "flags": {
@@ -1235,15 +1325,21 @@
   },
   "657131": {
    "summary": "Create a new Execute menu for Scratchpad",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[scratchpad]",
-   "hasPatch": false,
+   "status": "RESOLVED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "sdwilsh"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 18533
   },
   "654069": {
    "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
@@ -1258,27 +1354,21 @@
   },
   "642615": {
    "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0512]",
+   "whiteboard": "[patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "dtownsend",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 12456
+   "patchSize": 12862
   },
   "653978": {
    "summary": "GCLI should be prefed out",
    "status": "NEW",
-   "assignedName": "nobody",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1301,7 +1391,7 @@
   "653567": {
    "summary": "GCLI should be checked for accessibility",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1365,8 +1455,8 @@
   },
   "656701": {
    "summary": "Scratchpad missing a menu overlay",
-   "status": "NEW",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "rcampbell",
    "whiteboard": "[scratchpad]",
    "hasPatch": false,
    "flags": {
@@ -1377,16 +1467,16 @@
   },
   "644419": {
    "summary": "Console should have user-settable log limits for each message category",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "past",
-   "whiteboard": "[console]",
+   "whiteboard": "[console][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
    },
-   "patchSize": 29307
+   "patchSize": 20708
   },
   "644409": {
    "summary": "Make scratchpads save their state across restarts",
@@ -1476,6 +1566,19 @@
    },
    "patchSize": 1180
   },
+  "577721": {
+   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 36200
+  },
   "636907": {
    "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
    "status": "NEW",
@@ -1510,31 +1613,9 @@
     "superreview": []
    }
   },
-  "577721": {
-   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     },
-     {
-      "status": "+",
-      "setter": "sdwilsh"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 35072
-  },
   "656027": {
    "summary": "It should be possible to pref out the Style Inspector",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "mratcliffe",
    "hasPatch": false,
    "flags": {
@@ -1545,15 +1626,21 @@
   },
   "653550": {
    "summary": "Add a close button to the highlighter",
-   "status": "NEW",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "rcampbell",
    "whiteboard": "[best: 1h, likely: 4h, worst: 2d][highlighter]",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "-",
+      "setter": "mihai.sucan"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 19324
   },
   "642241": {
    "summary": "Experiment with better UI presentation methods in GCLI",
@@ -1567,11 +1654,10 @@
     "superreview": []
    }
   },
-  "637131": {
-   "summary": "Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
-   "status": "REOPENED",
-   "assignedName": "nobody",
-   "whiteboard": "[console-2]",
+  "646737": {
+   "summary": "Heap profiling API - shortest path tree",
+   "status": "NEW",
+   "assignedName": "dcamp",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1579,10 +1665,11 @@
     "superreview": []
    }
   },
-  "646737": {
-   "summary": "Heap profiling API - shortest path tree",
-   "status": "NEW",
-   "assignedName": "dcamp",
+  "637131": {
+   "summary": "Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
+   "status": "REOPENED",
+   "assignedName": "nobody",
+   "whiteboard": "[console-2]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1686,9 +1773,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "ddahl"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -1898,7 +1984,7 @@
   "583037": {
    "summary": "better logic for placement of inspector panels",
    "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1908,15 +1994,21 @@
   },
   "653108": {
    "summary": "Scratchpad is tied to the tab it was first run in",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[scratchpad]",
-   "hasPatch": false,
+   "status": "RESOLVED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "sdwilsh"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 9032
   },
   "619598": {
    "summary": "Up and Down does not retrieve command history in the same way as other consoles",
@@ -1979,15 +2071,21 @@
   },
   "657136": {
    "summary": "Rename top-level Context menu to something less confusing in Scratchpad",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[scratchpad]",
-   "hasPatch": false,
+   "status": "REOPENED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "gavin.sharp"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 1870
   },
   "642108": {
    "summary": "JS errors from HUD in Error Console",
@@ -2042,6 +2140,17 @@
     "superreview": []
    }
   },
+  "657940": {
+   "summary": "web console should be smarter about displaying really long strings",
+   "status": "RESOLVED",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "586977": {
    "summary": "Investigate how the inspector style panel works with shorthand properties",
    "status": "RESOLVED",
@@ -2068,8 +2177,8 @@
   "634406": {
    "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
    "status": "ASSIGNED",
-   "assignedName": "past",
-   "whiteboard": "[console-1]",
+   "assignedName": "nobody",
+   "whiteboard": "[console-1][scratchpad]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2079,8 +2188,8 @@
   },
   "654986": {
    "summary": "Initial GCLI screen lists only some of the available commands - it should list them all",
-   "status": "NEW",
-   "assignedName": "joseph.walker+bugzilla",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2104,7 +2213,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 161791
+   "patchSize": 177895
   },
   "587752": {
    "summary": "Animations in the new Style panel",
@@ -2215,13 +2324,19 @@
    "summary": "Strip out Style and DOM panels and support code from Inspector.",
    "status": "ASSIGNED",
    "assignedName": "rcampbell",
-   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem]",
-   "hasPatch": false,
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem][backed-out]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "gavin.sharp"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 56365
   }
  },
  "reviewQueues": {
@@ -2241,28 +2356,16 @@
     "devtoolsCount": 3
    }
   },
-  "mihai.sucan": {
-   "feedback": {
-    "devtoolsSize": 13990,
-    "devtoolsCount": 1
-   }
-  },
-  "neil": {
-   "superreview": {
-    "devtoolsSize": 45114,
+  "gal": {
+   "review": {
+    "devtoolsSize": 2552,
     "devtoolsCount": 1
    }
   },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 79003,
-    "devtoolsCount": 3
-   }
-  },
-  "dtownsend": {
-   "review": {
-    "devtoolsSize": 12456,
-    "devtoolsCount": 1
+    "devtoolsSize": 61757,
+    "devtoolsCount": 2
    }
   },
   "limi": {

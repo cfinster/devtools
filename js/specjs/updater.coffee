@@ -88,12 +88,11 @@ class BugDataCollector
             @saveData()
     
     run: () ->
-        if false
-            @queryCount++
-            console.log "Gathering data from bugzilla"
-            @mainQuery.run (q) =>
-                console.log "finished with main query"
-                @queryDone()
+        @queryCount++
+        console.log "Gathering data from bugzilla"
+        @mainQuery.run (q) =>
+            console.log "finished with main query"
+            @queryDone()
         
         for person in people
             if person.reviewCheck == false

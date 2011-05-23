@@ -99,14 +99,12 @@
     };
     BugDataCollector.prototype.run = function() {
       var person, q, _i, _len, _results;
-      if (false) {
-        this.queryCount++;
-        console.log("Gathering data from bugzilla");
-        this.mainQuery.run(__bind(function(q) {
-          console.log("finished with main query");
-          return this.queryDone();
-        }, this));
-      }
+      this.queryCount++;
+      console.log("Gathering data from bugzilla");
+      this.mainQuery.run(__bind(function(q) {
+        console.log("finished with main query");
+        return this.queryDone();
+      }, this));
       _results = [];
       for (_i = 0, _len = people.length; _i < _len; _i++) {
         person = people[_i];

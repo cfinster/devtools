@@ -52,6 +52,7 @@
             "656544 More intuitive keyboard shortcuts"
             "656701 Scratchpad missing a menu overlay"
             "658006 Scratchpad breaks if you close the tab it's running in"
+            "658344 useful introductory text"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -221,6 +222,8 @@
             "653567 GCLI should be checked for accessibility"
             "656668 Export from GCLI to JSM"
             "656666 Update HudService.jsm to allow GCLI integration"
+            "657678 remove dependency on Pilot"
+            "657677 Require.jsm unit tests"
         ]
     }
     {
@@ -291,9 +294,12 @@
         target: 7
         people: []
         bugs: [
+            "658368 Expand console object with time and timeEnd methods"
             "655700 More visual separation between requests"
             "656231 cleanup the HUD object properties"
             "656709 Net toggle isn't tab-specific"
+            "657940 should be smarter about really long strings"
+            "657932 lack of symmetry in handling of enter and escape keys"
         ]
     }
     {
