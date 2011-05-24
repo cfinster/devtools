@@ -155,7 +155,7 @@
   };
   createBugTable = function(project) {
     var bestStatus, bug, bugFlags, bugStr, bugid, buglink, f, flagType, flags, i, info, patchInfo, result, _i, _j, _len, _len2, _len3, _ref, _ref2;
-    result = "<section>\n    <h3>Bugs</h3>\n    <table>\n        <thead>\n            <tr>\n                <th>#</th>\n                <th>Bug #</th>\n                <th>Patch<br>Status</th>\n                <th>Summary</th>\n                <th>Assigned</th>\n                <th>Whiteboard</th>\n            </tr>\n        </thead>\n        <tbody>";
+    result = "<section>\n    <h3>Bugs</h3>\n    <table class=\"bugs\">\n        <thead>\n            <tr>\n                <th>#</th>\n                <th>Bug #</th>\n                <th>Patch<br>Status</th>\n                <th>Summary</th>\n                <th>Assigned</th>\n                <th>Whiteboard</th>\n            </tr>\n        </thead>\n        <tbody>";
     _ref = project.bugs;
     for (i = 0, _len = _ref.length; i < _len; i++) {
       bugStr = _ref[i];
@@ -193,7 +193,6 @@
         }
       }
       patchInfo = "<span class=\"patchstatus\" title=\"" + (flags.join(", ")) + "\">" + bestStatus + "</span>";
-      console.log("bug: ", bug);
       result += "<tr>\n    <td>" + (i + 1) + "</td>\n    <td>" + buglink + "</td>\n    <td>" + patchInfo + "</td>\n    <td>" + bug.summary + "</td>\n    <td>" + bug.assignedName + "</td>\n    <td>" + (bug.whiteboard != null ? bug.whiteboard : "") + "</td>\n</tr>";
     }
     return result += "        </tbody>\n    </table>\n</section>";
@@ -234,6 +233,10 @@
     }
     projectStr += "</section>";
     newNode = $(projectStr);
+    $("table.bugs", newNode).dataTable({
+      bPaginate: false,
+      bInfo: false
+    });
     $("#content").children().remove().append(newNode);
     newNode.appendTo($("#content"));
     $(".status").each(function() {

@@ -73,6 +73,35 @@
         ]
     }
     {
+        id: "webconsole6"
+        url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade"
+        name: "Web Console 6"
+        blurb: "Console positioning, autocompletion and more"
+        status: "Implementation"
+        target: 6
+        people: ["past", "msucan", "ddahl"]
+        bugs: [
+            577721
+            "585991 Show a popup listing possible completions"
+            637801
+            632347
+            632275
+            595223
+            626484
+            619598
+            642615
+            646025
+            "585956 Implement console.trace() in web console"
+            "644419 Console should have user-settable log limits for each message category"
+            "642109 Web Console REPL 'readline' occasionally stops working right"
+            "642111 Web Console messages should scroll into view automatically"
+            "650780 evaluating a null object returns TypeError: aObject is null"
+        ],
+        updates: [
+            "2011/05/23 Security review complete"
+        ]
+    }
+    {
         id: "highlighter"
         url: "https://wiki.mozilla.org/DevTools/Features/Highlighter"
         name: "Highlighter"
@@ -132,35 +161,6 @@
             "654068 Show visual indicator when there are unmatched rules but not matched rules"
             "654069 \"Effects and Other\" group should be extracted into more than 1 group"
             "654430 Unmatched rules do not work for string values"
-        ]
-    }
-    {
-        id: "webconsole6"
-        url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade"
-        name: "Web Console 6"
-        blurb: "Console positioning, autocompletion and more"
-        status: "Implementation"
-        target: 6
-        people: ["past", "msucan", "ddahl"]
-        bugs: [
-            577721
-            "585991 Show a popup listing possible completions"
-            637801
-            632347
-            632275
-            595223
-            626484
-            619598
-            642615
-            646025
-            "585956 Implement console.trace() in web console"
-            "644419 Console should have user-settable log limits for each message category"
-            "642109 Web Console REPL 'readline' occasionally stops working right"
-            "642111 Web Console messages should scroll into view automatically"
-            "650780 evaluating a null object returns TypeError: aObject is null"
-        ],
-        updates: [
-            "2011/05/23 Security review complete"
         ]
     }
     {

@@ -143,7 +143,7 @@ createBugTable = (project) ->
     result = """
             <section>
                 <h3>Bugs</h3>
-                <table>
+                <table class="bugs">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -185,7 +185,6 @@ createBugTable = (project) ->
                     flags.push flagType + f.status + " " + f.setter
         
         patchInfo = """<span class="patchstatus" title="#{flags.join(", ")}">#{bestStatus}</span>"""
-        console.log "bug: ", bug
         result += """
                             <tr>
                                 <td>#{i+1}</td>
@@ -270,6 +269,10 @@ exports.showProject = (id) ->
     </section>
 """
     newNode = $(projectStr)
+    $("table.bugs", newNode).dataTable({
+        bPaginate: false
+        bInfo: false
+    })
     $("#content").children().remove().append(newNode)
     newNode.appendTo($("#content"))
     $(".status").each(() ->

@@ -204,3 +204,7 @@ section.release_tracking table td.project {
     text-decoration: underline;
     cursor: pointer;
 }
+
+table.bugs {
+    width: 100%;
+}
