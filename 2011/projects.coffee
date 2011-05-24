@@ -35,7 +35,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/Workspaces"
         name: "Scratchpad First Take"
         blurb: "The humane way to monkey with code"
-        status: "Implementation"
+        status: "Aurora"
         target: 6
         people: ["msucan", "rcampbell"]
         bugs: [
@@ -63,7 +63,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/WebDeveloperMenu"
         name: "Web Developer Menu"
         blurb: "New home for web developer tools"
-        status: "Implementation"
+        status: "Aurora"
         target: 6
         people: ["rcampbell", "msucan"]
         bugs: [
@@ -77,7 +77,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade"
         name: "Web Console 6"
         blurb: "Console positioning, autocompletion and more"
-        status: "Implementation"
+        status: "Aurora"
         target: 6
         people: ["past", "msucan", "ddahl"]
         bugs: [

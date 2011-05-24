@@ -702,15 +702,14 @@
    "summary": "Firefox 6.0a1 Crash Report [@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder(JSContext*, JSObject*, JSObject*) ][@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder ]",
    "status": "NEW",
    "assignedName": "mrbkap",
-   "whiteboard": "[firebug-p1]",
+   "whiteboard": "[firebug-p1] fixed-in-tracemonkey",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gal",
-      "setter": "mrbkap"
+      "status": "+",
+      "setter": "gal"
      }
     ],
     "superreview": []
@@ -722,17 +721,6 @@
    "status": "ASSIGNED",
    "assignedName": "past",
    "whiteboard": "[pre-approved by beltzner][console-1]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "646504": {
-   "summary": "Global console should have decent display of stack traces",
-   "status": "NEW",
-   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -785,11 +773,11 @@
     "superreview": []
    }
   },
-  "653545": {
-   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
+  "650802": {
+   "summary": "Create some controller UI for the Highlighter",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
+   "whiteboard": "[highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -797,11 +785,11 @@
     "superreview": []
    }
   },
-  "650802": {
-   "summary": "Create some controller UI for the Highlighter",
+  "653545": {
+   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[highlighter]",
+   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1141,6 +1129,25 @@
    },
    "patchSize": 14856
   },
+  "566085": {
+   "summary": "Inspect is oblivious to DOM changes",
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[patchclean:0916]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 44266
+  },
   "655776": {
    "summary": "Web Developer > Get More Tools menu item",
    "status": "RESOLVED",
@@ -1151,12 +1158,12 @@
     "review": [
      {
       "status": "+",
-      "setter": "sdwilsh"
+      "setter": "dao"
      }
     ],
     "superreview": []
    },
-   "patchSize": 4468
+   "patchSize": 3716
   },
   "653084": {
    "summary": "Style Inspector should have specificity removed",
@@ -1242,18 +1249,6 @@
    "status": "ASSIGNED",
    "assignedName": "victor.porof",
    "whiteboard": "[tilt]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "587757": {
-   "summary": "Implement Browser Console",
-   "status": "NEW",
-   "assignedName": "ddahl",
-   "whiteboard": "[console-1]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1660,18 +1655,6 @@
     "superreview": []
    }
   },
-  "637131": {
-   "summary": "Unexpected load of chrome://browser/content/browser.xul when using the Web Console (Ctrl-Maj-K)",
-   "status": "REOPENED",
-   "assignedName": "nobody",
-   "whiteboard": "[console-2]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "642136": {
    "summary": "Debugger access to closure environments",
    "status": "NEW",
@@ -1683,6 +1666,19 @@
     "review": [],
     "superreview": []
    }
+  },
+  "566084": {
+   "summary": "Inspect gets disabled when navigating to new pages",
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[strings] [patchclean:0929]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 15885
   },
   "656296": {
    "summary": "console.jsm from Pilot should send reports to the web console",
@@ -1928,6 +1924,17 @@
     "superreview": []
    }
   },
+  "658756": {
+   "summary": "Experiment with a popup UI for the GCLI along the lines of launchers (Quicksilver etc)",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "653531": {
    "summary": "Shared knowledge of selected node in highlighter",
    "status": "NEW",
@@ -2128,17 +2135,6 @@
    "summary": "Style Panel CSS properties are limited to hard coded values",
    "status": "RESOLVED",
    "assignedName": "mratcliffe",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "657940": {
-   "summary": "web console should be smarter about displaying really long strings",
-   "status": "RESOLVED",
-   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2347,16 +2343,10 @@
     "devtoolsCount": 1
    }
   },
-  "gal": {
-   "review": {
-    "devtoolsSize": 2552,
-    "devtoolsCount": 1
-   }
-  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 61757,
-    "devtoolsCount": 2
+    "devtoolsSize": 106023,
+    "devtoolsCount": 3
    }
   },
   "limi": {
