@@ -101,16 +101,11 @@
    "assignedName": "past",
    "hasPatch": true,
    "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "feedback": [],
     "review": [],
     "superreview": []
    },
-   "patchSize": 2833
+   "patchSize": 1398
   },
   "630460": {
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
@@ -497,13 +492,13 @@
     "review": [
      {
       "status": "?",
-      "requestee": "mihai.sucan",
+      "requestee": "sdwilsh",
       "setter": "past"
      }
     ],
     "superreview": []
    },
-   "patchSize": 16146
+   "patchSize": 18766
   },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
@@ -559,7 +554,7 @@
   },
   "651071": {
    "summary": "Enhance the web console with a command based input system in addition to the existing JS based one",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -732,6 +727,17 @@
    "summary": "Require.jsm needs unit tests before it can be used by GCLI",
    "status": "RESOLVED",
    "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "659710": {
+   "summary": "[htmltree] add attribute editing",
+   "status": "NEW",
+   "assignedName": "getify",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -969,7 +975,7 @@
   "651081": {
    "summary": "Ensure GCLI commands are executed securely",
    "status": "NEW",
-   "assignedName": "nobody",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1421,16 +1427,10 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "rcampbell"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 41046
+   "patchSize": 107694
   },
   "588941": {
    "summary": "Computed style for property is sometimes wrong in the new Style panel",
@@ -1616,7 +1616,7 @@
   },
   "653550": {
    "summary": "Add a close button to the highlighter",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "rcampbell",
    "whiteboard": "[best: 1h, likely: 4h, worst: 2d][highlighter]",
    "hasPatch": true,
@@ -2168,14 +2168,20 @@
   "634406": {
    "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
    "status": "ASSIGNED",
-   "assignedName": "nobody",
+   "assignedName": "ehsan",
    "whiteboard": "[console-1][scratchpad]",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "roc"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 4449
   },
   "654986": {
    "summary": "Initial GCLI screen lists only some of the available commands - it should list them all",
@@ -2217,6 +2223,23 @@
     "superreview": []
    }
   },
+  "659625": {
+   "summary": "Expand console object with clear method",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 8371
+  },
   "637291": {
    "summary": "Add titlebar and name attributes to Panels",
    "status": "NEW",
@@ -2229,11 +2252,10 @@
     "superreview": []
    }
   },
-  "642231": {
-   "summary": "Prepare GCLI for review",
+  "642505": {
+   "summary": "Embed the GCLI in the Web Console",
    "status": "RESOLVED",
    "assignedName": "nobody",
-   "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2241,10 +2263,11 @@
     "superreview": []
    }
   },
-  "642505": {
-   "summary": "Embed the GCLI in the Web Console",
-   "status": "NEW",
+  "642231": {
+   "summary": "Prepare GCLI for review",
+   "status": "RESOLVED",
    "assignedName": "nobody",
+   "whiteboard": "[estimate:best=2d,likely=4d,worst=8d]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2337,16 +2360,16 @@
     "devtoolsCount": 3
    }
   },
-  "mihai.sucan": {
+  "sdwilsh": {
    "review": {
-    "devtoolsSize": 16146,
+    "devtoolsSize": 18766,
     "devtoolsCount": 1
    }
   },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 106023,
-    "devtoolsCount": 3
+    "devtoolsSize": 64977,
+    "devtoolsCount": 2
    }
   },
   "limi": {

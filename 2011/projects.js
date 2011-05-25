@@ -60,7 +60,7 @@
       status: "Implementation",
       target: 7,
       people: ["rcampbell"],
-      bugs: [642471, "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element", "566084 disabled when navigating to new pages", "566085 tracking DOM changes"]
+      bugs: ["642471 Rewrite PanelHighlighter using transparent xul iframe", "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element", "566084 disabled when navigating to new pages", "566085 tracking DOM changes"]
     }, {
       id: "styleinspector",
       url: "https://wiki.mozilla.org/DevTools/Features/StyleInspector",
@@ -106,11 +106,20 @@
       people: ["jwalker"],
       bugs: ["656863 getShortSource() should guarantee uniqueness", "657350 'rule overridden by other rule' diagnosis", "658202 needs a way to select inline styles"]
     }, {
+      id: "htmleditor",
+      url: "https://wiki.mozilla.org/DevTools/Features/HTMLTreeEditor",
+      name: "HTML Tree Editor",
+      blurb: "Easy editing for simple changes to HTML",
+      status: "Implementation",
+      target: 7,
+      people: ["getify"],
+      bugs: ["659710 add attribute editing"]
+    }, {
       id: "debugger",
       url: "https://wiki.mozilla.org/DevTools/Features/Debugger",
       name: "Debugger",
       blurb: "A straightforward walk through your code",
-      status: "Planning",
+      status: "Implementation",
       target: 8,
       people: ["dcamp"]
     }, {
@@ -121,7 +130,7 @@
       status: "Planning",
       target: 7,
       people: [],
-      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "614586 Implement string substitution in console API methods", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar", "643184 Checkbox menu items in a toolbar do not display the checkmark when checked", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object"]
+      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "614586 Implement string substitution in console API methods", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar", "643184 Checkbox menu items in a toolbar do not display the checkmark when checked", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object"]
     }, {
       id: "tilt",
       name: "Tilt",

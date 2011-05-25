@@ -110,7 +110,7 @@
         target: 7
         people: ["rcampbell"]
         bugs: [
-            642471
+            "642471 Rewrite PanelHighlighter using transparent xul iframe"
             "650802 Create some controller UI"
             "650825 create a content broker"
             "650794 Strip HTML panel and support code from browser"
@@ -257,11 +257,23 @@
         ]
     }
     {
+        id: "htmleditor"
+        url: "https://wiki.mozilla.org/DevTools/Features/HTMLTreeEditor"
+        name: "HTML Tree Editor"
+        blurb: "Easy editing for simple changes to HTML"
+        status: "Implementation"
+        target: 7
+        people: ["getify"]
+        bugs: [
+            "659710 add attribute editing"
+        ]
+    }
+    {
         id: "debugger"
         url: "https://wiki.mozilla.org/DevTools/Features/Debugger"
         name: "Debugger"
         blurb: "A straightforward walk through your code"
-        status: "Planning"
+        status: "Implementation"
         target: 8
         people: ["dcamp"]
     }
@@ -276,6 +288,7 @@
         bugs: [
             "644596 expand console object with missing methods"
             "658368 Expand console object with time and timeEnd methods"
+            "659625 Expand console object with clear method"
             "614586 Implement string substitution in console API methods"
             "638949 Copy Location for URLs"
             "646028 Add debug filter item to the toolbar"
