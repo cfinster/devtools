@@ -104,7 +104,7 @@ class Person
     constructor: (data) ->
         if not data?
             return
-        for prop in ["id", "url", "name", "blurb", "avatar", "status"]
+        for prop in ["id", "url", "name", "blurb", "avatar", "status", "bugzillaId"]
             @[prop] = if data[prop]? then data[prop] else ""
     
     getAvatar: () ->

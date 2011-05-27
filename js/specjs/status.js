@@ -121,7 +121,7 @@
       if (!(data != null)) {
         return;
       }
-      _ref = ["id", "url", "name", "blurb", "avatar", "status"];
+      _ref = ["id", "url", "name", "blurb", "avatar", "status", "bugzillaId"];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         prop = _ref[_i];
         this[prop] = data[prop] != null ? data[prop] : "";

@@ -50,7 +50,7 @@
       status: "Aurora",
       target: 6,
       people: ["past", "msucan", "ddahl"],
-      bugs: [577721, "585991 Show a popup listing possible completions", 637801, 632347, 632275, 595223, 626484, 619598, 642615, 646025, "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "650780 evaluating a null object returns TypeError: aObject is null"],
+      bugs: [577721, "585991 Show a popup listing possible completions", 637801, 632347, 632275, 595223, 626484, 619598, 642615, 646025, "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "650780 evaluating a null object returns TypeError: aObject is null", "659910 console.log from Scratchpad sends people to Scratchpad.com", "659778 Autocomplete is behind the console window"],
       updates: ["2011/05/23 Security review complete"]
     }, {
       id: "highlighter",
@@ -78,7 +78,7 @@
       status: "Implementation",
       target: 7,
       people: ["jwalker"],
-      bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility", "656668 Export from GCLI to JSM", "656666 Update HudService.jsm to allow GCLI integration", "657678 remove dependency on Pilot", "657677 Require.jsm unit tests", "658756 Experiment with popup UI for GCLI"]
+      bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility", "656668 Export from GCLI to JSM", "656666 Update HudService.jsm to allow GCLI integration", "657678 remove dependency on Pilot", "657677 Require.jsm unit tests", "658756 Experiment with popup UI for GCLI", "659889 GCLI should autostart"]
     }, {
       id: "viewsource",
       name: "View Source Reboot",
@@ -86,7 +86,7 @@
       status: "Planning",
       target: 7,
       people: ["msucan", "getify"],
-      bugs: ["650893 New View Source component", "650895 Initial implementation of the new View Source tool", "246620 Add line numbers to view source"],
+      bugs: ["650893 New View Source component", "650895 Initial implementation of the new View Source tool", "246620 Add line numbers to view source", "482921 reimplement view source with HTML5 parser", "469434 copy link location", "660193 improve view-source for .js, .json, .css"],
       notes: ["deminification", "insert alert", "view and edit?", "current source vs. original/cached"]
     }, {
       id: "cssedit",
@@ -130,7 +130,7 @@
       status: "Planning",
       target: 7,
       people: [],
-      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "614586 Implement string substitution in console API methods", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar", "643184 Checkbox menu items in a toolbar do not display the checkmark when checked", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object"]
+      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "659907 Expand console object with dir method", "614586 Implement string substitution in console API methods", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar", "643184 Checkbox menu items in a toolbar do not display the checkmark when checked", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "646816 command-w binding for dismissing panels", "659775 command-w to close separate Web Console window", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object", "659931 Clicking on position button changes position"]
     }, {
       id: "tilt",
       name: "Tilt",
@@ -138,7 +138,7 @@
       url: "https://wiki.mozilla.org/Tilt_Project_Page",
       status: "Implementation",
       people: ["victor.porof"],
-      bugs: ["653658 JavaScript implementation of MOZ_dom_element_texture extension"]
+      bugs: ["659807 Implement Tilt: a WebGL-based 3D visualization of a webpage", "653658 JavaScript implementation of MOZ_dom_element_texture extension"]
     }, {
       id: "sdk",
       url: "https://wiki.mozilla.org/DevTools/Features/SDK",
@@ -290,7 +290,18 @@
       id: "victor.porof",
       name: "Victor Porof",
       avatar: "http://gravatar.com/avatar/c0e3ca110aaf63386c3e520e614527c4",
-      bugzillaId: "victor.porof@gmail.com"
+      bugzillaId: "victor.porof@gmail.com",
+      reviewCheck: false
+    }, {
+      id: "bzbarsky",
+      name: "Boris Zbarsky",
+      avatar: "http://gravatar.com/avatar/8b86a9efd50a1c38bc4d3a0e47cd5979",
+      bugzillaId: "bzbarsky@mit.edu"
+    }, {
+      id: "jonas",
+      name: "Jonas Sicking",
+      avatar: "http://gravatar.com/avatar/12de552ffa2a81f8a03733071b70caaa",
+      bugzillaId: "jonas@sicking.cc"
     }
   ];
 }).call(this);

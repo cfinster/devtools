@@ -174,6 +174,17 @@
     "superreview": []
    }
   },
+  "659778": {
+   "summary": "Web Console autocomplete is behind the Web Console window",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "641903": {
    "summary": "[meta] GCLI needs a command registry",
    "status": "NEW",
@@ -255,6 +266,17 @@
     "superreview": []
    },
    "patchSize": 7548
+  },
+  "659775": {
+   "summary": "When the Web Console is in a separate window, Cmd+W should close it",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "656231": {
    "summary": "Cleanup the HUD object properties, add xul:tab reference",
@@ -695,9 +717,9 @@
   },
   "657292": {
    "summary": "Firefox 6.0a1 Crash Report [@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder(JSContext*, JSObject*, JSObject*) ][@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder ]",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "mrbkap",
-   "whiteboard": "[firebug-p1] fixed-in-tracemonkey",
+   "whiteboard": "[firebug-p1] fixed-in-tracemonkey nominated at comment 20",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -779,11 +801,11 @@
     "superreview": []
    }
   },
-  "650802": {
-   "summary": "Create some controller UI for the Highlighter",
+  "653545": {
+   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[highlighter]",
+   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -791,11 +813,11 @@
     "superreview": []
    }
   },
-  "653545": {
-   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
+  "650802": {
+   "summary": "Create some controller UI for the Highlighter",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
+   "whiteboard": "[highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -816,7 +838,7 @@
   },
   "585991": {
    "summary": "Show a popup listing possible completions",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "mihai.sucan",
    "whiteboard": "[console-2][patchclean:0517][see-try-build-in-comment-42][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -848,6 +870,17 @@
    "summary": "GCLI user interface needs tweaks",
    "status": "RESOLVED",
    "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "646816": {
+   "summary": "Optional Ctrl/Command-W Key binding for dismissing panels",
+   "status": "NEW",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -972,6 +1005,17 @@
    },
    "patchSize": 7845
   },
+  "659889": {
+   "summary": "GCLI should auto-start",
+   "status": "NEW",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "651081": {
    "summary": "Ensure GCLI commands are executed securely",
    "status": "NEW",
@@ -998,7 +1042,7 @@
   },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "past",
    "whiteboard": "[console][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -1022,7 +1066,7 @@
   },
   "658344": {
    "summary": "Create some useful introductory text for the Scratchpad",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "rcampbell",
    "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -1156,7 +1200,7 @@
   },
   "655776": {
    "summary": "Web Developer > Get More Tools menu item",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "mihai.sucan",
    "hasPatch": true,
    "flags": {
@@ -1250,6 +1294,18 @@
     "superreview": []
    }
   },
+  "659910": {
+   "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[scratchpad][console][view-source]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "653658": {
    "summary": "JavaScript implementation of WebGL MOZ_dom_element_texture extension",
    "status": "ASSIGNED",
@@ -1321,7 +1377,7 @@
   },
   "657131": {
    "summary": "Create a new Execute menu for Scratchpad",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "rcampbell",
    "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -1337,6 +1393,19 @@
    },
    "patchSize": 18533
   },
+  "642615": {
+   "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
+   "status": "VERIFIED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 12862
+  },
   "654069": {
    "summary": "Style Inspector \"Effects and Other\" group should be extracted into more than 1 group",
    "status": "RESOLVED",
@@ -1347,19 +1416,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "642615": {
-   "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
-   "status": "RESOLVED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 12862
   },
   "653978": {
    "summary": "GCLI should be prefed out",
@@ -1516,6 +1572,17 @@
    },
    "patchSize": 243154
   },
+  "659907": {
+   "summary": "Expand console object with a dir method",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
    "status": "VERIFIED",
@@ -1538,6 +1605,19 @@
     "superreview": []
    },
    "patchSize": 4439
+  },
+  "577721": {
+   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
+   "status": "VERIFIED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 36200
   },
   "656360": {
    "summary": "webDeveloperMenu.accesskey can not be localized",
@@ -1589,19 +1669,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "577721": {
-   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
-   "status": "RESOLVED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 36200
   },
   "656027": {
    "summary": "It should be possible to pref out the Style Inspector",
@@ -1764,13 +1831,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "-",
-      "setter": "gavin.sharp"
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "ddahl"
      }
     ],
     "superreview": []
    },
-   "patchSize": 17246
+   "patchSize": 16887
   },
   "590799": {
    "summary": "Styling for the CSS editor panel",
@@ -1959,6 +2027,17 @@
     "superreview": []
    }
   },
+  "659807": {
+   "summary": "Implement Tilt: a WebGL-based 3D visualization of a Webpage",
+   "status": "UNCONFIRMED",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "642111": {
    "summary": "Web Console messages should scroll into view automatically",
    "status": "RESOLVED",
@@ -1996,7 +2075,7 @@
   },
   "653108": {
    "summary": "Scratchpad is tied to the tab it was first run in",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "rcampbell",
    "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -2011,6 +2090,25 @@
     "superreview": []
    },
    "patchSize": 9032
+  },
+  "482921": {
+   "summary": "[HTML5] Re-implement view source syntax highlighting using the HTML5 parser",
+   "status": "NEW",
+   "assignedName": "hsivonen",
+   "whiteboard": "not-ready",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "jonas",
+      "setter": "hsivonen"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 186700
   },
   "619598": {
    "summary": "Up and Down does not retrieve command history in the same way as other consoles",
@@ -2073,7 +2171,7 @@
   },
   "657136": {
    "summary": "Rename top-level Context menu to something less confusing in Scratchpad",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "rcampbell",
    "whiteboard": "[scratchpad][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -2167,7 +2265,7 @@
   },
   "634406": {
    "summary": "In Web Console, \"Select All\" unexpectedly results in multi-line input",
-   "status": "ASSIGNED",
+   "status": "VERIFIED",
    "assignedName": "ehsan",
    "whiteboard": "[console-1][scratchpad]",
    "hasPatch": true,
@@ -2232,13 +2330,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
-      "setter": "mihai.sucan"
+      "status": "?",
+      "requestee": "sdwilsh",
+      "setter": "past"
      }
     ],
     "superreview": []
    },
-   "patchSize": 8371
+   "patchSize": 7177
   },
   "637291": {
    "summary": "Add titlebar and name attributes to Panels",
@@ -2338,50 +2437,55 @@
    "summary": "Strip out Style and DOM panels and support code from Inspector.",
    "status": "ASSIGNED",
    "assignedName": "rcampbell",
-   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem][backed-out]",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem][fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "gavin.sharp"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 56365
+   "patchSize": 57347
   }
  },
  "reviewQueues": {
   "bzbarsky": {
    "review": {
     "devtoolsSize": 34846,
-    "devtoolsCount": 3
+    "devtoolsCount": 3,
+    "totalSize": 34846,
+    "totalCount": 3
    }
   },
   "sdwilsh": {
    "review": {
-    "devtoolsSize": 18766,
-    "devtoolsCount": 1
+    "devtoolsSize": 25943,
+    "devtoolsCount": 2,
+    "totalSize": 25943,
+    "totalCount": 2
    }
   },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 64977,
-    "devtoolsCount": 2
+    "devtoolsSize": 87519,
+    "devtoolsCount": 4,
+    "totalSize": 87519,
+    "totalCount": 4
    }
   },
-  "limi": {
-   "ui-review": {
-    "devtoolsSize": 51004,
-    "devtoolsCount": 1
+  "jonas": {
+   "review": {
+    "devtoolsSize": 537145,
+    "devtoolsCount": 8,
+    "totalSize": 537145,
+    "totalCount": 8
    }
   },
   "rcampbell": {
    "review": {
     "devtoolsSize": 3074,
-    "devtoolsCount": 1
+    "devtoolsCount": 1,
+    "totalSize": 3074,
+    "totalCount": 1
    }
   }
  }

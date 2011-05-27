@@ -9,7 +9,6 @@
     console.log("Saving to ", filePath);
     if (window.Components) {
       try {
-        console.log("Requesting enhanced privileges");
         netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
         file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
         file.initWithPath(filePath);
@@ -21,7 +20,6 @@
         out.write(content, content.length);
         out.flush();
         out.close();
-        console.log("Saved");
         return true;
       } catch (ex) {
         return false;
@@ -82,6 +80,7 @@
   };
   BugDataCollector = (function() {
     function BugDataCollector() {
+      this.saveData = __bind(this.saveData, this);;
       this.reviewQueueResult = __bind(this.reviewQueueResult, this);;      this.mainQuery = new buggerall.Query({
         bugid: exports.bugList.join(","),
         whitespace: true,
@@ -94,7 +93,7 @@
     BugDataCollector.prototype.queryDone = function() {
       this.queryCount--;
       if (this.queryCount === 0) {
-        return this.saveData();
+        return this.gatherReviewBugData();
       }
     };
     BugDataCollector.prototype.run = function() {
@@ -122,19 +121,40 @@
       return _results;
     };
     BugDataCollector.prototype.reviewQueueResult = function(q) {
-      var id, _i, _len, _ref;
+      var id;
       console.log("Finished with review queue query", this.queryCount);
-      _ref = q.result;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        id = _ref[_i];
-        console.log("id: ", id);
+      for (id in q.result) {
+        this.reviewBugs.push(id);
       }
       return this.queryDone();
     };
+    BugDataCollector.prototype.gatherReviewBugData = function() {
+      var buglist;
+      if (!this.reviewBugs.length) {
+        this.saveData;
+        return;
+      }
+      buglist = _.uniq(this.reviewBugs, false);
+      this.reviewQuery = new buggerall.Query({
+        bugid: buglist.join(","),
+        whitespace: true,
+        includeHistory: true,
+        historyCacheURL: "bughistory/"
+      });
+      return this.reviewQuery.run(this.saveData);
+    };
     BugDataCollector.prototype.saveData = function() {
-      var bug, bugId, output, q, _ref, _results;
+      var bug, bugId, output, q, _ref, _ref2, _results;
       console.log("Saving query results");
       q = this.mainQuery;
+      _ref = q.result;
+      for (bugId in _ref) {
+        bug = _ref[bugId];
+        bug.devtoolsBug = true;
+      }
+      if (this.reviewQuery) {
+        q.merge(this.reviewQuery);
+      }
       if (!q.result) {
         console.log("No bugzilla results - not saving");
         return;
@@ -142,11 +162,10 @@
       exports.bugData = q.result;
       output = q.serialize();
       saveFile(exports.datadir + "/bugdata.json", output);
-      _ref = exports.bugData;
+      _ref2 = exports.bugData;
       _results = [];
-      for (bugId in _ref) {
-        bug = _ref[bugId];
-        console.log("bug", bug.id, " history", bug.history);
+      for (bugId in _ref2) {
+        bug = _ref2[bugId];
         _results.push(saveFile("" + exports.datadir + "/bughistory/" + bug.id + ".json", bug.history.serialize()));
       }
       return _results;
@@ -163,22 +182,16 @@
     return bdc.run();
   };
   addBugData = function(statusdata) {
-    var attachment, attachmentId, bug, bugData, bugSummary, bugs, flag, flags, key, patch, queueType, requesteeName, requesteeQueue, reviewQueues, _i, _len, _ref, _ref2, _results;
+    var attachment, attachmentId, bug, bugData, bugSummary, bugs, data, flag, flags, id, item, key, patch, queueType, requesteeName, requesteeQueue, reviewQueues, toDelete, _i, _j, _len, _len2, _ref, _ref2, _ref3, _results;
     bugs = statusdata.bugs;
     reviewQueues = statusdata.reviewQueues;
     bugData = exports.bugData;
     _results = [];
     for (key in bugData) {
-      bugSummary = bugs[key] = {};
       bug = bugData[key];
       if (!(bug != null)) {
         throw new Error("Where's the bug data for " + key + "?");
       }
-      bugSummary.summary = bug.summary;
-      bugSummary.status = bug.status;
-      bugSummary.assignedName = bug.assigned_to ? bug.assigned_to.name : null;
-      bugSummary.whiteboard = bug.whiteboard;
-      bugSummary.hasPatch = false;
       if (bug.attachments != null) {
         _ref = bug.attachments;
         for (attachmentId in _ref) {
@@ -202,12 +215,38 @@
               queueType = requesteeQueue[flag.name] = {};
               queueType.devtoolsSize = 0;
               queueType.devtoolsCount = 0;
+              queueType.totalSize = 0;
+              queueType.totalCount = 0;
             }
-            queueType.devtoolsCount++;
-            queueType.devtoolsSize += attachment.size;
+            if (bug.devtoolsBug) {
+              queueType.devtoolsCount++;
+              queueType.devtoolsSize += attachment.size;
+            }
+            queueType.totalCount++;
+            queueType.totalSize += attachment.size;
           }
         }
       }
+      toDelete = [];
+      for (id in reviewQueues) {
+        data = reviewQueues[id];
+        if (!((_ref3 = data.review) != null ? _ref3.devtoolsCount : void 0)) {
+          toDelete.push(id);
+        }
+      }
+      for (_j = 0, _len2 = toDelete.length; _j < _len2; _j++) {
+        item = toDelete[_j];
+        delete reviewQueues[item];
+      }
+      if (!bug.devtoolsBug) {
+        continue;
+      }
+      bugSummary = bugs[key] = {};
+      bugSummary.summary = bug.summary;
+      bugSummary.status = bug.status;
+      bugSummary.assignedName = bug.assigned_to ? bug.assigned_to.name : null;
+      bugSummary.whiteboard = bug.whiteboard;
+      bugSummary.hasPatch = false;
       patch = bug.getLatestPatch();
       flags = bugSummary.flags = {};
       flags.feedback = [];

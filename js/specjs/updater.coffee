@@ -10,7 +10,6 @@ saveFile = (filePath,content) ->
     console.log "Saving to ", filePath
     if window.Components
         try
-            console.log "Requesting enhanced privileges"
             netscape.security.PrivilegeManager.enablePrivilege "UniversalXPConnect"
             
             file = Components.classes["@mozilla.org/file/local;1"].createInstance Components.interfaces.nsILocalFile
@@ -22,7 +21,6 @@ saveFile = (filePath,content) ->
             out.write content, content.length
             out.flush()
             out.close()
-            console.log "Saved"
             return true
         catch ex
             return false
@@ -78,14 +76,14 @@ class BugDataCollector
             whitespace: true
             includeHistory: true
             historyCacheURL: "bughistory/"
-
+        
         @queryCount = 0
         @reviewBugs = []
     
     queryDone: () ->
         @queryCount--
         if @queryCount == 0
-            @saveData()
+            @gatherReviewBugData()
     
     run: () ->
         @queryCount++
@@ -107,18 +105,41 @@ class BugDataCollector
             
             console.log "Query: ", q.query
             @queryCount++
-            q.run this.reviewQueueResult
+            q.run @reviewQueueResult
             
     reviewQueueResult: (q) =>
         console.log "Finished with review queue query", @queryCount
-        for id in q.result
-            console.log "id: ", id
+        for id of q.result
+            @reviewBugs.push id
         @queryDone()
     
-    saveData: () ->
+    gatherReviewBugData: () ->
+        if not @reviewBugs.length
+            @saveData
+            return
+
+        buglist = _.uniq(@reviewBugs, false)
+
+        @reviewQuery = new buggerall.Query
+            bugid: buglist.join(","),
+            whitespace: true
+            includeHistory: true
+            historyCacheURL: "bughistory/"
+        
+        @reviewQuery.run @saveData
+
+    
+    saveData: () =>
         console.log "Saving query results"
 
         q = @mainQuery
+
+        for bugId, bug of q.result
+            bug.devtoolsBug = true
+
+        if @reviewQuery
+            q.merge @reviewQuery
+
         if not q.result
             console.log "No bugzilla results - not saving"
             return
@@ -127,7 +148,6 @@ class BugDataCollector
         output = q.serialize()
         saveFile exports.datadir + "/bugdata.json", output
         for bugId, bug of exports.bugData
-            console.log "bug", bug.id, " history", bug.history
             saveFile  "#{exports.datadir}/bughistory/#{bug.id}.json", bug.history.serialize()
         
 
@@ -145,16 +165,10 @@ addBugData = (statusdata) ->
     reviewQueues = statusdata.reviewQueues
     bugData = exports.bugData
     for key of bugData
-        bugSummary = bugs[key] = {}
         bug = bugData[key]
         if not bug?
             throw new Error("Where's the bug data for #{key}?")
-        bugSummary.summary = bug.summary
-        bugSummary.status = bug.status
-        bugSummary.assignedName = if bug.assigned_to then bug.assigned_to.name else null
-        bugSummary.whiteboard = bug.whiteboard
-        bugSummary.hasPatch = false
-        
+
         if bug.attachments?
             for attachmentId, attachment of bug.attachments
                 if not attachment.is_patch or attachment.is_obsolete or not attachment.flags?
@@ -171,9 +185,35 @@ addBugData = (statusdata) ->
                         queueType = requesteeQueue[flag.name] = {}
                         queueType.devtoolsSize = 0
                         queueType.devtoolsCount = 0
-                    queueType.devtoolsCount++
-                    queueType.devtoolsSize += attachment.size
+                        queueType.totalSize = 0
+                        queueType.totalCount = 0
+                    if bug.devtoolsBug
+                        queueType.devtoolsCount++
+                        queueType.devtoolsSize += attachment.size
+                    queueType.totalCount++
+                    queueType.totalSize += attachment.size
+        
+        # the way we look up bugs will generate review queue
+        # info that we don't care about
+        toDelete = []
+        for id, data of reviewQueues
+            if not data.review?.devtoolsCount
+                toDelete.push id
+        delete reviewQueues[item] for item in toDelete
 
+        # we only want devtools bugs in the final status file
+        # not the other random bugs looked up as part of
+        # review queue processing
+        if not bug.devtoolsBug
+            continue
+
+        bugSummary = bugs[key] = {}
+        bugSummary.summary = bug.summary
+        bugSummary.status = bug.status
+        bugSummary.assignedName = if bug.assigned_to then bug.assigned_to.name else null
+        bugSummary.whiteboard = bug.whiteboard
+        bugSummary.hasPatch = false
+        
         patch = bug.getLatestPatch()
         flags = bugSummary.flags = {}
         flags.feedback = []
