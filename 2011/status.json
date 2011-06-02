@@ -25,10 +25,16 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "dtownsend",
+      "setter": "jwalker"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 19888
+   "patchSize": 20416
   },
   "646028": {
    "summary": "Add debug filter item to the Web Developer toolbar dropdown in Web Console",
@@ -102,10 +108,15 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "-",
+      "setter": "mihai.sucan"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 1398
+   "patchSize": 3592
   },
   "630460": {
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
@@ -129,6 +140,18 @@
     "superreview": []
    }
   },
+  "654068": {
+   "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 5570
+  },
   "654962": {
    "summary": "GCLI needs a demo",
    "status": "RESOLVED",
@@ -139,18 +162,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "654068": {
-   "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
-   "status": "ASSIGNED",
-   "assignedName": "mratcliffe",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 5570
   },
   "653568": {
    "summary": "GCLI re-creates nodes in the RequestView/ArgFetcher too often",
@@ -513,14 +524,13 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "sdwilsh",
-      "setter": "past"
+      "status": "-",
+      "setter": "sdwilsh"
      }
     ],
     "superreview": []
    },
-   "patchSize": 18766
+   "patchSize": 18817
   },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
@@ -622,7 +632,7 @@
   },
   "646070": {
    "summary": "Respect chrome developer tools preference in workspace",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "mihai.sucan",
    "whiteboard": "[workspace][patchclean:0420][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -680,16 +690,23 @@
    }
   },
   "636727": {
-   "summary": "Add Ace to workspaces",
+   "summary": "Add a source editor to Scratchpad",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[workspaces]",
-   "hasPatch": false,
+   "whiteboard": "[scratchpad][see comment #2 for current work]",
+   "hasPatch": true,
    "flags": {
-    "feedback": [],
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "mihai.sucan"
+     }
+    ],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 11919
   },
   "657932": {
    "summary": "Web Console lacks symmetry in the handling of enter and escape keys during autocompletion",
@@ -719,7 +736,7 @@
    "summary": "Firefox 6.0a1 Crash Report [@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder(JSContext*, JSObject*, JSObject*) ][@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder ]",
    "status": "RESOLVED",
    "assignedName": "mrbkap",
-   "whiteboard": "[firebug-p1] fixed-in-tracemonkey nominated at comment 20",
+   "whiteboard": "[firebug-p1] fixed-in-tracemonkey [tracking requirement in comment 28]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -801,11 +818,11 @@
     "superreview": []
    }
   },
-  "653545": {
-   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
+  "650802": {
+   "summary": "Create some controller UI for the Highlighter",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
+   "whiteboard": "[highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -813,11 +830,11 @@
     "superreview": []
    }
   },
-  "650802": {
-   "summary": "Create some controller UI for the Highlighter",
+  "653545": {
+   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[highlighter]",
+   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1007,7 +1024,7 @@
   },
   "659889": {
    "summary": "GCLI should auto-start",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -1031,14 +1048,14 @@
    "summary": "Context menu item for Highlight Element (highlighter)",
    "status": "ASSIGNED",
    "assignedName": "rcampbell",
-   "whiteboard": "[strings] [patchbitrot] [parity-chrome]",
+   "whiteboard": "[strings] [rebased-05-27] [parity-chrome][failed-test]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
    },
-   "patchSize": 14565
+   "patchSize": 14985
   },
   "646025": {
    "summary": "Add file location to console.log, info, debug, etc.",
@@ -1077,10 +1094,10 @@
    },
    "patchSize": 4304
   },
-  "652509": {
-   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
+  "593345": {
+   "summary": "Investigate an advanced test tool for the inspector style panel",
    "status": "RESOLVED",
-   "assignedName": "mratcliffe",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1088,10 +1105,10 @@
     "superreview": []
    }
   },
-  "593345": {
-   "summary": "Investigate an advanced test tool for the inspector style panel",
-   "status": "NEW",
-   "assignedName": "nobody",
+  "652509": {
+   "summary": "Style Inspector displays styles that are not yet supported - they should be skipped",
+   "status": "RESOLVED",
+   "assignedName": "mratcliffe",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1170,14 +1187,20 @@
   "656666": {
    "summary": "Update HudService.jsm to allow GCLI integration",
    "status": "NEW",
-   "assignedName": "nobody",
+   "assignedName": "jwalker",
    "hasPatch": true,
    "flags": {
-    "feedback": [],
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "ddahl",
+      "setter": "jwalker"
+     }
+    ],
     "review": [],
     "superreview": []
    },
-   "patchSize": 14856
+   "patchSize": 19609
   },
   "566085": {
    "summary": "Inspect is oblivious to DOM changes",
@@ -1214,6 +1237,29 @@
     "superreview": []
    },
    "patchSize": 3716
+  },
+  "469434": {
+   "summary": "links in \"view source\" should have \"copy link location\" in context menu",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 10909
+  },
+  "659931": {
+   "summary": "Web Console window panel changes its position when partially off-screen",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "653084": {
    "summary": "Style Inspector should have specificity removed",
@@ -1271,17 +1317,6 @@
     "superreview": []
    }
   },
-  "586974": {
-   "summary": "Inspector style panel ranks all unmatched rules the same",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "641234": {
    "summary": "Implement unique objectId for JavaScript object debugging",
    "status": "NEW",
@@ -1294,17 +1329,40 @@
     "superreview": []
    }
   },
+  "586974": {
+   "summary": "Inspector style panel ranks all unmatched rules the same",
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 3928
+  },
   "659910": {
    "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
    "status": "ASSIGNED",
    "assignedName": "past",
    "whiteboard": "[scratchpad][console][view-source]",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "past"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 1011
   },
   "653658": {
    "summary": "JavaScript implementation of WebGL MOZ_dom_element_texture extension",
@@ -1440,17 +1498,6 @@
     "superreview": []
    }
   },
-  "653567": {
-   "summary": "GCLI should be checked for accessibility",
-   "status": "NEW",
-   "assignedName": "jwalker",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "653423": {
    "summary": "Undo option is grayed out although action is applicable",
    "status": "NEW",
@@ -1463,6 +1510,17 @@
     "superreview": []
    },
    "patchSize": 2520
+  },
+  "653567": {
+   "summary": "GCLI should be checked for accessibility",
+   "status": "ASSIGNED",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "642109": {
    "summary": "Web Console REPL \"readline\" occasionally stops working right",
@@ -1482,11 +1540,16 @@
    "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][rebased-05-14]",
    "hasPatch": true,
    "flags": {
-    "feedback": [],
+    "feedback": [
+     {
+      "status": "-",
+      "setter": "mihai.sucan"
+     }
+    ],
     "review": [],
     "superreview": []
    },
-   "patchSize": 107694
+   "patchSize": 146444
   },
   "588941": {
    "summary": "Computed style for property is sometimes wrong in the new Style panel",
@@ -1524,11 +1587,10 @@
    },
    "patchSize": 20708
   },
-  "644409": {
-   "summary": "Make scratchpads save their state across restarts",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[scratchpad][best: 3h, likely: 2d, worst: 4d]",
+  "653110": {
+   "summary": "WebConsole appends \"undefined\" after a pasted text when right arrow is pressed",
+   "status": "RESOLVED",
+   "assignedName": "past",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1536,10 +1598,11 @@
     "superreview": []
    }
   },
-  "653110": {
-   "summary": "WebConsole appends \"undefined\" after a pasted text when right arrow is pressed",
+  "644409": {
+   "summary": "Make scratchpads save their state across restarts",
    "status": "NEW",
-   "assignedName": "past",
+   "assignedName": "nobody",
+   "whiteboard": "[scratchpad][best: 3h, likely: 2d, worst: 4d]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1576,12 +1639,18 @@
    "summary": "Expand console object with a dir method",
    "status": "ASSIGNED",
    "assignedName": "past",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
-    "feedback": [],
+    "feedback": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     }
+    ],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 12850
   },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
@@ -1606,22 +1675,9 @@
    },
    "patchSize": 4439
   },
-  "577721": {
-   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
-   "status": "VERIFIED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 36200
-  },
   "656360": {
    "summary": "webDeveloperMenu.accesskey can not be localized",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "unghost",
    "hasPatch": true,
    "flags": {
@@ -1635,6 +1691,19 @@
     "superreview": []
    },
    "patchSize": 1180
+  },
+  "577721": {
+   "summary": "allow repositioning of the web console: above, below and out into a panel/window",
+   "status": "VERIFIED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][patchclean:0518][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 36200
   },
   "636907": {
    "summary": "SpiderMonkey should provide a low-level interface in JavaScript to JS debugging",
@@ -1935,6 +2004,17 @@
     "superreview": []
    }
   },
+  "660193": {
+   "summary": "Improve view-source protocol for .js, .json .css files",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "524674": {
    "summary": "nsIEventListenerService: tracking of dynamically added and removed event listeners",
    "status": "NEW",
@@ -2029,8 +2109,8 @@
   },
   "659807": {
    "summary": "Implement Tilt: a WebGL-based 3D visualization of a Webpage",
-   "status": "UNCONFIRMED",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "victor.porof",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2308,7 +2388,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 177895
+   "patchSize": 146010
   },
   "587752": {
    "summary": "Animations in the new Style panel",
@@ -2328,16 +2408,16 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
+    "review": [],
+    "superreview": [
      {
       "status": "?",
-      "requestee": "sdwilsh",
+      "requestee": "gavin.sharp",
       "setter": "past"
      }
-    ],
-    "superreview": []
+    ]
    },
-   "patchSize": 7177
+   "patchSize": 13180
   },
   "637291": {
    "summary": "Add titlebar and name attributes to Panels",
@@ -2394,18 +2474,12 @@
   },
   "656544": {
    "summary": "Make all of Scratchpad's keyboard shortcuts more intuitive.",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "nobody",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "kwierso"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
    "patchSize": 3074
@@ -2448,6 +2522,14 @@
   }
  },
  "reviewQueues": {
+  "dtownsend": {
+   "review": {
+    "devtoolsSize": 20416,
+    "devtoolsCount": 1,
+    "totalSize": 20416,
+    "totalCount": 1
+   }
+  },
   "bzbarsky": {
    "review": {
     "devtoolsSize": 34846,
@@ -2456,20 +2538,18 @@
     "totalCount": 3
    }
   },
-  "sdwilsh": {
-   "review": {
-    "devtoolsSize": 25943,
-    "devtoolsCount": 2,
-    "totalSize": 25943,
-    "totalCount": 2
-   }
-  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 87519,
-    "devtoolsCount": 4,
-    "totalSize": 87519,
-    "totalCount": 4
+    "devtoolsSize": 88530,
+    "devtoolsCount": 5,
+    "totalSize": 88530,
+    "totalCount": 5
+   },
+   "superreview": {
+    "devtoolsSize": 13180,
+    "devtoolsCount": 1,
+    "totalSize": 13180,
+    "totalCount": 1
    }
   },
   "jonas": {
@@ -2478,14 +2558,6 @@
     "devtoolsCount": 8,
     "totalSize": 537145,
     "totalCount": 8
-   }
-  },
-  "rcampbell": {
-   "review": {
-    "devtoolsSize": 3074,
-    "devtoolsCount": 1,
-    "totalSize": 3074,
-    "totalCount": 1
    }
   }
  }

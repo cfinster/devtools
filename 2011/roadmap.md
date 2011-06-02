@@ -6,9 +6,9 @@ layout: page
 # Developer Tools 2011 #
 
 Kevin Dangoor <kdangoor@mozilla.com>
-January 19, 2011
+May 27, 2011
 
-This document is a high-level plan for Mozilla developer tools releases after Firefox 4 and through the rest of 2011. We'll drill into the details of each part of this plan early in 2011.
+This document is the revised edition of the roadmap from January, 2011. The high level goals for the plan have not changed, but a number of the details have as we've dug into the implementation and grown our efforts.
 
 ## Vision ##
 
@@ -22,7 +22,7 @@ This year, we want to:
 To accomplish our goals for this year and set the stage for the challenging work that follows, we will take an approach that:
 
 * **Enables web developers to easily help with making the tools they use better**
-* **Gathers feedback via frequent releases**. Many developers are "early adopters" and would be willing to install Firefox add-ons to get new tools to make their lives better, as seen by the millions of users that have the Web Developer Toolbar and Firebug installed. We can take advantage of this to gather feedback and further encourage participation in the development of the tools.
+* **Gathers feedback via frequent releases**
 
 ## Our Priorities ##
 
@@ -34,49 +34,19 @@ To accomplish our goals for this year and set the stage for the challenging work
 
 Jetpacks and Firefox itself are built on many of the same technologies as the web. The same SpiderMonkey JavaScript engine that runs JS code on web pages is also responsible for a great deal of the Firefox user interface and for running Jetpacks. Where possible, we will engineer our work to support anyone who is building on the Mozilla platform, but our top priority for 2011 is to delight people building web applications.
 
-## Empowering Web Developers ##
-
-Web developers work with HTML, CSS and JavaScript every day. Jetpack provides programming interfaces (APIs) that are easy for web developers to work with and a "restartless" model that makes developing a Jetpack feel like the same kind of lightweight process as building a web application. Jetpack's APIs also make it easy for developers to dive in without having to learn much about how Firefox itself is put together.
-
-By creating a "developer tools software development kit (SDK)" that provides APIs designed to assist in building web applications, we make it easy for people with knowledge of JavaScript to dive in and build new tools. Developers will be able to use these APIs to provide new ways to visualize what's happening inside of the browser, or to help diagnose application problem areas.
-
-The APIs will allow developers to:
-
-* Control the flow of execution of JavaScript on the web page and query for the execution state (the stack, variables in scope, etc.) in order to build debuggers
-* Analyze and query the stylesheets in use on the page
-* Work with the HTML DOM
-* Retrieve events logged in the browser (JavaScript and CSS errors, network requests, content JavaScript-logged messages, other messages logged by browser internal systems)
-* Measure web application performance (JavaScript profiling, animation framerates, layout/styling performance)
-* Measure web application resource usage
-* Inspect modern application state (IndexedDB, localStorage, Web Workers, Web Sockets)
-* Provide informative displays that do not interfere with the operation of the page
-
-A comprehensive, documented set of APIs (along with introductory tutorials and screencasts) will help developers get going building their own tools.
-
-Further, these APIs will also help projects like Firebug by providing a straightforward and consistent interface to this kind of browser data. This work also ties in well with the "browser tools interface" work that the Firebug project is starting to undertake.
-
 ## Bundled Tools for the Most Common Tasks ##
 
-Firefox has a great add-on ecosystem, and the Developer Tools SDK will encourage the creation of even more add-ons for web developers. The needs of modern web sites and applications are far more significant than they used to be, and we'll rely on add-ons for handling many of the less common cases.
+Firefox has a great add-on ecosystem, and we want to encourage the creation of even more add-ons for web developers. The needs of modern web sites and applications are far more significant than they used to be, and we'll rely on add-ons for handling many of the less common cases.
 
-With that in mind, we do want Firefox to be a developer-friendly browser out-of-the-box. In Firefox 4, we are shipping the "web console" feature which provides users with insights into what their sites are doing and adds the de facto standard "console" object to the page. We also developed much of an "inspector" tool which provides a user interface for browsing the structure of the page, editing the CSS and HTML of the page and resolving styling issues.
+With that in mind, we do want Firefox to be a developer-friendly browser out-of-the-box. For a web developer, a browser without tools is useless. Every build of Firefox (releases, Nightly, Aurora, and Beta) should have functional tools.
 
-We will restructure these tools to work with the SDK, allowing them to serve as examples for other developers and to provide initial real-world tests for the SDK.
-
-The full suite of tools we will provide will touch upon all of the areas covered by the SDK. However, the approach that we will take in designing these tools is "task-oriented". Rather than developing a UI with the primary goal of exposing all of the available information, we will develop a UI that is expressly designed to cover many common needs of web developers.
+One goal we have for our tools is to offer "task-oriented" user interfaces. While it's important to dump the available information in some UI so that a web developer can figure out whatever they need to, we think the software can go farther to give the user direct solutions to common problems.
 
 More specifically,
 
-* Easy-to-use tools for diagnosing and correcting problems with page layout
+* Easy-to-use tools for diagnosing and correcting problems with page styling
 * A debugger for analyzing and correcting problems in JavaScript code
 * Views into the performance characteristics of an application
-
-While we want to provide tools that touch upon all areas of the SDK, the tools we ship with Firefox will be the ones that are:
-
-1. the most broadly useful
-2. the most polished
-
-Releasing tools initially as separate Jetpacks will allow us to iterate quickly and gather feedback while the tool is polished. That period may also help us determine if a tool is broadly useful enough to incorporate into the product.
 
 ## Supporting Open Web Standards via Tools ##
 
@@ -95,37 +65,21 @@ This won't be easy, and I won't even dive into specifics on how to do this here.
 
 Our "electrolysis" (e10s) project, which aims to change Firefox to a multi-process model in 2011, will have a significant impact on developer tools. We need to ensure that there is a solid collection of developer tools when the multi-process Firefox ships.
 
-The SDK is part of our strategy to get there. By designing the SDK with a multi-process architecture in mind, we can start working on tools *now*, well before e10s is complete. The implementation of the APIs will need to change to support e10s, but the tools themselves will be ready.
-
-Existing tools, including Firebug and the Web Developer Toolbar, will need to be updated for e10s. By encouraging developers to start adopting the SDK as soon as possible, we can have a smoother transition to the e10s Firefox for these and other popular add-ons.
+We will need to ensure that the tools that ship with Firefox are ready for e10s when the switchover is made. We will also look for opportunities to help web developer tool add-on authors prepare their tools for e10s.
 
 ## Frequent Releases ##
 
-Web developers need a stable, reliable browser for their day-to-day work but would likely be willing to try out new tools that will help them without impacting the normal operation of their browser.
+The rapid release cycle adopted after Firefox 4 enables us to get new features out the door every 6 weeks. This is a huge change from a Firefox 4-style cycle and will enable us to iterate and improve built-in tools much faster than before.
 
-We want to be able to start a feedback loop with developers early, so that we can know that our tools are solving the right problems in the right ways. To do this, our thinking is that we can release developer tools with a cycle like this:
+For experimental new tools, we will consider releasing the tools as add-ons first to get fast feedback, and then once the tool is stable and appears to have broad appeal, we'll bring it into the product.
 
-1. initially released as an add-on
-2. when we've reached a stable release point for common-use tools, we bake the add-on into Firefox
-3. updates to the code are then released as updated add-ons that override the built-in feature
-4. repeat from step 2
+## Empowering Web Developers ##
 
-This cycle will allow web developers to have greater input into the tools without running Minefield. And, since these users are developers themselves, more of that input can be in the form of code changes.
+The users of developer tools are all developers. Many of them know HTML, CSS and JavaScript very well indeed, and we will strive to make it as easy as possible for them to:
 
-# Process #
-
-Our work has the potential to touch a number of groups working on Mozilla projects and also has the potential for interest from a broad community of Mozilla contributors. To help make things more predictable and more easily collaborative, we're going to approach these new tools and the SDK with a bit more process than has traditionally been used. Specifically, for a given release we will create:
-
-* "light" functional specs – plain English descriptions of the main points of what the release will do
-* tech specs for more complex parts – if we need to gather input on *how* something will work, we will write that up in English with diagrams where appropriate, etc.
-* work breakdowns with estimates – it's difficult to have a predictable schedule without going through this step, and the schedule is important because we want to be sure that we have the tools we need when e10s ships
-
-The intention is to add just enough additional process to:
-
-1. communicate to other interested people what we're up to and how they could jump in or provide feedback
-2. maintain a reasonable schedule for the most important features
-
-Tying these documents to our frequent releases means that no single document should get large, boring and unwieldy.
+# extend the tools that ship with Firefox
+# improve/contribute to the tools that ship with Firefox
+# build entirely new tools of their own
 
 # Roadmap #
 
@@ -133,17 +87,25 @@ This is a high-level view of how we see 2011 going:
 
 ## Q1 (March 31) ##
 
-* Ship Firefox 4 with the Web Console
-* Ship Firebug 1.7 which is compatible with Firefox 4
-* Release initial devtools SDK with a small scope
-* Release an initial tool as a Jetpack
+* Ship Firefox 4 with the Web Console (done!)
+* Ship Firebug 1.7 which is compatible with Firefox 4 (done!)
+* Release initial devtools SDK with a small scope (back burner)
+* Release an initial tool as a Jetpack (sort of)
+
+During Q1, we discovered that the Add-on SDK (Jetpack) is not ideal at this stage for the kinds of tools we were building. Consequently, we shifted our focus away from the devtools SDK to building tools directly as Firefox features.
+
+We did release the Scratchpad tool as a traditional add-on in Q1. This tool ships in Firefox 6.
 
 ## Q2 (June 30) ##
 
-* Expand the devtools SDK
-* Release Web Console and Inspector updates on the expanded SDK
-* Initial prototype debugger
-* Portions of Firebug run as a Jetpack on top of the devtools SDK
+* Expand the devtools SDK (back burner)
+* Release Web Console and Inspector updates on the expanded SDK (scrapped - sort of)
+* Initial prototype debugger (in-progress)
+* Portions of Firebug run as a Jetpack on top of the devtools SDK (scrapped)
+
+While we do plan to have a devtools SDK (or, more specifically, devtools-oriented APIs that are a part of the Add-on SDK), this is on hold until we get more tools out.
+
+With that change in plans relative to the SDK, we are leaving the Web Console and Highlighter (formerly Inspector) as native Firefox features.
 
 ## Q3 (September 30) ##
 
