@@ -140,6 +140,17 @@
     "superreview": []
    }
   },
+  "654962": {
+   "summary": "GCLI needs a demo",
+   "status": "VERIFIED",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "654068": {
    "summary": "Style Inspector rows should show visual indicator when there are unmatched rules but not matched rules",
    "status": "RESOLVED",
@@ -151,17 +162,6 @@
     "superreview": []
    },
    "patchSize": 5570
-  },
-  "654962": {
-   "summary": "GCLI needs a demo",
-   "status": "RESOLVED",
-   "assignedName": "jwalker",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
   },
   "653568": {
    "summary": "GCLI re-creates nodes in the RequestView/ArgFetcher too often",
@@ -764,7 +764,7 @@
   },
   "657677": {
    "summary": "Require.jsm needs unit tests before it can be used by GCLI",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "nobody",
    "hasPatch": false,
    "flags": {

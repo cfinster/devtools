@@ -50,6 +50,7 @@
             "646524 cache the sandboxes"
             "657136 Rename top-level Context menu to something less confusing"
             "657131 Create an Execute menu"
+            "660560 pressing Tab should indent"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -98,6 +99,7 @@
             "650780 evaluating a null object returns TypeError: aObject is null"
             "659910 console.log from Scratchpad sends people to Scratchpad.com"
             "659778 Autocomplete is behind the console window"
+            "633204 Autocomplete isn't fully cleared on ctrl+backspace"
         ],
         updates: [
             "2011/05/23 Security review complete"
@@ -126,6 +128,7 @@
             "587134 Context menu item for Highlight Element"
             "566084 disabled when navigating to new pages"
             "566085 tracking DOM changes"
+            "660606 allow registration of developer tools"
         ]
     }
     {
@@ -207,6 +210,21 @@
             "657677 Require.jsm unit tests"
             "658756 Experiment with popup UI for GCLI"
             "659889 GCLI should autostart"
+            "661172 popup menu should be accessible"
+            "660765 Simplify Requisition._onAssignmentChange"
+            "660220 commands are double executed in Firefox"
+        ]
+    }
+    {
+        id: "codeeditor"
+        name: "Code Editor"
+        blurb: "better editing for your codes"
+        url: "https://wiki.mozilla.org/DevTools/Features/CodeEditor"
+        target: 7
+        status: "Implementation"
+        people: ["msucan"]
+        bugs: [
+            "660784 Add a source code editor to the browser"
         ]
     }
     {
@@ -321,6 +339,9 @@
             "653110 undefined appended after pasted text"
             "656461 Web Console calls getters when displaying an object"
             "659931 Clicking on position button changes position"
+            "660910 Autocompletion doesn't support this.x"
+            "660864 completeNode is accepting keyboard input"
+            "660806 autocomplete shows during history navigation"
         ]
     }
     {
@@ -443,6 +464,7 @@
             "656544 More intuitive keyboard shortcuts"
             "656701 Scratchpad missing a menu overlay"
             "658006 Scratchpad breaks if you close the tab it's running in"
+            "661289 Save file prompts twice to overwrite existing files"
         ]
     }
     {
