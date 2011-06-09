@@ -34,7 +34,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 20416
+   "patchSize": 22339
   },
   "646028": {
    "summary": "Add debug filter item to the Web Developer toolbar dropdown in Web Console",
@@ -111,12 +111,12 @@
     "review": [
      {
       "status": "-",
-      "setter": "mihai.sucan"
+      "setter": "dtownsend"
      }
     ],
     "superreview": []
    },
-   "patchSize": 3592
+   "patchSize": 13084
   },
   "630460": {
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
@@ -490,19 +490,10 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     },
-     {
-      "status": "-",
-      "setter": "dtownsend"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 2520
+   "patchSize": 10393
   },
   "653082": {
    "summary": "Style Inspector stylesheet selector should be removed",
@@ -524,13 +515,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "-",
-      "setter": "sdwilsh"
+      "status": "?",
+      "requestee": "sdwilsh",
+      "setter": "past"
      }
     ],
     "superreview": []
    },
-   "patchSize": 18817
+   "patchSize": 18947
   },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
@@ -1210,13 +1202,7 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
    "patchSize": 44266
@@ -1345,7 +1331,7 @@
    "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
    "status": "ASSIGNED",
    "assignedName": "past",
-   "whiteboard": "[scratchpad][console][view-source]",
+   "whiteboard": "[scratchpad][console][view-source][fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1355,9 +1341,8 @@
       "setter": "rcampbell"
      },
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "past"
+      "status": "+",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -1641,16 +1626,11 @@
    "assignedName": "past",
    "hasPatch": true,
    "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     }
-    ],
+    "feedback": [],
     "review": [],
     "superreview": []
    },
-   "patchSize": 12850
+   "patchSize": 26916
   },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
@@ -1907,7 +1887,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 16887
+   "patchSize": 16415
   },
   "590799": {
    "summary": "Styling for the CSS editor panel",
@@ -2181,14 +2161,13 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "jonas",
-      "setter": "hsivonen"
+      "status": "+",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
    },
-   "patchSize": 186700
+   "patchSize": 3461
   },
   "619598": {
    "summary": "Up and Down does not retrieve command history in the same way as other consoles",
@@ -2380,15 +2359,10 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "-",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 146010
+   "patchSize": 61006
   },
   "587752": {
    "summary": "Animations in the new Style panel",
@@ -2411,13 +2385,12 @@
     "review": [],
     "superreview": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "past"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ]
    },
-   "patchSize": 13180
+   "patchSize": 13174
   },
   "637291": {
    "summary": "Add titlebar and name attributes to Panels",
@@ -2524,9 +2497,9 @@
  "reviewQueues": {
   "dtownsend": {
    "review": {
-    "devtoolsSize": 20416,
+    "devtoolsSize": 22339,
     "devtoolsCount": 1,
-    "totalSize": 20416,
+    "totalSize": 22339,
     "totalCount": 1
    }
   },
@@ -2538,25 +2511,27 @@
     "totalCount": 3
    }
   },
+  "sdwilsh": {
+   "review": {
+    "devtoolsSize": 18947,
+    "devtoolsCount": 1,
+    "totalSize": 18947,
+    "totalCount": 1
+   }
+  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 88530,
-    "devtoolsCount": 5,
-    "totalSize": 88530,
-    "totalCount": 5
-   },
-   "superreview": {
-    "devtoolsSize": 13180,
-    "devtoolsCount": 1,
-    "totalSize": 13180,
-    "totalCount": 1
+    "devtoolsSize": 37126,
+    "devtoolsCount": 2,
+    "totalSize": 37126,
+    "totalCount": 2
    }
   },
   "jonas": {
    "review": {
-    "devtoolsSize": 537145,
+    "devtoolsSize": 538323,
     "devtoolsCount": 8,
-    "totalSize": 537145,
+    "totalSize": 538323,
     "totalCount": 8
    }
   }

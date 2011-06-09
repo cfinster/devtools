@@ -51,6 +51,7 @@
             "657136 Rename top-level Context menu to something less confusing"
             "657131 Create an Execute menu"
             "660560 pressing Tab should indent"
+            "661762 Scratchpad source link may focus the wrong window"
         ]
         updates: [
             "2011/04/14 Security review complete"
