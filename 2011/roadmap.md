@@ -6,7 +6,7 @@ layout: page
 # Developer Tools 2011 #
 
 Kevin Dangoor <kdangoor@mozilla.com>
-May 27, 2011
+June 9, 2011
 
 This document is the revised edition of the roadmap from January, 2011. The high level goals for the plan have not changed, but a number of the details have as we've dug into the implementation and grown our efforts.
 
@@ -38,7 +38,7 @@ Jetpacks and Firefox itself are built on many of the same technologies as the we
 
 Firefox has a great add-on ecosystem, and we want to encourage the creation of even more add-ons for web developers. The needs of modern web sites and applications are far more significant than they used to be, and we'll rely on add-ons for handling many of the less common cases.
 
-With that in mind, we do want Firefox to be a developer-friendly browser out-of-the-box. For a web developer, a browser without tools is useless. Every build of Firefox (releases, Nightly, Aurora, and Beta) should have functional tools.
+With that in mind, we do want Firefox to be a developer-friendly browser out-of-the-box. For a web developer, a browser without tools is useless. Every build of Firefox (Nightly, Aurora, Beta and final releases) should have functional tools.
 
 One goal we have for our tools is to offer "task-oriented" user interfaces. While it's important to dump the available information in some UI so that a web developer can figure out whatever they need to, we think the software can go farther to give the user direct solutions to common problems.
 
@@ -50,28 +50,34 @@ More specifically,
 
 ## Supporting Open Web Standards via Tools ##
 
-Ideally, every person using web sites and applications is using a modern browser with support for the latest standards. Of course, even this ideal scenario falls short of the ideal: what are the "latest standards"? The "HTML5" standard is still evolving and there has been considerable churn in areas like Web Sockets and IndexedDB vs. Web SQL Database.
+Ideally, every person using web sites and applications is using a modern browser with support for the latest standards. Of course, even this ideal scenario falls short of the ideal: what are the "latest standards"? HTML is a living standard and there has been considerable churn in areas like Web Sockets and IndexedDB vs. Web SQL Database.
 
 Among the many user interface challenges that we face, we want our tools to:
 
 1. provide support for and encourage users to develop for the latest standards supported by modern browsers
 2. assist users in making good tradeoffs when they need to support older browsers
 
-Most web developers are given constraints concerning which browsers they must support, with some developers saddled with a requirement to support a nearly decade old browser. If we can help developers both provide support for the browsers they are required to support *and* take advantage of newer browser features, we will be making the web a better place.
+Most web developers are given constraints concerning which browsers they must support, with some developers saddled with a requirement to support a decade old browser. If we can help developers both provide support for the browsers they are required to support *and* take advantage of newer browser features, we will be making the web a better place.
 
 This won't be easy, and I won't even dive into specifics on how to do this here. I'm writing this as a guideline that we can apply and one more thing to think about as we design new tools.
 
-## Multi-Process Firefox ##
+## More Complex Firefox Process Model ##
 
 Our "electrolysis" (e10s) project, which aims to change Firefox to a multi-process model in 2011, will have a significant impact on developer tools. We need to ensure that there is a solid collection of developer tools when the multi-process Firefox ships.
 
-We will need to ensure that the tools that ship with Firefox are ready for e10s when the switchover is made. We will also look for opportunities to help web developer tool add-on authors prepare their tools for e10s.
+The tools that ship with Firefox will be ready for e10s when the switchover is made, and we will look for opportunities to help web developer tool add-on authors prepare their tools as well.
+
+There is a second shift that is happening at the same time: the increased importance of mobile browsers including Firefox for Mobile. Due to the screen size limitations of mobile devices, we're effectively going from a "single layer" developer tools model to one with three layers:
+
+-- single firefox process --
+
+-- developer tools UI -- Firefox chrome process -- Firefox content process
 
 ## Frequent Releases ##
 
 The rapid release cycle adopted after Firefox 4 enables us to get new features out the door every 6 weeks. This is a huge change from a Firefox 4-style cycle and will enable us to iterate and improve built-in tools much faster than before.
 
-For experimental new tools, we will consider releasing the tools as add-ons first to get fast feedback, and then once the tool is stable and appears to have broad appeal, we'll bring it into the product.
+For experimental new tools, we will consider releasing the tools as add-ons first to get fast feedback. Once the tool is stable and appears to have broad appeal, we'll bring it into the product.
 
 ## Empowering Web Developers ##
 
@@ -94,7 +100,7 @@ This is a high-level view of how we see 2011 going:
 
 During Q1, we discovered that the Add-on SDK (Jetpack) is not ideal at this stage for the kinds of tools we were building. Consequently, we shifted our focus away from the devtools SDK to building tools directly as Firefox features.
 
-We did release the Scratchpad tool as a traditional add-on in Q1. This tool ships in Firefox 6.
+We did release the Scratchpad tool as a traditional add-on in Q1. This tool will ship in Firefox 6.
 
 ## Q2 (June 30) ##
 

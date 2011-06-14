@@ -27,9 +27,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "dtownsend",
-      "setter": "jwalker"
+      "status": "-",
+      "setter": "dtownsend"
      }
     ],
     "superreview": []
@@ -110,13 +109,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "-",
-      "setter": "dtownsend"
+      "status": "?",
+      "requestee": "dtownsend",
+      "setter": "past"
      }
     ],
     "superreview": []
    },
-   "patchSize": 13084
+   "patchSize": 12866
   },
   "630460": {
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
@@ -279,9 +279,10 @@
    "patchSize": 7548
   },
   "659775": {
-   "summary": "When the Web Console is in a separate window, Cmd+W should close it",
+   "summary": "When the Web Console is in a separate window, Ctrl+W/Cmd+W should close it",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[testday-20110610]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -312,10 +313,10 @@
     "superreview": []
    }
   },
-  "653142": {
-   "summary": "Create a pilot.jsm javascript module for use with GCLI/Ace",
+  "653979": {
+   "summary": "WebConsole UI should have toggle to switch from JS mode to command mode (GCLI)",
    "status": "RESOLVED",
-   "assignedName": "jwalker",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -323,10 +324,10 @@
     "superreview": []
    }
   },
-  "653979": {
-   "summary": "WebConsole UI should have toggle to switch from JS mode to command mode (GCLI)",
-   "status": "NEW",
-   "assignedName": "nobody",
+  "653142": {
+   "summary": "Create a pilot.jsm javascript module for use with GCLI/Ace",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -522,7 +523,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 18947
+   "patchSize": 20517
   },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
@@ -698,7 +699,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 11919
+   "patchSize": 15296
   },
   "657932": {
    "summary": "Web Console lacks symmetry in the handling of enter and escape keys during autocompletion",
@@ -711,22 +712,9 @@
     "superreview": []
    }
   },
-  "637801": {
-   "summary": "console.log shouldn't display escaped strings",
-   "status": "VERIFIED",
-   "assignedName": "dherman",
-   "whiteboard": "[console-1][has-patch]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 6910
-  },
   "657292": {
    "summary": "Firefox 6.0a1 Crash Report [@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder(JSContext*, JSObject*, JSObject*) ][@ xpc::XrayWrapper<JSCrossCompartmentWrapper>::createHolder ]",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "mrbkap",
    "whiteboard": "[firebug-p1] fixed-in-tracemonkey [tracking requirement in comment 28]",
    "hasPatch": true,
@@ -741,6 +729,19 @@
     "superreview": []
    },
    "patchSize": 2552
+  },
+  "637801": {
+   "summary": "console.log shouldn't display escaped strings",
+   "status": "VERIFIED",
+   "assignedName": "dherman",
+   "whiteboard": "[console-1][has-patch]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 6910
   },
   "622303": {
    "summary": "Web Console should remember filter settings.",
@@ -1240,6 +1241,7 @@
    "summary": "Web Console window panel changes its position when partially off-screen",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[testday-20110610]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1325,13 +1327,13 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 3928
+   "patchSize": 3857
   },
   "659910": {
    "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
    "status": "ASSIGNED",
    "assignedName": "past",
-   "whiteboard": "[scratchpad][console][view-source][fixed-in-devtools]",
+   "whiteboard": "[scratchpad][console][view-source][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1527,14 +1529,20 @@
    "flags": {
     "feedback": [
      {
-      "status": "-",
+      "status": "+",
+      "setter": "paul"
+     }
+    ],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "dietrich",
       "setter": "mihai.sucan"
      }
     ],
-    "review": [],
     "superreview": []
    },
-   "patchSize": 146444
+   "patchSize": 158843
   },
   "588941": {
    "summary": "Computed style for property is sometimes wrong in the new Style panel",
@@ -1630,7 +1638,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 26916
+   "patchSize": 19387
   },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
@@ -1887,7 +1895,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 16415
+   "patchSize": 16380
   },
   "590799": {
    "summary": "Styling for the CSS editor panel",
@@ -2268,7 +2276,7 @@
    "summary": "Memory consumption increases when registering a stream listener.",
    "status": "REOPENED",
    "assignedName": "general",
-   "whiteboard": "[firebug-p1][Requesting blocking .x]",
+   "whiteboard": "[firebug-p1][Requesting blocking .x][MemShrink:P2]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2359,10 +2367,16 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "dolske",
+      "setter": "mratcliffe"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 61006
+   "patchSize": 159123
   },
   "587752": {
    "summary": "Animations in the new Style panel",
@@ -2482,9 +2496,9 @@
   },
   "653528": {
    "summary": "Strip out Style and DOM panels and support code from Inspector.",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "rcampbell",
-   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem][fixed-in-devtools]",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][killthem][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -2497,9 +2511,9 @@
  "reviewQueues": {
   "dtownsend": {
    "review": {
-    "devtoolsSize": 22339,
+    "devtoolsSize": 12866,
     "devtoolsCount": 1,
-    "totalSize": 22339,
+    "totalSize": 12866,
     "totalCount": 1
    }
   },
@@ -2513,18 +2527,26 @@
   },
   "sdwilsh": {
    "review": {
-    "devtoolsSize": 18947,
+    "devtoolsSize": 20517,
     "devtoolsCount": 1,
-    "totalSize": 18947,
+    "totalSize": 20517,
     "totalCount": 1
    }
   },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 37126,
+    "devtoolsSize": 37091,
     "devtoolsCount": 2,
-    "totalSize": 37126,
+    "totalSize": 37091,
     "totalCount": 2
+   }
+  },
+  "dietrich": {
+   "review": {
+    "devtoolsSize": 158843,
+    "devtoolsCount": 1,
+    "totalSize": 158843,
+    "totalCount": 1
    }
   },
   "jonas": {
@@ -2533,6 +2555,14 @@
     "devtoolsCount": 8,
     "totalSize": 538323,
     "totalCount": 8
+   }
+  },
+  "dolske": {
+   "review": {
+    "devtoolsSize": 159123,
+    "devtoolsCount": 1,
+    "totalSize": 159123,
+    "totalCount": 1
    }
   }
  }

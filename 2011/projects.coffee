@@ -52,6 +52,7 @@
             "657131 Create an Execute menu"
             "660560 pressing Tab should indent"
             "661762 Scratchpad source link may focus the wrong window"
+            "663746 Change Scratchpad shortcut key to something other than F4"
         ]
         updates: [
             "2011/04/14 Security review complete"
@@ -101,6 +102,7 @@
             "659910 console.log from Scratchpad sends people to Scratchpad.com"
             "659778 Autocomplete is behind the console window"
             "633204 Autocomplete isn't fully cleared on ctrl+backspace"
+            "663443 No indication to which tab a Web Console belongs"
         ],
         updates: [
             "2011/05/23 Security review complete"
@@ -113,7 +115,7 @@
         blurb: "Beautiful information about your DOM"
         status: "Implementation"
         target: 7
-        people: ["rcampbell"]
+        people: ["rcampbell", "paul"]
         bugs: [
             "642471 Rewrite PanelHighlighter using transparent xul iframe"
             "650802 Create some controller UI"
@@ -130,6 +132,10 @@
             "566084 disabled when navigating to new pages"
             "566085 tracking DOM changes"
             "660606 allow registration of developer tools"
+            "663100 Re-implement highlighting mechanism in HTML+flexbox"
+            "663781 Once a node is locked, the black background should be removed"
+            "663778 Draw layout information of the selected node"
+            "663834 registerTools() should allow tools to be docked in the browser"
         ]
     }
     {
@@ -167,6 +173,7 @@
             "654068 Show visual indicator when there are unmatched rules but not matched rules"
             "654069 \"Effects and Other\" group should be extracted into more than 1 group"
             "654430 Unmatched rules do not work for string values"
+            "663831 Should be controllable from the Highlighter"
         ]
     }
     {
@@ -214,6 +221,8 @@
             "661172 popup menu should be accessible"
             "660765 Simplify Requisition._onAssignmentChange"
             "660220 commands are double executed in Firefox"
+            "663120 Simple (help-free) GCLI UI needs polish"
+            "663124 Simple help-free version of GCLI has 1 string needing localization"
         ]
     }
     {
@@ -233,8 +242,8 @@
         name: "View Source Reboot"
         blurb: "The View Source of the Future"
         status: "Planning"
-        target: 7
-        people: ["msucan", "getify"]
+        target: 8
+        people: []
         bugs: [
             "650893 New View Source component"
             "650895 Initial implementation of the new View Source tool"
@@ -315,6 +324,7 @@
             "658368 Expand console object with time and timeEnd methods"
             "659625 Expand console object with clear method"
             "659907 Expand console object with dir method"
+            "664131 Expand console object with group methods"
             "614586 Implement string substitution in console API methods"
             "638949 Copy Location for URLs"
             "646028 Add debug filter item to the toolbar"
@@ -355,6 +365,19 @@
         bugs: [
             "659807 Implement Tilt: a WebGL-based 3D visualization of a webpage"
             "653658 JavaScript implementation of MOZ_dom_element_texture extension"
+        ]
+    }
+    {
+        id: "webconsole8"
+        name: "Web Console 8"
+        blurb: "Console refinement, remoting?"
+        url: "https://wiki.mozilla.org/DevTools/Features/WebConsole8"
+        status: "Planning"
+        people: []
+        bugs: [
+            "663151 Display IP address and IP version in network panel"
+            "663366 Full-screen web console is missing toolbar"
+            "662807 Error bubbles in multiline messages in console look silly"
         ]
     }
     {
@@ -419,7 +442,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/JSD2"
         name: "JSD2"
         blurb: "Debugging the multiprocess world"
-        status: "Planning"
+        status: "Implementation"
         people: ["jblandy"]
         bugs: [
             "560314"
@@ -445,7 +468,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined"
         name: "Scratchpad 7"
         blurb: "The refined, humane way to engage in software development experiments."
-        status: "Planning"
+        status: "Implementation"
         target: 7
         people: []
         bugs: [
@@ -466,6 +489,16 @@
             "656701 Scratchpad missing a menu overlay"
             "658006 Scratchpad breaks if you close the tab it's running in"
             "661289 Save file prompts twice to overwrite existing files"
+        ]
+    }
+    {
+        id: "scratchpad8"
+        name: "Scratchpad 8"
+        status: "Planning"
+        target: 8
+        people: []
+        bugs: [
+            "663380 Restore Scratchpad after Firefox crash"
         ]
     }
     {
@@ -597,5 +630,11 @@
         name: "Jonas Sicking"
         avatar: "http://gravatar.com/avatar/12de552ffa2a81f8a03733071b70caaa"
         bugzillaId: "jonas@sicking.cc"
+    }
+    {
+        id: "paul"
+        name: "Paul Rouget"
+        avatar: "http://gravatar.com/avatar/a046f67399acec21282d784ac66cb009"
+        bugzillaId: "paul@mozilla.com"
     }
 ]
