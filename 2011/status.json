@@ -57,6 +57,17 @@
     "superreview": []
    }
   },
+  "660910": {
+   "summary": "[Web Console] The autocompletion mechanism doesn't support \"this.xxx\"",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "653221": {
    "summary": "Create Web Developer Sub-menu in the Tools menu",
    "status": "VERIFIED",
@@ -109,9 +120,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "dtownsend",
-      "setter": "past"
+      "status": "+",
+      "setter": "dtownsend"
      }
     ],
     "superreview": []
@@ -196,6 +206,17 @@
     "superreview": []
    }
   },
+  "663120": {
+   "summary": "Simple (help-free) GCLI UI needs polish",
+   "status": "NEW",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "641903": {
    "summary": "[meta] GCLI needs a command registry",
    "status": "NEW",
@@ -219,6 +240,18 @@
     "review": [],
     "superreview": []
    }
+  },
+  "663778": {
+   "summary": "[highlighter] Draw layout information of the selected node",
+   "status": "NEW",
+   "assignedName": "paul",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 5219
   },
   "658202": {
    "summary": "CSS Doctor needs a way to select inline rules to ask why they don't work",
@@ -277,6 +310,17 @@
     "superreview": []
    },
    "patchSize": 7548
+  },
+  "660606": {
+   "summary": "Highlighter should allow registration of developer tools",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "659775": {
    "summary": "When the Web Console is in a separate window, Ctrl+W/Cmd+W should close it",
@@ -356,6 +400,17 @@
     "superreview": []
    },
    "patchSize": 21736
+  },
+  "663746": {
+   "summary": "Change Scratchpad shortcut key to something other than F4",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "653427": {
    "summary": "No save dialog is displayed before closing workspaces window",
@@ -471,6 +526,17 @@
    },
    "patchSize": 1134
   },
+  "661289": {
+   "summary": "Scratchpad Save File prompts to overwrite existing files twice.",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "642189": {
    "summary": "GCLI should support grouped parameters",
    "status": "RESOLVED",
@@ -555,6 +621,17 @@
    },
    "patchSize": 13990
   },
+  "663834": {
+   "summary": "Highlighter's registerTools() method should allow tools to be docked in the browser",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "589375": {
    "summary": "Inspector: style panel keyboard access",
    "status": "NEW",
@@ -623,6 +700,17 @@
     "superreview": []
    }
   },
+  "663124": {
+   "summary": "Simple help-free version of GCLI has 1 string needing localization",
+   "status": "NEW",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "646070": {
    "summary": "Respect chrome developer tools preference in workspace",
    "status": "VERIFIED",
@@ -670,6 +758,18 @@
     "superreview": []
    },
    "patchSize": 1250
+  },
+  "663380": {
+   "summary": "Restore Scratchpad window after a Firefox kill/crash",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[testday-20110610]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "642400": {
    "summary": "Ace/Pilot/GCLI doesn't have a good definition of the environment",
@@ -766,6 +866,25 @@
     "superreview": []
    }
   },
+  "660560": {
+   "summary": "Scratchpad lacks indentation, pressing TAB key should indent code",
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[scratchpad]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "dietrich",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 9341
+  },
   "659710": {
    "summary": "[htmltree] add attribute editing",
    "status": "NEW",
@@ -811,11 +930,10 @@
     "superreview": []
    }
   },
-  "650802": {
-   "summary": "Create some controller UI for the Highlighter",
+  "660864": {
+   "summary": "completeNode is accepting keyboard input",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -828,6 +946,18 @@
    "status": "NEW",
    "assignedName": "nobody",
    "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "650802": {
+   "summary": "Create some controller UI for the Highlighter",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -863,6 +993,34 @@
     "superreview": []
    },
    "patchSize": 1202
+  },
+  "663831": {
+   "summary": "Style inspector should be controllable from the highlighter",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "663100": {
+   "summary": "[highlighter] Re-implement the highlighting mechanism in HTML + flex box model",
+   "status": "RESOLVED",
+   "assignedName": "paul",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 8278
   },
   "650895": {
    "summary": "initial implementation of the new View Source tool",
@@ -997,6 +1155,17 @@
     "superreview": []
    }
   },
+  "660220": {
+   "summary": "GCLI double executes commands when embedded in Firefox",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "612252": {
    "summary": "\"clear console\" needs a keyboard shortcut in a bad way",
    "status": "ASSIGNED",
@@ -1019,6 +1188,17 @@
    "summary": "GCLI should auto-start",
    "status": "RESOLVED",
    "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "661762": {
+   "summary": "Scratchpad source link may focus the wrong Scratchpad window",
+   "status": "ASSIGNED",
+   "assignedName": "past",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1282,6 +1462,24 @@
     "superreview": []
    }
   },
+  "660784": {
+   "summary": "Add the Orion source code editor to the browser",
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "mihai.sucan"
+     }
+    ],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 253376
+  },
   "643184": {
    "summary": "Checkbox menu items in a toolbar do not display the check mark when checked in Firefox 4 on Mac OS X",
    "status": "NEW",
@@ -1304,6 +1502,28 @@
     "review": [],
     "superreview": []
    }
+  },
+  "659910": {
+   "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[scratchpad][console][view-source][fixed-in-devtools][merged-to-mozilla-central]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "+",
+      "setter": "gavin.sharp"
+     }
+    ],
+    "superreview": []
+   },
+   "patchSize": 1011
   },
   "641234": {
    "summary": "Implement unique objectId for JavaScript object debugging",
@@ -1328,28 +1548,6 @@
     "superreview": []
    },
    "patchSize": 3857
-  },
-  "659910": {
-   "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
-   "status": "ASSIGNED",
-   "assignedName": "past",
-   "whiteboard": "[scratchpad][console][view-source][fixed-in-devtools][merged-to-mozilla-central]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "rcampbell"
-     },
-     {
-      "status": "+",
-      "setter": "gavin.sharp"
-     }
-    ],
-    "superreview": []
-   },
-   "patchSize": 1011
   },
   "653658": {
    "summary": "JavaScript implementation of WebGL MOZ_dom_element_texture extension",
@@ -1437,6 +1635,17 @@
     "superreview": []
    },
    "patchSize": 18533
+  },
+  "662807": {
+   "summary": "Error bubbles for multiline messages in console look silly",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "642615": {
    "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -1579,6 +1788,17 @@
     "superreview": []
    },
    "patchSize": 20708
+  },
+  "661172": {
+   "summary": "The GCLI popup menu should be accessible in addition to the main command line",
+   "status": "NEW",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "653110": {
    "summary": "WebConsole appends \"undefined\" after a pasted text when right arrow is pressed",
@@ -1866,6 +2086,17 @@
     "superreview": []
    }
   },
+  "660765": {
+   "summary": "GCLI Requisition._onAssignmentChange could be simplified",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "642238": {
    "summary": "GCLI metadata should have types on return values",
    "status": "RESOLVED",
@@ -1901,6 +2132,29 @@
    "summary": "Styling for the CSS editor panel",
    "status": "ASSIGNED",
    "assignedName": "cedricv",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "633204": {
+   "summary": "Autocomplete in the Web Console isn't fully cleared on ctrl+backspace",
+   "status": "VERIFIED",
+   "assignedName": "nobody",
+   "whiteboard": "[console-1]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "660806": {
+   "summary": "Autocomplete shows during history navigation",
+   "status": "NEW",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2202,6 +2456,18 @@
     "superreview": []
    }
   },
+  "664131": {
+   "summary": "Expand console object with group methods",
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 12487
+  },
   "650780": {
    "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
    "status": "VERIFIED",
@@ -2235,6 +2501,18 @@
     "review": [],
     "superreview": []
    }
+  },
+  "663781": {
+   "summary": "[highlighter] Once a node is locked, the black background should be removed",
+   "status": "NEW",
+   "assignedName": "paul",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 3600
   },
   "657136": {
    "summary": "Rename top-level Context menu to something less confusing in Scratchpad",
@@ -2296,10 +2574,33 @@
     "superreview": []
    }
   },
+  "663443": {
+   "summary": "No indication to which tab a Web Console window belongs (esp. an empty one)",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[fx6][testday-20110610]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "591582": {
    "summary": "Style Panel CSS properties are limited to hard coded values",
    "status": "RESOLVED",
    "assignedName": "mratcliffe",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
+  "663151": {
+   "summary": "[webconsole] Display IP address and IP version (v4 or v6) in the network panel",
+   "status": "NEW",
+   "assignedName": "nobody",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2359,6 +2660,18 @@
     "superreview": []
    }
   },
+  "663366": {
+   "summary": "Going Fullscreen (Win -> F11) while Web Console is in window mode loses the options bar in the Web Console",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[testday-20110610]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "582596": {
    "summary": "Style view centered around answering common CSS questions",
    "status": "ASSIGNED",
@@ -2378,17 +2691,6 @@
    },
    "patchSize": 159123
   },
-  "587752": {
-   "summary": "Animations in the new Style panel",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
   "659625": {
    "summary": "Expand console object with clear method",
    "status": "ASSIGNED",
@@ -2405,6 +2707,17 @@
     ]
    },
    "patchSize": 13174
+  },
+  "587752": {
+   "summary": "Animations in the new Style panel",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
   },
   "637291": {
    "summary": "Add titlebar and name attributes to Panels",
@@ -2509,14 +2822,6 @@
   }
  },
  "reviewQueues": {
-  "dtownsend": {
-   "review": {
-    "devtoolsSize": 12866,
-    "devtoolsCount": 1,
-    "totalSize": 12866,
-    "totalCount": 1
-   }
-  },
   "bzbarsky": {
    "review": {
     "devtoolsSize": 34846,
@@ -2533,20 +2838,20 @@
     "totalCount": 1
    }
   },
+  "dietrich": {
+   "review": {
+    "devtoolsSize": 168184,
+    "devtoolsCount": 2,
+    "totalSize": 168184,
+    "totalCount": 2
+   }
+  },
   "gavin.sharp": {
    "review": {
     "devtoolsSize": 37091,
     "devtoolsCount": 2,
     "totalSize": 37091,
     "totalCount": 2
-   }
-  },
-  "dietrich": {
-   "review": {
-    "devtoolsSize": 158843,
-    "devtoolsCount": 1,
-    "totalSize": 158843,
-    "totalCount": 1
    }
   },
   "jonas": {
