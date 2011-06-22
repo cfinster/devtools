@@ -71,6 +71,14 @@
       people: ["mratcliffe"],
       bugs: ["582596 Style view answering common CSS questions", "656220 Create styleInspector obj. containing cssLogic & cssHtmlTree, open/close methods", "656027 It should be possible to pref out the Style Inspector", "586974 All unmatched rules are ranked the same", "593331 Csslogic shortSource can create duplicate names", "583037 Better logic for placement of inspector panels", "590536 Inspector panels should remember at least size and ideally also position", "587752 Animations in the new Style panel", "593345 Investigate an advanced test tool for the inspector style panel", "585563 The inspector style panel should link to the CSS editor", "590796 Clicking on a rule doesn't jump to the correct line in the CSS editor", "589264 Add option to choose an alternative media type", "589375 Keyboard access", "591212 React to dynamic changes to the stylesheets", "591584 Localize the URLs in csshtmltree", "591902 Automatic display of localized content", "574347 Opening the HUD with Inspector open causes Style Panel to move", "586977 Investigate how the panel works with shorthand properties", "588941 Computed style for property is sometimes wrong", "591582 Style Panel CSS properties are limited to hard coded values", "652509 Style inspector should skip unsupported styles", "653082 Stylesheet selector should be removed", "653084 Specificity should be removed", "654068 Show visual indicator when there are unmatched rules but not matched rules", "654069 \"Effects and Other\" group should be extracted into more than 1 group", "654430 Unmatched rules do not work for string values", "663831 Should be controllable from the Highlighter"]
     }, {
+      id: "highlighter8",
+      name: "Highlighter 8",
+      blurb: "Making the Highlighter sparkle",
+      status: "Planning",
+      target: 8,
+      people: ["rcampbell", "paul"],
+      bugs: ["663778 Draw layout information"]
+    }, {
       id: "gcli",
       url: "https://wiki.mozilla.org/DevTools/Features/GCLI",
       name: "Graphical Command Line Interface",
@@ -139,7 +147,7 @@
       status: "Planning",
       target: 7,
       people: [],
-      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "659907 Expand console object with dir method", "664131 Expand console object with group methods", "614586 Implement string substitution in console API methods", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar", "643184 Checkbox menu items in a toolbar do not display the checkmark when checked", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "646816 command-w binding for dismissing panels", "659775 command-w to close separate Web Console window", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object", "659931 Clicking on position button changes position", "660910 Autocompletion doesn't support this.x", "660864 completeNode is accepting keyboard input", "660806 autocomplete shows during history navigation"]
+      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "659907 Expand console object with dir method", "664131 Expand console object with group methods", "614586 Implement string substitution in console API methods", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "646816 command-w binding for dismissing panels", "659775 command-w to close separate Web Console window", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object", "659931 Clicking on position button changes position", "660910 Autocompletion doesn't support this.x", "660864 completeNode is accepting keyboard input", "660806 autocomplete shows during history navigation"]
     }, {
       id: "tilt",
       name: "Tilt",
@@ -155,7 +163,7 @@
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsole8",
       status: "Planning",
       people: [],
-      bugs: ["663151 Display IP address and IP version in network panel", "663366 Full-screen web console is missing toolbar", "662807 Error bubbles in multiline messages in console look silly"]
+      bugs: ["663151 Display IP address and IP version in network panel", "663366 Full-screen web console is missing toolbar", "662807 Error bubbles in multiline messages in console look silly", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar"]
     }, {
       id: "sdk",
       url: "https://wiki.mozilla.org/DevTools/Features/SDK",

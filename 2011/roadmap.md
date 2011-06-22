@@ -6,7 +6,7 @@ layout: page
 # Developer Tools 2011 #
 
 Kevin Dangoor <kdangoor@mozilla.com>
-June 9, 2011
+June 14, 2011
 
 This document is the revised edition of the roadmap from January, 2011. The high level goals for the plan have not changed, but a number of the details have as we've dug into the implementation and grown our efforts.
 
@@ -26,7 +26,7 @@ To accomplish our goals for this year and set the stage for the challenging work
 
 ## Our Priorities ##
 
-1. Help web developers on electrolysis-based (see "Multi-Process Firefox" below) desktop Firefox
+1. Help web developers on electrolysis-based desktop Firefox (see "More Complex Firefox Process Model" below)
 2. Help Jetpack developers debug their add-ons
 3. Help web developers create their mobile apps on with Firefox for mobile (with remote debugging interfaces)
 4. Help Firefox developers debug the browser
@@ -89,40 +89,31 @@ The users of developer tools are all developers. Many of them know HTML, CSS and
 
 # Roadmap #
 
-This is a high-level view of how we see 2011 going:
+We're nearly halfway through the year as I write this, so I will report on how the first half has gone and we'll move forward in the second half of the year.
 
-## Q1 (March 31) ##
+## Looking back ##
 
-* Ship Firefox 4 with the Web Console (done!)
-* Ship Firebug 1.7 which is compatible with Firefox 4 (done!)
-* Release initial devtools SDK with a small scope (back burner)
-* Release an initial tool as a Jetpack (sort of)
+In Q1, our main goal was to ship Firefox 4 with the Web Console and to ensure that a Firefox 4-compatible version of Firebug was shipped at the same time. We hit those goals.
 
-During Q1, we discovered that the Add-on SDK (Jetpack) is not ideal at this stage for the kinds of tools we were building. Consequently, we shifted our focus away from the devtools SDK to building tools directly as Firefox features.
+We also released the "Workspaces" add-on which later evolved into Scratchpad, a feature in Firefox 6.
 
-We did release the Scratchpad tool as a traditional add-on in Q1. This tool will ship in Firefox 6.
+During the first quarter, we also made an important discovery: the Add-on SDK (Jetpack) is not the best platform at this stage for the kinds of tools we're building. We also wanted to spend more of our time building tools at this stage and less time on infrastructure. So, we changed gears and started developing tools as standard Firefox features.
 
-## Q2 (June 30) ##
+With that new plan in hand, we went to work building new tools and improving the Web Console. The Firefox 7 Web Console is considerably more refined than that of Firefox 4 and the "console" object provided to web pages is now in line with the de facto standard. We also have a collection of tools to help developers work with the styling of their pages that will be shipping soon.
 
-* Expand the devtools SDK (back burner)
-* Release Web Console and Inspector updates on the expanded SDK (scrapped - sort of)
-* Initial prototype debugger (in-progress)
-* Portions of Firebug run as a Jetpack on top of the devtools SDK (scrapped)
+Finally, the Firebug 1.7.2 release is compatible with Firefox 3.6, 4 and the upcoming 5. Firebug 1.8 is due around the time of Firefox 5's release and is planned to be compatible with Firefox 6 as well.
 
-While we do plan to have a devtools SDK (or, more specifically, devtools-oriented APIs that are a part of the Add-on SDK), this is on hold until we get more tools out.
+## Looking forward ##
 
-With that change in plans relative to the SDK, we are leaving the Web Console and Highlighter (formerly Inspector) as native Firefox features.
+For the second half of the year, we will need to build on the base of tools that we've created and refine them to meet our overall goals. In the second half of the year, we need to ship:
 
-## Q3 (September 30) ##
+* the debugger
+* performance-related tools
+* e10s-ready versions of the tools
+* mobile compatible versions of core tools (the Web Console, styling and performance related tools)
 
-* devtools SDK-based tools should run atop the e10s Firefox beta
-* Firefox beta with SDK-based tools integrated
-* Improve the integration of the tools and add features based on feedback
-* Another new tool (something like performance or memory profiling)
-* Flesh out the debugger
-* Get the remainder of Firebug standing on the devtools SDK
+These are substantial new areas that we will push into. We will undoubtedly refine the tools built in the first half of the year, and we will likely seek opporunities to start improving the developer experience for Jetpacks and Apps.
 
-## Q4 (December 31) ##
+Work has already started on getting Firebug ready for e10s and remote access and that work will likely start appearing in Firebug 1.9.
 
-* Firefox e10s ships with integrated tools
-* Companion Firebug release ships
+With our tools developed during the first half of the year as a base, we will start making it easier for web developers to get involved in improving the tools they use day-to-day.

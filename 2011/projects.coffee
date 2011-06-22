@@ -177,6 +177,17 @@
         ]
     }
     {
+        id: "highlighter8"
+        name: "Highlighter 8"
+        blurb: "Making the Highlighter sparkle"
+        status: "Planning"
+        target: 8
+        people: ["rcampbell", "paul"]
+        bugs: [
+            "663778 Draw layout information"
+        ]
+    }
+    {
         id: "gcli"
         url: "https://wiki.mozilla.org/DevTools/Features/GCLI"
         name: "Graphical Command Line Interface"
@@ -326,9 +337,6 @@
             "659907 Expand console object with dir method"
             "664131 Expand console object with group methods"
             "614586 Implement string substitution in console API methods"
-            "638949 Copy Location for URLs"
-            "646028 Add debug filter item to the toolbar"
-            "643184 Checkbox menu items in a toolbar do not display the checkmark when checked"
             "609890 Errors from before console is opened don't appear"
             "611032 Break out HUDConsoleObserver from HUDService"
             "612658 Implement ConsoleStorageService"
@@ -378,6 +386,8 @@
             "663151 Display IP address and IP version in network panel"
             "663366 Full-screen web console is missing toolbar"
             "662807 Error bubbles in multiline messages in console look silly"
+            "638949 Copy Location for URLs"
+            "646028 Add debug filter item to the toolbar"
         ]
     }
     {

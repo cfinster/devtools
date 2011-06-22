@@ -22,23 +22,30 @@
    "summary": "GCLI needs a commonjs require system",
    "status": "ASSIGNED",
    "assignedName": "jwalker",
+   "whiteboard": "[fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "-",
+      "status": "+",
       "setter": "dtownsend"
      }
     ],
-    "superreview": []
+    "superreview": [
+     {
+      "status": "+",
+      "setter": "dtownsend"
+     }
+    ]
    },
-   "patchSize": 22339
+   "patchSize": 23288
   },
   "646028": {
    "summary": "Add debug filter item to the Web Developer toolbar dropdown in Web Console",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[good first bug]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -115,18 +122,14 @@
    "summary": "document.body fails to autocomplete in Web Console",
    "status": "ASSIGNED",
    "assignedName": "past",
+   "whiteboard": "[fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "+",
-      "setter": "dtownsend"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 12866
+   "patchSize": 13012
   },
   "630460": {
    "summary": "Command-w doesn't close the web inspector window and instead is passed through to the open tab",
@@ -197,14 +200,25 @@
   },
   "659778": {
    "summary": "Web Console autocomplete is behind the Web Console window",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
+   "status": "ASSIGNED",
+   "assignedName": "past",
+   "whiteboard": "[land-in-devtools]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "ddahl"
+     },
+     {
+      "status": "+",
+      "setter": "enndeakin"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 1192
   },
   "663120": {
    "summary": "Simple (help-free) GCLI UI needs polish",
@@ -243,7 +257,7 @@
   },
   "663778": {
    "summary": "[highlighter] Draw layout information of the selected node",
-   "status": "NEW",
+   "status": "ASSIGNED",
    "assignedName": "paul",
    "hasPatch": true,
    "flags": {
@@ -313,14 +327,15 @@
   },
   "660606": {
    "summary": "Highlighter should allow registration of developer tools",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
+   "status": "ASSIGNED",
+   "assignedName": "mratcliffe",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 20528
   },
   "659775": {
    "summary": "When the Web Console is in a separate window, Ctrl+W/Cmd+W should close it",
@@ -403,8 +418,9 @@
   },
   "663746": {
    "summary": "Change Scratchpad shortcut key to something other than F4",
-   "status": "NEW",
-   "assignedName": "nobody",
+   "status": "ASSIGNED",
+   "assignedName": "rcampbell",
+   "whiteboard": "[scratchpad][ux-needed]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -613,18 +629,18 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
-      "setter": "ddahl"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
    },
-   "patchSize": 13990
+   "patchSize": 14910
   },
   "663834": {
    "summary": "Highlighter's registerTools() method should allow tools to be docked in the browser",
    "status": "NEW",
-   "assignedName": "nobody",
+   "assignedName": "mratcliffe",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -702,7 +718,7 @@
   },
   "663124": {
    "summary": "Simple help-free version of GCLI has 1 string needing localization",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -728,12 +744,14 @@
    "summary": "F4 and ESC should close the Scratchpad window",
    "status": "NEW",
    "assignedName": "nobody",
-   "hasPatch": false,
+   "whiteboard": "[scratchpad]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 2849
   },
   "591902": {
    "summary": "Automatic display of localized content",
@@ -786,20 +804,30 @@
    "summary": "Add a source editor to Scratchpad",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[scratchpad][see comment #2 for current work]",
+   "whiteboard": "[scratchpad][trybuilds in comment #8]",
    "hasPatch": true,
    "flags": {
     "feedback": [
      {
       "status": "?",
-      "requestee": "rcampbell",
+      "requestee": "ehsan",
+      "setter": "rcampbell"
+     }
+    ],
+    "review": [
+     {
+      "status": "+",
+      "setter": "ddahl"
+     },
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
       "setter": "mihai.sucan"
      }
     ],
-    "review": [],
     "superreview": []
    },
-   "patchSize": 15296
+   "patchSize": 38309
   },
   "657932": {
    "summary": "Web Console lacks symmetry in the handling of enter and escape keys during autocompletion",
@@ -845,9 +873,9 @@
   },
   "622303": {
    "summary": "Web Console should remember filter settings.",
-   "status": "ASSIGNED",
-   "assignedName": "past",
-   "whiteboard": "[pre-approved by beltzner][console-1]",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[console-1][good first bug]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -870,15 +898,14 @@
    "summary": "Scratchpad lacks indentation, pressing TAB key should indent code",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[scratchpad]",
+   "whiteboard": "[scratchpad][fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "dietrich",
-      "setter": "mihai.sucan"
+      "status": "+",
+      "setter": "dietrich"
      }
     ],
     "superreview": []
@@ -920,9 +947,9 @@
   },
   "638949": {
    "summary": "Please add Copy Location in the context menu for URLs in the web console",
-   "status": "ASSIGNED",
-   "assignedName": "past",
-   "whiteboard": "[console-1]",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[console-1][good first bug]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -934,18 +961,6 @@
    "summary": "completeNode is accepting keyboard input",
    "status": "NEW",
    "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
-  },
-  "653545": {
-   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -965,9 +980,21 @@
     "superreview": []
    }
   },
+  "653545": {
+   "summary": "Create a means to highlight multiple items on a single webpage (highlighter)",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[best: 1d, likely: 2d, worst: 5d][highlighter]",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "654985": {
    "summary": "GCLI help should sort commands alphabetically (according to locale)",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -997,13 +1024,14 @@
   "663831": {
    "summary": "Style inspector should be controllable from the highlighter",
    "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
+   "assignedName": "mratcliffe",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 5501
   },
   "663100": {
    "summary": "[highlighter] Re-implement the highlighting mechanism in HTML + flex box model",
@@ -1146,7 +1174,7 @@
   "638142": {
    "summary": "Add ability to anchor a panel to a widget",
    "status": "NEW",
-   "assignedName": "nobody",
+   "assignedName": "myk",
    "whiteboard": "[papercuts]",
    "hasPatch": false,
    "flags": {
@@ -1186,7 +1214,7 @@
   },
   "659889": {
    "summary": "GCLI should auto-start",
-   "status": "RESOLVED",
+   "status": "VERIFIED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -1197,8 +1225,9 @@
   },
   "661762": {
    "summary": "Scratchpad source link may focus the wrong Scratchpad window",
-   "status": "ASSIGNED",
-   "assignedName": "past",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "whiteboard": "[good first bug]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1208,7 +1237,7 @@
   },
   "651081": {
    "summary": "Ensure GCLI commands are executed securely",
-   "status": "NEW",
+   "status": "VERIFIED",
    "assignedName": "jwalker",
    "hasPatch": false,
    "flags": {
@@ -1468,29 +1497,17 @@
    "assignedName": "mihai.sucan",
    "hasPatch": true,
    "flags": {
-    "feedback": [
+    "feedback": [],
+    "review": [
      {
       "status": "?",
-      "requestee": "rcampbell",
+      "requestee": "ddahl",
       "setter": "mihai.sucan"
      }
     ],
-    "review": [],
     "superreview": []
    },
-   "patchSize": 253376
-  },
-  "643184": {
-   "summary": "Checkbox menu items in a toolbar do not display the check mark when checked in Firefox 4 on Mac OS X",
-   "status": "NEW",
-   "assignedName": "mstange",
-   "whiteboard": "[4rc2]",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
+   "patchSize": 278479
   },
   "644596": {
    "summary": "[console] expand console object with missing methods",
@@ -1505,7 +1522,7 @@
   },
   "659910": {
    "summary": "Evaluating console.log or other API messages in Scratchpad presents wrong source link in web console",
-   "status": "ASSIGNED",
+   "status": "VERIFIED",
    "assignedName": "past",
    "whiteboard": "[scratchpad][console][view-source][fixed-in-devtools][merged-to-mozilla-central]",
    "hasPatch": true,
@@ -1694,6 +1711,17 @@
     "superreview": []
    }
   },
+  "653567": {
+   "summary": "GCLI should be checked for accessibility",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "653423": {
    "summary": "Undo option is grayed out although action is applicable",
    "status": "NEW",
@@ -1705,18 +1733,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 2520
-  },
-  "653567": {
-   "summary": "GCLI should be checked for accessibility",
-   "status": "ASSIGNED",
-   "assignedName": "jwalker",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
+   "patchSize": 1040
   },
   "642109": {
    "summary": "Web Console REPL \"readline\" occasionally stops working right",
@@ -1733,25 +1750,14 @@
    "summary": "Rewrite PanelHighlighter using transparent xul iframe and canvas",
    "status": "ASSIGNED",
    "assignedName": "rcampbell",
-   "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][rebased-05-14]",
+   "whiteboard": "[best: 1d, likely: 3d, worst: 1w][highlighter][fixed-in-devtools]",
    "hasPatch": true,
    "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "paul"
-     }
-    ],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "dietrich",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "feedback": [],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 158843
+   "patchSize": 162619
   },
   "588941": {
    "summary": "Computed style for property is sometimes wrong in the new Style panel",
@@ -1855,10 +1861,15 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "-",
+      "setter": "mihai.sucan"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 19387
+   "patchSize": 17279
   },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
@@ -2113,20 +2124,19 @@
    "summary": "Implement ConsoleStorageService",
    "status": "NEW",
    "assignedName": "ddahl",
-   "whiteboard": "[has new patch][softblocker][console-1]",
+   "whiteboard": "[has new patch][softblocker][console-1][has review]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
+      "status": "+",
       "setter": "ddahl"
      }
     ],
     "superreview": []
    },
-   "patchSize": 16380
+   "patchSize": 16118
   },
   "590799": {
    "summary": "Styling for the CSS editor panel",
@@ -2153,14 +2163,24 @@
   },
   "660806": {
    "summary": "Autocomplete shows during history navigation",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     },
+     {
+      "status": "+",
+      "setter": "dtownsend"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 3619
   },
   "653534": {
    "summary": "Create basic Annotations feature for the Highlighter",
@@ -2325,11 +2345,11 @@
     "superreview": []
    }
   },
-  "653531": {
-   "summary": "Shared knowledge of selected node in highlighter",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][console]",
+  "642239": {
+   "summary": "GCLI should have history retention",
+   "status": "RESOLVED",
+   "assignedName": "nfitzgerald",
+   "whiteboard": "[estimate:best=2d,likely=3d,worst=8d]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2337,11 +2357,11 @@
     "superreview": []
    }
   },
-  "642239": {
-   "summary": "GCLI should have history retention",
+  "653531": {
+   "summary": "Shared knowledge of selected node in highlighter",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[estimate:best=2d,likely=3d,worst=8d]",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][console]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2463,10 +2483,16 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "past"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 12487
+   "patchSize": 15956
   },
   "650780": {
    "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
@@ -2504,7 +2530,7 @@
   },
   "663781": {
    "summary": "[highlighter] Once a node is locked, the black background should be removed",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "paul",
    "hasPatch": true,
    "flags": {
@@ -2576,15 +2602,16 @@
   },
   "663443": {
    "summary": "No indication to which tab a Web Console window belongs (esp. an empty one)",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "whiteboard": "[fx6][testday-20110610]",
-   "hasPatch": false,
+   "status": "ASSIGNED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[fx6][testday-20110610][fixed-in-devtools]",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [],
     "superreview": []
-   }
+   },
+   "patchSize": 7254
   },
   "591582": {
    "summary": "Style Panel CSS properties are limited to hard coded values",
@@ -2691,6 +2718,17 @@
    },
    "patchSize": 159123
   },
+  "587752": {
+   "summary": "Animations in the new Style panel",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "659625": {
    "summary": "Expand console object with clear method",
    "status": "ASSIGNED",
@@ -2707,17 +2745,6 @@
     ]
    },
    "patchSize": 13174
-  },
-  "587752": {
-   "summary": "Animations in the new Style panel",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
   },
   "637291": {
    "summary": "Add titlebar and name attributes to Panels",
@@ -2838,20 +2865,20 @@
     "totalCount": 1
    }
   },
-  "dietrich": {
-   "review": {
-    "devtoolsSize": 168184,
-    "devtoolsCount": 2,
-    "totalSize": 168184,
-    "totalCount": 2
-   }
-  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 37091,
-    "devtoolsCount": 2,
-    "totalSize": 37091,
-    "totalCount": 2
+    "devtoolsSize": 74976,
+    "devtoolsCount": 3,
+    "totalSize": 74976,
+    "totalCount": 3
+   }
+  },
+  "ddahl": {
+   "review": {
+    "devtoolsSize": 278479,
+    "devtoolsCount": 1,
+    "totalSize": 278479,
+    "totalCount": 1
    }
   },
   "jonas": {
