@@ -148,14 +148,12 @@
         people: ["mratcliffe"]
         bugs: [
             "582596 Style view answering common CSS questions"
-            "656220 Create styleInspector obj. containing cssLogic & cssHtmlTree, open/close methods"
-            "656027 It should be possible to pref out the Style Inspector"
+            "663831 Should be controllable from the Highlighter"
             "586974 All unmatched rules are ranked the same"
             "593331 Csslogic shortSource can create duplicate names"
             "583037 Better logic for placement of inspector panels"
             "590536 Inspector panels should remember at least size and ideally also position"
             "587752 Animations in the new Style panel"
-            "593345 Investigate an advanced test tool for the inspector style panel"
             "585563 The inspector style panel should link to the CSS editor"
             "590796 Clicking on a rule doesn't jump to the correct line in the CSS editor"
             "589264 Add option to choose an alternative media type"
@@ -163,6 +161,9 @@
             "591212 React to dynamic changes to the stylesheets"
             "591584 Localize the URLs in csshtmltree"
             "591902 Automatic display of localized content"
+            "593345 Investigate an advanced test tool for the inspector style panel"
+            "656220 Create styleInspector obj. containing cssLogic & cssHtmlTree, open/close methods"
+            "656027 It should be possible to pref out the Style Inspector"
             "574347 Opening the HUD with Inspector open causes Style Panel to move"
             "586977 Investigate how the panel works with shorthand properties"
             "588941 Computed style for property is sometimes wrong"
@@ -173,7 +174,6 @@
             "654068 Show visual indicator when there are unmatched rules but not matched rules"
             "654069 \"Effects and Other\" group should be extracted into more than 1 group"
             "654430 Unmatched rules do not work for string values"
-            "663831 Should be controllable from the Highlighter"
         ]
     }
     {
