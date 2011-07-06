@@ -150,6 +150,7 @@
             "582596 Style view answering common CSS questions"
             "663831 Should be controllable from the Highlighter"
             "586974 All unmatched rules are ranked the same"
+            "669596 Style Inspector should allow editing of css property values"
             "593331 Csslogic shortSource can create duplicate names"
             "583037 Better logic for placement of inspector panels"
             "590536 Inspector panels should remember at least size and ideally also position"
