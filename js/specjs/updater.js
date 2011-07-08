@@ -105,7 +105,6 @@
         console.log("finished with main query");
         return this.queryDone();
       }, this));
-      return;
       _results = [];
       for (_i = 0, _len = people.length; _i < _len; _i++) {
         person = people[_i];
@@ -154,7 +153,7 @@
         bug = _ref[bugId];
         bug.devtoolsBug = true;
       }
-      if (this.reviewQuery) {
+      if (this.reviewQuery != null) {
         q.merge(this.reviewQuery);
       }
       if (!q.result) {

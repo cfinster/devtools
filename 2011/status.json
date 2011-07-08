@@ -1478,6 +1478,17 @@
    },
    "patchSize": 353599
   },
+  "669596": {
+   "summary": "Style inspector should allow editing of css property values",
+   "status": "NEW",
+   "assignedName": "nobody",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "644596": {
    "summary": "[console] expand console object with missing methods",
    "status": "ASSIGNED",
@@ -1667,6 +1678,17 @@
     "superreview": []
    }
   },
+  "653567": {
+   "summary": "GCLI should be checked for accessibility",
+   "status": "RESOLVED",
+   "assignedName": "jwalker",
+   "hasPatch": false,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   }
+  },
   "653423": {
    "summary": "Undo option is grayed out although action is applicable in Scratchpad",
    "status": "NEW",
@@ -1688,17 +1710,6 @@
     "superreview": []
    },
    "patchSize": 1040
-  },
-  "653567": {
-   "summary": "GCLI should be checked for accessibility",
-   "status": "RESOLVED",
-   "assignedName": "jwalker",
-   "hasPatch": false,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   }
   },
   "642109": {
    "summary": "Web Console REPL \"readline\" occasionally stops working right",

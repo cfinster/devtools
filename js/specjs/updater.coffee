@@ -93,9 +93,6 @@ class BugDataCollector
             console.log "finished with main query"
             @queryDone()
         
-        # temporarily turning off review queues
-        return
-
         for person in people
             if person.reviewCheck == false
                 continue
