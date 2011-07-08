@@ -82,6 +82,7 @@ class BugDataCollector
     
     queryDone: () ->
         @queryCount--
+        console.log "Done with query, remaining: ", @queryCount
         if @queryCount == 0
             @gatherReviewBugData()
     
@@ -92,6 +93,9 @@ class BugDataCollector
             console.log "finished with main query"
             @queryDone()
         
+        # temporarily turning off review queues
+        return
+
         for person in people
             if person.reviewCheck == false
                 continue
@@ -114,8 +118,8 @@ class BugDataCollector
         @queryDone()
     
     gatherReviewBugData: () ->
-        if not @reviewBugs.length
-            @saveData
+        if @reviewBugs.length == 0
+            @saveData()
             return
 
         buglist = _.uniq(@reviewBugs, false)
@@ -137,7 +141,7 @@ class BugDataCollector
         for bugId, bug of q.result
             bug.devtoolsBug = true
 
-        if @reviewQuery
+        if @reviewQuery?
             q.merge @reviewQuery
 
         if not q.result

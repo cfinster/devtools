@@ -15,20 +15,11 @@
   };
   this.projects = [
     {
-      id: "console5",
-      url: "https://wiki.mozilla.org/DevTools/Features/WebConsole5",
-      name: "Web Console 5",
-      blurb: "Adding awesome to the existing Web Console",
-      status: "Beta",
-      target: 5,
-      people: ["ddahl", "msucan"],
-      bugs: ["642108 JS errors from HUD in Error Console", "616742 Implement console.debug", "637801 console.log shouldn't display escaped strings", 618311]
-    }, {
       id: "workspaces",
       url: "https://wiki.mozilla.org/DevTools/Features/Workspaces",
       name: "Scratchpad First Take",
       blurb: "The humane way to monkey with code",
-      status: "Aurora",
+      status: "Beta",
       target: 6,
       people: ["msucan", "rcampbell"],
       bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "658344 useful introductory text", "646524 cache the sandboxes", "657136 Rename top-level Context menu to something less confusing", "657131 Create an Execute menu", "660560 pressing Tab should indent", "661762 Scratchpad source link may focus the wrong window", "663746 Change Scratchpad shortcut key to something other than F4"],
@@ -38,7 +29,7 @@
       url: "https://wiki.mozilla.org/DevTools/Features/WebDeveloperMenu",
       name: "Web Developer Menu",
       blurb: "New home for web developer tools",
-      status: "Aurora",
+      status: "Beta",
       target: 6,
       people: ["rcampbell", "msucan"],
       bugs: ["653221 Web Developer Menu", "655776 Get More Tools menu item", "656360 access key problem"]
@@ -47,7 +38,7 @@
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade",
       name: "Web Console 6",
       blurb: "Console positioning, autocompletion and more",
-      status: "Aurora",
+      status: "Beta",
       target: 6,
       people: ["past", "msucan", "ddahl"],
       bugs: [577721, "585991 Show a popup listing possible completions", 637801, 632347, 632275, 595223, 626484, 619598, 642615, 646025, "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "650780 evaluating a null object returns TypeError: aObject is null", "659910 console.log from Scratchpad sends people to Scratchpad.com", "659778 Autocomplete is behind the console window", "633204 Autocomplete isn't fully cleared on ctrl+backspace", "663443 No indication to which tab a Web Console belongs"],
@@ -58,33 +49,25 @@
       name: "Highlighter",
       blurb: "Beautiful information about your DOM",
       status: "Implementation",
-      target: 7,
+      target: 8,
       people: ["rcampbell", "paul"],
-      bugs: ["642471 Rewrite PanelHighlighter using transparent xul iframe", "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element", "566084 disabled when navigating to new pages", "566085 tracking DOM changes", "660606 allow registration of developer tools", "663100 Re-implement highlighting mechanism in HTML+flexbox", "663781 Once a node is locked, the black background should be removed", "663778 Draw layout information of the selected node", "663834 registerTools() should allow tools to be docked in the browser"]
+      bugs: ["642471 Rewrite PanelHighlighter using transparent xul iframe", "650802 Create some controller UI", "650825 create a content broker", "650794 Strip HTML panel and support code from browser", "653528 Strip out Style and DOM panels and support code from Inspector", "642471 Rewrite PanelHighlighter using transparent xul iframe and canvas", "653531 Shared knowledge of selected node", "653534 Create basic Annotations feature", "653545 Create a means to highlight multiple items on a single webpage", "653549 Add a close button to the selected node", "653550 Add a close button", "587134 Context menu item for Highlight Element", "566084 disabled when navigating to new pages", "566085 tracking DOM changes", "660606 allow registration of developer tools", "663100 Re-implement highlighting mechanism in HTML+flexbox", "663781 Once a node is locked, the black background should be removed", "663778 Draw layout information of the selected node", "663834 registerTools() should allow tools to be docked in the browser", "663778 Draw layout information"]
     }, {
       id: "styleinspector",
       url: "https://wiki.mozilla.org/DevTools/Features/StyleInspector",
       name: "Style Inspector",
       blurb: "View an element's style, in style!",
       status: "Implementation",
-      target: 7,
+      target: 8,
       people: ["mratcliffe"],
       bugs: ["582596 Style view answering common CSS questions", "656220 Create styleInspector obj. containing cssLogic & cssHtmlTree, open/close methods", "656027 It should be possible to pref out the Style Inspector", "586974 All unmatched rules are ranked the same", "593331 Csslogic shortSource can create duplicate names", "583037 Better logic for placement of inspector panels", "590536 Inspector panels should remember at least size and ideally also position", "587752 Animations in the new Style panel", "593345 Investigate an advanced test tool for the inspector style panel", "585563 The inspector style panel should link to the CSS editor", "590796 Clicking on a rule doesn't jump to the correct line in the CSS editor", "589264 Add option to choose an alternative media type", "589375 Keyboard access", "591212 React to dynamic changes to the stylesheets", "591584 Localize the URLs in csshtmltree", "591902 Automatic display of localized content", "574347 Opening the HUD with Inspector open causes Style Panel to move", "586977 Investigate how the panel works with shorthand properties", "588941 Computed style for property is sometimes wrong", "591582 Style Panel CSS properties are limited to hard coded values", "652509 Style inspector should skip unsupported styles", "653082 Stylesheet selector should be removed", "653084 Specificity should be removed", "654068 Show visual indicator when there are unmatched rules but not matched rules", "654069 \"Effects and Other\" group should be extracted into more than 1 group", "654430 Unmatched rules do not work for string values", "663831 Should be controllable from the Highlighter"]
-    }, {
-      id: "highlighter8",
-      name: "Highlighter 8",
-      blurb: "Making the Highlighter sparkle",
-      status: "Planning",
-      target: 8,
-      people: ["rcampbell", "paul"],
-      bugs: ["663778 Draw layout information"]
     }, {
       id: "gcli",
       url: "https://wiki.mozilla.org/DevTools/Features/GCLI",
       name: "Graphical Command Line Interface",
       blurb: "The fastest, most discoverable way to control your tools",
       status: "Implementation",
-      target: 7,
+      target: 8,
       people: ["jwalker"],
       bugs: ["654962 GCLI demo", "653142 Create pilot.jsm required for Command Line", "653140 Pilot/Command Line need a CommonJS require", "656296 console.jsm from pilot should send reports to web ", 641903, 642505, "653978 Command Line should be prefed out", "642231 Prepare GCLI for review", "642241 Experiment with better UI presentation methods in GCLI", "642401 Ace/Pilot/GCLI doesn't have a good definition of pref scopes", "642400 Ace/Pilot/GCLI doesn't have a good definition of the environment", "642242 GCLI should embed help as commands", "642240 GCLI needs some form of URI for reference to everything", "642239 GCLI should have history retention", "642238 GCLI metadata should have types on return values", "642237 GCLI should display its opening command menu in a hierarchy", "642226 GCLI should support use without an input element", "642196 GCLI should allow JS to be entered using {}", "642189 GCLI should support grouped parameters", "651081 Ensure GCLI commands are executed securely", "651071 Enhance the Web Console with a command-based input system", "654986 lists only some of the available commands - it should list them all", "654985 help should sort commands alphabetically (according to locale)", "654970 UI tweaks", "653979 UI to switch web console between JS and Command Line modes", "653568 GCLI re-creates nodes in RequestView/ArgFetcher too often", "653567 GCLI should be checked for accessibility", "656668 Export from GCLI to JSM", "656666 Update HudService.jsm to allow GCLI integration", "657678 remove dependency on Pilot", "657677 Require.jsm unit tests", "658756 Experiment with popup UI for GCLI", "659889 GCLI should autostart", "661172 popup menu should be accessible", "660765 Simplify Requisition._onAssignmentChange", "660220 commands are double executed in Firefox", "663120 Simple (help-free) GCLI UI needs polish", "663124 Simple help-free version of GCLI has 1 string needing localization"]
     }, {
@@ -92,7 +75,7 @@
       name: "Code Editor",
       blurb: "better editing for your codes",
       url: "https://wiki.mozilla.org/DevTools/Features/CodeEditor",
-      target: 7,
+      target: 8,
       status: "Implementation",
       people: ["msucan"],
       bugs: ["660784 Add a source code editor to the browser"]
@@ -101,7 +84,6 @@
       name: "View Source Reboot",
       blurb: "The View Source of the Future",
       status: "Planning",
-      target: 8,
       people: [],
       bugs: ["650893 New View Source component", "650895 Initial implementation of the new View Source tool", "246620 Add line numbers to view source", "482921 reimplement view source with HTML5 parser", "469434 copy link location", "660193 improve view-source for .js, .json, .css"],
       notes: ["deminification", "insert alert", "view and edit?", "current source vs. original/cached"]
@@ -110,7 +92,7 @@
       name: "Style Editor",
       blurb: "Tweak and view!",
       status: "Implementation",
-      target: 7,
+      target: 8,
       people: ["cedricv"],
       bugs: ["583041 CSS editor", "590307 inline stylesheet support", "590795 edits should be reflected in the Inspector", "590796 style inspector link to the CSS editor", "590797 resizable editor panel", "590799 CSS editor styling", "594742 unsaved state reappears when the editor is reopened"]
     }, {
@@ -119,7 +101,6 @@
       name: "Style Doctor",
       blurb: "The cure for what ails your CSS",
       status: "Implementation",
-      target: 7,
       people: ["jwalker"],
       bugs: ["656863 getShortSource() should guarantee uniqueness", "657350 'rule overridden by other rule' diagnosis", "658202 needs a way to select inline styles"]
     }, {
@@ -128,7 +109,7 @@
       name: "HTML Tree Editor",
       blurb: "Easy editing for simple changes to HTML",
       status: "Implementation",
-      target: 7,
+      target: 8,
       people: ["getify"],
       bugs: ["659710 add attribute editing"]
     }, {
@@ -137,14 +118,13 @@
       name: "Debugger",
       blurb: "A straightforward walk through your code",
       status: "Implementation",
-      target: 8,
-      people: ["dcamp"]
+      people: ["dcamp", "past"]
     }, {
       id: "webconsole7",
       url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7",
       name: "Web Console 7",
       blurb: "Fleshed out console object, console message storage, more",
-      status: "Planning",
+      status: "Aurora",
       target: 7,
       people: [],
       bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "659907 Expand console object with dir method", "664131 Expand console object with group methods", "614586 Implement string substitution in console API methods", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "646816 command-w binding for dismissing panels", "659775 command-w to close separate Web Console window", "651501 document.body properties fail to autocomplete", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text", "656461 Web Console calls getters when displaying an object", "659931 Clicking on position button changes position", "660910 Autocompletion doesn't support this.x", "660864 completeNode is accepting keyboard input", "660806 autocomplete shows during history navigation"]
@@ -170,7 +150,6 @@
       name: "DevTools SDK 1",
       blurb: "First bits of customizability",
       status: "Planning",
-      target: 8,
       bugs: [639518, 638871, 638131, 638142, 637291]
     }, {
       id: "memoryback",
@@ -213,19 +192,12 @@
     }, {
       id: "scratchpad7",
       url: "https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined",
-      name: "Scratchpad 7",
+      name: "Scratchpad 8",
       blurb: "The refined, humane way to engage in software development experiments.",
       status: "Implementation",
-      target: 7,
-      people: [],
-      bugs: ["636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make scratchpads save their state across restarts", "651942 Add recent files to the file menu", "656273 Add a toolbar", "656330 make ctrl/cmd+enter execute command", "657303 F4 and esc should close the scratchpad window", "657132 Create a popup equivalent to the context menu in the status bar", "650760 Help menu", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts", "656701 Scratchpad missing a menu overlay", "658006 Scratchpad breaks if you close the tab it's running in", "661289 Save file prompts twice to overwrite existing files"]
-    }, {
-      id: "scratchpad8",
-      name: "Scratchpad 8",
-      status: "Planning",
       target: 8,
       people: [],
-      bugs: ["663380 Restore Scratchpad after Firefox crash"]
+      bugs: ["636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make scratchpads save their state across restarts", "651942 Add recent files to the file menu", "656273 Add a toolbar", "656330 make ctrl/cmd+enter execute command", "657303 F4 and esc should close the scratchpad window", "657132 Create a popup equivalent to the context menu in the status bar", "650760 Help menu", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts", "656701 Scratchpad missing a menu overlay", "658006 Scratchpad breaks if you close the tab it's running in", "661289 Save file prompts twice to overwrite existing files", "663380 Restore Scratchpad after Firefox crash"]
     }, {
       id: "incontent",
       name: "In-Content Tools",

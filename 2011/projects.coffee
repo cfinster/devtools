@@ -16,26 +16,11 @@
 
 @projects = [
     {
-        id: "console5"
-        url: "https://wiki.mozilla.org/DevTools/Features/WebConsole5"
-        name: "Web Console 5"
-        blurb: "Adding awesome to the existing Web Console"
-        status: "Beta"
-        target: 5
-        people: ["ddahl", "msucan"]
-        bugs: [
-            "642108 JS errors from HUD in Error Console"
-            "616742 Implement console.debug"
-            "637801 console.log shouldn't display escaped strings"
-            618311
-        ]
-    }
-    {
         id: "workspaces"
         url: "https://wiki.mozilla.org/DevTools/Features/Workspaces"
         name: "Scratchpad First Take"
         blurb: "The humane way to monkey with code"
-        status: "Aurora"
+        status: "Beta"
         target: 6
         people: ["msucan", "rcampbell"]
         bugs: [
@@ -66,7 +51,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/WebDeveloperMenu"
         name: "Web Developer Menu"
         blurb: "New home for web developer tools"
-        status: "Aurora"
+        status: "Beta"
         target: 6
         people: ["rcampbell", "msucan"]
         bugs: [
@@ -80,7 +65,7 @@
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade"
         name: "Web Console 6"
         blurb: "Console positioning, autocompletion and more"
-        status: "Aurora"
+        status: "Beta"
         target: 6
         people: ["past", "msucan", "ddahl"]
         bugs: [
@@ -114,7 +99,7 @@
         name: "Highlighter"
         blurb: "Beautiful information about your DOM"
         status: "Implementation"
-        target: 7
+        target: 8
         people: ["rcampbell", "paul"]
         bugs: [
             "642471 Rewrite PanelHighlighter using transparent xul iframe"
@@ -136,6 +121,7 @@
             "663781 Once a node is locked, the black background should be removed"
             "663778 Draw layout information of the selected node"
             "663834 registerTools() should allow tools to be docked in the browser"
+            "663778 Draw layout information"
         ]
     }
     {
@@ -144,7 +130,7 @@
         name: "Style Inspector"
         blurb: "View an element's style, in style!"
         status: "Implementation"
-        target: 7
+        target: 8
         people: ["mratcliffe"]
         bugs: [
             "582596 Style view answering common CSS questions"
@@ -177,23 +163,12 @@
         ]
     }
     {
-        id: "highlighter8"
-        name: "Highlighter 8"
-        blurb: "Making the Highlighter sparkle"
-        status: "Planning"
-        target: 8
-        people: ["rcampbell", "paul"]
-        bugs: [
-            "663778 Draw layout information"
-        ]
-    }
-    {
         id: "gcli"
         url: "https://wiki.mozilla.org/DevTools/Features/GCLI"
         name: "Graphical Command Line Interface"
         blurb: "The fastest, most discoverable way to control your tools"
         status: "Implementation"
-        target: 7
+        target: 8
         people: ["jwalker"]
         bugs: [
             "654962 GCLI demo"
@@ -241,7 +216,7 @@
         name: "Code Editor"
         blurb: "better editing for your codes"
         url: "https://wiki.mozilla.org/DevTools/Features/CodeEditor"
-        target: 7
+        target: 8
         status: "Implementation"
         people: ["msucan"]
         bugs: [
@@ -253,7 +228,6 @@
         name: "View Source Reboot"
         blurb: "The View Source of the Future"
         status: "Planning"
-        target: 8
         people: []
         bugs: [
             "650893 New View Source component"
@@ -275,7 +249,7 @@
         name: "Style Editor"
         blurb: "Tweak and view!"
         status: "Implementation"
-        target: 7
+        target: 8
         people: ["cedricv"]
         bugs: [
             "583041 CSS editor"
@@ -293,7 +267,6 @@
         name: "Style Doctor"
         blurb: "The cure for what ails your CSS"
         status: "Implementation"
-        target: 7
         people: ["jwalker"]
         bugs: [
             "656863 getShortSource() should guarantee uniqueness"
@@ -307,7 +280,7 @@
         name: "HTML Tree Editor"
         blurb: "Easy editing for simple changes to HTML"
         status: "Implementation"
-        target: 7
+        target: 8
         people: ["getify"]
         bugs: [
             "659710 add attribute editing"
@@ -319,15 +292,14 @@
         name: "Debugger"
         blurb: "A straightforward walk through your code"
         status: "Implementation"
-        target: 8
-        people: ["dcamp"]
+        people: ["dcamp", "past"]
     }
     {
         id: "webconsole7"
         url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7"
         name: "Web Console 7"
         blurb: "Fleshed out console object, console message storage, more"
-        status: "Planning"
+        status: "Aurora"
         target: 7
         people: []
         bugs: [
@@ -396,7 +368,6 @@
         name: "DevTools SDK 1"
         blurb: "First bits of customizability"
         status: "Planning"
-        target: 8
         bugs: [
             639518
             638871
@@ -476,10 +447,10 @@
     {
         id: "scratchpad7"
         url: "https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined"
-        name: "Scratchpad 7"
+        name: "Scratchpad 8"
         blurb: "The refined, humane way to engage in software development experiments."
         status: "Implementation"
-        target: 7
+        target: 8
         people: []
         bugs: [
             "636727 Add Ace to workspaces"
@@ -499,15 +470,6 @@
             "656701 Scratchpad missing a menu overlay"
             "658006 Scratchpad breaks if you close the tab it's running in"
             "661289 Save file prompts twice to overwrite existing files"
-        ]
-    }
-    {
-        id: "scratchpad8"
-        name: "Scratchpad 8"
-        status: "Planning"
-        target: 8
-        people: []
-        bugs: [
             "663380 Restore Scratchpad after Firefox crash"
         ]
     }

@@ -92,6 +92,7 @@
     }
     BugDataCollector.prototype.queryDone = function() {
       this.queryCount--;
+      console.log("Done with query, remaining: ", this.queryCount);
       if (this.queryCount === 0) {
         return this.gatherReviewBugData();
       }
@@ -104,6 +105,7 @@
         console.log("finished with main query");
         return this.queryDone();
       }, this));
+      return;
       _results = [];
       for (_i = 0, _len = people.length; _i < _len; _i++) {
         person = people[_i];
@@ -130,8 +132,8 @@
     };
     BugDataCollector.prototype.gatherReviewBugData = function() {
       var buglist;
-      if (!this.reviewBugs.length) {
-        this.saveData;
+      if (this.reviewBugs.length === 0) {
+        this.saveData();
         return;
       }
       buglist = _.uniq(this.reviewBugs, false);
