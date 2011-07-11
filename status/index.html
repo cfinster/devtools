@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/status.css" type="text/css">
+    <link rel="stylesheet" href="../css/demo_table_jui.css" type="text/css">
+    <script src="../js/LAB.min.js"></script>
+    <script>
+        var development = true;
+        $LAB
+        .script("projects.js")
+        .script("../js/jquery.js").wait()
+        .script("../js/jquery.dataTables.min.js")
+        .script("../js/bigtext.js").wait()
+        .script("../js/specjs/status.js")
+        .wait(function() {
+            specjs.status.populatePage();
+            var url = "status.json";
+            if (development) {
+                url += "?" + new Date().getTime();
+            }
+            $.getJSON(url, function(data) {
+                window.statusdata = data;
+                specjs.status.jumpToProject();
+            });
+        });
+    </script>
+    <title>Mozilla Developer Tools Project Status</title>
+  </head>
+  <body>
+        <div class="topsummary">
+        <h1>Developer Tools Project Status</h1>
+        <div class="maindate">July 7</div>
+        </div>
+    
+        <div id="primary">
+            <div id="nav">
+                <div data-id="summary">Summary</div>
+                <div data-id="people">People</div>
+            </div>
+        
+            <div id="content">
+            </div>
+            <div id="people">
+            </div>
+        </div>
+
+        <div class="attribution">Some icons by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a>.</div>
+  </body>
+</html>
