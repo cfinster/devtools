@@ -23,7 +23,7 @@ body
     color: #484848;
 }
 
-section.project {
+section.project, section.release_tracking {
     border: 2px solid #00a;
     margin-bottom: 2em;
     background: white;

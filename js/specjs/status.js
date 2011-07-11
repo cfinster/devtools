@@ -261,7 +261,7 @@
     return location.hash = "#people";
   };
   exports.showSummary = function() {
-    var container, content, counts, firstRelease, i, lastRelease, project, release, releases, target, _i, _j, _len, _len2;
+    var container, content, contentNode, firstRelease, formatProjectLine, i, lastRelease, project, release, releases, target, _i, _j, _k, _len, _len2, _len3;
     $('#content').show();
     $('#people').hide();
     releases = [];
@@ -287,24 +287,39 @@
     if (firstRelease === Infinity || lastRelease === -1) {
       return;
     }
-    content = "<section class=\"release_tracking\">\n<h2>Release Tracking</h2>";
+    content = "<section class=\"release_tracking\">\n<h2>Release Tracking</h2>\n<table class=\"releases\">\n    <thead>\n        <tr>\n            <th>Release</th>\n            <th>Feature</th>\n            <th>Status</th>\n            <th>Open Bugs</th>\n            <th>with Patches</th>\n        </tr>\n    </thead>\n    <tbody>";
+    formatProjectLine = function(release, project) {
+      var counts, releaseName;
+      counts = project.getBugCounts();
+      releaseName = release ? "Firefox " + release : "None";
+      return "<tr><td>" + releaseName + "</td><td class=\"project\" data-id=\"" + project.id + "\">" + project.name + "</td><td>" + project.status + "</td><td>" + counts.open + "</td><td>" + counts.withPatches + "</td>";
+    };
     for (i = firstRelease; (firstRelease <= lastRelease ? i <= lastRelease : i >= lastRelease); (firstRelease <= lastRelease ? i += 1 : i -= 1)) {
       release = releases[i];
       if (!(release != null)) {
         continue;
       }
-      content += "<h3>Firefox " + i + "</h3>\n<table>\n    <thead>\n        <tr>\n            <th>Feature</th>\n            <th>Status</th>\n            <th>Open Bugs</th>\n            <th>with Patches</th>\n        </tr>\n    </thead>\n    <tbody>";
       for (_j = 0, _len2 = release.length; _j < _len2; _j++) {
         project = release[_j];
-        counts = project.getBugCounts();
-        content += "<tr><td class=\"project\" data-id=\"" + project.id + "\">" + project.name + "</td><td>" + project.status + "</td><td>" + counts.open + "</td><td>" + counts.withPatches + "</td>";
+        content += formatProjectLine(i, project);
       }
-      content += "</tbody>\n</table>";
     }
+    for (_k = 0, _len3 = projects.length; _k < _len3; _k++) {
+      project = projects[_k];
+      if (!project.target) {
+        content += formatProjectLine(null, project);
+      }
+    }
+    content += "</tbody>\n</table>";
     content += "</section>";
     container = $("#content");
     container.children().remove();
-    container.append($(content));
+    contentNode = $(content);
+    $("table.releases", contentNode).dataTable({
+      bPaginate: false,
+      bInfo: false
+    });
+    container.append(contentNode);
     $("td.project", container).click(function(e) {
       return exports.showProject($(e.target).attr("data-id"));
     });

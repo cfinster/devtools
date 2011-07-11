@@ -316,15 +316,10 @@ exports.showSummary = () ->
 
     content = """<section class="release_tracking">
 <h2>Release Tracking</h2>
-"""
-    for i in [firstRelease..lastRelease]
-        release = releases[i]
-        if not release?
-            continue
-        content += """<h3>Firefox #{i}</h3>
-<table>
+<table class="releases">
     <thead>
         <tr>
+            <th>Release</th>
             <th>Feature</th>
             <th>Status</th>
             <th>Open Bugs</th>
@@ -333,12 +328,26 @@ exports.showSummary = () ->
     </thead>
     <tbody>
 """
+    formatProjectLine = (release, project) ->
+        counts = project.getBugCounts()
+        releaseName = if release then "Firefox #{release}" else "None"
+        
+        """
+        <tr><td>#{releaseName}</td><td class="project" data-id="#{project.id}">#{project.name}</td><td>#{project.status}</td><td>#{counts.open}</td><td>#{counts.withPatches}</td>
+        """
+
+    for i in [firstRelease..lastRelease]
+        release = releases[i]
+        if not release?
+            continue
         for project in release
-            counts = project.getBugCounts()
-            content += """
-        <tr><td class="project" data-id="#{project.id}">#{project.name}</td><td>#{project.status}</td><td>#{counts.open}</td><td>#{counts.withPatches}</td>
-"""
-        content += """
+            content += formatProjectLine i, project
+    
+    for project in projects
+        if not project.target
+            content += formatProjectLine null, project
+
+    content += """
     </tbody>
 </table>
 """
@@ -348,7 +357,12 @@ exports.showSummary = () ->
 """
     container = $("#content")
     container.children().remove()
-    container.append($(content))
+    contentNode = $ content
+    $("table.releases", contentNode).dataTable({
+        bPaginate: false
+        bInfo: false
+    })
+    container.append(contentNode)
 
     $("td.project", container).click (e) ->
         exports.showProject($(e.target).attr("data-id"))
