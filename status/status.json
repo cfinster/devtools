@@ -329,7 +329,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 18675
+   "patchSize": 18671
   },
   "659775": {
    "summary": "When the Web Console is in a separate window, Ctrl+W/Cmd+W should close it",
@@ -601,7 +601,7 @@
    "summary": "window.console API messages from before the Web Console is opened don't show",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[has review][new patch attached][softblocker][console-1]",
+   "whiteboard": "[has review][new patch attached][console-1]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -780,7 +780,12 @@
    "whiteboard": "[scratchpad][trybuilds in comment #29]",
    "hasPatch": true,
    "flags": {
-    "feedback": [],
+    "feedback": [
+     {
+      "status": "+",
+      "setter": "rcampbell"
+     }
+    ],
     "review": [
      {
       "status": "?",
@@ -879,12 +884,18 @@
    "summary": "[htmltree] add attribute editing",
    "status": "NEW",
    "assignedName": "getify",
-   "hasPatch": false,
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "-",
+      "setter": "rcampbell"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 89966
   },
   "656220": {
    "summary": "Style Inspector should cache cssLogic and cssHtmlTree outside the Highlighter",
@@ -1119,7 +1130,7 @@
    "summary": "Errors from before the Web Console is opened do not show",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[has patch][has new patch][final?][softblocker][console-1]",
+   "whiteboard": "[has patch][has new patch][final?][console-1]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1132,7 +1143,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 18961
+   "patchSize": 27698
   },
   "638142": {
    "summary": "Add ability to anchor a panel to a widget",
@@ -1372,14 +1383,19 @@
    "summary": "Inspect is oblivious to DOM changes",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[patchclean:0916]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "mihai.sucan"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 44266
+   "patchSize": 42215
   },
   "655776": {
    "summary": "Web Developer > Get More Tools menu item",
@@ -2098,22 +2114,23 @@
    }
   },
   "612658": {
-   "summary": "Implement ConsoleStorageService",
+   "summary": "Implement ConsoleAPIStorage - add caching for the window.console API",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[has new patch][softblocker][console-1][has review]",
+   "whiteboard": "[console-1]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
+    "review": [],
+    "superreview": [
      {
-      "status": "-",
-      "setter": "gavin.sharp"
+      "status": "?",
+      "requestee": "bzbarsky",
+      "setter": "mihai.sucan"
      }
-    ],
-    "superreview": []
+    ]
    },
-   "patchSize": 17069
+   "patchSize": 18176
   },
   "590799": {
    "summary": "Styling for the CSS editor panel",
@@ -2204,10 +2221,16 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "rcampbell",
+      "setter": "cedricv"
+     }
+    ],
     "superreview": []
    },
-   "patchSize": 21171
+   "patchSize": 90243
   },
   "638452": {
    "summary": "Can you please help us make the Orion code editor fast on Firefox?",
@@ -2811,9 +2834,17 @@
  "reviewQueues": {
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 435691,
+    "devtoolsSize": 444428,
     "devtoolsCount": 4,
-    "totalSize": 435691,
+    "totalSize": 444428,
+    "totalCount": 4
+   }
+  },
+  "rcampbell": {
+   "review": {
+    "devtoolsSize": 169493,
+    "devtoolsCount": 4,
+    "totalSize": 169493,
     "totalCount": 4
    }
   },
@@ -2822,14 +2853,6 @@
     "devtoolsSize": 353599,
     "devtoolsCount": 1,
     "totalSize": 353599,
-    "totalCount": 1
-   }
-  },
-  "rcampbell": {
-   "review": {
-    "devtoolsSize": 15864,
-    "devtoolsCount": 1,
-    "totalSize": 15864,
     "totalCount": 1
    }
   },
