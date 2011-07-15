@@ -7,7 +7,6 @@ getBugIDandLabel = specjs.status.getBugIDandLabel
 
 # Returns null if it can't do it, false if there's an error, true if it saved OK
 saveFile = (filePath,content) ->
-    console.log "Saving to ", filePath
     if window.Components
         try
             netscape.security.PrivilegeManager.enablePrivilege "UniversalXPConnect"
@@ -93,6 +92,9 @@ class BugDataCollector
             console.log "finished with main query"
             @queryDone()
         
+        # temporarily short circuit review queue loading
+        return
+
         for person in people
             if person.reviewCheck == false
                 continue

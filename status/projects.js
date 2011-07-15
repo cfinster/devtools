@@ -22,7 +22,7 @@
       status: "Beta",
       target: 6,
       people: ["msucan", "rcampbell"],
-      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in workspace", "646524 Cache the sandboxes", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "658344 useful introductory text", "646524 cache the sandboxes", "657136 Rename top-level Context menu to something less confusing", "657131 Create an Execute menu", "660560 pressing Tab should indent", "661762 Scratchpad source link may focus the wrong window", "663746 Change Scratchpad shortcut key to something other than F4"],
+      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in rkspace# ", "646524 Cache the sandboxes", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "658344 useful introductory text", "646524 cache the sandboxes", "657136 Rename top-level Context menu to something less # nfusing", "657131 Create an Execute menu", "660560 pressing Tab should indent", "661762 Scratchpad source link may focus the wrong window", "663746 Change Scratchpad shortcut key to something other than F4"],
       updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
     }, {
       id: "webdevmenu",

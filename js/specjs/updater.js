@@ -6,7 +6,6 @@
   getBugIDandLabel = specjs.status.getBugIDandLabel;
   saveFile = function(filePath, content) {
     var file, out;
-    console.log("Saving to ", filePath);
     if (window.Components) {
       try {
         netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
@@ -105,6 +104,7 @@
         console.log("finished with main query");
         return this.queryDone();
       }, this));
+      return;
       _results = [];
       for (_i = 0, _len = people.length; _i < _len; _i++) {
         person = people[_i];
