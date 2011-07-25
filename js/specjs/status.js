@@ -205,6 +205,9 @@
     } else if (id === "summary") {
       exports.showSummary();
       return;
+    } else if (id === "news") {
+      exports.showNews();
+      return;
     }
     $('#content').show();
     $('#people').hide();
@@ -259,6 +262,27 @@
     $('#content').hide();
     $('#people').show();
     return location.hash = "#people";
+  };
+  exports.showNews = function() {
+    var container, content, contentNode, event, _i, _len, _ref;
+    $('#content').show();
+    $('#people').hide();
+    content = "<secton class=\"news\">\n<table class=\"news\">\n    <thead>\n        <th>Date/Time</th>\n        <th>Project</th>\n        <th>Bug</th>\n        <th>What Happened</th>\n    </thead>\n    <tbody>";
+    _ref = statusdata.timeline.events;
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      event = _ref[_i];
+      content += "<tr><td>" + event.when + "</td><td>&nbsp;</td><td>" + event.bugId + "</td><td>" + event.type + " " + event.detail + "</td></tr>";
+    }
+    content += "</tbody>\n</table>\n</section>";
+    container = $("#content");
+    container.children().remove();
+    contentNode = $(content);
+    $("table.news", contentNode).dataTable({
+      bPaginate: false,
+      bInfo: false
+    });
+    container.append(contentNode);
+    return location.hash = "#news";
   };
   exports.showSummary = function() {
     var container, content, contentNode, firstRelease, formatProjectLine, i, lastRelease, project, release, releases, target, _i, _j, _k, _len, _len2, _len3;
@@ -357,7 +381,7 @@
     var hash;
     hash = location.hash.substring(1);
     if (!hash) {
-      hash = "summary";
+      hash = "news";
     }
     return exports.showProject(hash);
   };

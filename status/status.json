@@ -22,7 +22,7 @@
    "summary": "GCLI needs a commonjs require system",
    "status": "ASSIGNED",
    "assignedName": "jwalker",
-   "whiteboard": "[backed-out-of-devtools][leaks]",
+   "whiteboard": "[backed-out-of-devtools][leaks][minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -146,6 +146,7 @@
    "summary": "csslogic shortSource can create duplicate names",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -247,7 +248,7 @@
    "summary": "Disable HTML panel and make it use registerTools API",
    "status": "NEW",
    "assignedName": "rcampbell",
-   "whiteboard": "[highlighter]",
+   "whiteboard": "[highlighter][minotaur]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -259,6 +260,7 @@
    "summary": "[highlighter] Draw layout information of the selected node",
    "status": "ASSIGNED",
    "assignedName": "paul",
+   "whiteboard": "minotaur",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -298,8 +300,9 @@
   },
   "590796": {
    "summary": "Clicking on a rule in the style panel doesn't jump to the correct line in the CSS editor",
-   "status": "NEW",
+   "status": "RESOLVED",
    "assignedName": "cedricv",
+   "whiteboard": "[minotaur][hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -329,7 +332,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 18671
+   "patchSize": 18538
   },
   "659775": {
    "summary": "When the Web Console is in a separate window, Ctrl+W/Cmd+W should close it",
@@ -469,6 +472,7 @@
    "summary": "Inspector: be able to choose an alternative media type",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -583,7 +587,7 @@
      }
     ]
    },
-   "patchSize": 20858
+   "patchSize": 15522
   },
   "657132": {
    "summary": "Create a popup equivalent to the Context Menu on the Scratchpad's status bar",
@@ -625,6 +629,7 @@
    "summary": "Inspector: style panel keyboard access",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -636,6 +641,7 @@
    "summary": "Inspector panels should remember at least size and ideally also position",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -730,6 +736,7 @@
    "summary": "Automatic display of localized content",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -884,18 +891,14 @@
    "summary": "[htmltree] add attribute editing",
    "status": "NEW",
    "assignedName": "getify",
+   "whiteboard": "[minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "-",
-      "setter": "rcampbell"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 89966
+   "patchSize": 89993
   },
   "656220": {
    "summary": "Style Inspector should cache cssLogic and cssHtmlTree outside the Highlighter",
@@ -999,6 +1002,7 @@
    "summary": "Style inspector should be controllable from the highlighter",
    "status": "NEW",
    "assignedName": "mratcliffe",
+   "whiteboard": "[minotaur], [hydra]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1073,6 +1077,7 @@
    "summary": "Changes made in the CSS editor aren't reflected in the style panel",
    "status": "NEW",
    "assignedName": "cedricv",
+   "whiteboard": "[minotaur]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1084,6 +1089,7 @@
    "summary": "The style inspector should react to dynamic changes to the pages stylesheets",
    "status": "NEW",
    "assignedName": "jwalker",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1250,6 +1256,7 @@
    "summary": "The inspector style panel should link to the CSS editor",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[minotaur][hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1365,6 +1372,7 @@
    "summary": "Update HudService.jsm to allow GCLI integration",
    "status": "NEW",
    "assignedName": "jwalker",
+   "whiteboard": "[minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [
@@ -1383,16 +1391,11 @@
    "summary": "Inspect is oblivious to DOM changes",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
+   "whiteboard": "[minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
    "patchSize": 42215
@@ -1480,9 +1483,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "ehsan",
-      "setter": "mihai.sucan"
+      "status": "-",
+      "setter": "ehsan"
      },
      {
       "status": "?",
@@ -1498,6 +1500,7 @@
    "summary": "Style inspector should allow editing of css property values",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1554,6 +1557,7 @@
    "summary": "Inspector style panel ranks all unmatched rules the same",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
+   "whiteboard": "[hydra]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1565,7 +1569,7 @@
   "653658": {
    "summary": "JavaScript implementation of WebGL MOZ_dom_element_texture extension",
    "status": "ASSIGNED",
-   "assignedName": "victor.porof",
+   "assignedName": "cedricv",
    "whiteboard": "[tilt]",
    "hasPatch": false,
    "flags": {
@@ -1638,14 +1642,21 @@
   },
   "662807": {
    "summary": "Error bubbles for multiline messages in console look silly",
-   "status": "NEW",
-   "assignedName": "nobody",
-   "hasPatch": false,
+   "status": "ASSIGNED",
+   "assignedName": "rcampbell",
+   "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [],
+    "review": [
+     {
+      "status": "?",
+      "requestee": "dao",
+      "setter": "rcampbell"
+     }
+    ],
     "superreview": []
-   }
+   },
+   "patchSize": 4559
   },
   "642615": {
    "summary": "If I paste over an auto-suggestion in web console, the suggested text remains",
@@ -1838,6 +1849,7 @@
    "summary": "Create Export from GCLI project to JSM",
    "status": "ASSIGNED",
    "assignedName": "jwalker",
+   "whiteboard": "[minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1856,7 +1868,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 13162
+   "patchSize": 13267
   },
   "626484": {
    "summary": "Incorrect order of lines when copying from web console",
@@ -2013,20 +2025,20 @@
    "summary": "Inspect gets disabled when navigating to new pages",
    "status": "ASSIGNED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[strings]",
+   "whiteboard": "[strings][minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
       "status": "?",
-      "requestee": "rcampbell",
+      "requestee": "dolske",
       "setter": "mihai.sucan"
      }
     ],
     "superreview": []
    },
-   "patchSize": 15864
+   "patchSize": 14622
   },
   "656296": {
    "summary": "console.jsm from Pilot should send reports to the web console",
@@ -2041,8 +2053,9 @@
   },
   "590307": {
    "summary": "CSS editor should properly edit inline style sheets",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "cedricv",
+   "whiteboard": "[minotaur]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2124,9 +2137,8 @@
     "review": [],
     "superreview": [
      {
-      "status": "?",
-      "requestee": "bzbarsky",
-      "setter": "mihai.sucan"
+      "status": "+",
+      "setter": "bzbarsky"
      }
     ]
    },
@@ -2217,15 +2229,14 @@
    "summary": "Style Editor integration",
    "status": "ASSIGNED",
    "assignedName": "cedricv",
-   "whiteboard": "[strings][patch-needs-updating]",
+   "whiteboard": "[strings][patch-needs-updating][minotaur]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "cedricv"
+      "status": "-",
+      "setter": "rcampbell"
      }
     ],
     "superreview": []
@@ -2362,7 +2373,7 @@
    "summary": "Shared knowledge of selected node in highlighter",
    "status": "NEW",
    "assignedName": "nobody",
-   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][console]",
+   "whiteboard": "[best: 1h, likely: 2h, worst: 1d][console][minotaur]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2409,6 +2420,7 @@
    "summary": "better logic for placement of inspector panels",
    "status": "NEW",
    "assignedName": "jwalker",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2493,7 +2505,7 @@
     ],
     "superreview": []
    },
-   "patchSize": 15956
+   "patchSize": 11240
   },
   "650780": {
    "summary": "evaluating a null object in the web console returns TypeError: aObject is null",
@@ -2686,7 +2698,7 @@
    "summary": "Style view centered around answering common CSS questions",
    "status": "ASSIGNED",
    "assignedName": "mratcliffe",
-   "whiteboard": "[strings] [patchclean:0827]",
+   "whiteboard": "[strings] [patchclean:0827][hydra]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -2699,12 +2711,13 @@
     ],
     "superreview": []
    },
-   "patchSize": 169311
+   "patchSize": 169187
   },
   "587752": {
    "summary": "Animations in the new Style panel",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2798,6 +2811,7 @@
    "summary": "Localize the URLs in csshtmltree",
    "status": "NEW",
    "assignedName": "nobody",
+   "whiteboard": "[hydra]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -2834,26 +2848,26 @@
  "reviewQueues": {
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 444428,
+    "devtoolsSize": 439712,
     "devtoolsCount": 4,
-    "totalSize": 444428,
+    "totalSize": 439712,
     "totalCount": 4
    }
   },
-  "rcampbell": {
+  "dao": {
    "review": {
-    "devtoolsSize": 169493,
-    "devtoolsCount": 4,
-    "totalSize": 169493,
-    "totalCount": 4
-   }
-  },
-  "ehsan": {
-   "review": {
-    "devtoolsSize": 353599,
+    "devtoolsSize": 4559,
     "devtoolsCount": 1,
-    "totalSize": 353599,
+    "totalSize": 4559,
     "totalCount": 1
+   }
+  },
+  "dolske": {
+   "review": {
+    "devtoolsSize": 183809,
+    "devtoolsCount": 2,
+    "totalSize": 183809,
+    "totalCount": 2
    }
   },
   "jonas": {
@@ -2863,14 +2877,412 @@
     "totalSize": 538323,
     "totalCount": 8
    }
-  },
-  "dolske": {
-   "review": {
-    "devtoolsSize": 169311,
-    "devtoolsCount": 1,
-    "totalSize": 169311,
-    "totalCount": 1
-   }
   }
+ },
+ "timeline": {
+  "events": [
+   {
+    "bugId": "662807",
+    "when": "2011-07-22T22:34:09.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "612658",
+    "when": "2011-07-22T13:05:43.000Z",
+    "type": "newComment",
+    "detail": "from bzbarsky@mit.edu"
+   },
+   {
+    "bugId": "582596",
+    "when": "2011-07-21T23:44:37.000Z",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "653545",
+    "when": "2011-07-21T21:32:33.000Z",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "590796",
+    "when": "2011-07-21T18:20:21.000Z",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "585563",
+    "when": "2011-07-21T18:20:21.000Z",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "663831",
+    "when": "2011-07-21T18:10:09.000Z",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "660784",
+    "when": "2011-07-21T06:38:31.000Z",
+    "type": "newComment",
+    "detail": "from ehsan@mozilla.com"
+   },
+   {
+    "bugId": "660606",
+    "when": "2011-07-21T04:51:12.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "659710",
+    "when": "2011-07-21T02:52:04.000Z",
+    "type": "newComment",
+    "detail": "from getify@mozilla.com"
+   },
+   {
+    "bugId": "659710",
+    "when": "2011-07-21T02:52:00.000Z",
+    "type": "newPatch",
+    "detail": "updated patch for UX overhaul of html panel"
+   },
+   {
+    "bugId": "566084",
+    "when": "2011-07-21T02:41:58.000Z",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "590307",
+    "when": "2011-07-21T02:28:26.000Z",
+    "type": "newComment",
+    "detail": "from cedricv@neonux.com"
+   },
+   {
+    "bugId": "653658",
+    "when": "2011-07-20T21:17:16.000Z",
+    "type": "newComment",
+    "detail": "from cedricv@neonux.com"
+   },
+   {
+    "bugId": "659907",
+    "when": "2011-07-20T18:30:26.000Z",
+    "type": "newComment",
+    "detail": "from past@mozilla.com"
+   },
+   {
+    "bugId": "659907",
+    "when": "2011-07-20T18:30:00.000Z",
+    "type": "newPatch",
+    "detail": "Patch v13"
+   },
+   {
+    "bugId": "664131",
+    "when": "2011-07-20T18:05:44.000Z",
+    "type": "newComment",
+    "detail": "from past@mozilla.com"
+   },
+   {
+    "bugId": "664131",
+    "when": "2011-07-20T18:05:00.000Z",
+    "type": "newPatch",
+    "detail": "Patch v4"
+   },
+   {
+    "bugId": "658368",
+    "when": "2011-07-20T17:48:08.000Z",
+    "type": "newComment",
+    "detail": "from past@mozilla.com"
+   },
+   {
+    "bugId": "658368",
+    "when": "2011-07-20T17:48:00.000Z",
+    "type": "newPatch",
+    "detail": "Patch v9"
+   },
+   {
+    "bugId": "582596",
+    "when": "2011-07-20T16:23:00.000Z",
+    "type": "newPatch",
+    "detail": "Style Inspector complete patch 4"
+   },
+   {
+    "bugId": "660606",
+    "when": "2011-07-20T16:11:00.000Z",
+    "type": "newPatch",
+    "detail": "Register tools patch 9"
+   },
+   {
+    "bugId": "566084",
+    "when": "2011-07-20T02:55:00.000Z",
+    "type": "newPatch",
+    "detail": "new patch 3"
+   },
+   {
+    "bugId": "566085",
+    "when": "2011-07-19T23:20:32.000Z",
+    "type": "newComment",
+    "detail": "from dcamp@mozilla.com"
+   },
+   {
+    "bugId": "583041",
+    "when": "2011-07-19T23:02:19.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "662807",
+    "when": "2011-07-18T05:28:00.000Z",
+    "type": "newPatch",
+    "detail": "silly-bubbles-2"
+   },
+   {
+    "bugId": "650794",
+    "when": "2011-07-16T07:53:24.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "529536",
+    "when": "2011-07-13T23:33:20.000Z",
+    "type": "newComment",
+    "detail": "from jonathan.wylie@gmail.com"
+   },
+   {
+    "bugId": "611032",
+    "when": "2011-07-13T03:24:49.000Z",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "611032",
+    "when": "2011-07-13T03:24:00.000Z",
+    "type": "newPatch",
+    "detail": "v 0.10 back to nsIConsoleService"
+   },
+   {
+    "bugId": "612658",
+    "when": "2011-07-12T04:22:00.000Z",
+    "type": "newPatch",
+    "detail": "v 0.15 improved comments"
+   },
+   {
+    "bugId": "566085",
+    "when": "2011-07-12T03:06:00.000Z",
+    "type": "newPatch",
+    "detail": "rebase to fxteam"
+   },
+   {
+    "bugId": "636727",
+    "when": "2011-07-08T21:30:58.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "656668",
+    "when": "2011-07-08T02:59:25.000Z",
+    "type": "newComment",
+    "detail": "from dtownsend@mozilla.com"
+   },
+   {
+    "bugId": "636727",
+    "when": "2011-07-07T22:48:00.000Z",
+    "type": "newPatch",
+    "detail": "rebased patch"
+   },
+   {
+    "bugId": "660784",
+    "when": "2011-07-07T22:37:00.000Z",
+    "type": "newPatch",
+    "detail": "patch update 5"
+   },
+   {
+    "bugId": "609890",
+    "when": "2011-07-07T20:43:09.000Z",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "609890",
+    "when": "2011-07-07T20:43:00.000Z",
+    "type": "newPatch",
+    "detail": "v 0.11 comments addressed"
+   },
+   {
+    "bugId": "669596",
+    "when": "2011-07-06T20:18:16.000Z",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "669596",
+    "when": "2011-07-06T20:18:00.000Z",
+    "type": "newBug",
+    "detail": ""
+   },
+   {
+    "bugId": "663831",
+    "when": "2011-07-06T18:45:00.000Z",
+    "type": "newPatch",
+    "detail": "Style inspector registerTools patch 2"
+   },
+   {
+    "bugId": "663746",
+    "when": "2011-07-06T17:11:14.000Z",
+    "type": "newComment",
+    "detail": "from simona.marcu@softvision.ro"
+   },
+   {
+    "bugId": "482921",
+    "when": "2011-07-06T02:28:14.000Z",
+    "type": "newComment",
+    "detail": "from gavin.sharp@gmail.com"
+   },
+   {
+    "bugId": "583041",
+    "when": "2011-07-06T01:10:00.000Z",
+    "type": "newPatch",
+    "detail": "Patch"
+   },
+   {
+    "bugId": "583041",
+    "when": "2011-07-06T01:10:00.000Z",
+    "type": "newPatch",
+    "detail": "Tests"
+   },
+   {
+    "bugId": "594742",
+    "when": "2011-07-05T23:13:35.000Z",
+    "type": "newComment",
+    "detail": "from cedricv@neonux.com"
+   },
+   {
+    "bugId": "590799",
+    "when": "2011-07-05T23:11:48.000Z",
+    "type": "newComment",
+    "detail": "from cedricv@neonux.com"
+   },
+   {
+    "bugId": "246620",
+    "when": "2011-07-02T04:55:06.000Z",
+    "type": "newComment",
+    "detail": "from bzbarsky@mit.edu"
+   },
+   {
+    "bugId": "651501",
+    "when": "2011-07-01T20:40:47.000Z",
+    "type": "newComment",
+    "detail": "from george.carstoiu@softvision.ro"
+   },
+   {
+    "bugId": "659778",
+    "when": "2011-06-30T20:30:37.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "554926",
+    "when": "2011-06-30T00:54:18.000Z",
+    "type": "newComment",
+    "detail": "from enndeakin@gmail.com"
+   },
+   {
+    "bugId": "653423",
+    "when": "2011-06-30T00:39:38.000Z",
+    "type": "newComment",
+    "detail": "from gavin.sharp@gmail.com"
+   },
+   {
+    "bugId": "660806",
+    "when": "2011-06-29T20:51:40.000Z",
+    "type": "newComment",
+    "detail": "from george.carstoiu@softvision.ro"
+   },
+   {
+    "bugId": "656701",
+    "when": "2011-06-29T20:25:45.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "642471",
+    "when": "2011-06-29T19:31:29.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "663443",
+    "when": "2011-06-28T21:52:42.000Z",
+    "type": "newComment",
+    "detail": "from george.carstoiu@softvision.ro"
+   },
+   {
+    "bugId": "660560",
+    "when": "2011-06-28T21:41:47.000Z",
+    "type": "newComment",
+    "detail": "from george.carstoiu@softvision.ro"
+   },
+   {
+    "bugId": "586974",
+    "when": "2011-06-28T02:29:55.000Z",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "651501",
+    "when": "2011-06-27T17:56:00.000Z",
+    "type": "newPatch",
+    "detail": "Patch v8"
+   },
+   {
+    "bugId": "657303",
+    "when": "2011-06-27T03:04:10.000Z",
+    "type": "newComment",
+    "detail": "from dao@mozilla.com"
+   },
+   {
+    "bugId": "586974",
+    "when": "2011-06-24T17:07:00.000Z",
+    "type": "newPatch",
+    "detail": "Unmatched property order patch"
+   },
+   {
+    "bugId": "642196",
+    "when": "2011-06-24T15:27:40.000Z",
+    "type": "newComment",
+    "detail": "from jwalker@mozilla.com"
+   },
+   {
+    "bugId": "656668",
+    "when": "2011-06-24T04:26:00.000Z",
+    "type": "newPatch",
+    "detail": "upload 3"
+   },
+   {
+    "bugId": "663746",
+    "when": "2011-06-24T01:55:00.000Z",
+    "type": "newPatch",
+    "detail": "scratch-n-shift"
+   },
+   {
+    "bugId": "656330",
+    "when": "2011-06-23T22:02:43.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "653140",
+    "when": "2011-06-23T20:09:28.000Z",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "663120",
+    "when": "2011-06-23T19:22:13.000Z",
+    "type": "newComment",
+    "detail": "from jwalker@mozilla.com"
+   }
+  ]
  }
 }

@@ -1,5 +1,5 @@
 (function() {
-  var BugDataCollector, Projects, addBugData, checkDataDir, exports, getBugIDandLabel, loadCachedBugData, saveFile;
+  var BugDataCollector, MILLISECONDS_IN_MONTH, Projects, addBugData, checkDataDir, exports, getBugIDandLabel, loadCachedBugData, saveFile;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   exports = specjs.updater = {};
   Projects = specjs.status.Projects;
@@ -49,14 +49,7 @@
       if (!checkDataDir()) {
         return;
       }
-      if (!exports.bugData) {
-        return buggerall.getCachedResult("bugdata.json?" + new Date().getTime(), function(q) {
-          exports.bugData = q;
-          return exports.generateStatusData();
-        });
-      } else {
-        return exports.generateStatusData();
-      }
+      return exports.generateStatusData();
     });
     return console.log("UI ready");
   };
@@ -84,7 +77,8 @@
         bugid: exports.bugList.join(","),
         whitespace: true,
         includeHistory: true,
-        historyCacheURL: "bughistory/"
+        historyCacheURL: "bughistory/",
+        computeLastCommentTime: true
       });
       this.queryCount = 0;
       this.reviewBugs = [];
@@ -276,11 +270,32 @@
     }
     return _results;
   };
+  MILLISECONDS_IN_MONTH = 30 * 24 * 60 * 60 * 1000;
   loadCachedBugData = function() {
     console.log("Reloading cached bugdata");
     return buggerall.getCachedResult("bugdata.json", function(data) {
+      var bug, cutoff, historyComplete, key, queryCount;
       console.log("Bugdata retrieved");
       exports.bugData = data;
+      cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH;
+      queryCount = 0;
+      historyComplete = function(bug) {
+        var changeset, changesets, i, _ref, _results;
+        queryCount--;
+        changesets = bug.history.changesets;
+        _results = [];
+        for (i = _ref = changesets.length; (_ref <= 0 ? i <= 0 : i >= 0); (_ref <= 0 ? i += 1 : i -= 1)) {
+          _results.push(changeset = changesets[i]);
+        }
+        return _results;
+      };
+      for (key in data) {
+        bug = data[key];
+        if (bug.last_change_time.getTime() > cutoff) {
+          queryCount++;
+          bug.loadHistory("bughistory/" + key + ".json", historyComplete);
+        }
+      }
       return exports.generateStatusData();
     });
   };
@@ -295,6 +310,7 @@
       return;
     }
     addBugData(statusdata);
+    statusdata.timeline = new buggerall.Timeline(exports.bugData, 30);
     return saveFile(exports.datadir + "/status.json", JSON.stringify(statusdata, null, 1));
   };
 }).call(this);

@@ -36,14 +36,14 @@
    * the terms of any one of the MPL, the GPL or the LGPL.
    *
    * ***** END LICENSE BLOCK ***** *
-  */  var Attachment, Bug, Change, ChangeSet, History, Query, ajax, exports, getJSON, _serialize, _unserialize;
+  */  var Attachment, Bug, Change, ChangeSet, History, Query, Timeline, TimelineEntry, ajax, buggerall, getJSON, _serialize, _unserialize;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; }, __hasProp = Object.prototype.hasOwnProperty;
-  exports = this.buggerall = {};
+  buggerall = this.buggerall = {};
   getJSON = $.getJSON;
   ajax = $.ajax;
-  exports.VERSION = "0.2";
-  exports.SERIALIZER_VERSION = 1;
-  exports.Query = Query = (function() {
+  buggerall.VERSION = "0.3";
+  buggerall.SERIALIZER_VERSION = 1;
+  buggerall.Query = Query = (function() {
     function Query(opts) {
       this._queryDone = __bind(this._queryDone, this);;
       this._bugResult = __bind(this._bugResult, this);;      this._queryCount = 0;
@@ -63,6 +63,7 @@
       this.historyCacheURL = opts.historyCacheURL;
       this.includeHistory = opts.includeHistory;
       this.whitespace = opts.whitespace;
+      this.computeLastCommentTime = opts.computeLastCommentTime;
       this.result = void 0;
     }
     Query.prototype.getJSON = function(url, callback) {
@@ -111,7 +112,10 @@
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         bugData = _ref[_i];
         bug = result[bugData.id] = new Bug(bugData);
-        _results.push(this.includeHistory ? this._loadHistory(bug) : void 0);
+        if (this.includeHistory) {
+          this._loadHistory(bug);
+        }
+        _results.push(this.computeLastCommentTime ? this._getLatestComment(bug) : void 0);
       }
       return _results;
     };
@@ -140,18 +144,19 @@
       } else {
         url = this.apiURL + "bug/" + bug.id + "/history";
         return this.getJSON(url, function(data) {
-          var changeset, changesets, history, _i, _len, _ref, _results;
-          history = bug.history = new History(bug.last_change_time);
-          changesets = history.changesets;
-          _ref = data.history;
-          _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            changeset = _ref[_i];
-            _results.push(changesets.push(new ChangeSet(bug, changeset)));
-          }
-          return _results;
+          return bug._setHistoryFromQueryResult(data.history);
         });
       }
+    };
+    Query.prototype._getLatestComment = function(bug) {
+      var url;
+      url = this.apiURL + "bug/" + bug.id + "/comment?include_fields=creation_time,creator";
+      return this.getJSON(url, function(data) {
+        var lastComment;
+        lastComment = data.comments[data.comments.length - 1];
+        bug.lastCommentTime = Date.parse(lastComment.creation_time);
+        return bug.lastCommentCreator = lastComment.creator.name;
+      });
     };
     Query.prototype.merge = function(otherQ) {
       var bugId, _results;
@@ -164,7 +169,7 @@
     Query.prototype.serialize = function() {
       var bugId, data;
       data = {
-        _version: exports.SERIALIZER_VERSION
+        _version: buggerall.SERIALIZER_VERSION
       };
       for (bugId in this.result) {
         data[bugId] = _serialize(this.result[bugId]);
@@ -175,14 +180,20 @@
         return JSON.stringify(data);
       }
     };
+    Query.prototype.timeline = function(daysback) {
+      if (daysback == null) {
+        daysback = 30;
+      }
+      return new buggerall.Timeline(this.result, daysback);
+    };
     return Query;
   })();
-  exports.getCachedResult = function(url, callback) {
+  buggerall.getCachedResult = function(url, callback) {
     return getJSON(url, function(data) {
       var key, result;
       console.log("Have the data... gonna run with it");
-      if (data._version !== exports.SERIALIZER_VERSION) {
-        throw new Error("bugger all! I don't know how to handle data from version: " + data._version + ". This is serializer version " + exports.SERIALIZER_VERSION);
+      if (data._version !== buggerall.SERIALIZER_VERSION) {
+        throw new Error("bugger all! I don't know how to handle data from version: " + data._version + ". This is serializer version " + buggerall.SERIALIZER_VERSION);
       }
       result = {};
       for (key in data) {
@@ -194,7 +205,7 @@
       return callback(result);
     });
   };
-  exports.Attachment = Attachment = (function() {
+  buggerall.Attachment = Attachment = (function() {
     function Attachment(data) {
       var key;
       for (key in data) {
@@ -207,7 +218,7 @@
     }
     return Attachment;
   })();
-  exports.Bug = Bug = (function() {
+  buggerall.Bug = Bug = (function() {
     function Bug(data) {
       var attachment, attachments, key, _i, _len, _ref;
       for (key in data) {
@@ -217,6 +228,12 @@
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             attachment = _ref[_i];
             attachments[attachment.id] = new Attachment(attachment);
+          }
+        } else if (key === "history") {
+          if (data[key] instanceof History) {
+            this[key] = data[key];
+          } else {
+            this._setHistoryFromQueryResult(data[key]);
           }
         } else if (key === "creation_time" || key === "last_change_time") {
           this[key] = Date.parse(data[key]);
@@ -243,9 +260,26 @@
       }
       return latest;
     };
+    Bug.prototype.loadHistory = function(url, callback) {
+      return getJSON(url, __bind(function(data) {
+        this.history = _unserialize(data);
+        return callback(this);
+      }, this));
+    };
+    Bug.prototype._setHistoryFromQueryResult = function(data) {
+      var changeset, changesets, history, _i, _len, _results;
+      history = this.history = new History(this.last_change_time);
+      changesets = history.changesets;
+      _results = [];
+      for (_i = 0, _len = data.length; _i < _len; _i++) {
+        changeset = data[_i];
+        _results.push(changesets.push(new ChangeSet(this, changeset)));
+      }
+      return _results;
+    };
     return Bug;
   })();
-  exports.History = History = (function() {
+  buggerall.History = History = (function() {
     function History(lastChangeTime) {
       this.lastChangeTime = lastChangeTime;
       this.changesets = [];
@@ -264,7 +298,7 @@
     };
     return History;
   })();
-  exports.ChangeSet = ChangeSet = (function() {
+  buggerall.ChangeSet = ChangeSet = (function() {
     function ChangeSet(bug, data) {
       var change, changes, key, _i, _len, _ref;
       for (key in data) {
@@ -284,7 +318,7 @@
     }
     return ChangeSet;
   })();
-  exports.Change = Change = (function() {
+  buggerall.Change = Change = (function() {
     function Change(bug, data) {
       var key;
       for (key in data) {
@@ -314,13 +348,13 @@
     objData = {};
     if (obj instanceof Bug) {
       objData._type = "Bug";
-    } else if (obj instanceof exports.Attachment) {
+    } else if (obj instanceof buggerall.Attachment) {
       objData._type = "Attachment";
-    } else if (obj instanceof exports.ChangeSet) {
+    } else if (obj instanceof buggerall.ChangeSet) {
       objData._type = "ChangeSet";
-    } else if (obj instanceof exports.Change) {
+    } else if (obj instanceof buggerall.Change) {
       objData._type = "Change";
-    } else if (obj instanceof exports.History) {
+    } else if (obj instanceof buggerall.History) {
       objData._type = "History";
     } else if (obj instanceof Date) {
       objData._type = "Date";
@@ -359,7 +393,7 @@
       if (obj._type === "Date") {
         return Date.parse(obj.value);
       }
-      objData = new exports[obj._type]();
+      objData = new buggerall[obj._type]();
     } else {
       objData = {};
     }
@@ -376,4 +410,77 @@
     }
     return objData;
   };
+  buggerall.Timeline = Timeline = (function() {
+    function Timeline(result, daysback) {
+      var attachment, attachmentInfo, bug, bugId, change, changeset, cutoff, events, id, reviewFlag, reviewFlagResult, reviewRequestFlag, reviewRequestFlagResult, _i, _j, _len, _len2, _ref, _ref2, _ref3;
+      events = this.events = [];
+      cutoff = new Date().getTime() - 30 * 24 * 60 * 60 * 1000;
+      reviewRequestFlag = /^review\?\((.*)\)$/;
+      reviewFlag = /^review([+-])$/;
+      for (bugId in result) {
+        bug = result[bugId];
+        if ((bug.creation_time != null) && bug.creation_time > cutoff) {
+          events.push(new TimelineEntry(bugId, bug.creation_time, "newBug", ""));
+        }
+        if (bug.history != null) {
+          _ref = bug.history.changesets;
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            changeset = _ref[_i];
+            if (changeset.change_time < cutoff) {
+              continue;
+            }
+            _ref2 = changeset.changes;
+            for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
+              change = _ref2[_j];
+              if (change.field_name === "whiteboard") {
+                events.push(new TimelineEntry(bugId, changeset.change_time, "whiteboard", change.added));
+              } else if (change.field_name === "summary") {
+                events.push(new TimelineEntry(bugId, changeset.change_time, "summary", change.added));
+              } else if (change.field_name === "flag") {
+                attachmentInfo = change.attachment != null ? " for " + change.attachment.description : "";
+                reviewRequestFlagResult = reviewRequestFlag.exec(change.added);
+                reviewFlagResult = reviewFlag.exec(change.added);
+                if (reviewRequestFlagResult) {
+                  events.push(new TimelineEntry(bugId, changeset.change_time, "review", "r? " + reviewRequestFlagResult[1] + attachmentInfo));
+                } else if (reviewFlagResult) {
+                  events.push(new TimelineEntry(bugId, changeset.change_time, "review", "r" + reviewFlagResult[1] + attachmentInfo));
+                }
+              }
+            }
+          }
+        }
+        if (bug.attachments != null) {
+          _ref3 = bug.attachments;
+          for (id in _ref3) {
+            attachment = _ref3[id];
+            if (attachment.creation_time < cutoff || attachment.is_obsolete || !attachment.is_patch) {
+              continue;
+            }
+            events.push(new TimelineEntry(bugId, attachment.creation_time, "newPatch", attachment.description));
+          }
+        }
+        if ((bug.lastCommentTime != null) && bug.lastCommentTime > cutoff) {
+          events.push(new TimelineEntry(bugId, bug.lastCommentTime, "newComment", "from " + bug.lastCommentCreator));
+        }
+      }
+      events.sort(function(a, b) {
+        if (a.when < b.when) {
+          return 1;
+        } else if (a.when > b.when) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+    return Timeline;
+  })();
+  buggerall.TimelineEntry = TimelineEntry = (function() {
+    function TimelineEntry(bugId, when, type, detail) {
+      this.bugId = bugId;
+      this.when = when;
+      this.type = type;
+      this.detail = detail;
+    }
+    return TimelineEntry;
+  })();
 }).call(this);

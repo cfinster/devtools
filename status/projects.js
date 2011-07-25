@@ -179,7 +179,7 @@
       blurb: "Debugging the multiprocess world",
       status: "Implementation",
       people: ["jblandy"],
-      bugs: ["560314", "636907"]
+      bugs: ["560314", "636907", "672829"]
     }, {
       id: "ui",
       url: "https://wiki.mozilla.org/DevTools/Features/OverallUI",

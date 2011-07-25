@@ -48,12 +48,7 @@ exports.attachUI = () ->
     $('#statusupdate').click(() ->
         if !checkDataDir()
             return
-        if !exports.bugData
-            buggerall.getCachedResult "bugdata.json?" + new Date().getTime(), (q) ->
-                exports.bugData = q
-                exports.generateStatusData()
-        else
-            exports.generateStatusData()
+        exports.generateStatusData()
     )
     console.log "UI ready"
 
@@ -75,6 +70,7 @@ class BugDataCollector
             whitespace: true
             includeHistory: true
             historyCacheURL: "bughistory/"
+            computeLastCommentTime: true
         
         @queryCount = 0
         @reviewBugs = []
@@ -233,13 +229,32 @@ addBugData = (statusdata) ->
                             requestee: flag.requestee && flag.requestee.name,
                             setter: flag.setter && flag.setter.name
 
+MILLISECONDS_IN_MONTH = 30*24*60*60*1000
+
 loadCachedBugData = () ->
     console.log "Reloading cached bugdata"
-    buggerall.getCachedResult("bugdata.json", (data) ->
+    buggerall.getCachedResult "bugdata.json", (data) ->
         console.log "Bugdata retrieved"
         exports.bugData = data
+
+        cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH
+        queryCount = 0
+
+        historyComplete = (bug) ->
+            queryCount--
+            changesets = bug.history.changesets
+            
+            # iterate through the changesets from most recent backward
+            for i in [changesets.length..0]
+                changeset = changesets[i]
+                
+
+        for key, bug of data
+            if bug.last_change_time.getTime() > cutoff
+                queryCount++
+                bug.loadHistory "bughistory/#{key}.json", historyComplete
+
         exports.generateStatusData()
-    )
 
 
 exports.generateStatusData = () ->
@@ -252,5 +267,6 @@ exports.generateStatusData = () ->
         return
 
     addBugData statusdata
+    statusdata.timeline = new buggerall.Timeline(exports.bugData, 30)
     saveFile exports.datadir + "/status.json", JSON.stringify statusdata, null, 1
 

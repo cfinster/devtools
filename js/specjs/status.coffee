@@ -210,6 +210,9 @@ exports.showProject = (id) ->
         # summary turned off for now due to breakage
         exports.showSummary()
         return
+    else if id == "news"
+        exports.showNews()
+        return
     
     $('#content').show()
     $('#people').hide()
@@ -293,6 +296,39 @@ exports.showPeople = () ->
     $('#content').hide()
     $('#people').show()
     location.hash = "#people"
+
+exports.showNews = () ->
+    $('#content').show()
+    $('#people').hide()
+    
+    content = """<secton class="news">
+<table class="news">
+    <thead>
+        <th>Date/Time</th>
+        <th>Project</th>
+        <th>Bug</th>
+        <th>What Happened</th>
+    </thead>
+    <tbody>
+"""
+    for event in statusdata.timeline.events
+        content += """<tr><td>#{event.when}</td><td>&nbsp;</td><td>#{event.bugId}</td><td>#{event.type} #{event.detail}</td></tr>"""
+    content += """
+</tbody>
+</table>
+</section>
+"""
+
+    container = $ "#content"
+    container.children().remove()
+    contentNode = $ content
+    $("table.news", contentNode).dataTable({
+        bPaginate: false
+        bInfo: false
+    })
+    container.append(contentNode)
+    location.hash = "#news"
+
     
 exports.showSummary = () ->
     $('#content').show()
@@ -397,6 +433,6 @@ exports.populatePage = () ->
 exports.jumpToProject = () ->
     hash = location.hash.substring(1)
     if not hash
-        hash = "summary"
+        hash = "news"
     
     exports.showProject hash
