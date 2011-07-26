@@ -277,6 +277,7 @@ loadCachedBugData = () ->
 
 exports.generateStatusData = () ->
     statusdata = 
+        update: new Date().toString("MMMM dd")
         bugs: {}
         reviewQueues: {}
     

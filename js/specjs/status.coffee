@@ -144,6 +144,9 @@ makeBugLink = (bugid, bug) ->
     else
         """<a class="#{if bug.status == "RESOLVED" or bug.status == "VERIFIED" then "bugid resolved" else "bugid"}" href="https://bugzilla.mozilla.org/show_bug.cgi?id=#{bugid}" target="_blank">#{bugid}</a>"""
 
+htmlescape = (str) ->
+    str.replace("<", "&lt;")
+
 createBugTable = (project) ->
     result = """
             <section>
@@ -195,7 +198,7 @@ createBugTable = (project) ->
                                 <td>#{i+1}</td>
                                 <td>#{buglink}</td>
                                 <td>#{patchInfo}</td>
-                                <td>#{bug.summary}</td>
+                                <td>#{htmlescape(bug.summary)}</td>
                                 <td>#{bug.assignedName}</td>
                                 <td>#{if bug.whiteboard? then bug.whiteboard else ""}</td>
                             </tr>
@@ -325,11 +328,11 @@ exports.showNews = () ->
             if bug.project
                 projectName = bug.project.name
                 projectId = bug.project.id
-            summary = bug.summary
+            summary = htmlescape(bug.summary)
             buglink = makeBugLink event.bugId, bug
         else
             if event.type == "newBug" and event.detail
-                summary = event.detail
+                summary = htmlescape(event.detail)
             buglink = makeBugLink event.bugId
         
         if event.type == "newBug"
@@ -467,7 +470,7 @@ exports.populatePage = () ->
 
     $('.maindate').each () ->
         el = $(this)
-        text = el.text()
+        text = statusdata.update
         el.html("<div>" + text.split(" ").join("</div><div>") + "</div>").bigtext()
     
     $("#nav").click (e) ->

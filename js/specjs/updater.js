@@ -315,6 +315,7 @@
   exports.generateStatusData = function() {
     var bug, entry, id, statusdata, _i, _len, _ref, _ref2;
     statusdata = {
+      update: new Date().toString("MMMM dd"),
       bugs: {},
       reviewQueues: {}
     };

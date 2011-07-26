@@ -1,5 +1,5 @@
 (function() {
-  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, i, makeBugLink, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, _ref, _ref2, _ref3;
+  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, htmlescape, i, makeBugLink, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
@@ -160,6 +160,9 @@
       return "<a class=\"" + (bug.status === "RESOLVED" || bug.status === "VERIFIED" ? "bugid resolved" : "bugid") + "\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid + "\" target=\"_blank\">" + bugid + "</a>";
     }
   };
+  htmlescape = function(str) {
+    return str.replace("<", "&lt;");
+  };
   createBugTable = function(project) {
     var bestStatus, bug, bugFlags, bugStr, bugid, buglink, f, flagType, flags, i, info, patchInfo, result, _i, _j, _len, _len2, _len3, _ref, _ref2;
     result = "<section>\n    <h3>Bugs</h3>\n    <table class=\"bugs\">\n        <thead>\n            <tr>\n                <th>#</th>\n                <th>Bug #</th>\n                <th>Patch<br>Status</th>\n                <th>Summary</th>\n                <th>Assigned</th>\n                <th>Whiteboard</th>\n            </tr>\n        </thead>\n        <tbody>";
@@ -200,7 +203,7 @@
         }
       }
       patchInfo = "<span class=\"patchstatus\" title=\"" + (flags.join(", ")) + "\">" + bestStatus + "</span>";
-      result += "<tr>\n    <td>" + (i + 1) + "</td>\n    <td>" + buglink + "</td>\n    <td>" + patchInfo + "</td>\n    <td>" + bug.summary + "</td>\n    <td>" + bug.assignedName + "</td>\n    <td>" + (bug.whiteboard != null ? bug.whiteboard : "") + "</td>\n</tr>";
+      result += "<tr>\n    <td>" + (i + 1) + "</td>\n    <td>" + buglink + "</td>\n    <td>" + patchInfo + "</td>\n    <td>" + (htmlescape(bug.summary)) + "</td>\n    <td>" + bug.assignedName + "</td>\n    <td>" + (bug.whiteboard != null ? bug.whiteboard : "") + "</td>\n</tr>";
     }
     return result += "        </tbody>\n    </table>\n</section>";
   };
@@ -287,11 +290,11 @@
           projectName = bug.project.name;
           projectId = bug.project.id;
         }
-        summary = bug.summary;
+        summary = htmlescape(bug.summary);
         buglink = makeBugLink(event.bugId, bug);
       } else {
         if (event.type === "newBug" && event.detail) {
-          summary = event.detail;
+          summary = htmlescape(event.detail);
         }
         buglink = makeBugLink(event.bugId);
       }
@@ -423,7 +426,7 @@
     $('.maindate').each(function() {
       var el, text;
       el = $(this);
-      text = el.text();
+      text = statusdata.update;
       return el.html("<div>" + text.split(" ").join("</div><div>") + "</div>").bigtext();
     });
     return $("#nav").click(function(e) {
