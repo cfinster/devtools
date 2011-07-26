@@ -290,29 +290,25 @@
       console.log("New bugs retrieved");
       exports.newBugs = data;
       return buggerall.getCachedResult("bugdata.json", function(data) {
-        var bug, cutoff, historyComplete, key, queryCount;
+        var bug, cutoff, historyComplete, key, queryCount, _results;
         console.log("Bugdata retrieved");
         exports.bugData = data;
         cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH;
         queryCount = 0;
         historyComplete = function(bug) {
-          var changeset, changesets, i, _ref, _results;
+          var changesets;
           queryCount--;
           changesets = bug.history.changesets;
-          _results = [];
-          for (i = _ref = changesets.length; (_ref <= 0 ? i <= 0 : i >= 0); (_ref <= 0 ? i += 1 : i -= 1)) {
-            _results.push(changeset = changesets[i]);
+          if (queryCount < 1) {
+            return exports.generateStatusData();
           }
-          return _results;
         };
+        _results = [];
         for (key in data) {
           bug = data[key];
-          if (bug.last_change_time.getTime() > cutoff) {
-            queryCount++;
-            bug.loadHistory("bughistory/" + key + ".json", historyComplete);
-          }
+          _results.push(bug.last_change_time.getTime() > cutoff ? (queryCount++, bug.loadHistory("bughistory/" + key + ".json", historyComplete)) : void 0);
         }
-        return exports.generateStatusData();
+        return _results;
       });
     });
   };

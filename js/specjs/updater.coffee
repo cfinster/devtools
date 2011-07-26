@@ -265,17 +265,14 @@ loadCachedBugData = () ->
                 queryCount--
                 changesets = bug.history.changesets
                 
-                # iterate through the changesets from most recent backward
-                for i in [changesets.length..0]
-                    changeset = changesets[i]
-                    
+                if queryCount < 1
+                    exports.generateStatusData()
 
             for key, bug of data
                 if bug.last_change_time.getTime() > cutoff
                     queryCount++
                     bug.loadHistory "bughistory/#{key}.json", historyComplete
 
-            exports.generateStatusData()
 
 
 exports.generateStatusData = () ->
