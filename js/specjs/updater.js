@@ -29,6 +29,7 @@
   exports.datadir = null;
   exports.bugList = null;
   exports.bugData = null;
+  exports.newBugs = null;
   checkDataDir = function() {
     exports.datadir = $('#datadir').val();
     if (!exports.datadir) {
@@ -80,6 +81,11 @@
         historyCacheURL: "bughistory/",
         computeLastCommentTime: true
       });
+      this.newBugQuery = new buggerall.Query({
+        query: "bug_id=" + (exports.bugList.join(",")) + "&bug_id_type=nowords&resolution=---&query_format=advanced&chfield=[Bug creation]&chfieldfrom=30d&chfieldto=Now&component=Developer Tools&product=Firefox",
+        fields: "id,summary,creation_time",
+        whitespace: true
+      });
       this.queryCount = 0;
       this.reviewBugs = [];
     }
@@ -92,10 +98,14 @@
     };
     BugDataCollector.prototype.run = function() {
       var person, q, _i, _len, _results;
-      this.queryCount++;
+      this.queryCount += 2;
       console.log("Gathering data from bugzilla");
       this.mainQuery.run(__bind(function(q) {
         console.log("finished with main query");
+        return this.queryDone();
+      }, this));
+      this.newBugQuery.run(__bind(function(q) {
+        console.log("finished with new bug query");
         return this.queryDone();
       }, this));
       return;
@@ -139,7 +149,7 @@
       return this.reviewQuery.run(this.saveData);
     };
     BugDataCollector.prototype.saveData = function() {
-      var bug, bugId, output, q, _ref, _ref2, _results;
+      var bug, bugId, output, q, _ref, _ref2;
       console.log("Saving query results");
       q = this.mainQuery;
       _ref = q.result;
@@ -154,16 +164,19 @@
         console.log("No bugzilla results - not saving");
         return;
       }
+      console.log("Saving bugdata.json");
       exports.bugData = q.result;
       output = q.serialize();
       saveFile(exports.datadir + "/bugdata.json", output);
       _ref2 = exports.bugData;
-      _results = [];
       for (bugId in _ref2) {
         bug = _ref2[bugId];
-        _results.push(saveFile("" + exports.datadir + "/bughistory/" + bug.id + ".json", bug.history.serialize()));
+        saveFile("" + exports.datadir + "/bughistory/" + bug.id + ".json", bug.history.serialize());
       }
-      return _results;
+      console.log("Saving newbugs.json");
+      exports.newBugs = this.newBugQuery.result;
+      output = this.newBugQuery.serialize();
+      return saveFile(exports.datadir + "/newbugs.json", output);
     };
     return BugDataCollector;
   })();
@@ -273,34 +286,38 @@
   MILLISECONDS_IN_MONTH = 30 * 24 * 60 * 60 * 1000;
   loadCachedBugData = function() {
     console.log("Reloading cached bugdata");
-    return buggerall.getCachedResult("bugdata.json", function(data) {
-      var bug, cutoff, historyComplete, key, queryCount;
-      console.log("Bugdata retrieved");
-      exports.bugData = data;
-      cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH;
-      queryCount = 0;
-      historyComplete = function(bug) {
-        var changeset, changesets, i, _ref, _results;
-        queryCount--;
-        changesets = bug.history.changesets;
-        _results = [];
-        for (i = _ref = changesets.length; (_ref <= 0 ? i <= 0 : i >= 0); (_ref <= 0 ? i += 1 : i -= 1)) {
-          _results.push(changeset = changesets[i]);
+    return buggerall.getCachedResult("newbugs.json", function(data) {
+      console.log("New bugs retrieved");
+      exports.newBugs = data;
+      return buggerall.getCachedResult("bugdata.json", function(data) {
+        var bug, cutoff, historyComplete, key, queryCount;
+        console.log("Bugdata retrieved");
+        exports.bugData = data;
+        cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH;
+        queryCount = 0;
+        historyComplete = function(bug) {
+          var changeset, changesets, i, _ref, _results;
+          queryCount--;
+          changesets = bug.history.changesets;
+          _results = [];
+          for (i = _ref = changesets.length; (_ref <= 0 ? i <= 0 : i >= 0); (_ref <= 0 ? i += 1 : i -= 1)) {
+            _results.push(changeset = changesets[i]);
+          }
+          return _results;
+        };
+        for (key in data) {
+          bug = data[key];
+          if (bug.last_change_time.getTime() > cutoff) {
+            queryCount++;
+            bug.loadHistory("bughistory/" + key + ".json", historyComplete);
+          }
         }
-        return _results;
-      };
-      for (key in data) {
-        bug = data[key];
-        if (bug.last_change_time.getTime() > cutoff) {
-          queryCount++;
-          bug.loadHistory("bughistory/" + key + ".json", historyComplete);
-        }
-      }
-      return exports.generateStatusData();
+        return exports.generateStatusData();
+      });
     });
   };
   exports.generateStatusData = function() {
-    var statusdata;
+    var bug, entry, id, statusdata, _i, _len, _ref, _ref2;
     statusdata = {
       bugs: {},
       reviewQueues: {}
@@ -311,6 +328,17 @@
     }
     addBugData(statusdata);
     statusdata.timeline = new buggerall.Timeline(exports.bugData, 30);
+    _ref = exports.newBugs;
+    for (id in _ref) {
+      bug = _ref[id];
+      statusdata.timeline.events.push(new buggerall.TimelineEntry(id, bug.creation_time, "newBug", bug.summary));
+      statusdata.timeline.sortEvents();
+    }
+    _ref2 = statusdata.timeline.events;
+    for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+      entry = _ref2[_i];
+      entry.when = entry.when.toString("MM/dd HH:mm");
+    }
     return saveFile(exports.datadir + "/status.json", JSON.stringify(statusdata, null, 1));
   };
 }).call(this);

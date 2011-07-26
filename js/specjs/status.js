@@ -1,5 +1,5 @@
 (function() {
-  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, i, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, _ref, _ref2, _ref3;
+  var Person, Project, createBugTable, exports, flagMap, formatDefaultBugRow, getBugID, getBugIDandLabel, i, makeBugLink, peopleMap, person, personTemplate, project, projectMap, template, templateSettings, _ref, _ref2, _ref3;
   this.specjs = (_ref = this.specjs) != null ? _ref : {};
   this.specjs.status = {};
   exports = this.specjs.status;
@@ -153,6 +153,13 @@
   formatDefaultBugRow = function(bugStr) {
     return "<tr>\n    <td colspan=\"6\">" + bugStr + "</td>\n</tr>";
   };
+  makeBugLink = function(bugid, bug) {
+    if (!bug) {
+      return "<a class=\"bugid\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid + "\" target=\"_blank\">" + bugid + "</a>";
+    } else {
+      return "<a class=\"" + (bug.status === "RESOLVED" || bug.status === "VERIFIED" ? "bugid resolved" : "bugid") + "\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid + "\" target=\"_blank\">" + bugid + "</a>";
+    }
+  };
   createBugTable = function(project) {
     var bestStatus, bug, bugFlags, bugStr, bugid, buglink, f, flagType, flags, i, info, patchInfo, result, _i, _j, _len, _len2, _len3, _ref, _ref2;
     result = "<section>\n    <h3>Bugs</h3>\n    <table class=\"bugs\">\n        <thead>\n            <tr>\n                <th>#</th>\n                <th>Bug #</th>\n                <th>Patch<br>Status</th>\n                <th>Summary</th>\n                <th>Assigned</th>\n                <th>Whiteboard</th>\n            </tr>\n        </thead>\n        <tbody>";
@@ -175,7 +182,7 @@
         result += formatDefaultBugRow(bugStr);
         continue;
       }
-      buglink = "<a class=\"" + (bug.status === "RESOLVED" || bug.status === "VERIFIED" ? "bugid resolved" : "bugid") + "\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=" + bugid + "\" target=\"_blank\">" + bugid + "</a>";
+      buglink = makeBugLink(bugid, bug);
       flags = [];
       bestStatus = bug.hasPatch ? "&nbsp;p&nbsp;" : "&nbsp;&nbsp;&nbsp;";
       _ref2 = ["feedback", "review", "superreview"];
@@ -264,14 +271,40 @@
     return location.hash = "#people";
   };
   exports.showNews = function() {
-    var container, content, contentNode, event, _i, _len, _ref;
+    var bug, buglink, container, content, contentNode, detail, event, projectId, projectName, summary, _i, _len, _ref;
     $('#content').show();
     $('#people').hide();
     content = "<secton class=\"news\">\n<table class=\"news\">\n    <thead>\n        <th>Date/Time</th>\n        <th>Project</th>\n        <th>Bug</th>\n        <th>What Happened</th>\n    </thead>\n    <tbody>";
     _ref = statusdata.timeline.events;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       event = _ref[_i];
-      content += "<tr><td>" + event.when + "</td><td>&nbsp;</td><td>" + event.bugId + "</td><td>" + event.type + " " + event.detail + "</td></tr>";
+      bug = statusdata.bugs[event.bugId];
+      projectName = "";
+      projectId = "";
+      summary = "";
+      if (bug) {
+        if (bug.project) {
+          projectName = bug.project.name;
+          projectId = bug.project.id;
+        }
+        summary = bug.summary;
+        buglink = makeBugLink(event.bugId, bug);
+      } else {
+        if (event.type === "newBug" && event.detail) {
+          summary = event.detail;
+        }
+        buglink = makeBugLink(event.bugId);
+      }
+      if (event.type === "newBug") {
+        detail = "Bug created";
+      } else if (event.type === "newComment") {
+        detail = "New comment from " + event.detail;
+      } else if (event.type === "newPatch") {
+        detail = "Patch: " + event.detail;
+      } else {
+        detail = event.detail;
+      }
+      content += "<tr><td>" + event.when + "</td><td class=\"project\" data-id=\"" + projectId + "\">" + projectName + "</td><td>" + buglink + " " + summary + "</td><td>" + detail + "</td></tr>";
     }
     content += "</tbody>\n</table>\n</section>";
     container = $("#content");
@@ -279,7 +312,15 @@
     contentNode = $(content);
     $("table.news", contentNode).dataTable({
       bPaginate: false,
-      bInfo: false
+      bInfo: false,
+      aaSorting: [[0, 'desc']]
+    });
+    $("tbody", contentNode).click(function(e) {
+      e = $(e.target);
+      projectId = e.attr('data-id');
+      if (projectId) {
+        return exports.showProject(projectId);
+      }
     });
     container.append(contentNode);
     return location.hash = "#news";
@@ -350,16 +391,28 @@
     return location.hash = "#summary";
   };
   exports.populatePage = function() {
-    var contents, newNode, peopleNode, person, project, _i, _j, _len, _len2;
+    var bug, bugId, contents, newNode, peopleNode, person, project, _i, _j, _k, _len, _len2, _len3, _ref;
+    console.log("In populate");
     for (_i = 0, _len = projects.length; _i < _len; _i++) {
       project = projects[_i];
       newNode = $("<div data-id=\"" + project.id + "\">" + project.name + "</div>");
       newNode.appendTo($("#nav"));
+      if (project.bugs != null) {
+        _ref = project.getBugIds();
+        for (_j = 0, _len2 = _ref.length; _j < _len2; _j++) {
+          bugId = _ref[_j];
+          bug = typeof statusdata != "undefined" && statusdata !== null ? statusdata.bugs[bugId] : void 0;
+          if (!(bug != null)) {
+            continue;
+          }
+          bug.project = project;
+        }
+      }
     }
     peopleNode = $('#people');
     contents = "";
-    for (_j = 0, _len2 = people.length; _j < _len2; _j++) {
-      person = people[_j];
+    for (_k = 0, _len3 = people.length; _k < _len3; _k++) {
+      person = people[_k];
       try {
         contents += personTemplate(person);
       } catch (e) {

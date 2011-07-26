@@ -196,7 +196,7 @@ div.tabs {
     padding: 1em;
 }
 
-section.release_tracking table td.project {
+section.release_tracking table td.project, table.news td.project {
     text-decoration: underline;
     cursor: pointer;
 }

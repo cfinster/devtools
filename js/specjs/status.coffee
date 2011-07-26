@@ -138,6 +138,11 @@ formatDefaultBugRow = (bugStr) ->
                             </tr>
 """
 
+makeBugLink = (bugid, bug) ->
+    if not bug
+        """<a class="bugid" href="https://bugzilla.mozilla.org/show_bug.cgi?id=#{bugid}" target="_blank">#{bugid}</a>"""
+    else
+        """<a class="#{if bug.status == "RESOLVED" or bug.status == "VERIFIED" then "bugid resolved" else "bugid"}" href="https://bugzilla.mozilla.org/show_bug.cgi?id=#{bugid}" target="_blank">#{bugid}</a>"""
 
 createBugTable = (project) ->
     result = """
@@ -172,7 +177,7 @@ createBugTable = (project) ->
             result += formatDefaultBugRow bugStr
             continue
 
-        buglink = """<a class="#{if bug.status == "RESOLVED" or bug.status == "VERIFIED" then "bugid resolved" else "bugid"}" href="https://bugzilla.mozilla.org/show_bug.cgi?id=#{bugid}" target="_blank">#{bugid}</a>"""
+        buglink = makeBugLink bugid, bug
         flags = []
         bestStatus = if bug.hasPatch then "&nbsp;p&nbsp;" else "&nbsp;&nbsp;&nbsp;"
         for flagType in ["feedback", "review", "superreview"]
@@ -312,7 +317,31 @@ exports.showNews = () ->
     <tbody>
 """
     for event in statusdata.timeline.events
-        content += """<tr><td>#{event.when}</td><td>&nbsp;</td><td>#{event.bugId}</td><td>#{event.type} #{event.detail}</td></tr>"""
+        bug = statusdata.bugs[event.bugId]
+        projectName = ""
+        projectId = ""
+        summary = ""
+        if bug
+            if bug.project
+                projectName = bug.project.name
+                projectId = bug.project.id
+            summary = bug.summary
+            buglink = makeBugLink event.bugId, bug
+        else
+            if event.type == "newBug" and event.detail
+                summary = event.detail
+            buglink = makeBugLink event.bugId
+        
+        if event.type == "newBug"
+            detail = "Bug created"
+        else if event.type == "newComment"
+            detail = "New comment from " + event.detail
+        else if event.type == "newPatch"
+            detail = "Patch: " + event.detail
+        else
+            detail = event.detail
+
+        content += """<tr><td>#{event.when}</td><td class="project" data-id="#{projectId}">#{projectName}</td><td>#{buglink} #{summary}</td><td>#{detail}</td></tr>"""
     content += """
 </tbody>
 </table>
@@ -325,7 +354,15 @@ exports.showNews = () ->
     $("table.news", contentNode).dataTable({
         bPaginate: false
         bInfo: false
+        aaSorting: [[0, 'desc']]
     })
+
+    $("tbody", contentNode).click (e) ->
+        e = $ e.target
+        projectId = e.attr('data-id')
+        if projectId
+            exports.showProject(projectId)
+
     container.append(contentNode)
     location.hash = "#news"
 
@@ -406,9 +443,16 @@ exports.showSummary = () ->
     location.hash = "#summary"
 
 exports.populatePage = () ->
+    console.log "In populate"
     for project in projects
         newNode = $("""<div data-id="#{project.id}">#{project.name}</div>""")
         newNode.appendTo($("#nav"))
+        if project.bugs?
+            for bugId in project.getBugIds()
+                bug = statusdata?.bugs[bugId]
+                if not bug?
+                    continue
+                bug.project = project
     
     peopleNode = $ '#people'
 

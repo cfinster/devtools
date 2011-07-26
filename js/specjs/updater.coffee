@@ -28,6 +28,7 @@ saveFile = (filePath,content) ->
 exports.datadir = null
 exports.bugList = null
 exports.bugData = null
+exports.newBugs = null
 
 checkDataDir = () ->
     exports.datadir = $('#datadir').val()
@@ -72,6 +73,13 @@ class BugDataCollector
             historyCacheURL: "bughistory/"
             computeLastCommentTime: true
         
+        # Query to find all new Developer Tools bugs for the last 30 days
+        # excluding the ones we already know about in the project file.
+        @newBugQuery = new buggerall.Query
+            query: """bug_id=#{exports.bugList.join(",")}&bug_id_type=nowords&resolution=---&query_format=advanced&chfield=[Bug creation]&chfieldfrom=30d&chfieldto=Now&component=Developer Tools&product=Firefox"""
+            fields: "id,summary,creation_time"
+            whitespace: true
+        
         @queryCount = 0
         @reviewBugs = []
     
@@ -82,10 +90,13 @@ class BugDataCollector
             @gatherReviewBugData()
     
     run: () ->
-        @queryCount++
+        @queryCount += 2
         console.log "Gathering data from bugzilla"
         @mainQuery.run (q) =>
             console.log "finished with main query"
+            @queryDone()
+        @newBugQuery.run (q) =>
+            console.log "finished with new bug query"
             @queryDone()
         
         # temporarily short circuit review queue loading
@@ -142,12 +153,18 @@ class BugDataCollector
         if not q.result
             console.log "No bugzilla results - not saving"
             return
-
+        
+        console.log "Saving bugdata.json"
         exports.bugData = q.result
         output = q.serialize()
         saveFile exports.datadir + "/bugdata.json", output
         for bugId, bug of exports.bugData
             saveFile  "#{exports.datadir}/bughistory/#{bug.id}.json", bug.history.serialize()
+        
+        console.log "Saving newbugs.json"
+        exports.newBugs = @newBugQuery.result
+        output = @newBugQuery.serialize()
+        saveFile exports.datadir + "/newbugs.json", output
         
 
 exports.saveBugData = () ->
@@ -233,28 +250,32 @@ MILLISECONDS_IN_MONTH = 30*24*60*60*1000
 
 loadCachedBugData = () ->
     console.log "Reloading cached bugdata"
-    buggerall.getCachedResult "bugdata.json", (data) ->
-        console.log "Bugdata retrieved"
-        exports.bugData = data
+    buggerall.getCachedResult "newbugs.json", (data) ->
+        console.log "New bugs retrieved"
+        exports.newBugs = data
 
-        cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH
-        queryCount = 0
+        buggerall.getCachedResult "bugdata.json", (data) ->
+            console.log "Bugdata retrieved"
+            exports.bugData = data
 
-        historyComplete = (bug) ->
-            queryCount--
-            changesets = bug.history.changesets
-            
-            # iterate through the changesets from most recent backward
-            for i in [changesets.length..0]
-                changeset = changesets[i]
+            cutoff = new Date().getTime() - MILLISECONDS_IN_MONTH
+            queryCount = 0
+
+            historyComplete = (bug) ->
+                queryCount--
+                changesets = bug.history.changesets
                 
+                # iterate through the changesets from most recent backward
+                for i in [changesets.length..0]
+                    changeset = changesets[i]
+                    
 
-        for key, bug of data
-            if bug.last_change_time.getTime() > cutoff
-                queryCount++
-                bug.loadHistory "bughistory/#{key}.json", historyComplete
+            for key, bug of data
+                if bug.last_change_time.getTime() > cutoff
+                    queryCount++
+                    bug.loadHistory "bughistory/#{key}.json", historyComplete
 
-        exports.generateStatusData()
+            exports.generateStatusData()
 
 
 exports.generateStatusData = () ->
@@ -268,5 +289,12 @@ exports.generateStatusData = () ->
 
     addBugData statusdata
     statusdata.timeline = new buggerall.Timeline(exports.bugData, 30)
+    for id, bug of exports.newBugs
+        statusdata.timeline.events.push(new buggerall.TimelineEntry(id, bug.creation_time, "newBug", bug.summary))
+        statusdata.timeline.sortEvents()
+    
+    for entry in statusdata.timeline.events
+        entry.when = entry.when.toString("MM/dd HH:mm")
+
     saveFile exports.datadir + "/status.json", JSON.stringify statusdata, null, 1
 

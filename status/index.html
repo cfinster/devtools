@@ -13,13 +13,13 @@
         .script("../js/bigtext.js").wait()
         .script("../js/specjs/status.js")
         .wait(function() {
-            specjs.status.populatePage();
             var url = "status.json";
             if (development) {
                 url += "?" + new Date().getTime();
             }
             $.getJSON(url, function(data) {
                 window.statusdata = data;
+                specjs.status.populatePage();
                 specjs.status.jumpToProject();
             });
         });
