@@ -1,19 +1,5 @@
 # This is the project data for the status.html page
 
-@estimates = 
-    "577721": [6, 12, 16]
-    "585991": [1, 2, 4]
-    "637801": [1, 1, 2]
-    "638949": [4, 8, 16]
-    "614586": [8, 16, 24]
-    "646025": [8, 16, 48]
-    "646028": [4, 6, 8]
-    "585956": [8, 16, 24]
-    "637131": [4, 8, 16]
-    "592552": [1, 3, 4]
-    "642112": [2, 4, 8]
-    "622303": [4, 6, 12]
-
 @projects = [
     {
         id: "workspaces"
@@ -144,6 +130,12 @@
             "671689 Nodes should be selectable from the HTML tree"
             "671294 Opening the Inspect window with the Web Console open causes the panel to open in the wrong position"
             "671291 iframe and html overlap in the inspect window"
+            "674851 can't close inspect"
+            "669652 Move the highlighter the code from inspector.js to a jsm"
+            "668435 hilight box should round corners to match"
+            "668254 doesn't handle full page zoom correctly"
+            "665539 find the best duration and delay for transitions"
+            "663852 support transformed elements (CSS3 transform)"
         ]
     }
     {
@@ -188,6 +180,19 @@
             "672746 'include default styles' checkbox"
             "672744 Add search filter"
             "672743 remove category view"
+            "674485 missing color legend for its rule colors"
+            "674482 Make header fixed to ease knowing which element is being inspected"
+            "669486 Uses same template engine as GCLI but different copy"
+        ]
+    }
+    {
+        id: "devtoolbar"
+        name: "Developer Toolbar"
+        blurb: "Quick access to the tools"
+        status: "Planning"
+        people: "paul"
+        bugs: [
+            "674476 Sidebar to host the developer tools"
         ]
     }
     {
@@ -197,7 +202,7 @@
         blurb: "The fastest, most discoverable way to control your tools"
         status: "Implementation"
         target: 8
-        people: ["jwalker"]
+        people: ["jwalker", "fitzgen"]
         bugs: [
             "654962 GCLI demo"
             "653142 Create pilot.jsm required for Command Line"
@@ -246,6 +251,20 @@
             "671406 create a list of commands that could be useful in Firefox"
             "671311 needs a way to display single line output with no output area"
             "671255 pressing space at the start of a command shows misaligned completion"
+            "668811 complete element misaligned on Windows"
+            "666650 global toolbar"
+            "665907 bounding boxes update are slow while the page is scrolling"
+            "663833 add a floating toolbar next to the selected node"
+            "663778 draw layout information"
+            "665014 selecting text in the output area is broken"
+            "664696 commands should be reviewed for security issues"
+            "664693 all commands should be documented for security review"
+            "664676 conversion error messages should be localized"
+            "664377 needs test to check for mutating params with non-defaults after params with defaults"
+            "664207 needs tests for escaped characters being converted in various ways"
+            "664204 ArrayType.stringify doesn't handle strings with spaces properly"
+            "664203 needs tests to check that a command without mandatory param causes ERROR"
+            "664198 ArgFetcher.getInputFor registers a Field.fieldChanged listener but doesn't release it"
         ]
     }
     {
@@ -258,6 +277,7 @@
         people: ["msucan"]
         bugs: [
             "660784 Add a source code editor to the browser"
+            "668320 Integrate Orion unit and performance tests"
         ]
     }
     {
@@ -356,6 +376,11 @@
             "670897 add inner windowID and timestamp to nsiScriptError2"
             "670857 deliberate uncaught exceptions will cause test failures in the future"
             "670140 browser_webconsole_bug611795.js leaks its content window"
+            "664568 Allow ConsoleAPIStorage to keep logged messages in PB Mode"
+            "664688 fails to track back/forward"
+            "664466 sometimes hud is undefined in HS_deactivateHUDForContext"
+            "663477 Can't close the Web Console window by repeating the keyboard shortcut: both windows are inactive"
+            "662611 Console messages can freeze browser or tab"
         ]
     }
     {
@@ -387,6 +412,12 @@
             "663380 Restore Scratchpad after Firefox crash"
             "671982 automatically reload opened files where possible"
             "661762 Scratchpad source link may focus the wrong window"
+            "669612 add indicator to window for unsaved changes"
+            "669585 hide Environment->Content when devtools.chrome.enabled is false"
+            "669400 Warning: use of getAttributeNode is deprecated"
+            "669011 doesn't allow ctrl-shift-X to switch text direction"
+            "663902 find a solution to draw negative margins"
+            "667259 add new scratchpad context: remote content process"
         ]
     }
     {
