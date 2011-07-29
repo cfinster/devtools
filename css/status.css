@@ -204,3 +204,11 @@ section.release_tracking table td.project, table.news td.project {
 table.bugs, table.news, section.release_tracking table {
     width: 100%;
 }
+
+td.group {
+    background-color: #D1CFD0;
+    border-bottom: 2px solid #A19B9E;
+    border-top: 2px solid #A19B9E;
+    font-weight: bold;
+    padding: 5px;
+}

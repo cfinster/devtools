@@ -28,14 +28,27 @@
     return data ? func(data) : func;
   };;
   getBugID = function(text) {
-    return getBugIDandLabel(text).id;
+    var result;
+    result = getBugIDandLabel(text);
+    if (result !== null && (result.id != null)) {
+      return result.id;
+    } else {
+      return null;
+    }
   };
   exports.getBugIDandLabel = getBugIDandLabel = function(text) {
     var match;
     text = text.toString();
     match = /^(bug|)\s*(\d+)\s*(.*)/.exec(text);
     if (!match) {
-      return null;
+      match = /^---\s*(.*)\s*---\s*$/.exec(text);
+      if (!match) {
+        return null;
+      } else {
+        return {
+          group: match[1]
+        };
+      }
     } else {
       return {
         id: match[2],
@@ -62,14 +75,17 @@
       }
     }
     Project.prototype.getBugIds = function() {
-      var bug, _i, _len, _ref, _results;
+      var bug, bugID, result, _i, _len, _ref;
+      result = [];
       _ref = this.bugs;
-      _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         bug = _ref[_i];
-        _results.push(getBugID(bug));
+        bugID = getBugID(bug);
+        if (bugID) {
+          result.push(bugID);
+        }
       }
-      return _results;
+      return result;
     };
     Project.prototype.getPeople = function() {
       var person, result, _i, _len, _ref;
@@ -150,8 +166,8 @@
     people[i] = person;
     peopleMap[person.id] = person;
   }
-  formatDefaultBugRow = function(bugStr) {
-    return "<tr>\n    <td colspan=\"6\">" + bugStr + "</td>\n</tr>";
+  formatDefaultBugRow = function(i, bugStr) {
+    return "<tr>\n    <td>" + i + "</td><td></td><td></td><td>" + bugStr + "</td><td></td><td></td>\n</tr>";
   };
   makeBugLink = function(bugid, bug) {
     if (!bug) {
@@ -170,19 +186,22 @@
     for (i = 0, _len = _ref.length; i < _len; i++) {
       bugStr = _ref[i];
       if (!statusdata) {
-        result += formatDefaultBugRow(bugStr);
+        result += formatDefaultBugRow(i, bugStr);
         continue;
       }
       info = getBugIDandLabel(bugStr);
       if (info === null) {
-        result += formatDefaultBugRow(bugStr);
+        result += formatDefaultBugRow(i, bugStr);
+        continue;
+      }
+      if (info.group) {
         continue;
       }
       bugid = info.id;
       bug = statusdata.bugs[bugid];
       if (!(bug != null)) {
         console.log("Couldn't find data for bug: ", bugid);
-        result += formatDefaultBugRow(bugStr);
+        result += formatDefaultBugRow(i, bugStr);
         continue;
       }
       buglink = makeBugLink(bugid, bug);
@@ -247,6 +266,22 @@
     projectStr += "</section>";
     newNode = $(projectStr);
     $("table.bugs", newNode).dataTable({
+      fnDrawCallback: function(settings) {
+        var bugStr, groups, i, info, rows, _len, _ref, _results;
+        if (settings.aiDisplay.length === 0) {
+          return;
+        }
+        rows = $("table.bugs tbody tr", newNode);
+        groups = 0;
+        _ref = project.bugs;
+        _results = [];
+        for (i = 0, _len = _ref.length; i < _len; i++) {
+          bugStr = _ref[i];
+          info = getBugIDandLabel(bugStr);
+          _results.push(info.group ? ($("<tr class=\"group\"><td class=\"group\" colspan=\"6\">" + info.group + "</td></tr>").insertBefore(rows[i - groups]), groups++) : void 0);
+        }
+        return _results;
+      },
       bPaginate: false,
       bInfo: false
     });

@@ -38,16 +38,20 @@ template = `function(str, data) {
   };`
 
 getBugID = (text) ->
-    getBugIDandLabel(text).id
+    result = getBugIDandLabel(text)
+    if result != null and result.id? then result.id else null
 
 exports.getBugIDandLabel = getBugIDandLabel = (text) ->
     text = text.toString()
     match = /^(bug|)\s*(\d+)\s*(.*)/.exec text
     
-    if !match then null else {
+    if !match
+        match = /^---\s*(.*)\s*---\s*$/.exec text
+        return if !match then null else
+            group: match[1]
+    else
         id: match[2]
         label: match[3]
-    }
 
 personTemplate = template """
     <section class="person">
@@ -66,7 +70,12 @@ class Project
             @[prop] = if data[prop]? then data[prop] else []
 
     getBugIds: () ->
-        getBugID bug for bug in @bugs
+        result = []
+        for bug in @bugs
+            bugID = getBugID bug
+            if bugID
+                result.push bugID
+        return result
     
     getPeople: () ->
         result = []
@@ -131,10 +140,10 @@ for i in [0..people.length-1]
     people[i] = person
     peopleMap[person.id] = person
 
-formatDefaultBugRow = (bugStr) ->
+formatDefaultBugRow = (i, bugStr) ->
     """
                             <tr>
-                                <td colspan="6">#{bugStr}</td>
+                                <td>#{i}</td><td></td><td></td><td>#{bugStr}</td><td></td><td></td>
                             </tr>
 """
 
@@ -166,18 +175,21 @@ createBugTable = (project) ->
 """
     for bugStr, i in project.bugs
         if not statusdata
-            result += formatDefaultBugRow bugStr
+            result += formatDefaultBugRow i, bugStr
             continue
         info = getBugIDandLabel bugStr
         if info == null
-            result += formatDefaultBugRow bugStr
+            result += formatDefaultBugRow i, bugStr
             continue
         
+        if info.group
+            continue
+            
         bugid = info.id
         bug = statusdata.bugs[bugid]
         if not bug?
             console.log "Couldn't find data for bug: ", bugid
-            result += formatDefaultBugRow bugStr
+            result += formatDefaultBugRow i, bugStr
             continue
 
         buglink = makeBugLink bugid, bug
@@ -281,6 +293,19 @@ exports.showProject = (id) ->
 """
     newNode = $(projectStr)
     $("table.bugs", newNode).dataTable({
+        fnDrawCallback: (settings) ->
+            if settings.aiDisplay.length == 0
+                return
+            
+            # handle the display of groups
+            rows = $ "table.bugs tbody tr", newNode
+            groups = 0
+            for bugStr, i in project.bugs
+                info = getBugIDandLabel bugStr
+                if info.group
+                    $("""<tr class="group"><td class="group" colspan="6">#{info.group}</td></tr>""").insertBefore(rows[i-groups])
+                    groups++
+                    
         bPaginate: false
         bInfo: false
     })
