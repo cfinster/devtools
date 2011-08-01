@@ -119,7 +119,6 @@
             "663781 Once a node is locked, the black background should be removed"
             "663778 Draw layout information of the selected node"
             "663834 registerTools() should allow tools to be docked in the browser"
-            "663778 Draw layout information"
             "672902 usable via keyboard"
             "672876 Inspect panel opens up on the wrong monitor"
             "--- Want ---"
@@ -257,7 +256,6 @@
             "668811 complete element misaligned on Windows"
             "665907 bounding boxes update are slow while the page is scrolling"
             "663833 add a floating toolbar next to the selected node"
-            "663778 draw layout information"
             "665014 selecting text in the output area is broken"
             "664696 commands should be reviewed for security issues"
             "664693 all commands should be documented for security review"
@@ -301,6 +299,7 @@
             "673129 import a file as a new style sheet"
             "673127 save to file"
             "671350 responive UI"
+            "675148 move to devtools/ module"
         ]
     }
     {
@@ -317,6 +316,7 @@
             "672312 Mini-require should be pulled out of GCLI so it can be shared with Source Map"
             "670002 use sourcemaps in the web console"
             "669999 Add a library for parsing and consuming source map files"
+            "674980 XPCOM service to map js filenames and stackframes to source map filenames"
         ]
     }
     {
@@ -394,6 +394,7 @@
         target: 8
         people: []
         bugs: [
+            "674879 Move Scratchpad to browser/devtools"
             "636727 Add Ace to workspaces"
             "636731 Add GCLI commands for Workspaces"
             "644413 Workspaces should be able to restore their context via mode-line"
