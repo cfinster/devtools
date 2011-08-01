@@ -292,9 +292,19 @@ exports.showProject = (id) ->
     </section>
 """
     newNode = $(projectStr)
+    hideButton = $ """<button id="hideResolved">Hide Resolved</button>"""
+    hideButton.click(->
+        $("table.bugs .resolved", newNode).parent().parent().remove()
+        hideButton.hide()
+    )
     $("table.bugs", newNode).dataTable({
         fnDrawCallback: (settings) ->
-            console.log("Sorting:", settings.aaSorting)
+            hideButtonInDom = $('#hideResolved')
+            if hideButtonInDom.length > 0
+                hideButtonInDom.show()
+            else
+                $('.dataTables_filter', newNode).prepend(hideButton)
+            
             if settings.aiDisplay.length == 0 or settings.aaSorting.length != 1 or settings.aaSorting[0][0] != 0 or settings.aaSorting[0][1] != 'asc'
                 return
             
@@ -306,6 +316,7 @@ exports.showProject = (id) ->
                 if info.group
                     $("""<tr class="group"><td class="group" colspan="6">#{info.group}</td></tr>""").insertBefore(rows[i-groups])
                     groups++
+            
                     
         bPaginate: false
         bInfo: false

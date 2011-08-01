@@ -227,7 +227,7 @@
     return result += "        </tbody>\n    </table>\n</section>";
   };
   exports.showProject = function(id) {
-    var avatarNode, newImage, newNode, person, projectStr, update, _i, _j, _k, _len, _len2, _len3, _ref, _ref2;
+    var avatarNode, hideButton, newImage, newNode, person, projectStr, update, _i, _j, _k, _len, _len2, _len3, _ref, _ref2;
     if (id === "people") {
       exports.showPeople();
       return;
@@ -265,10 +265,20 @@
     }
     projectStr += "</section>";
     newNode = $(projectStr);
+    hideButton = $("<button id=\"hideResolved\">Hide Resolved</button>");
+    hideButton.click(function() {
+      $("table.bugs .resolved", newNode).parent().parent().remove();
+      return hideButton.hide();
+    });
     $("table.bugs", newNode).dataTable({
       fnDrawCallback: function(settings) {
-        var bugStr, groups, i, info, rows, _len, _ref, _results;
-        console.log("Sorting:", settings.aaSorting);
+        var bugStr, groups, hideButtonInDom, i, info, rows, _len, _ref, _results;
+        hideButtonInDom = $('#hideResolved');
+        if (hideButtonInDom.length > 0) {
+          hideButtonInDom.show();
+        } else {
+          $('.dataTables_filter', newNode).prepend(hideButton);
+        }
         if (settings.aiDisplay.length === 0 || settings.aaSorting.length !== 1 || settings.aaSorting[0][0] !== 0 || settings.aaSorting[0][1] !== 'asc') {
           return;
         }

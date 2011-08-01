@@ -234,3 +234,7 @@ td.group {
     font-weight: bold;
     padding: 5px;
 }
+
+#hideResolved {
+    margin-right: 1em;
+}
