@@ -268,7 +268,8 @@
     $("table.bugs", newNode).dataTable({
       fnDrawCallback: function(settings) {
         var bugStr, groups, i, info, rows, _len, _ref, _results;
-        if (settings.aiDisplay.length === 0) {
+        console.log("Sorting:", settings.aaSorting);
+        if (settings.aiDisplay.length === 0 || settings.aaSorting.length !== 1 || settings.aaSorting[0][0] !== 0 || settings.aaSorting[0][1] !== 'asc') {
           return;
         }
         rows = $("table.bugs tbody tr", newNode);

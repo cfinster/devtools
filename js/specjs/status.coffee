@@ -294,7 +294,8 @@ exports.showProject = (id) ->
     newNode = $(projectStr)
     $("table.bugs", newNode).dataTable({
         fnDrawCallback: (settings) ->
-            if settings.aiDisplay.length == 0
+            console.log("Sorting:", settings.aaSorting)
+            if settings.aiDisplay.length == 0 or settings.aaSorting.length != 1 or settings.aaSorting[0][0] != 0 or settings.aaSorting[0][1] != 'asc'
                 return
             
             # handle the display of groups
