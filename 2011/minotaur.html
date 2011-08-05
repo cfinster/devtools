@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../css/styles.css">
+        <link type="text/css" rel="stylesheet" href="../css/mockups.css">
+        <link rel="stylesheet" type="text/css" href="../css/annotate.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../css/guiders-1.1.1.css" media="all">
+        <style>
+            .file_link {
+                text-decoration: underline;
+            }
+        </style>
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/emphasis.js" async></script>
+        <script type="text/javascript" src="../js/guiders-1.1.1.js" async onload="$(defineGuiders)"></script>
+        <title>Mozilla Web Developer Tools Q3 2011</title>
+    </head>
+    <body>
+        <h1>Mozilla Web Developer Tools</h1>
+        <h2 class="subhead">Q3 2011 Big Picture</h2>
+        <div class="date">August 4, 2011</div>
+        <h2>Front Matter</h2>
+        <h3>Start Here</h3>
+        <p>We have a bunch of tools in the works and, in line with Mozilla's newer product development practices, you can read about them in the <a href="https://wiki.mozilla.org/Products/Feature_tracking/Roadmap#Developer_Tools_.2830.29">feature pages</a>. But, the purpose of those feature pages is to drill into the details of a particular feature, so that we're clear on what we're building and why.</p>
+        <p>Especially now, when we're building entirely new tools, I think we need something that ties everything together. That's this document.</p>
+        <p>Have any comments for this? Feel free to join the discussion at <a href="https://lists.mozilla.org/listinfo/dev-apps-firefox">dev-apps-firefox</a> (also on <a href="http://groups.google.com/group/mozilla.dev.apps.firefox/topics">googlegroups</a>). Or, you can <a href="mailto:kdangoor@mozilla.com">send me a message directly</a> with your comments, but we really prefer them in the public forums!</p>
+        <p>Hint: <b>double tap the shift key</b> to get links to each paragraph in this document.</p>
+        <h3>How To Use This Document</h3>
+        <p>This document is a bit different from most. Reading straight through it, you'll learn a bit about the tools we're building. But, that doesn't explain what makes the tools <em>useful</em>. To help with that, there's an overlay that walks through various scenarios (use cases) to show how real people will use our tools to get things done.</p>
+        <p>I'd recommend that you start by reading about the tools and then step through the use cases.</p>
+        <h3>When Will These Tools Be Available?</h3>
+        <p>Firefox is following a "release train" model and these trains run on time. A Firefox release goes out on schedule, but with a set of features that is hard to predict in advance. Our goal is to have most of what you see in the document hit the Aurora release channel in late September (which means beta in November and final release in December).</p>
+        <p>As I write this, some of these features are already available in the Nightly channel and there will be more landing there regularly over the next few weeks. Even so, it's possible that some features displayed here are not going to ship in the December (Firefox 9) release.</p>
+        <p>Also, keep in mind that these are mockups and screenshots of in-development tools. I'd be surprised if things <em>don't</em> change between now and the release!</p>
+        <h2>The Tools</h2>
+        
+        <section>
+            <h3>Highlighter</h3>
+            <h4 class="subhead">Visually inspecting your page</h4>
+            <figure class="annotated">
+                <img src="images/highlighter.folded.png" width="800" height="481">
+                <figcaption>
+                    <b>Highlighter in action (hover for details)</b>
+                
+                    <ul>
+                        <li class="contrast" style="top:50px; left: 195px;"><a href="#infobar">Infobar</a></li>
+                        <li class="contrast" style="top:400px; left: 25px"><a href="#htoolbar">Highlighter Toolbar</a></li>
+                        <li class="contrast" style="top:425px; left: 480px"><a href="#devtoolbar">Developer Toolbar</a></li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <p>The <a href="https://wiki.mozilla.org/DevTools/Features/Highlighter" title="Highlighter Feature Page">Highlighter</a> is the visual entry point into the developer tools. It allows you to quickly zero in on an element of your page and get useful information about the element.</p>
+            <p>In the example above, Google title box is highlighted. Highlighter dims the rest of the page, and provides extra information about the highlighted page element in the <a href="#infobar">Infobar</a>. The <a href="#htoolbar">Highlighter Toolbar</a> appears above the <a href="#devtoolbar">Developer Toolbar</a> at the bottom of the window, providing Highlighter-specific controls.</p>
+        </section>
+        
+        <section>
+            <h3><a name="infobar">Highlighter Infobar</a></h3>
+            <figure class="annotated">
+                <img src="images/infobar.png" alt="">
+                <figcaption>
+                    <b>Infobar shows information about the highlighted element</b>
+                    
+                    <ul>
+                        <li style="top:12px; left: 50px">Tag name</li>
+                        <li style="top:12px; left: 100px">Element ID</li>
+                        <li style="top:12px; left: 165px">CSS Classes</li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <p>When you highlight a page element, the "infobar" appears to quickly give you the most useful information about that element (tag name, ID of the element and the CSS classes on the element). Additionally, if you click a class name, the Highlighter will toggle that class for that element.</p>
+        </section>
+        
+        <section>
+            <h3><a name="htoolbar">Highlighter Toolbar</a></h3>
+            <figure>
+                <img src="images/highlighterToolbar.png" width="800" height="28">
+                <figcaption>
+                    <b>Highlighter Toolbar</b>
+                </figcaption>
+            </figure>
+            <p>The Highlighter Toolbar provides breadcrumb-style navigation around the document and a button to turn on/off element selection mode and the <a href="#styleinspector">Style Inspector</a>.</p>
+        </section>
+        
+        <section>
+            <h3>Style Inspector</h3>
+            <figure>
+                <img src="images/styleinspector.png">
+                <figcaption>
+                    <b>Style Inspector shows details of the styles applied to the element</b>
+                </figcaption>
+            </figure>
+            
+        </section>
+        
+        <section>
+            <h3>Style Editor</h3>
+        </section>
+        
+        <section>
+            <h3>Highlight Element</h3>
+            <figure>
+                <img src="images/highlight.contextmenu.png" id="highlight_context_menu">
+                <figcaption>
+                    <b>Highlight an element via the context menu on the page</b>
+                </figcaption>
+            </figure>
+        
+        <section>
+            <h3><a name="devtoolbar">Developer Toolbar</a></h3>
+            <figure>
+                <img src="images/devtoolbar.png" width="800" height="479">
+                <figcaption>
+                    <b>Developer Toolbar (bottom of the window)</b>
+                </figcaption>
+            </figure>
+        
+            <section class="sidebar">
+                <h1>Page Tools vs. Element Tools</h1>
+                <p>Different tools will be available to the user at different times, depending on what the user is doing or has selected. <i>Page tools</i> work with information that is always available on the page (style sheets, scripts, etc.). The Web Console, Scratchpad and Style Editor are all examples of page tools.</p>
+                <p>There are also <i>element tools</i> which work with either a single page element or a collection of elements. The Style Inspector is an example of an element tool, because it only makes sense to talk about styling in the context of a specific part of the page. Tools users will use a page tool, such as the Highlighter, to select an element to use with an element tool.</p>
+                <p>The Style Editor could conceivably work at the page level or at the element level.</p>
+            </section>
+        
+        </section>
+        
+        
+        <h3>Accessing Other Tools</h3>
+        <div><img src="images/devtoolbar.details.png"></div>
+        <h2>Use Cases</h2>
+        <p>Now that you've seen what we're building, let's take a look at how someone will use all of these pieces to get things done.</p>
+        <p><a id="uc_fixfont" onclick="guiders.show('fixfont')" class="usecase">Fix a font</a></p>
+        <script type="application/javascript">
+            defineGuiders = function() {
+                guiders.createGuider({
+                    buttons: [{name: "Next"}],
+                    attachTo: "#uc_fixfont",
+                    description: "Oh, no! Our text font is wrong! But, why? Let's investigate!<br>We're angling to use the lovely Comic Sans, but we're getting the boring Helvetica instead.",
+                    id: "fixfont",
+                    position: 12,
+                    title: "The Fix a Font Use Case",
+                    next: "highlightHeadline"
+                });
+                guiders.createGuider({
+                    attachTo: "#highlight_context_menu",
+                    id: "highlightHeadline",
+                    description: "We can see the incorrect font on our page right in front of us. We can simply right click on the paragraph and select Highlight Element.",
+                    position: 6,
+                    title: "Use the context menu"
+                });
+            };
+        </script>
+	</body>
+</html>
