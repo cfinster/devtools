@@ -93,3 +93,7 @@ figure {
     margin-left: 0px;
     padding-left: 0px;
 }
+
+.tooltips {
+    display: none;
+}

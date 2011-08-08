@@ -18,7 +18,7 @@
     <body>
         <h1>Mozilla Web Developer Tools</h1>
         <h2 class="subhead">Q3 2011 Big Picture</h2>
-        <div class="date">August 4, 2011</div>
+        <div class="date">August 8, 2011</div>
         <h2>Front Matter</h2>
         <h3>Start Here</h3>
         <p>We have a bunch of tools in the works and, in line with Mozilla's newer product development practices, you can read about them in the <a href="https://wiki.mozilla.org/Products/Feature_tracking/Roadmap#Developer_Tools_.2830.29">feature pages</a>. But, the purpose of those feature pages is to drill into the details of a particular feature, so that we're clear on what we're building and why.</p>
@@ -38,14 +38,21 @@
             <h3>Highlighter</h3>
             <h4 class="subhead">Visually inspecting your page</h4>
             <figure>
-                <map name="highlighterFoldedMap" id="highlighterFoldedMap">
+                <map name="highlighterFoldedMap">
                     <area href="#infobar" data-name="infobar" shape="rect" coords="303,109,485,125">
                     <area href="#htoolbar" data-name="htoolbar" shape="rect" coords="0,490,921,520">
                     <area href="#devtoolbar" data-name="devtoolbar" shape="rect" coords="0,520,921,550">
+                    <area href="#" data-name="element" shape="rect" coords="302,135,615,275">
                 </map>
-                <img id="highlighterFolded" src="images/highlighter.folded.png" width="800" height="481" usemap="#highlighterFoldedMap">
+                <img src="images/highlighter.folded.png" width="800" height="481" usemap="#highlighterFoldedMap">
                 <figcaption>
-                    Highlighter in action (hover for details)
+                    <div>Highlighter in action (hover for details)</div>
+                    <div class="tooltips">
+                        <div id="infobar_tooltip">The <a href="#infobar">Infobar</a> provides quick access to the most important information about an element</div>
+                        <div id="htoolbar_tooltip">The <a href="#htoolbar">Highlighter Toolbar</a> gives you control over the Highlighter and "element tools"</div>
+                        <div id="devtoolbar_tooltip">The <a href="#devtoolbar">Developer Toolbar</a> provides is global and provides control over "page tools"</div>
+                        <div id="element_tooltip">The currently Highlighted element on the page</div>
+                    </div>
                 </figcaption>
             </figure>
             <p>The <a href="https://wiki.mozilla.org/DevTools/Features/Highlighter" title="Highlighter Feature Page">Highlighter</a> is the visual entry point into the developer tools. It allows you to quickly zero in on an element of your page and get useful information about the element.</p>
@@ -54,18 +61,23 @@
         
         <section>
             <h3><a name="infobar">Highlighter Infobar</a></h3>
-            <figure class="annotated">
-                <img src="images/infobar.png" alt="">
+            <figure>
+                <map name="infobarMap">
+                    <area href="#" data-name="tagname" shape="rect" coords="123,30,171,60">
+                    <area href="#" data-name="elementID" shape="rect" coords="174,30,235,60">
+                    <area href="#" data-name="cssclasses" shape="rect" coords="237,30,303,60">
+                </map>
+                <img src="images/infobar.png" alt="" usemap="#infobarMap">
                 <figcaption>
-                    <b>Infobar shows information about the highlighted element</b>
-                    
-                    <ul>
-                        <li style="top:12px; left: 50px">Tag name</li>
-                        <li style="top:12px; left: 100px">Element ID</li>
-                        <li style="top:12px; left: 165px">CSS Classes</li>
-                    </ul>
+                    <div>Infobar shows information about the highlighted element</div>
+                    <div class="tooltips">
+                        <div id="tagname_tooltip">Tag name</div>
+                        <div id="elementID_tooltip">Element ID</div>
+                        <div id="cssclasses_tooltip">CSS Classes</div>
+                    </div>
                 </figcaption>
             </figure>
+            
             <p>When you highlight a page element, the "infobar" appears to quickly give you the most useful information about that element (tag name, ID of the element and the CSS classes on the element). Additionally, if you click a class name, the Highlighter will toggle that class for that element.</p>
         </section>
         
@@ -148,32 +160,30 @@
                 });
             };
             defineTooltips = function() {
-                $('img').mapster();
-                var img = $('#highlighterFolded');
-                img.mapster({
-                    render_highlight: {
-                        fillColor: '2aff00',
-                        stroke: true
-                    },
-                    mapKey: "data-name",
-                    isSelectable: false,
-                    showToolTip: true,
-                    toolTipClose: ['tooltip-click', 'area-click'],
-                    areas: [
-                        {
-                            key: "infobar",
-                            toolTip: $('<div><a href="#infobar">Infobar</a></div>'),
+                $('img[usemap]').each(function(i, img) {
+                    img = $(img);
+                    mapname = img.attr('usemap').substring(1);
+                    var areaElems = $("area", $("map[name=" + mapname + "]"));
+                    var areas = [];
+                    areaElems.each(function(j, e) {
+                        var name = $(e).attr("data-name");
+                        areas.push({
+                            key: name,
+                            toolTip: $("#" + name + "_tooltip")
+                        });
+                    });
+                    img.mapster({
+                        render_highlight: {
+                            fillColor: '2aff00',
+                            stroke: true
                         },
-                        {
-                            key: "htoolbar",
-                            toolTip: $('<div><a href="#htoolbar">Highlighter Toolbar</a></div>'),
-                        },
-                        {
-                            key: "devtoolbar",
-                            toolTip: $('<div><a href="#devtoolbar">Developer Toolbar</a></div>')
-                        }
-                    ]
-                })
+                        mapKey: "data-name",
+                        isSelectable: false,
+                        showToolTip: true,
+                        toolTipClose: ['tooltip-click', 'area-click'],
+                        areas: areas
+                    });
+                });
             };
         </script>
 	</body>
