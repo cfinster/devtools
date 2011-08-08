@@ -3,7 +3,6 @@
     <head>
         <link type="text/css" rel="stylesheet" href="../css/styles.css">
         <link type="text/css" rel="stylesheet" href="../css/mockups.css">
-        <link rel="stylesheet" type="text/css" href="../css/annotate.css" media="screen">
         <link rel="stylesheet" type="text/css" href="../css/guiders-1.1.1.css" media="all">
         <style>
             .file_link {
@@ -13,6 +12,7 @@
         <script type="text/javascript" src="../js/jquery.js"></script>
         <script type="text/javascript" src="../js/emphasis.js" async></script>
         <script type="text/javascript" src="../js/guiders-1.1.1.js" async onload="$(defineGuiders)"></script>
+        <script type="text/javascript" src="../js/jquery.imagemapster.js" async onload="$(defineTooltips)"></script>
         <title>Mozilla Web Developer Tools Q3 2011</title>
     </head>
     <body>
@@ -37,16 +37,15 @@
         <section>
             <h3>Highlighter</h3>
             <h4 class="subhead">Visually inspecting your page</h4>
-            <figure class="annotated">
-                <img src="images/highlighter.folded.png" width="800" height="481">
+            <figure>
+                <map name="highlighterFoldedMap" id="highlighterFoldedMap">
+                    <area href="#infobar" data-name="infobar" shape="rect" coords="303,109,485,125">
+                    <area href="#htoolbar" data-name="htoolbar" shape="rect" coords="0,490,921,520">
+                    <area href="#devtoolbar" data-name="devtoolbar" shape="rect" coords="0,520,921,550">
+                </map>
+                <img id="highlighterFolded" src="images/highlighter.folded.png" width="800" height="481" usemap="#highlighterFoldedMap">
                 <figcaption>
-                    <b>Highlighter in action (hover for details)</b>
-                
-                    <ul>
-                        <li class="contrast" style="top:50px; left: 195px;"><a href="#infobar">Infobar</a></li>
-                        <li class="contrast" style="top:400px; left: 25px"><a href="#htoolbar">Highlighter Toolbar</a></li>
-                        <li class="contrast" style="top:425px; left: 480px"><a href="#devtoolbar">Developer Toolbar</a></li>
-                    </ul>
+                    Highlighter in action (hover for details)
                 </figcaption>
             </figure>
             <p>The <a href="https://wiki.mozilla.org/DevTools/Features/Highlighter" title="Highlighter Feature Page">Highlighter</a> is the visual entry point into the developer tools. It allows you to quickly zero in on an element of your page and get useful information about the element.</p>
@@ -147,6 +146,34 @@
                     position: 6,
                     title: "Use the context menu"
                 });
+            };
+            defineTooltips = function() {
+                $('img').mapster();
+                var img = $('#highlighterFolded');
+                img.mapster({
+                    render_highlight: {
+                        fillColor: '2aff00',
+                        stroke: true
+                    },
+                    mapKey: "data-name",
+                    isSelectable: false,
+                    showToolTip: true,
+                    toolTipClose: ['tooltip-click', 'area-click'],
+                    areas: [
+                        {
+                            key: "infobar",
+                            toolTip: $('<div><a href="#infobar">Infobar</a></div>'),
+                        },
+                        {
+                            key: "htoolbar",
+                            toolTip: $('<div><a href="#htoolbar">Highlighter Toolbar</a></div>'),
+                        },
+                        {
+                            key: "devtoolbar",
+                            toolTip: $('<div><a href="#devtoolbar">Developer Toolbar</a></div>')
+                        }
+                    ]
+                })
             };
         </script>
 	</body>
