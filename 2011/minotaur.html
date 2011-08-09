@@ -32,6 +32,14 @@
         <p>Firefox is following a "release train" model and these trains run on time. A Firefox release goes out on schedule, but with a set of features that is hard to predict in advance. Our goal is to have most of what you see in the document hit the Aurora release channel in late September (which means beta in November and final release in December).</p>
         <p>As I write this, some of these features are already available in the Nightly channel and there will be more landing there regularly over the next few weeks. Even so, it's possible that some features displayed here are not going to ship in the December (Firefox 9) release.</p>
         <p>Also, keep in mind that these are mockups and screenshots of in-development tools. I'd be surprised if things <em>don't</em> change between now and the release!</p>
+        
+        <section>
+            <h3>Page Tools vs. Element Tools</h3>
+            <p>Different tools will be available to the user at different times, depending on what the user is doing or has selected. <i>Page tools</i> work with information that is always available on the page (style sheets, scripts, etc.). The Web Console, Scratchpad and Style Editor are all examples of page tools.</p>
+            <p>There are also <i>element tools</i> which work with either a single page element or a collection of elements. The Style Inspector is an example of an element tool, because it only makes sense to talk about styling in the context of a specific part of the page. Tools users will use a page tool, such as the Highlighter, to select an element to use with an element tool.</p>
+            <p>The Style Editor could conceivably work at the page level or at the element level.</p>
+        </section>
+        
         <h2>The Tools</h2>
         
         <section>
@@ -69,7 +77,7 @@
                 </map>
                 <img src="images/infobar.png" alt="" usemap="#infobarMap">
                 <figcaption>
-                    <div>Infobar shows information about the highlighted element</div>
+                    <div>Infobar shows information about the highlighted element (hover for details)</div>
                     <div class="tooltips">
                         <div id="tagname_tooltip">Tag name</div>
                         <div id="elementID_tooltip">Element ID</div>
@@ -84,20 +92,34 @@
         <section>
             <h3><a name="htoolbar">Highlighter Toolbar</a></h3>
             <figure>
-                <img src="images/highlighterToolbar.png" width="800" height="28">
+                <map name="highlighterToolbarMap">
+                    <area href="#" data-name="highlightElementToggle" shape="rect" coords="0,0,65,27">
+                    <area href="#" data-name="styleInspectorToggle" shape="rect" coords="66,0,112,27">
+                    <area href="#" data-name="htmlTreeToggle" shape="rect" coords="120,0,157,27">
+                    <area href="#" data-name="layoutViewToggle" shape="rect" coords="165,0,215,27">
+                    <area href="#" data-name="breadcrumbs" shape="rect" coords="224,0,675,27">
+                </map>
+                <img src="images/highlighterToolbar.png" width="800" height="28" usemap="#highlighterToolbarMap">
                 <figcaption>
-                    <b>Highlighter Toolbar</b>
+                    <div>Highlighter Toolbar</div>
+                    <div class="tooltips">
+                        <div id="highlightElementToggle_tooltip">Switches in and out of element highlighting mode.</div>
+                        <div id="styleInspectorToggle_tooltip">Shows/hides the <a href="#style_inspector">Style Inspector</a></div>
+                        <div id="htmlTreeToggle_tooltip">Shows/hides the <a href="#htmltree">HTML Tree</a></div>
+                        <div id="layoutViewToggle_tooltip">Shows/hides the <a href="#layout">Layout View</a></div>
+                        <div id="breadcrumbs_tooltip">Displays all of the parent elements of the selected element. Clicking on any of the referenced elements will select it.</div>
+                    </div>
                 </figcaption>
             </figure>
-            <p>The Highlighter Toolbar provides breadcrumb-style navigation around the document and a button to turn on/off element selection mode and the <a href="#styleinspector">Style Inspector</a>.</p>
+            <p>The Highlighter Toolbar provides breadcrumb-style navigation to other elements in the document and buttons to control other element tools.</p>
         </section>
         
         <section>
-            <h3>Style Inspector</h3>
+            <h3><a name="style_inspector">Style Inspector</a></h3>
             <figure>
                 <img src="images/styleinspector.png">
                 <figcaption>
-                    <b>Style Inspector shows details of the styles applied to the element</b>
+                    <div>Style Inspector shows details of the styles applied to the element</div>
                 </figcaption>
             </figure>
             
@@ -105,6 +127,24 @@
         
         <section>
             <h3>Style Editor</h3>
+        </section>
+        
+        <section>
+            <h3><a name="layout">Layout</a></h3>
+            <figure>
+                <map name="layoutMap">
+                    <area href="#" data-name="waist" shape="rect" coords="164,600,330,623">
+                    <area href="#" data-name="inseam" shape="rect" coords="361,394,392,571">
+                </map>
+                <img src="images/layout.png" width="800" height="471" usemap="#layoutMap">
+                <figcaption>
+                    <div>Layout view</div>
+                    <div class="tooltips">
+                        <div id="waist_tooltip">waist</div>
+                        <div id="inseam_tooltip">inseam</div>
+                    </div>
+                </figcaption>
+            </figure>
         </section>
         
         <section>
@@ -125,13 +165,6 @@
                 </figcaption>
             </figure>
         
-            <section class="sidebar">
-                <h1>Page Tools vs. Element Tools</h1>
-                <p>Different tools will be available to the user at different times, depending on what the user is doing or has selected. <i>Page tools</i> work with information that is always available on the page (style sheets, scripts, etc.). The Web Console, Scratchpad and Style Editor are all examples of page tools.</p>
-                <p>There are also <i>element tools</i> which work with either a single page element or a collection of elements. The Style Inspector is an example of an element tool, because it only makes sense to talk about styling in the context of a specific part of the page. Tools users will use a page tool, such as the Highlighter, to select an element to use with an element tool.</p>
-                <p>The Style Editor could conceivably work at the page level or at the element level.</p>
-            </section>
-        
         </section>
         
         
@@ -145,7 +178,7 @@
                 guiders.createGuider({
                     buttons: [{name: "Next"}],
                     attachTo: "#uc_fixfont",
-                    description: "Oh, no! Our text font is wrong! But, why? Let's investigate!<br>We're angling to use the lovely Comic Sans, but we're getting the boring Helvetica instead.",
+                    description: "Oh, no! Our main text font is wrong! But, why? Let's investigate!<br>We're angling to use the lovely Comic Sans, but we're getting the boring Helvetica instead.",
                     id: "fixfont",
                     position: 12,
                     title: "The Fix a Font Use Case",
