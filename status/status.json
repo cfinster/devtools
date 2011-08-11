@@ -1,5 +1,5 @@
 {
- "update": "August 10",
+ "update": "August 11",
  "bugs": {
   "636725": {
    "summary": "Unit tests for Workspaces",
@@ -168,14 +168,13 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "luke",
-      "setter": "jorendorff"
+      "status": "+",
+      "setter": "sphink"
      }
     ],
     "superreview": []
    },
-   "patchSize": 22609
+   "patchSize": 6341
   },
   "657678": {
    "summary": "Remove GCLI dependency on Pilot",
@@ -477,9 +476,14 @@
    "flags": {
     "feedback": [],
     "review": [],
-    "superreview": []
+    "superreview": [
+     {
+      "status": "-",
+      "setter": "gavin.sharp"
+     }
+    ]
    },
-   "patchSize": 3502
+   "patchSize": 15222
   },
   "671689": {
    "summary": "[highlighter] Nodes should be selectable from the HTML tree",
@@ -1759,9 +1763,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "past"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -1790,13 +1793,13 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
-      "setter": "mihai.sucan"
+      "status": "-",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
    },
-   "patchSize": 9514
+   "patchSize": 9602
   },
   "669652": {
    "summary": "[highlighter] Move the highlighter related code from inspector.js to a jsm",
@@ -2104,16 +2107,11 @@
    "whiteboard": "[highlighter][minotaur][best: 3h; likely: 1d; worst: 3d]",
    "hasPatch": true,
    "flags": {
-    "feedback": [
-     {
-      "status": "+",
-      "setter": "mihai.sucan"
-     }
-    ],
+    "feedback": [],
     "review": [],
     "superreview": []
    },
-   "patchSize": 17256
+   "patchSize": 44777
   },
   "663778": {
    "summary": "[highlighter] Draw layout information of the selected node",
@@ -2298,15 +2296,14 @@
    "summary": "Scratchpad Save File prompts to overwrite existing files twice.",
    "status": "ASSIGNED",
    "assignedName": "pcvrcek",
-   "whiteboard": "[scratchpad][good-first-bugs]",
+   "whiteboard": "[scratchpad][good-first-bugs][land-in-fx-team]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "rcampbell",
-      "setter": "pcvrcek"
+      "status": "+",
+      "setter": "rcampbell"
      }
     ],
     "superreview": []
@@ -2479,9 +2476,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "mihai.sucan"
+      "status": "+",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -2841,9 +2837,8 @@
     "feedback": [],
     "review": [
      {
-      "status": "?",
-      "requestee": "gavin.sharp",
-      "setter": "mihai.sucan"
+      "status": "+",
+      "setter": "gavin.sharp"
      }
     ],
     "superreview": []
@@ -3666,19 +3661,27 @@
   }
  },
  "reviewQueues": {
-  "wmccloskey": {
+  "adrake": {
    "review": {
-    "devtoolsSize": 15711,
+    "devtoolsSize": 56835,
+    "devtoolsCount": 3,
+    "totalSize": 56835,
+    "totalCount": 3
+   }
+  },
+  "igor": {
+   "review": {
+    "devtoolsSize": 7574,
     "devtoolsCount": 1,
-    "totalSize": 15711,
+    "totalSize": 7574,
     "totalCount": 1
    }
   },
-  "luke": {
+  "brendan": {
    "review": {
-    "devtoolsSize": 22609,
+    "devtoolsSize": 18624,
     "devtoolsCount": 1,
-    "totalSize": 22609,
+    "totalSize": 18624,
     "totalCount": 1
    }
   },
@@ -3692,10 +3695,10 @@
   },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 475459,
-    "devtoolsCount": 4,
-    "totalSize": 475459,
-    "totalCount": 4
+    "devtoolsSize": 22903,
+    "devtoolsCount": 1,
+    "totalSize": 22903,
+    "totalCount": 1
    }
   },
   "dolske": {
@@ -3708,10 +3711,10 @@
   },
   "rcampbell": {
    "review": {
-    "devtoolsSize": 151639,
-    "devtoolsCount": 4,
-    "totalSize": 151639,
-    "totalCount": 4
+    "devtoolsSize": 150828,
+    "devtoolsCount": 3,
+    "totalSize": 150828,
+    "totalCount": 3
    }
   },
   "jonas": {
@@ -3726,6 +3729,138 @@
  "timeline": {
   "events": [
    {
+    "bugId": "664131",
+    "when": "08/11 13:26",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "660784",
+    "when": "08/11 12:02",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "678152",
+    "when": "08/11 09:28",
+    "type": "newBug",
+    "detail": "GCLI should be more visually appealing in Firefox"
+   },
+   {
+    "bugId": "672829",
+    "when": "08/11 07:23",
+    "type": "newComment",
+    "detail": "from jorendorff@mozilla.com"
+   },
+   {
+    "bugId": "658368",
+    "when": "08/11 01:18",
+    "type": "newComment",
+    "detail": "from gavin.sharp@gmail.com"
+   },
+   {
+    "bugId": "636727",
+    "when": "08/11 00:42",
+    "type": "newComment",
+    "detail": "from gavin.sharp@gmail.com"
+   },
+   {
+    "bugId": "650794",
+    "when": "08/10 21:47",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "650794",
+    "when": "08/10 21:47",
+    "type": "newPatch",
+    "detail": "v4 (WIP)"
+   },
+   {
+    "bugId": "677996",
+    "when": "08/10 19:13",
+    "type": "newBug",
+    "detail": "test-console.html and test-console-api.html are leaked during browser-chrome tests"
+   },
+   {
+    "bugId": "638142",
+    "when": "08/10 17:39",
+    "type": "newComment",
+    "detail": "from kwierso@gmail.com"
+   },
+   {
+    "bugId": "637291",
+    "when": "08/10 17:39",
+    "type": "newComment",
+    "detail": "from kwierso@gmail.com"
+   },
+   {
+    "bugId": "674871",
+    "when": "08/10 17:23",
+    "type": "newComment",
+    "detail": "from gavin.sharp@gmail.com"
+   },
+   {
+    "bugId": "674871",
+    "when": "08/10 16:49",
+    "type": "newPatch",
+    "detail": "patch v1.3"
+   },
+   {
+    "bugId": "677930",
+    "when": "08/10 16:11",
+    "type": "newBug",
+    "detail": "Style Inspector: make URLs clickable"
+   },
+   {
+    "bugId": "677929",
+    "when": "08/10 16:08",
+    "type": "newBug",
+    "detail": "Style Inspector: show color tooltip"
+   },
+   {
+    "bugId": "677928",
+    "when": "08/10 16:04",
+    "type": "newBug",
+    "detail": "Style Inspector: allow users to hide unmatched rules"
+   },
+   {
+    "bugId": "672744",
+    "when": "08/10 15:57",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "677921",
+    "when": "08/10 15:45",
+    "type": "newBug",
+    "detail": "Style Inspector: optimize the UI to not refresh all the content when a new element is highlighted"
+   },
+   {
+    "bugId": "677917",
+    "when": "08/10 15:32",
+    "type": "newBug",
+    "detail": "Style Inspector: remember expanded property views"
+   },
+   {
+    "bugId": "677902",
+    "when": "08/10 14:45",
+    "type": "newBug",
+    "detail": "Style Inspector: add an option to filter properties by category"
+   },
+   {
+    "bugId": "677899",
+    "when": "08/10 14:36",
+    "type": "newBug",
+    "detail": "Add an option to display shorthand properties"
+   },
+   {
+    "bugId": "661289",
+    "when": "08/10 14:25",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
     "bugId": "672748",
     "when": "08/10 12:56",
     "type": "newComment",
@@ -3738,16 +3873,10 @@
     "detail": "from mihai.sucan@gmail.com"
    },
    {
-    "bugId": "650794",
-    "when": "08/10 12:12",
-    "type": "newComment",
-    "detail": "from mihai.sucan@gmail.com"
-   },
-   {
-    "bugId": "672829",
-    "when": "08/10 04:58",
-    "type": "newComment",
-    "detail": "from jorendorff@mozilla.com"
+    "bugId": "677876",
+    "when": "08/10 11:32",
+    "type": "newBug",
+    "detail": "console.js in GCLI polutes the namespace more than it needs to"
    },
    {
     "bugId": "672829",
@@ -3848,12 +3977,6 @@
    {
     "bugId": "661289",
     "when": "08/09 21:17",
-    "type": "newComment",
-    "detail": "from pcvrcek@mozilla.cz"
-   },
-   {
-    "bugId": "661289",
-    "when": "08/09 21:17",
     "type": "newPatch",
     "detail": "Patch v1"
    },
@@ -3882,12 +4005,6 @@
     "detail": "Source map integration w/ the webconsole V2"
    },
    {
-    "bugId": "636727",
-    "when": "08/09 16:43",
-    "type": "newComment",
-    "detail": "from mihai.sucan@gmail.com"
-   },
-   {
     "bugId": "672748",
     "when": "08/09 16:43",
     "type": "newPatch",
@@ -3898,12 +4015,6 @@
     "when": "08/09 16:43",
     "type": "newPatch",
     "detail": "patch update 9 - rebase"
-   },
-   {
-    "bugId": "660784",
-    "when": "08/09 16:42",
-    "type": "newComment",
-    "detail": "from mihai.sucan@gmail.com"
    },
    {
     "bugId": "660784",
@@ -3942,16 +4053,10 @@
     "detail": "Style Inspector complete patch 6"
    },
    {
-    "bugId": "650794",
-    "when": "08/09 15:41",
-    "type": "newPatch",
-    "detail": "disable html panel v3"
-   },
-   {
-    "bugId": "637291",
-    "when": "08/08 19:01",
-    "type": "newComment",
-    "detail": "from kwierso@gmail.com"
+    "bugId": "677518",
+    "when": "08/09 13:26",
+    "type": "newBug",
+    "detail": "keys() should return an error if it doesn't exist when calling against a HTML canvas element"
    },
    {
     "bugId": "659775",
@@ -3984,12 +4089,6 @@
     "detail": "from dtownsend@mozilla.com"
    },
    {
-    "bugId": "674871",
-    "when": "08/05 18:48",
-    "type": "newComment",
-    "detail": "from rcampbell@mozilla.com"
-   },
-   {
     "bugId": "672003",
     "when": "08/05 17:59",
     "type": "newComment",
@@ -4014,10 +4113,22 @@
     "detail": "from mihai.sucan@gmail.com"
    },
    {
-    "bugId": "674871",
-    "when": "08/05 16:48",
-    "type": "newPatch",
-    "detail": "patch v1.2"
+    "bugId": "676866",
+    "when": "08/05 16:54",
+    "type": "newBug",
+    "detail": "StyleEditor search should highlight matching text"
+   },
+   {
+    "bugId": "676864",
+    "when": "08/05 16:50",
+    "type": "newBug",
+    "detail": "Style Editor should have a resizing splitter between the stylesheets list and editor"
+   },
+   {
+    "bugId": "676861",
+    "when": "08/05 16:45",
+    "type": "newBug",
+    "detail": "Style Editor should allow to rename stylesheets"
    },
    {
     "bugId": "669652",
@@ -4050,6 +4161,18 @@
     "detail": "from rcampbell@mozilla.com"
    },
    {
+    "bugId": "676722",
+    "when": "08/04 23:35",
+    "type": "newBug",
+    "detail": "The output of console.log(object) isn't expandable/inspectable in the Web Console"
+   },
+   {
+    "bugId": "676696",
+    "when": "08/04 22:12",
+    "type": "newBug",
+    "detail": "Intermittent browser_webconsole_bug_618311_private_browsing.js | Test timed out followed by | correct number of popups shown - Got 0, expected 2 and an unexpected tab"
+   },
+   {
     "bugId": "653423",
     "when": "08/04 21:31",
     "type": "newComment",
@@ -4062,10 +4185,40 @@
     "detail": "patch v0.2 WIP"
    },
    {
-    "bugId": "658368",
-    "when": "08/04 16:53",
-    "type": "newComment",
-    "detail": "from past@mozilla.com"
+    "bugId": "676605",
+    "when": "08/04 18:30",
+    "type": "newBug",
+    "detail": "Refactor the script debugger to use the modified hook API"
+   },
+   {
+    "bugId": "676602",
+    "when": "08/04 18:26",
+    "type": "newBug",
+    "detail": "Allow multiple breakpoints in a single line to be set"
+   },
+   {
+    "bugId": "676594",
+    "when": "08/04 18:15",
+    "type": "newBug",
+    "detail": "Use Orion for displaying script source in the debugger"
+   },
+   {
+    "bugId": "676592",
+    "when": "08/04 18:11",
+    "type": "newBug",
+    "detail": "Add a property viewer to the script debugger"
+   },
+   {
+    "bugId": "676590",
+    "when": "08/04 18:04",
+    "type": "newBug",
+    "detail": "Properly handle location changes in the script debugger"
+   },
+   {
+    "bugId": "676586",
+    "when": "08/04 17:57",
+    "type": "newBug",
+    "detail": "Implement a script debugger"
    },
    {
     "bugId": "658368",
@@ -4082,14 +4235,14 @@
    {
     "bugId": "664131",
     "when": "08/04 15:52",
-    "type": "newComment",
-    "detail": "from past@mozilla.com"
-   },
-   {
-    "bugId": "664131",
-    "when": "08/04 15:52",
     "type": "newPatch",
     "detail": "Patch v6"
+   },
+   {
+    "bugId": "676520",
+    "when": "08/04 13:20",
+    "type": "newBug",
+    "detail": "GCLI fails to read from input element when embedded"
    },
    {
     "bugId": "611032",
@@ -4126,6 +4279,12 @@
     "when": "08/04 12:35",
     "type": "newPatch",
     "detail": "v 0.17 rebase"
+   },
+   {
+    "bugId": "676509",
+    "when": "08/04 12:02",
+    "type": "newBug",
+    "detail": "GCLI browser UI and chrome UI should be separate implementations"
    },
    {
     "bugId": "653140",
@@ -4194,6 +4353,24 @@
     "detail": "from tim.taubert@gmx.de"
    },
    {
+    "bugId": "676256",
+    "when": "08/03 14:47",
+    "type": "newBug",
+    "detail": "Remove equals tests from GCLI test suite"
+   },
+   {
+    "bugId": "676255",
+    "when": "08/03 14:45",
+    "type": "newBug",
+    "detail": "Make the Highlighter Toolbar look like shorlander's design on Windows Aero"
+   },
+   {
+    "bugId": "676253",
+    "when": "08/03 14:42",
+    "type": "newBug",
+    "detail": "Make the Highlighter Toolbar look like faaborg's design on OS X"
+   },
+   {
     "bugId": "663833",
     "when": "08/03 14:40",
     "type": "newPatch",
@@ -4218,6 +4395,12 @@
     "detail": "from jwalker@mozilla.com"
    },
    {
+    "bugId": "676202",
+    "when": "08/03 09:22",
+    "type": "newBug",
+    "detail": "GCLI should use 2 space indents not 4"
+   },
+   {
     "bugId": "653658",
     "when": "08/03 05:16",
     "type": "newComment",
@@ -4230,16 +4413,34 @@
     "detail": "from rcampbell@mozilla.com"
    },
    {
+    "bugId": "674879",
+    "when": "08/02 17:47",
+    "type": "review",
+    "detail": "r+ for move scratchpad"
+   },
+   {
     "bugId": "674980",
     "when": "08/02 17:46",
     "type": "newComment",
     "detail": "from nfitzgerald@mozilla.com"
    },
    {
-    "bugId": "674879",
-    "when": "08/02 13:47",
-    "type": "review",
-    "detail": "r+ for move scratchpad"
+    "bugId": "675957",
+    "when": "08/02 15:55",
+    "type": "newBug",
+    "detail": "GCLI should have a way to not require the user to press '}' when entering JS."
+   },
+   {
+    "bugId": "675927",
+    "when": "08/02 14:15",
+    "type": "newBug",
+    "detail": "[Mac] The Web Console Window freezes when drag and drop the parent tab to create a new window"
+   },
+   {
+    "bugId": "675923",
+    "when": "08/02 14:03",
+    "type": "newBug",
+    "detail": "[meta] GCLI should allow display of Javascript completion"
    },
    {
     "bugId": "674879",
@@ -4258,6 +4459,24 @@
     "when": "08/01 14:42",
     "type": "newPatch",
     "detail": "[in-fx-team] Patch v19"
+   },
+   {
+    "bugId": "675602",
+    "when": "08/01 12:18",
+    "type": "newBug",
+    "detail": "Web console show \"Cannot show responses of type «(null)»\" for 304 \"Not modified\" responses"
+   },
+   {
+    "bugId": "675592",
+    "when": "08/01 10:17",
+    "type": "newBug",
+    "detail": "WebConsole should not forget position in history when reopening"
+   },
+   {
+    "bugId": "675487",
+    "when": "07/31 08:03",
+    "type": "newBug",
+    "detail": "Add tooltip to repeat bubble in Web Console"
    },
    {
     "bugId": "674229",
@@ -4285,9 +4504,15 @@
    },
    {
     "bugId": "674871",
-    "when": "07/29 15:32",
+    "when": "07/29 19:32",
     "type": "summary",
     "detail": "[highlighter] there is something wrong with iframes"
+   },
+   {
+    "bugId": "674871",
+    "when": "07/29 15:30",
+    "type": "whiteboard",
+    "detail": "[minotaur]"
    },
    {
     "bugId": "588871",
@@ -4314,8 +4539,20 @@
     "detail": "Bug 583041 - Style Editor integration [1/2] v2"
    },
    {
-    "bugId": "674871",
-    "when": "07/29 11:30",
+    "bugId": "674879",
+    "when": "07/29 10:55",
+    "type": "review",
+    "detail": "r+ for move scratchpad"
+   },
+   {
+    "bugId": "674879",
+    "when": "07/29 10:39",
+    "type": "review",
+    "detail": "r? gavin.sharp@gmail.com), review?(mihai.sucan@gmail.com for move scratchpad"
+   },
+   {
+    "bugId": "674476",
+    "when": "07/29 07:25",
     "type": "whiteboard",
     "detail": "[minotaur]"
    },
@@ -4326,28 +4563,22 @@
     "detail": ""
    },
    {
-    "bugId": "674879",
-    "when": "07/29 06:55",
-    "type": "review",
-    "detail": "r+ for move scratchpad"
-   },
-   {
-    "bugId": "674879",
-    "when": "07/29 06:39",
-    "type": "review",
-    "detail": "r? gavin.sharp@gmail.com), review?(mihai.sucan@gmail.com for move scratchpad"
-   },
-   {
-    "bugId": "674476",
-    "when": "07/29 03:25",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
-   },
-   {
     "bugId": "667259",
-    "when": "07/29 00:49",
+    "when": "07/29 04:49",
     "type": "whiteboard",
     "detail": "[e10s][scratchpad]"
+   },
+   {
+    "bugId": "674485",
+    "when": "07/29 02:09",
+    "type": "whiteboard",
+    "detail": "[styleinspector]"
+   },
+   {
+    "bugId": "674482",
+    "when": "07/29 01:38",
+    "type": "whiteboard",
+    "detail": "[styleinspector]"
    },
    {
     "bugId": "667259",
@@ -4356,16 +4587,16 @@
     "detail": "from felipc@gmail.com"
    },
    {
-    "bugId": "674485",
-    "when": "07/28 22:09",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
+    "bugId": "669999",
+    "when": "07/28 20:40",
+    "type": "review",
+    "detail": "r? rcampbell@mozilla.com for Patch update 3"
    },
    {
-    "bugId": "674482",
-    "when": "07/28 21:38",
+    "bugId": "672902",
+    "when": "07/28 20:18",
     "type": "whiteboard",
-    "detail": "[styleinspector]"
+    "detail": "[highlighter][minotaur][best: 3h: likely: 6h; worst 2d]"
    },
    {
     "bugId": "666650",
@@ -4386,16 +4617,10 @@
     "detail": "from gavin.sharp@gmail.com"
    },
    {
-    "bugId": "669999",
-    "when": "07/28 16:40",
-    "type": "review",
-    "detail": "r? rcampbell@mozilla.com for Patch update 3"
-   },
-   {
-    "bugId": "672902",
-    "when": "07/28 16:18",
-    "type": "whiteboard",
-    "detail": "[highlighter][minotaur][best: 3h: likely: 6h; worst 2d]"
+    "bugId": "674887",
+    "when": "07/28 13:17",
+    "type": "newBug",
+    "detail": "Find a better place for the Layout View"
    },
    {
     "bugId": "674879",
@@ -4422,70 +4647,88 @@
     "detail": ""
    },
    {
+    "bugId": "674856",
+    "when": "07/28 10:11",
+    "type": "newBug",
+    "detail": "The style inspector should allow updating of single css property values"
+   },
+   {
     "bugId": "672006",
-    "when": "07/28 00:32",
+    "when": "07/28 04:32",
     "type": "whiteboard",
     "detail": "[minotaur][best: 3d; likely: 1w; worst: 2w]"
    },
    {
     "bugId": "672003",
-    "when": "07/28 00:31",
+    "when": "07/28 04:31",
     "type": "whiteboard",
     "detail": "[minotaur][has-patch]"
    },
    {
     "bugId": "671689",
-    "when": "07/28 00:29",
+    "when": "07/28 04:29",
     "type": "whiteboard",
     "detail": "[minotaur][has-patch]"
    },
    {
     "bugId": "672806",
-    "when": "07/28 00:23",
+    "when": "07/28 04:23",
     "type": "whiteboard",
     "detail": "[styleinspector][minotaur][best: 2h; likely: 1d; worst: 3d]"
    },
    {
     "bugId": "672002",
-    "when": "07/28 00:21",
+    "when": "07/28 04:21",
     "type": "whiteboard",
     "detail": "[minotaur][best: 2h; likely: 1d; worst: 3d]"
    },
    {
     "bugId": "672748",
-    "when": "07/28 00:16",
+    "when": "07/28 04:16",
     "type": "whiteboard",
     "detail": "[styleinspector][minotaur][has-patch][best: 1d; likely: 1w; worst: 3w]"
    },
    {
     "bugId": "672743",
-    "when": "07/28 00:14",
+    "when": "07/28 04:14",
     "type": "whiteboard",
     "detail": "[styleinspector][minotaur][best: 4h; likely: 1d; worst: 3d]"
    },
    {
     "bugId": "671350",
-    "when": "07/27 23:49",
+    "when": "07/28 03:49",
     "type": "whiteboard",
     "detail": "[minotaur][best: 1d; likely: 3d; worst: 1w]"
    },
    {
     "bugId": "671350",
-    "when": "07/27 23:46",
+    "when": "07/28 03:46",
     "type": "whiteboard",
     "detail": "[minotaur][p3][best: 1d; likely: 3d; worst: 1w]"
    },
    {
     "bugId": "672748",
-    "when": "07/27 23:11",
+    "when": "07/28 03:11",
     "type": "summary",
     "detail": "Style inspector UI refresh"
    },
    {
     "bugId": "672806",
-    "when": "07/27 23:03",
+    "when": "07/28 03:03",
     "type": "whiteboard",
     "detail": "[styleinspector][minotaur]"
+   },
+   {
+    "bugId": "673129",
+    "when": "07/28 01:42",
+    "type": "whiteboard",
+    "detail": ""
+   },
+   {
+    "bugId": "673127",
+    "when": "07/28 01:40",
+    "type": "whiteboard",
+    "detail": ""
    },
    {
     "bugId": "674283",
@@ -4494,22 +4737,52 @@
     "detail": "Patch v. 3"
    },
    {
-    "bugId": "673129",
-    "when": "07/27 21:42",
-    "type": "whiteboard",
-    "detail": ""
-   },
-   {
-    "bugId": "673127",
-    "when": "07/27 21:40",
-    "type": "whiteboard",
-    "detail": ""
-   },
-   {
     "bugId": "673148",
     "when": "07/27 19:49",
     "type": "newComment",
     "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "666650",
+    "when": "07/27 16:34",
+    "type": "whiteboard",
+    "detail": "[minotaur][has-patch][needs-update][needs-review]"
+   },
+   {
+    "bugId": "663833",
+    "when": "07/27 16:26",
+    "type": "whiteboard",
+    "detail": "[minotaur][has-patch]"
+   },
+   {
+    "bugId": "665907",
+    "when": "07/27 16:20",
+    "type": "whiteboard",
+    "detail": "[minotaur][best: 1h; likely: 4h; worst: 2d]"
+   },
+   {
+    "bugId": "668254",
+    "when": "07/27 15:50",
+    "type": "whiteboard",
+    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d]"
+   },
+   {
+    "bugId": "674548",
+    "when": "07/27 15:43",
+    "type": "newBug",
+    "detail": "DOM Templater to be able to handle \"promises\""
+   },
+   {
+    "bugId": "668254",
+    "when": "07/27 15:43",
+    "type": "whiteboard",
+    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d][p2]"
+   },
+   {
+    "bugId": "668254",
+    "when": "07/27 15:43",
+    "type": "whiteboard",
+    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d]"
    },
    {
     "bugId": "672806",
@@ -4518,76 +4791,46 @@
     "detail": "from dcamp@mozilla.com"
    },
    {
+    "bugId": "672748",
+    "when": "07/27 14:58",
+    "type": "whiteboard",
+    "detail": "[styleinspector][minotaur]"
+   },
+   {
+    "bugId": "672806",
+    "when": "07/27 14:58",
+    "type": "whiteboard",
+    "detail": "[styleinspector]"
+   },
+   {
+    "bugId": "672746",
+    "when": "07/27 14:57",
+    "type": "whiteboard",
+    "detail": "[styleinspector]"
+   },
+   {
+    "bugId": "672744",
+    "when": "07/27 14:57",
+    "type": "whiteboard",
+    "detail": "[styleinspector]"
+   },
+   {
+    "bugId": "672743",
+    "when": "07/27 14:57",
+    "type": "whiteboard",
+    "detail": "[styleinspector][minotaur]"
+   },
+   {
     "bugId": "674476",
     "when": "07/27 13:26",
     "type": "newComment",
     "detail": "from paul@mozilla.com"
    },
    {
-    "bugId": "666650",
-    "when": "07/27 12:34",
-    "type": "whiteboard",
-    "detail": "[minotaur][has-patch][needs-update][needs-review]"
-   },
-   {
-    "bugId": "663833",
-    "when": "07/27 12:26",
-    "type": "whiteboard",
-    "detail": "[minotaur][has-patch]"
-   },
-   {
-    "bugId": "665907",
-    "when": "07/27 12:20",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 4h; worst: 2d]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/27 11:50",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/27 11:43",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d][p2]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/27 11:43",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d]"
-   },
-   {
-    "bugId": "672748",
-    "when": "07/27 10:58",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur]"
-   },
-   {
-    "bugId": "672806",
-    "when": "07/27 10:58",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "672746",
-    "when": "07/27 10:57",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "672744",
-    "when": "07/27 10:57",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "672743",
-    "when": "07/27 10:57",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur]"
+    "bugId": "671689",
+    "when": "07/27 11:46",
+    "type": "review",
+    "detail": "r? gavin.sharp@gmail.com for patch v1.2"
    },
    {
     "bugId": "674485",
@@ -4620,10 +4863,16 @@
     "detail": ""
    },
    {
-    "bugId": "671689",
-    "when": "07/27 07:46",
-    "type": "review",
-    "detail": "r? gavin.sharp@gmail.com for patch v1.2"
+    "bugId": "674422",
+    "when": "07/26 23:53",
+    "type": "newBug",
+    "detail": "Tighten up fonts in the Web Console"
+   },
+   {
+    "bugId": "674351",
+    "when": "07/26 21:14",
+    "type": "newBug",
+    "detail": "can't close inspect"
    },
    {
     "bugId": "672876",
@@ -4672,6 +4921,12 @@
     "when": "07/26 08:11",
     "type": "newBug",
     "detail": ""
+   },
+   {
+    "bugId": "674134",
+    "when": "07/26 00:33",
+    "type": "newBug",
+    "detail": "API to auto-generate a CSS selector for any given node"
    },
    {
     "bugId": "585563",
@@ -4729,213 +4984,237 @@
    },
    {
     "bugId": "672829",
-    "when": "07/25 01:21",
+    "when": "07/25 05:21",
     "type": "review",
     "detail": "r? brendan@mozilla.org for Main, part 1 - jsdbg.cpp and data structures"
    },
    {
     "bugId": "671689",
-    "when": "07/24 19:34",
+    "when": "07/24 23:34",
     "type": "review",
     "detail": "r+ for patch v1.1"
    },
    {
     "bugId": "672829",
-    "when": "07/24 19:21",
+    "when": "07/24 23:21",
     "type": "review",
     "detail": "r+ for Tidying, part 1 - getCallerFunction"
    },
    {
     "bugId": "672829",
-    "when": "07/24 19:13",
+    "when": "07/24 23:13",
     "type": "review",
     "detail": "r+ for Support, part 6 - Cross-compartment weak map support, v2"
    },
    {
     "bugId": "672829",
-    "when": "07/24 19:10",
+    "when": "07/24 23:10",
     "type": "review",
     "detail": "r? wmccloskey@mozilla.com for Support, part 6 - Cross-compartment weak map support, v2"
    },
    {
     "bugId": "672829",
-    "when": "07/24 18:00",
+    "when": "07/24 22:00",
     "type": "review",
     "detail": "r+ for Support, part 2 - Make js_InitClass optionally return the new constructor object."
    },
    {
     "bugId": "672829",
-    "when": "07/24 17:45",
+    "when": "07/24 21:45",
     "type": "review",
     "detail": "r+ for Support, part 5 - Copying errors from one compartment to another."
    },
    {
     "bugId": "672829",
-    "when": "07/24 17:25",
+    "when": "07/24 21:25",
     "type": "review",
     "detail": "r+ for Tidying, part 2 - Miscellaneous cleanups."
    },
    {
     "bugId": "671689",
-    "when": "07/24 15:53",
+    "when": "07/24 19:53",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for patch v1.1"
    },
    {
     "bugId": "669999",
-    "when": "07/24 14:05",
+    "when": "07/24 18:05",
     "type": "review",
     "detail": "r- for Patch update 2 w/ very small bugfix from mozilla/source-map github repo"
    },
    {
     "bugId": "672829",
-    "when": "07/23 21:58",
+    "when": "07/24 01:58",
     "type": "review",
     "detail": "r+ for Support, part 7 - JSObject changes."
    },
    {
     "bugId": "672829",
-    "when": "07/23 21:16",
+    "when": "07/24 01:16",
     "type": "review",
     "detail": "r+ for Main, part 2 - Each global object gains a slot for a list of debuggers."
    },
    {
     "bugId": "672829",
-    "when": "07/23 17:48",
+    "when": "07/23 21:48",
     "type": "review",
     "detail": "r+ for Support, part 1 - Add JSPROP_NATIVE_ACCESSORS."
    },
    {
     "bugId": "672829",
-    "when": "07/23 17:43",
+    "when": "07/23 21:43",
     "type": "review",
     "detail": "r+ for Tests - part 1, Fixes for trap tests that have probably been busted for some time."
    },
    {
     "bugId": "672829",
-    "when": "07/23 16:46",
+    "when": "07/23 20:46",
     "type": "review",
     "detail": "r+ for Main, part 3 - Changes to how the rest of the engine interacts with debug mode."
    },
    {
     "bugId": "672829",
-    "when": "07/23 16:38",
+    "when": "07/23 20:38",
     "type": "review",
     "detail": "r+ for Support, part 3 - Add js::BytecodeRange! \\o/"
    },
    {
     "bugId": "673127",
-    "when": "07/23 15:34",
+    "when": "07/23 19:34",
     "type": "whiteboard",
     "detail": "[minotaur]"
    },
    {
     "bugId": "671350",
-    "when": "07/23 15:32",
+    "when": "07/23 19:32",
     "type": "whiteboard",
     "detail": "[minotaur]"
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:32",
+    "when": "07/23 18:32",
     "type": "review",
     "detail": "r? adrake@mozilla.com for Tests - part 1, Fixes for trap tests that have probably been busted for some time."
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:30",
+    "when": "07/23 18:30",
     "type": "review",
     "detail": "r? dvander@alliedmods.net for Main, part 3 - Changes to how the rest of the engine interacts with debug mode."
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:27",
+    "when": "07/23 18:27",
     "type": "review",
     "detail": "r? jwalden+bmo@mit.edu for Main, part 2 - Each global object gains a slot for a list of debuggers."
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:22",
+    "when": "07/23 18:22",
     "type": "review",
     "detail": "r? gal@uci.edu for Main, part 1 - jsdbg.cpp and data structures"
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:17",
+    "when": "07/23 18:17",
     "type": "review",
     "detail": "r? jwalden+bmo@mit.edu for Tidying, part 2 - Miscellaneous cleanups."
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:16",
+    "when": "07/23 18:16",
     "type": "review",
     "detail": "r? brendan@mozilla.org for Tidying, part 1 - getCallerFunction"
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:07",
+    "when": "07/23 18:07",
     "type": "review",
     "detail": "r? jwalden+bmo@mit.edu for Support, part 7 - JSObject changes."
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:05",
+    "when": "07/23 18:05",
     "type": "review",
     "detail": "r? wmccloskey@mozilla.com for Support, part 6 - Cross-compartment weak map support."
    },
    {
     "bugId": "672829",
-    "when": "07/23 14:00",
+    "when": "07/23 18:00",
     "type": "review",
     "detail": "r? mrbkap@gmail.com for Support, part 5 - Copying errors from one compartment to another."
    },
    {
     "bugId": "672829",
-    "when": "07/23 13:58",
+    "when": "07/23 17:58",
     "type": "review",
     "detail": "r+ for Support, part 4 - Add JSObject::{getWrapperHandler,isCrossCompartmentWrapper}."
    },
    {
     "bugId": "672829",
-    "when": "07/23 13:55",
+    "when": "07/23 17:55",
     "type": "review",
     "detail": "r? gal@uci.edu for Support, part 4 - Add JSObject::{getWrapperHandler,isCrossCompartmentWrapper}."
    },
    {
     "bugId": "672829",
-    "when": "07/23 13:54",
+    "when": "07/23 17:54",
     "type": "review",
     "detail": "r? dvander@alliedmods.net for Support, part 3 - Add js::BytecodeRange! \\o/"
    },
    {
     "bugId": "672829",
-    "when": "07/23 13:52",
+    "when": "07/23 17:52",
     "type": "review",
     "detail": "r? jwalden+bmo@mit.edu for Support, part 2 - Make js_InitClass optionally return the new constructor object."
    },
    {
     "bugId": "672829",
-    "when": "07/23 13:49",
+    "when": "07/23 17:49",
     "type": "review",
     "detail": "r? luke@mozilla.com for Support, part 1 - Add JSPROP_NATIVE_ACCESSORS."
    },
    {
     "bugId": "672743",
-    "when": "07/23 10:30",
+    "when": "07/23 14:30",
     "type": "whiteboard",
     "detail": "[hydra][minotaur]"
    },
    {
     "bugId": "669999",
-    "when": "07/22 22:18",
+    "when": "07/23 02:18",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for Patch update 2 w/ very small bugfix from mozilla/source-map github repo"
    },
    {
     "bugId": "672902",
-    "when": "07/22 19:28",
+    "when": "07/22 23:28",
     "type": "whiteboard",
     "detail": "[highlighter][minotaur]"
+   },
+   {
+    "bugId": "672748",
+    "when": "07/22 20:41",
+    "type": "whiteboard",
+    "detail": "[hydra][minotaur]"
+   },
+   {
+    "bugId": "672470",
+    "when": "07/22 19:30",
+    "type": "whiteboard",
+    "detail": ""
+   },
+   {
+    "bugId": "672470",
+    "when": "07/22 19:29",
+    "type": "review",
+    "detail": "r? gavin.sharp@gmail.com for patch update 2"
+   },
+   {
+    "bugId": "672806",
+    "when": "07/22 19:08",
+    "type": "whiteboard",
+    "detail": "[hydra]"
    },
    {
     "bugId": "673487",
@@ -4950,86 +5229,80 @@
     "detail": ""
    },
    {
-    "bugId": "672748",
-    "when": "07/22 16:41",
-    "type": "whiteboard",
-    "detail": "[hydra][minotaur]"
-   },
-   {
     "bugId": "671689",
     "when": "07/22 15:53",
     "type": "newPatch",
     "detail": "patch v1.1"
    },
    {
-    "bugId": "672470",
-    "when": "07/22 15:30",
-    "type": "whiteboard",
-    "detail": ""
-   },
-   {
-    "bugId": "672470",
-    "when": "07/22 15:29",
-    "type": "review",
-    "detail": "r? gavin.sharp@gmail.com for patch update 2"
-   },
-   {
-    "bugId": "672806",
-    "when": "07/22 15:08",
-    "type": "whiteboard",
-    "detail": "[hydra]"
-   },
-   {
     "bugId": "672743",
-    "when": "07/22 10:05",
+    "when": "07/22 14:05",
     "type": "whiteboard",
     "detail": "[hydra]"
    },
    {
     "bugId": "672748",
-    "when": "07/22 10:05",
+    "when": "07/22 14:05",
     "type": "whiteboard",
     "detail": "[hydra]"
    },
    {
     "bugId": "672470",
-    "when": "07/22 09:58",
+    "when": "07/22 13:58",
     "type": "whiteboard",
     "detail": "[land-in-fx-team]"
    },
    {
     "bugId": "672744",
-    "when": "07/22 09:54",
+    "when": "07/22 13:54",
     "type": "whiteboard",
     "detail": "[hydra]"
    },
    {
     "bugId": "672746",
-    "when": "07/22 09:53",
+    "when": "07/22 13:53",
     "type": "whiteboard",
     "detail": "[hydra]"
    },
    {
     "bugId": "669011",
-    "when": "07/22 06:56",
+    "when": "07/22 10:56",
     "type": "review",
     "detail": "r- for rtl-switch"
    },
    {
     "bugId": "669011",
-    "when": "07/22 04:56",
+    "when": "07/22 08:56",
     "type": "review",
     "detail": "r? ehsan@mozilla.com for rtl-switch"
    },
    {
     "bugId": "669999",
-    "when": "07/22 00:30",
+    "when": "07/22 04:30",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for Updated version with the correct depth in the makefile"
    },
    {
     "bugId": "671689",
-    "when": "07/21 23:37",
+    "when": "07/22 03:37",
+    "type": "whiteboard",
+    "detail": "[minotaur]"
+   },
+   {
+    "bugId": "672006",
+    "when": "07/22 02:20",
+    "type": "whiteboard",
+    "detail": "[minotaur]"
+   },
+   {
+    "bugId": "672003",
+    "when": "07/22 01:23",
+    "type": "whiteboard",
+    "detail": "[minotaur]"
+   },
+   {
+    "bugId": "672002",
+    "when": "07/22 01:08",
     "type": "whiteboard",
     "detail": "[minotaur]"
    },
@@ -5040,28 +5313,28 @@
     "detail": "Support, part 6 - Cross-compartment weak map support, v2"
    },
    {
-    "bugId": "672006",
-    "when": "07/21 22:20",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
+    "bugId": "672470",
+    "when": "07/21 21:05",
+    "type": "review",
+    "detail": "r+ for patch update 2"
    },
    {
-    "bugId": "672003",
-    "when": "07/21 21:23",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
-   },
-   {
-    "bugId": "672002",
-    "when": "07/21 21:08",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
+    "bugId": "673225",
+    "when": "07/21 20:52",
+    "type": "newBug",
+    "detail": "Web Console close button should be on the right side"
    },
    {
     "bugId": "672470",
-    "when": "07/21 17:05",
+    "when": "07/21 19:40",
     "type": "review",
-    "detail": "r+ for patch update 2"
+    "detail": "r? rcampbell@mozilla.com for patch update 2"
+   },
+   {
+    "bugId": "671689",
+    "when": "07/21 19:16",
+    "type": "review",
+    "detail": "r- for patch v1"
    },
    {
     "bugId": "673148",
@@ -5071,9 +5344,9 @@
    },
    {
     "bugId": "672470",
-    "when": "07/21 15:40",
+    "when": "07/21 16:45",
     "type": "review",
-    "detail": "r? rcampbell@mozilla.com for patch update 2"
+    "detail": "r? rcampbell@mozilla.com for proposed patch"
    },
    {
     "bugId": "673129",
@@ -5088,22 +5361,22 @@
     "detail": ""
    },
    {
-    "bugId": "671689",
-    "when": "07/21 15:16",
-    "type": "review",
-    "detail": "r- for patch v1"
-   },
-   {
     "bugId": "653545",
     "when": "07/21 13:32",
     "type": "newComment",
     "detail": "from mratcliffe@mozilla.com"
    },
    {
-    "bugId": "672470",
-    "when": "07/21 12:45",
-    "type": "review",
-    "detail": "r? rcampbell@mozilla.com for proposed patch"
+    "bugId": "668254",
+    "when": "07/21 13:24",
+    "type": "whiteboard",
+    "detail": "[minotaur]"
+   },
+   {
+    "bugId": "666650",
+    "when": "07/21 13:07",
+    "type": "whiteboard",
+    "detail": "[minotaur]"
    },
    {
     "bugId": "590796",
@@ -5113,45 +5386,33 @@
    },
    {
     "bugId": "668254",
-    "when": "07/21 09:24",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
-   },
-   {
-    "bugId": "666650",
-    "when": "07/21 09:07",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/21 05:35",
+    "when": "07/21 09:35",
     "type": "summary",
     "detail": "Highlighter doesn't handle full page zoom"
    },
    {
     "bugId": "665907",
-    "when": "07/21 04:48",
+    "when": "07/21 08:48",
     "type": "whiteboard",
     "detail": "[minotaur]"
    },
    {
     "bugId": "663833",
-    "when": "07/21 04:41",
+    "when": "07/21 08:41",
     "type": "whiteboard",
     "detail": "minotaur"
+   },
+   {
+    "bugId": "669999",
+    "when": "07/21 02:33",
+    "type": "review",
+    "detail": "r? rcampbell@mozilla.com for First pass at a patch to add the core source map parsing lib to browser/devtools/sourcemap"
    },
    {
     "bugId": "669011",
     "when": "07/20 23:44",
     "type": "newComment",
     "detail": "from ehsan@mozilla.com"
-   },
-   {
-    "bugId": "669999",
-    "when": "07/20 22:33",
-    "type": "review",
-    "detail": "r? rcampbell@mozilla.com for First pass at a patch to add the core source map parsing lib to browser/devtools/sourcemap"
    },
    {
     "bugId": "672902",
@@ -5280,22 +5541,16 @@
     "detail": ""
    },
    {
-    "bugId": "672744",
-    "when": "07/20 14:43",
-    "type": "newComment",
-    "detail": "from mratcliffe@mozilla.com"
+    "bugId": "669011",
+    "when": "07/20 13:40",
+    "type": "whiteboard",
+    "detail": "[good-first-bugs]"
    },
    {
     "bugId": "672748",
     "when": "07/20 09:41",
     "type": "newBug",
     "detail": ""
-   },
-   {
-    "bugId": "669011",
-    "when": "07/20 09:40",
-    "type": "whiteboard",
-    "detail": "[good-first-bugs]"
    },
    {
     "bugId": "672746",
@@ -5395,31 +5650,31 @@
    },
    {
     "bugId": "583041",
-    "when": "07/17 01:22",
+    "when": "07/17 05:22",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for Patch"
    },
    {
     "bugId": "583041",
-    "when": "07/17 01:22",
+    "when": "07/17 05:22",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for Tests"
    },
    {
     "bugId": "671689",
-    "when": "07/16 23:05",
+    "when": "07/17 03:05",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for patch v1"
    },
    {
     "bugId": "659710",
-    "when": "07/16 06:55",
+    "when": "07/16 10:55",
     "type": "review",
     "detail": "r- for work in progress on the html inspector"
    },
    {
     "bugId": "611032",
-    "when": "07/16 02:24",
+    "when": "07/16 06:24",
     "type": "review",
     "detail": "r? gavin.sharp@gmail.com for v 0.10 back to nsIConsoleService"
    },
@@ -5497,25 +5752,25 @@
    },
    {
     "bugId": "612658",
-    "when": "07/15 02:37",
+    "when": "07/15 06:37",
     "type": "summary",
     "detail": "Implement ConsoleAPIStorage - add caching for the window.console API"
    },
    {
     "bugId": "612658",
-    "when": "07/15 02:37",
+    "when": "07/15 06:37",
     "type": "whiteboard",
     "detail": "[console-1]"
    },
    {
     "bugId": "566085",
-    "when": "07/15 02:07",
+    "when": "07/15 06:07",
     "type": "whiteboard",
     "detail": ""
    },
    {
     "bugId": "566085",
-    "when": "07/15 02:06",
+    "when": "07/15 06:06",
     "type": "review",
     "detail": "r? rcampbell@mozilla.com for rebase to fxteam"
    },
@@ -5524,6 +5779,12 @@
     "when": "07/14 23:05",
     "type": "newBug",
     "detail": ""
+   },
+   {
+    "bugId": "671503",
+    "when": "07/14 08:21",
+    "type": "newBug",
+    "detail": "PropertyPanels should close with ESC key"
    },
    {
     "bugId": "671406",
@@ -5574,6 +5835,12 @@
     "detail": ""
    },
    {
+    "bugId": "671287",
+    "when": "07/13 15:52",
+    "type": "newBug",
+    "detail": "cli increment and decrement from the input element in GCLI should ignore step value when shift is pressed"
+   },
+   {
     "bugId": "671255",
     "when": "07/13 13:39",
     "type": "newComment",
@@ -5584,6 +5851,18 @@
     "when": "07/13 13:39",
     "type": "newBug",
     "detail": ""
+   },
+   {
+    "bugId": "671234",
+    "when": "07/13 11:56",
+    "type": "newBug",
+    "detail": "Experiment with a twitter like output system for GCLI"
+   },
+   {
+    "bugId": "671040",
+    "when": "07/12 19:39",
+    "type": "newBug",
+    "detail": "batch 'o telemetry metrics for devtools and content"
    },
    {
     "bugId": "670897",
@@ -5598,52 +5877,10 @@
     "detail": ""
    },
    {
-    "bugId": "670857",
-    "when": "07/12 06:31",
+    "bugId": "670896",
+    "when": "07/12 11:08",
     "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "611032",
-    "when": "07/12 01:41",
-    "type": "review",
-    "detail": "r- for v 0.9 revert for window.top"
-   },
-   {
-    "bugId": "611032",
-    "when": "07/12 00:36",
-    "type": "review",
-    "detail": "r? gavin.sharp@gmail.com for v 0.9 revert for window.top"
-   },
-   {
-    "bugId": "611032",
-    "when": "07/11 20:34",
-    "type": "whiteboard",
-    "detail": "[has patch][has new patch][final?][console-1]"
-   },
-   {
-    "bugId": "612658",
-    "when": "07/11 20:33",
-    "type": "whiteboard",
-    "detail": "[has new patch][console-1][has review]"
-   },
-   {
-    "bugId": "609890",
-    "when": "07/11 20:32",
-    "type": "whiteboard",
-    "detail": "[has review][new patch attached][console-1]"
-   },
-   {
-    "bugId": "566085",
-    "when": "07/11 19:06",
-    "type": "newPatch",
-    "detail": "rebase to fxteam"
-   },
-   {
-    "bugId": "611032",
-    "when": "07/11 17:53",
-    "type": "review",
-    "detail": "r? gavin.sharp@gmail.com for v 0.8 rebase"
+    "detail": "Add inner window ID and timestamp to nsIScriptError2"
    }
   ]
  }
