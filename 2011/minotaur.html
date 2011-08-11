@@ -64,7 +64,8 @@
                 </figcaption>
             </figure>
             <p>The <a href="https://wiki.mozilla.org/DevTools/Features/Highlighter" title="Highlighter Feature Page">Highlighter</a> is the visual entry point into the developer tools. It allows you to quickly zero in on an element of your page and get useful information about the element.</p>
-            <p>In the example above, Google title box is highlighted. Highlighter dims the rest of the page, and provides extra information about the highlighted page element in the <a href="#infobar">Infobar</a>. The <a href="#htoolbar">Highlighter Toolbar</a> appears above the <a href="#devtoolbar">Developer Toolbar</a> at the bottom of the window, providing Highlighter-specific controls.</p>
+            <p>In the example above, the Google logo is highlighted. Highlighter dims the rest of the page, and provides extra information about the highlighted page element in the <a href="#infobar">Infobar</a>. The <a href="#htoolbar">Highlighter Toolbar</a> appears above the <a href="#devtoolbar">Developer Toolbar</a> at the bottom of the window, providing Highlighter-specific controls.</p>
+            <p>The Highlighter has two modes: "highlight" and "selected".In "highlight" mode, moving the mouse around will highlight the element of the page that's under the cursor. If you click on the element, you switch to "selected" mode and you can then move your mouse around without changing which element is highlighted. You can click the "Highlight" button in the Highlighter Toolbar to switch back into highlight mode.</p>
         </section>
         
         <section>
@@ -81,7 +82,7 @@
                     <div class="tooltips">
                         <div id="tagname_tooltip">Tag name</div>
                         <div id="elementID_tooltip">Element ID</div>
-                        <div id="cssclasses_tooltip">CSS Classes</div>
+                        <div id="cssclasses_tooltip">CSS Classes. Click to toggle a class on or off!</div>
                     </div>
                 </figcaption>
             </figure>
@@ -101,7 +102,7 @@
                 </map>
                 <img src="images/highlighterToolbar.png" width="800" height="28" usemap="#highlighterToolbarMap">
                 <figcaption>
-                    <div>Highlighter Toolbar</div>
+                    <div>Highlighter Toolbar (hover for details)</div>
                     <div class="tooltips">
                         <div id="highlightElementToggle_tooltip">Switches in and out of element highlighting mode.</div>
                         <div id="styleInspectorToggle_tooltip">Shows/hides the <a href="#style_inspector">Style Inspector</a></div>
@@ -111,17 +112,36 @@
                     </div>
                 </figcaption>
             </figure>
-            <p>The Highlighter Toolbar provides breadcrumb-style navigation to other elements in the document and buttons to control other element tools.</p>
+            <p>The Highlighter Toolbar provides breadcrumb-style navigation to other elements in the document and buttons to toggle other element tools. When you toggle the other element tools, they appear in the sidebar on the right. Only one tool is visible in the sidebar at a time.</p>
+            
+            <h4 class="notes">Notes and Questions</h4>
+            <ul>
+                <li>What happens to the breadcrumbs when you have a very deeply nested tree? Is there truncation at one part of the tree or other? (my initial thought is to truncate at the tree's route)</li>
+            </ul>
         </section>
         
         <section>
             <h3><a name="style_inspector">Style Inspector</a></h3>
             <figure>
-                <img src="images/styleinspector.png">
+                <map name="styleInspectorMap">
+                    <area href="#" data-name="propertyName" shape="rect" coords="52,98,87,115">
+                </map>
+                <img src="images/styleinspector.png" usemap="#styleInspectorMap">
                 <figcaption>
-                    <div>Style Inspector shows details of the styles applied to the element</div>
+                    <div>Style Inspector</div>
+                    <div class="tooltips">
+                        <div id="propertyName_tooltip">CSS property name (when you click it, it takes you to the MDN topic)</div>
+                    </div>
                 </figcaption>
             </figure>
+            
+            <p>The Style Inspector provides detailed information about the styles applied to the node, organized by property name. The property names are links that take you to the MDN page that documents that property. For any given property, the selected rule is displayed, along with rules that were overridden. There's also an option to view unmatched rules, which helps in cases where a selector was mistyped.</p>
+            <p>By default, it only shows the styles that have been altered by user style sheets. There's a checkbox to change this behavior. Also, since there are potentially a very large number of properties to be displayed, there is a filtering search box.</p>
+            <h4 class="notes">Notes and Questions</h4>
+            <ul>
+                <li>What will the default sort be? (it's alphabetical by property name at the moment)</li>
+                <li>Can we make the Style Inspector show (in bold, or something like that) which font was selected from a list of fonts?</li>
+            </ul>
             
         </section>
         
@@ -145,6 +165,22 @@
                     </div>
                 </figcaption>
             </figure>
+            
+            <p>The Layout tool displays information about an element's layout. It displays:</p>
+            <ul>
+                <li>Position on the page</li>
+                <li>Outer height and width</li>
+                <li>Margins</li>
+                <li>Borders</li>
+                <li>Padding</li>
+                <li>Inner height and width</li>
+            </ul>
+            
+            <h4 class="notes">Notes and Questions</h4>
+            <ul>
+                <li>Will the layout tool appear in the sidebar or as a doorhanger?</li>
+                <li>Will there be anything special for flexboxes?</li>
+            </ul>
         </section>
         
         <section>
@@ -170,24 +206,41 @@
         
         <h3>Accessing Other Tools</h3>
         <div><img src="images/devtoolbar.details.png"></div>
-        <h2>Use Cases</h2>
-        <p>Now that you've seen what we're building, let's take a look at how someone will use all of these pieces to get things done.</p>
-        <p><a id="uc_fixfont" onclick="guiders.show('fixfont')" class="usecase">Fix a font</a></p>
+        
+        <section>
+            <h2>Use Cases</h2>
+            <p>Now that you've seen what we're building, let's take a look at how someone will use all of these pieces to get things done.</p>
+            <p><a id="uc_fixfont" onclick="guiders.show('fixfont')" class="usecase">Fix a font</a></p>
+        </section>
+        
+        <!-- use cases -->
+        <div style="display: none">
+            <div id="fixfont">
+                Oh, no! Our main text font is wrong! But, why? Let's investigate!<br>We're angling to use the lovely <span style="font-family: 'Comic Sans MS'">Comic Sans</span>, but we're getting the boring <span style="font-family: Helvetica">Helvetica</span> instead.
+            </div>
+            
+            <div id="fixfont2">
+                We can see the incorrect font on our page right in front of us. We can simply right click on the paragraph and select Highlight Element.
+            </div>
+                
+        </div>
+        
+        
         <script type="application/javascript">
             defineGuiders = function() {
                 guiders.createGuider({
                     buttons: [{name: "Next"}],
                     attachTo: "#uc_fixfont",
-                    description: "Oh, no! Our main text font is wrong! But, why? Let's investigate!<br>We're angling to use the lovely Comic Sans, but we're getting the boring Helvetica instead.",
+                    description: $("#fixfont"),
                     id: "fixfont",
                     position: 12,
                     title: "The Fix a Font Use Case",
-                    next: "highlightHeadline"
+                    next: "fixfont2"
                 });
                 guiders.createGuider({
                     attachTo: "#highlight_context_menu",
-                    id: "highlightHeadline",
-                    description: "We can see the incorrect font on our page right in front of us. We can simply right click on the paragraph and select Highlight Element.",
+                    id: "fixfont2",
+                    description: $("#fixfont2"),
                     position: 6,
                     title: "Use the context menu"
                 });
