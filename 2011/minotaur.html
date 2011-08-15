@@ -125,12 +125,20 @@
             <figure>
                 <map name="styleInspectorMap">
                     <area href="#" data-name="propertyName" shape="rect" coords="52,98,87,115">
+                    <area href="#" data-name="errorstab" shape="rect" coords="20,5,69,33">
+                    <area href="#" data-name="doctortab" shape="rect" coords="69,5,127,33">
+                    <area href="#" data-name="includeDefaultStyles" shape="rect" coords="131,40,280,62">
+                    <area href="#" data-name="filterProperties" shape="rect" coords="312,43,457,68">
                 </map>
                 <img src="images/styleinspector.png" usemap="#styleInspectorMap">
                 <figcaption>
                     <div>Style Inspector</div>
                     <div class="tooltips">
                         <div id="propertyName_tooltip">CSS property name (when you click it, it takes you to the MDN topic)</div>
+                        <div id="errorstab_tooltip">Displays CSS errors for the page (the same errors that appear in the Web Console)</div>
+                        <div id="doctortab_tooltip">Style Doctor coming later...</div>
+                        <div id="includeDefaultStyles_tooltip">If this is not checked, only the styles explicit set by the user are displayed here. Check this to include the browser defaults.</div>
+                        <div id="filterProperties_tooltip">Search by property name <em>and</em> value</div>
                     </div>
                 </figcaption>
             </figure>
