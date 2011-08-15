@@ -1,44 +1,6 @@
 (function() {
   this.projects = [
     {
-      id: "workspaces",
-      url: "https://wiki.mozilla.org/DevTools/Features/Workspaces",
-      name: "Scratchpad First Take",
-      blurb: "The humane way to monkey with code",
-      status: "Beta",
-      target: 6,
-      people: ["msucan", "rcampbell"],
-      bugs: ["642176 Integrate Workspace extension into the browser", "636725 Unit tests for Workspaces", "646070 Respect chrome developer tools preference in rkspace# ", "646524 Cache the sandboxes", "651872 access key for menu option", "656021 Update Scratchpad menu access key to S", "653108 workspace is tied to the tab it was first run in", "658344 useful introductory text", "646524 cache the sandboxes", "657136 Rename top-level Context menu to something less # nfusing", "657131 Create an Execute menu", "660560 pressing Tab should indent", "663746 Change Scratchpad shortcut key to something other than F4"],
-      updates: ["2011/04/14 Security review complete", "2011/03/18 Patch to put the Workspaces in browser", "2011/03/01 Prototype is working as a Jetpack", "2011/01/05 Initial Prototype Add-On"]
-    }, {
-      id: "webdevmenu",
-      url: "https://wiki.mozilla.org/DevTools/Features/WebDeveloperMenu",
-      name: "Web Developer Menu",
-      blurb: "New home for web developer tools",
-      status: "Beta",
-      target: 6,
-      people: ["rcampbell", "msucan"],
-      bugs: ["653221 Web Developer Menu", "655776 Get More Tools menu item", "656360 access key problem"]
-    }, {
-      id: "webconsole6",
-      url: "https://wiki.mozilla.org/DevTools/Features/WebConsoleUpgrade",
-      name: "Web Console 6",
-      blurb: "Console positioning, autocompletion and more",
-      status: "Beta",
-      target: 6,
-      people: ["past", "msucan", "ddahl"],
-      bugs: [577721, "585991 Show a popup listing possible completions", 637801, 632347, 632275, 595223, 626484, 619598, 642615, 646025, "585956 Implement console.trace() in web console", "644419 Console should have user-settable log limits for each message category", "642109 Web Console REPL 'readline' occasionally stops working right", "642111 Web Console messages should scroll into view automatically", "650780 evaluating a null object returns TypeError: aObject is null", "659910 console.log from Scratchpad sends people to Scratchpad.com", "659778 Autocomplete is behind the console window", "633204 Autocomplete isn't fully cleared on ctrl+backspace", "663443 No indication to which tab a Web Console belongs", "660806 autocomplete shows during history navigation"],
-      updates: ["2011/05/23 Security review complete"]
-    }, {
-      id: "webconsole7",
-      url: "https://wiki.mozilla.org/DevTools/Features/WebConsole7",
-      name: "Web Console 7",
-      blurb: "document.body autocompletion and select all fixes",
-      status: "Aurora",
-      target: 7,
-      people: [],
-      bugs: ["651501 document.body properties fail to autocomplete", "634406 Select All unexpectedly results in multi-line input", "653110 undefined appended after pasted text"]
-    }, {
       id: "highlighter",
       url: "https://wiki.mozilla.org/DevTools/Features/Highlighter",
       name: "Highlighter",
@@ -106,36 +68,23 @@
       people: ["victor.porof"],
       bugs: ["659807 Implement Tilt: a WebGL-based 3D visualization of a webpage", "653658 JavaScript implementation of MOZ_dom_element_texture extension"]
     }, {
-      id: "webconsole8",
-      name: "Web Console 8",
-      blurb: "Console refinement, remoting?",
-      url: "https://wiki.mozilla.org/DevTools/Features/WebConsole8",
-      status: "Planning",
-      people: [],
-      bugs: ["672470 Fix memory leaks", "644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "659907 Expand console object with dir method", "664131 Expand console object with group methods", "614586 Implement string substitution in console API methods", "669861 Cached errors and messages have wrong time stamp", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService", "612252 Clear console keyboard shortcut", "655700 More visual separation between requests", "656231 cleanup the HUD object properties", "656709 Net toggle isn't tab-specific", "657932 lack of symmetry in handling of enter and escape keys", "592552 History is shared among all Web Console instances", "622303 Web Console should remember filter settings", "649350 Cleanup/reorganize the HUDService observers and listeners", "630460 command-w doesn't close inspector panels", "616586 Internal console logging API", "588871 Remove ConsoleStorage methods used for log message storage", "646816 command-w binding for dismissing panels", "656461 Web Console calls getters when displaying an object", "659931 Clicking on position button changes position", "660910 Autocompletion doesn't support this.x", "660864 completeNode is accepting keyboard input", "659775 command-w to close separate Web Console window", "663151 Display IP address and IP version in network panel", "663366 Full-screen web console is missing toolbar", "662807 Error bubbles in multiline messages in console look silly", "638949 Copy Location for URLs", "646028 Add debug filter item to the toolbar", "674229 Repeat bubbles are too close to source link", "673891 Convert message items to XBL", "673148 e10s", "670897 add inner windowID and timestamp to nsiScriptError2", "670857 deliberate uncaught exceptions will cause test failures in the future", "670140 browser_webconsole_bug611795.js leaks its content window", "664568 Allow ConsoleAPIStorage to keep logged messages in PB Mode", "664688 fails to track back/forward", "664466 sometimes hud is undefined in HS_deactivateHUDForContext", "663477 Can't close the Web Console window by repeating the keyboard shortcut: both windows are inactive", "662611 Console messages can freeze browser or tab"]
-    }, {
-      id: "scratchpad9",
-      url: "https://wiki.mozilla.org/DevTools/Features/WorkspacesRefined",
-      name: "Scratchpad 9",
-      blurb: "The refined, humane way to engage in software development experiments.",
+      id: "consolequeued",
+      name: "Web Console Queued Messages",
+      blurb: "Those who forget the past...",
+      url: "https://wiki.mozilla.org/DevTools/Features/ConsoleQueuedMessages",
       status: "Implementation",
-      target: 8,
-      people: [],
-      bugs: ["674879 Move Scratchpad to browser/devtools", "636727 Add Ace to workspaces", "636731 Add GCLI commands for Workspaces", "644413 Workspaces should be able to restore their context via mode-line", "644409 Make scratchpads save their state across restarts", "651942 Add recent files to the file menu", "656273 Add a toolbar", "656330 make ctrl/cmd+enter execute command", "657303 F4 and esc should close the scratchpad window", "657132 Create a popup equivalent to the context menu in the status bar", "650760 Help menu", "653423 Undo option is grayed out although action is applicable", "653427 No save dialog displayed before closing window", "654023 Adding 'Tools' menu item to error console", "656544 More intuitive keyboard shortcuts", "656701 Scratchpad missing a menu overlay", "658006 Scratchpad breaks if you close the tab it's running in", "661289 Save file prompts twice to overwrite existing files", "663380 Restore Scratchpad after Firefox crash", "671982 automatically reload opened files where possible", "661762 Scratchpad source link may focus the wrong window", "669612 add indicator to window for unsaved changes", "669585 hide Environment->Content when devtools.chrome.enabled is false", "669400 Warning: use of getAttributeNode is deprecated", "669011 doesn't allow ctrl-shift-X to switch text direction", "663902 find a solution to draw negative margins", "667259 add new scratchpad context: remote content process"]
+      people: ["ddahl", "msucan"],
+      target: 9,
+      bugs: ["669861 Cached errors and messages have wrong time stamp", "609890 Errors from before console is opened don't appear", "611032 Break out HUDConsoleObserver from HUDService", "612658 Implement ConsoleStorageService"]
     }, {
-      id: "webconsole9",
-      name: "Web Console 9",
-      status: "Planning",
-      people: [],
-      bugs: ["672733 auto-complete search should be case insensitive"]
-    }, {
-      id: "cssdoctor",
-      url: "https://wiki.mozilla.org/DevTools/Features/CSSDoctor",
-      name: "Style Doctor",
-      blurb: "The cure for what ails your CSS",
+      id: "consoleobj",
+      name: "Console Object Completion",
+      blurb: "console group, time, dir",
+      url: "https://wiki.mozilla.org/DevTools/Features/ConsoleObjectCompletion",
+      target: 9,
       status: "Implementation",
-      people: ["jwalker"],
-      bugs: ["656863 getShortSource() should guarantee uniqueness", "657350 'rule overridden by other rule' diagnosis", "658202 needs a way to select inline styles"]
+      people: ["past"],
+      bugs: ["644596 expand console object with missing methods", "658368 Expand console object with time and timeEnd methods", "659625 Expand console object with clear method", "659907 Expand console object with dir method", "664131 Expand console object with group methods"]
     }, {
       id: "htmleditor",
       url: "https://wiki.mozilla.org/DevTools/Features/HTMLTreeEditor",
@@ -153,36 +102,6 @@
       status: "Implementation",
       people: ["dcamp", "past", "jblandy", "jorendorff"],
       bugs: ["560314", "636907", "672829"]
-    }, {
-      id: "viewsource",
-      name: "View Source Reboot",
-      blurb: "The View Source of the Future",
-      status: "Planning",
-      people: [],
-      bugs: ["650893 New View Source component", "650895 Initial implementation of the new View Source tool", "246620 Add line numbers to view source", "482921 reimplement view source with HTML5 parser", "469434 copy link location", "660193 improve view-source for .js, .json, .css"],
-      notes: ["deminification", "insert alert", "view and edit?", "current source vs. original/cached"]
-    }, {
-      id: "sdk",
-      url: "https://wiki.mozilla.org/DevTools/Features/SDK",
-      name: "DevTools SDK 1",
-      blurb: "First bits of customizability",
-      status: "Planning",
-      bugs: [639518, 638871, 638131, 638142, 637291]
-    }, {
-      id: "memoryback",
-      url: "https://wiki.mozilla.org/DevTools/Features/Memory",
-      name: "Memory Tooling Backend",
-      blurb: "Data for the future",
-      status: "Planning",
-      people: ["dcamp"],
-      bugs: [646734, 646735, 646737, 646739]
-    }, {
-      id: "gauges",
-      name: "Gauges",
-      blurb: "Page performance at-a-glance",
-      status: "Planning",
-      people: [],
-      bugs: []
     }
   ];
   this.people = [
