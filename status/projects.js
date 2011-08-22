@@ -60,14 +60,6 @@
       people: ["fitzgen"],
       bugs: ["618650 Map JS source coordinates to source language that was translated to JS", "674283 Add sourcemap URLs to JSScript", "673487 Add ability to map from original to generated source to SourceMapConsumer", "672312 Mini-require should be pulled out of GCLI so it can be shared with Source Map", "670002 use sourcemaps in the web console", "669999 Add a library for parsing and consuming source map files", "674980 XPCOM service to map js filenames and stackframes to source map filenames"]
     }, {
-      id: "tilt",
-      name: "Tilt",
-      blurb: "WebGL DOM inspection awesomeness",
-      url: "https://wiki.mozilla.org/Tilt_Project_Page",
-      status: "Implementation",
-      people: ["victor.porof"],
-      bugs: ["659807 Implement Tilt: a WebGL-based 3D visualization of a webpage", "653658 JavaScript implementation of MOZ_dom_element_texture extension"]
-    }, {
       id: "consolequeued",
       name: "Web Console Queued Messages",
       blurb: "Those who forget the past...",

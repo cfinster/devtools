@@ -228,18 +228,6 @@
         ]
     }
     {
-        id: "tilt"
-        name: "Tilt"
-        blurb: "WebGL DOM inspection awesomeness"
-        url: "https://wiki.mozilla.org/Tilt_Project_Page"
-        status: "Implementation"
-        people: ["victor.porof"]
-        bugs: [
-            "659807 Implement Tilt: a WebGL-based 3D visualization of a webpage"
-            "653658 JavaScript implementation of MOZ_dom_element_texture extension"
-        ]
-    }
-    {
         id: "consolequeued"
         name: "Web Console Queued Messages"
         blurb: "Those who forget the past..."
