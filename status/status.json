@@ -1,5 +1,5 @@
 {
- "update": "August 25",
+ "update": "August 30",
  "bugs": {
   "653140": {
    "summary": "GCLI needs a commonjs require system",
@@ -168,7 +168,7 @@
    "summary": "All built-in GCLI commands should be documented for security review",
    "status": "NEW",
    "assignedName": "jwalker",
-   "whiteboard": "[sg:audit][minotaur][best:1d, likely:2d, worst:2d]",
+   "whiteboard": "[minotaur][best:1d, likely:2d, worst:2d]",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -197,13 +197,14 @@
     "feedback": [],
     "review": [
      {
-      "status": "+",
-      "setter": "mihai.sucan"
+      "status": "?",
+      "requestee": "gavin.sharp",
+      "setter": "rcampbell"
      }
     ],
     "superreview": []
    },
-   "patchSize": 85814
+   "patchSize": 85289
   },
   "641903": {
    "summary": "[meta] GCLI needs a command registry",
@@ -428,14 +429,9 @@
    "flags": {
     "feedback": [],
     "review": [],
-    "superreview": [
-     {
-      "status": "-",
-      "setter": "gavin.sharp"
-     }
-    ]
+    "superreview": []
    },
-   "patchSize": 15222
+   "patchSize": 1164
   },
   "674476": {
    "summary": "Implement a sidebar to host the developers tools",
@@ -638,7 +634,7 @@
   "672006": {
    "summary": "[highlighter] Selecting a Node should update the Highlighter's main toolbar with a breadcrumb display",
    "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
+   "assignedName": "paul",
    "whiteboard": "[minotaur][best: 3d; likely: 1w; worst: 2w]",
    "hasPatch": true,
    "flags": {
@@ -769,16 +765,10 @@
    "hasPatch": true,
    "flags": {
     "feedback": [],
-    "review": [
-     {
-      "status": "?",
-      "requestee": "dolske",
-      "setter": "mratcliffe"
-     }
-    ],
+    "review": [],
     "superreview": []
    },
-   "patchSize": 4596
+   "patchSize": 12239
   },
   "671311": {
    "summary": "GCLI needs a way to display single line output when there is no output area",
@@ -984,7 +974,7 @@
   "587134": {
    "summary": "Context menu item for Highlight Element (highlighter)",
    "status": "ASSIGNED",
-   "assignedName": "rcampbell",
+   "assignedName": "past",
    "whiteboard": "[minotaur][has-patch][needs-review]",
    "hasPatch": true,
    "flags": {
@@ -992,7 +982,7 @@
     "review": [
      {
       "status": "?",
-      "requestee": "dtownsend",
+      "requestee": "gavin.sharp",
       "setter": "rcampbell"
      }
     ],
@@ -1074,7 +1064,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 42215
+   "patchSize": 43798
   },
   "660784": {
    "summary": "Add the Orion source code editor to the browser",
@@ -1148,7 +1138,7 @@
   "672902": {
    "summary": "Highlighter should be useable via keyboard.",
    "status": "ASSIGNED",
-   "assignedName": "rcampbell",
+   "assignedName": "past",
    "whiteboard": "[highlighter][minotaur][best: 3h: likely: 6h; worst 2d]",
    "hasPatch": false,
    "flags": {
@@ -1420,9 +1410,9 @@
   },
   "566084": {
    "summary": "Highlighter should be disabled when navigating to new pages",
-   "status": "ASSIGNED",
+   "status": "RESOLVED",
    "assignedName": "mihai.sucan",
-   "whiteboard": "[strings][minotaur][land-in-fx-team]",
+   "whiteboard": "[strings][minotaur][fixed-in-fx-team]",
    "hasPatch": true,
    "flags": {
     "feedback": [],
@@ -1471,10 +1461,10 @@
     "superreview": []
    }
   },
-  "671846": {
-   "summary": "GCLI completion shows incorrectly for sub-commands",
+  "654430": {
+   "summary": "Style Inspector - unmatched rules do not work for string values",
    "status": "RESOLVED",
-   "assignedName": "nfitzgerald",
+   "assignedName": "mratcliffe",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1482,10 +1472,10 @@
     "superreview": []
    }
   },
-  "654430": {
-   "summary": "Style Inspector - unmatched rules do not work for string values",
+  "671846": {
+   "summary": "GCLI completion shows incorrectly for sub-commands",
    "status": "RESOLVED",
-   "assignedName": "mratcliffe",
+   "assignedName": "nfitzgerald",
    "hasPatch": false,
    "flags": {
     "feedback": [],
@@ -1504,6 +1494,19 @@
     "superreview": []
    }
   },
+  "612658": {
+   "summary": "Implement ConsoleAPIStorage - add caching for the window.console API",
+   "status": "RESOLVED",
+   "assignedName": "mihai.sucan",
+   "whiteboard": "[console-1][fixed-in-fx-team]",
+   "hasPatch": true,
+   "flags": {
+    "feedback": [],
+    "review": [],
+    "superreview": []
+   },
+   "patchSize": 18503
+  },
   "642238": {
    "summary": "GCLI metadata should have types on return values",
    "status": "RESOLVED",
@@ -1515,19 +1518,6 @@
     "review": [],
     "superreview": []
    }
-  },
-  "612658": {
-   "summary": "Implement ConsoleAPIStorage - add caching for the window.console API",
-   "status": "ASSIGNED",
-   "assignedName": "mihai.sucan",
-   "whiteboard": "[console-1][land-in-fx-team]",
-   "hasPatch": true,
-   "flags": {
-    "feedback": [],
-    "review": [],
-    "superreview": []
-   },
-   "patchSize": 18503
   },
   "590799": {
    "summary": "Styling for the CSS editor panel",
@@ -1789,7 +1779,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 56948
+   "patchSize": 55562
   },
   "671294": {
    "summary": "Opening the Inspect window with the web console open causes the panel to open in the wrong position",
@@ -1892,7 +1882,7 @@
     "review": [],
     "superreview": []
    },
-   "patchSize": 183152
+   "patchSize": 183160
   },
   "671837": {
    "summary": "GCLI should not allow boolean parameters to be positional",
@@ -2018,27 +2008,17 @@
   }
  },
  "reviewQueues": {
-  "dolske": {
-   "review": {
-    "devtoolsSize": 4596,
-    "devtoolsCount": 1,
-    "totalSize": 4596,
-    "totalCount": 1
-   }
-  },
   "gavin.sharp": {
    "review": {
-    "devtoolsSize": 22903,
+    "devtoolsSize": 124393,
+    "devtoolsCount": 3,
+    "totalSize": 124393,
+    "totalCount": 3
+   },
+   "superreview": {
+    "devtoolsSize": 26318,
     "devtoolsCount": 1,
-    "totalSize": 22903,
-    "totalCount": 1
-   }
-  },
-  "dtownsend": {
-   "review": {
-    "devtoolsSize": 16201,
-    "devtoolsCount": 1,
-    "totalSize": 16201,
+    "totalSize": 26318,
     "totalCount": 1
    }
   },
@@ -2054,10 +2034,190 @@
  "timeline": {
   "events": [
    {
-    "bugId": "656666",
-    "when": "08/25 13:14",
+    "bugId": "658368",
+    "when": "08/30 11:01",
+    "type": "newComment",
+    "detail": "from past@mozilla.com"
+   },
+   {
+    "bugId": "658368",
+    "when": "08/30 11:01",
+    "type": "newPatch",
+    "detail": "Diff between v12 and v13"
+   },
+   {
+    "bugId": "672743",
+    "when": "08/30 11:00",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "658368",
+    "when": "08/30 11:00",
+    "type": "newPatch",
+    "detail": "Patch v13"
+   },
+   {
+    "bugId": "672743",
+    "when": "08/30 11:00",
+    "type": "newPatch",
+    "detail": "Remove categories patch 10"
+   },
+   {
+    "bugId": "683123",
+    "when": "08/30 10:54",
+    "type": "newBug",
+    "detail": "GCLI should experiment with a { causing next command to start with a '{'"
+   },
+   {
+    "bugId": "683121",
+    "when": "08/30 10:53",
+    "type": "newBug",
+    "detail": "GCLI JS parser does not handle ' and \" inside {}"
+   },
+   {
+    "bugId": "670002",
+    "when": "08/30 01:14",
+    "type": "newComment",
+    "detail": "from nfitzgerald@mozilla.com"
+   },
+   {
+    "bugId": "674871",
+    "when": "08/29 21:42",
+    "type": "newComment",
+    "detail": "from paul@mozilla.com"
+   },
+   {
+    "bugId": "566084",
+    "when": "08/29 19:42",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "612658",
+    "when": "08/29 19:35",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "665907",
+    "when": "08/29 16:51",
+    "type": "newComment",
+    "detail": "from dcamp@mozilla.com"
+   },
+   {
+    "bugId": "566085",
+    "when": "08/29 16:38",
     "type": "newComment",
     "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "566085",
+    "when": "08/29 16:38",
+    "type": "newPatch",
+    "detail": "another rebase"
+   },
+   {
+    "bugId": "672902",
+    "when": "08/29 15:26",
+    "type": "newComment",
+    "detail": "from past@mozilla.com"
+   },
+   {
+    "bugId": "587134",
+    "when": "08/29 15:25",
+    "type": "newComment",
+    "detail": "from past@mozilla.com"
+   },
+   {
+    "bugId": "663831",
+    "when": "08/29 14:34",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "663831",
+    "when": "08/29 14:34",
+    "type": "newPatch",
+    "detail": "Style inspector registerTools patch 9"
+   },
+   {
+    "bugId": "658368",
+    "when": "08/29 13:36",
+    "type": "newPatch",
+    "detail": "Diff between v11 and v12"
+   },
+   {
+    "bugId": "582596",
+    "when": "08/29 13:30",
+    "type": "newComment",
+    "detail": "from mratcliffe@mozilla.com"
+   },
+   {
+    "bugId": "582596",
+    "when": "08/29 13:30",
+    "type": "newPatch",
+    "detail": "555671: Style Inspector complete patch 12"
+   },
+   {
+    "bugId": "682694",
+    "when": "08/28 09:58",
+    "type": "newBug",
+    "detail": "GCLI JS autocomplete should be smarter"
+   },
+   {
+    "bugId": "682447",
+    "when": "08/26 22:50",
+    "type": "newBug",
+    "detail": "WebConsole seems to disable long script popup"
+   },
+   {
+    "bugId": "656666",
+    "when": "08/26 20:48",
+    "type": "newComment",
+    "detail": "from mihai.sucan@gmail.com"
+   },
+   {
+    "bugId": "650794",
+    "when": "08/26 17:20",
+    "type": "newComment",
+    "detail": "from rcampbell@mozilla.com"
+   },
+   {
+    "bugId": "650794",
+    "when": "08/26 17:20",
+    "type": "newPatch",
+    "detail": "disable and modularize html panel v15 (rebased 08/26)"
+   },
+   {
+    "bugId": "682297",
+    "when": "08/26 15:25",
+    "type": "newBug",
+    "detail": "[highlighter] Overlay stacks with multiple activations"
+   },
+   {
+    "bugId": "671406",
+    "when": "08/26 13:39",
+    "type": "newComment",
+    "detail": "from jwalker@mozilla.com"
+   },
+   {
+    "bugId": "682033",
+    "when": "08/25 18:14",
+    "type": "newBug",
+    "detail": "Make DOM nodes look like DOM nodes in the Web Console"
+   },
+   {
+    "bugId": "664693",
+    "when": "08/25 17:39",
+    "type": "newComment",
+    "detail": "from dveditz@mozilla.com"
+   },
+   {
+    "bugId": "681975",
+    "when": "08/25 16:02",
+    "type": "newBug",
+    "detail": "registered tools should be able to deregister themselves and cleanup on highlighter destruction"
    },
    {
     "bugId": "672748",
@@ -2074,14 +2234,8 @@
    {
     "bugId": "612658",
     "when": "08/25 11:48",
-    "type": "newComment",
-    "detail": "from mihai.sucan@gmail.com"
-   },
-   {
-    "bugId": "612658",
-    "when": "08/25 11:48",
     "type": "newPatch",
-    "detail": "v 0.18 rebase"
+    "detail": "[checked-in] v 0.18 rebase"
    },
    {
     "bugId": "656666",
@@ -2108,30 +2262,6 @@
     "detail": "Dryice should have override path feature so we can cleanly customize embedded GCLI"
    },
    {
-    "bugId": "672743",
-    "when": "08/25 09:47",
-    "type": "newComment",
-    "detail": "from mratcliffe@mozilla.com"
-   },
-   {
-    "bugId": "672743",
-    "when": "08/25 09:47",
-    "type": "newPatch",
-    "detail": "Remove categories patch 9"
-   },
-   {
-    "bugId": "663831",
-    "when": "08/25 09:18",
-    "type": "newComment",
-    "detail": "from mratcliffe@mozilla.com"
-   },
-   {
-    "bugId": "663831",
-    "when": "08/25 09:18",
-    "type": "newPatch",
-    "detail": "Style inspector registerTools patch 8"
-   },
-   {
     "bugId": "681894",
     "when": "08/25 08:57",
     "type": "newBug",
@@ -2144,40 +2274,10 @@
     "detail": "GCLI Field.claim should be optimized"
    },
    {
-    "bugId": "582596",
-    "when": "08/25 07:49",
-    "type": "newComment",
-    "detail": "from mratcliffe@mozilla.com"
-   },
-   {
-    "bugId": "582596",
-    "when": "08/25 07:49",
-    "type": "newPatch",
-    "detail": "Style Inspector complete patch 11"
-   },
-   {
-    "bugId": "650794",
-    "when": "08/24 20:22",
-    "type": "newComment",
-    "detail": "from mihai.sucan@gmail.com"
-   },
-   {
     "bugId": "681723",
     "when": "08/24 19:02",
     "type": "newBug",
     "detail": "scratchpad: add \"documentation\" as a menu item"
-   },
-   {
-    "bugId": "566084",
-    "when": "08/24 18:31",
-    "type": "newComment",
-    "detail": "from mihai.sucan@gmail.com"
-   },
-   {
-    "bugId": "650794",
-    "when": "08/24 15:44",
-    "type": "newPatch",
-    "detail": "disable and modularize html panel v12"
    },
    {
     "bugId": "681653",
@@ -2192,16 +2292,10 @@
     "detail": "Move Highlighter's TreePanel associated code to browser/devtools"
    },
    {
-    "bugId": "587134",
-    "when": "08/24 14:26",
-    "type": "newComment",
-    "detail": "from rcampbell@mozilla.com"
-   },
-   {
     "bugId": "566084",
     "when": "08/23 20:38",
     "type": "newPatch",
-    "detail": "address dão's comments"
+    "detail": "[checked-in] address dão's comments"
    },
    {
     "bugId": "681366",
@@ -2272,12 +2366,6 @@
    {
     "bugId": "674871",
     "when": "08/20 18:38",
-    "type": "newComment",
-    "detail": "from past@mozilla.com"
-   },
-   {
-    "bugId": "674871",
-    "when": "08/20 18:38",
     "type": "newPatch",
     "detail": "patch v1.4"
    },
@@ -2292,12 +2380,6 @@
     "when": "08/19 21:09",
     "type": "newPatch",
     "detail": "Highlighter context menu"
-   },
-   {
-    "bugId": "672902",
-    "when": "08/19 19:42",
-    "type": "newComment",
-    "detail": "from rcampbell@mozilla.com"
    },
    {
     "bugId": "680509",
@@ -2462,12 +2544,6 @@
     "detail": "Use the jsdbg2 getAllScripts() method in SourceMapUtils.jsm"
    },
    {
-    "bugId": "670002",
-    "when": "08/15 21:46",
-    "type": "newComment",
-    "detail": "from nfitzgerald@mozilla.com"
-   },
-   {
     "bugId": "679088",
     "when": "08/15 19:36",
     "type": "newBug",
@@ -2489,7 +2565,7 @@
     "bugId": "678971",
     "when": "08/15 13:01",
     "type": "newBug",
-    "detail": "Running code in Scratchpad breaks MDN until Firefox restart"
+    "detail": "Running code in Scratchpad breaks MDN and bugzilla.mozilla.org until Firefox restart"
    },
    {
     "bugId": "660784",
@@ -2526,12 +2602,6 @@
     "when": "08/11 09:28",
     "type": "newBug",
     "detail": "GCLI should be more visually appealing in Firefox"
-   },
-   {
-    "bugId": "658368",
-    "when": "08/11 01:18",
-    "type": "newComment",
-    "detail": "from gavin.sharp@gmail.com"
    },
    {
     "bugId": "677996",
@@ -2816,18 +2886,6 @@
     "detail": "Implement a script debugger"
    },
    {
-    "bugId": "658368",
-    "when": "08/04 16:53",
-    "type": "newPatch",
-    "detail": "Diff between v10 and v11"
-   },
-   {
-    "bugId": "658368",
-    "when": "08/04 16:51",
-    "type": "newPatch",
-    "detail": "Patch v11"
-   },
-   {
     "bugId": "664131",
     "when": "08/04 15:52",
     "type": "newPatch",
@@ -2868,12 +2926,6 @@
     "when": "08/04 02:36",
     "type": "newComment",
     "detail": "from cedricv@neonux.com"
-   },
-   {
-    "bugId": "665907",
-    "when": "08/03 18:33",
-    "type": "newComment",
-    "detail": "from rcampbell@mozilla.com"
    },
    {
     "bugId": "672312",
@@ -2982,354 +3034,6 @@
     "when": "07/31 08:03",
     "type": "newBug",
     "detail": "Add tooltip to repeat bubble in Web Console"
-   },
-   {
-    "bugId": "653531",
-    "when": "07/30 09:00",
-    "type": "newPatch",
-    "detail": "[in-fx-team] Simpler working patch"
-   },
-   {
-    "bugId": "674871",
-    "when": "07/30 07:32",
-    "type": "summary",
-    "detail": "[highlighter] there is something wrong with iframes"
-   },
-   {
-    "bugId": "674871",
-    "when": "07/30 03:30",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
-   },
-   {
-    "bugId": "674476",
-    "when": "07/29 19:25",
-    "type": "whiteboard",
-    "detail": "[minotaur]"
-   },
-   {
-    "bugId": "674485",
-    "when": "07/29 14:09",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "674482",
-    "when": "07/29 13:38",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "583041",
-    "when": "07/29 12:19",
-    "type": "newPatch",
-    "detail": "Diff v2 against v1"
-   },
-   {
-    "bugId": "583041",
-    "when": "07/29 12:11",
-    "type": "newPatch",
-    "detail": "Bug 583041 - Style Editor integration (tests) [2/2]"
-   },
-   {
-    "bugId": "583041",
-    "when": "07/29 12:08",
-    "type": "newPatch",
-    "detail": "Bug 583041 - Style Editor integration [1/2] v2"
-   },
-   {
-    "bugId": "669999",
-    "when": "07/29 08:40",
-    "type": "review",
-    "detail": "r? rcampbell@mozilla.com for Patch update 3"
-   },
-   {
-    "bugId": "672902",
-    "when": "07/29 08:18",
-    "type": "whiteboard",
-    "detail": "[highlighter][minotaur][best: 3h: likely: 6h; worst 2d]"
-   },
-   {
-    "bugId": "675148",
-    "when": "07/29 07:03",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "666650",
-    "when": "07/28 20:07",
-    "type": "newPatch",
-    "detail": "[in-fx-team] toolbar2.1"
-   },
-   {
-    "bugId": "674980",
-    "when": "07/28 18:14",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "660606",
-    "when": "07/28 16:56",
-    "type": "newComment",
-    "detail": "from gavin.sharp@gmail.com"
-   },
-   {
-    "bugId": "672006",
-    "when": "07/28 16:32",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 3d; likely: 1w; worst: 2w]"
-   },
-   {
-    "bugId": "672003",
-    "when": "07/28 16:31",
-    "type": "whiteboard",
-    "detail": "[minotaur][has-patch]"
-   },
-   {
-    "bugId": "671689",
-    "when": "07/28 16:29",
-    "type": "whiteboard",
-    "detail": "[minotaur][has-patch]"
-   },
-   {
-    "bugId": "672806",
-    "when": "07/28 16:23",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur][best: 2h; likely: 1d; worst: 3d]"
-   },
-   {
-    "bugId": "672002",
-    "when": "07/28 16:21",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 2h; likely: 1d; worst: 3d]"
-   },
-   {
-    "bugId": "672748",
-    "when": "07/28 16:16",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur][has-patch][best: 1d; likely: 1w; worst: 3w]"
-   },
-   {
-    "bugId": "672743",
-    "when": "07/28 16:14",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur][best: 4h; likely: 1d; worst: 3d]"
-   },
-   {
-    "bugId": "671350",
-    "when": "07/28 15:49",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1d; likely: 3d; worst: 1w]"
-   },
-   {
-    "bugId": "671350",
-    "when": "07/28 15:46",
-    "type": "whiteboard",
-    "detail": "[minotaur][p3][best: 1d; likely: 3d; worst: 1w]"
-   },
-   {
-    "bugId": "672748",
-    "when": "07/28 15:11",
-    "type": "summary",
-    "detail": "Style inspector UI refresh"
-   },
-   {
-    "bugId": "672806",
-    "when": "07/28 15:03",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur]"
-   },
-   {
-    "bugId": "673129",
-    "when": "07/28 13:42",
-    "type": "whiteboard",
-    "detail": ""
-   },
-   {
-    "bugId": "673127",
-    "when": "07/28 13:40",
-    "type": "whiteboard",
-    "detail": ""
-   },
-   {
-    "bugId": "674887",
-    "when": "07/28 13:17",
-    "type": "newBug",
-    "detail": "Find a better place for the Layout View"
-   },
-   {
-    "bugId": "663778",
-    "when": "07/28 11:55",
-    "type": "newPatch",
-    "detail": "patch v2.1"
-   },
-   {
-    "bugId": "674871",
-    "when": "07/28 11:29",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "674856",
-    "when": "07/28 10:11",
-    "type": "newBug",
-    "detail": "The style inspector should not redraw the whole UI every time it is used"
-   },
-   {
-    "bugId": "666650",
-    "when": "07/28 04:34",
-    "type": "whiteboard",
-    "detail": "[minotaur][has-patch][needs-update][needs-review]"
-   },
-   {
-    "bugId": "663833",
-    "when": "07/28 04:26",
-    "type": "whiteboard",
-    "detail": "[minotaur][has-patch]"
-   },
-   {
-    "bugId": "665907",
-    "when": "07/28 04:20",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 4h; worst: 2d]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/28 03:50",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/28 03:43",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d][p2]"
-   },
-   {
-    "bugId": "668254",
-    "when": "07/28 03:43",
-    "type": "whiteboard",
-    "detail": "[minotaur][best: 1h; likely: 3h; worst: 1d]"
-   },
-   {
-    "bugId": "672748",
-    "when": "07/28 02:58",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur]"
-   },
-   {
-    "bugId": "672806",
-    "when": "07/28 02:58",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "672746",
-    "when": "07/28 02:57",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "672744",
-    "when": "07/28 02:57",
-    "type": "whiteboard",
-    "detail": "[styleinspector]"
-   },
-   {
-    "bugId": "672743",
-    "when": "07/28 02:57",
-    "type": "whiteboard",
-    "detail": "[styleinspector][minotaur]"
-   },
-   {
-    "bugId": "671689",
-    "when": "07/27 23:46",
-    "type": "review",
-    "detail": "r? gavin.sharp@gmail.com for patch v1.2"
-   },
-   {
-    "bugId": "674283",
-    "when": "07/27 22:22",
-    "type": "newPatch",
-    "detail": "Patch v. 3"
-   },
-   {
-    "bugId": "674548",
-    "when": "07/27 15:43",
-    "type": "newBug",
-    "detail": "DOM Templater to be able to handle \"promises\""
-   },
-   {
-    "bugId": "672806",
-    "when": "07/27 15:25",
-    "type": "newComment",
-    "detail": "from dcamp@mozilla.com"
-   },
-   {
-    "bugId": "674476",
-    "when": "07/27 13:26",
-    "type": "newComment",
-    "detail": "from paul@mozilla.com"
-   },
-   {
-    "bugId": "674485",
-    "when": "07/27 10:09",
-    "type": "newComment",
-    "detail": "from mratcliffe@mozilla.com"
-   },
-   {
-    "bugId": "674485",
-    "when": "07/27 10:09",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "674482",
-    "when": "07/27 09:37",
-    "type": "newComment",
-    "detail": "from mratcliffe@mozilla.com"
-   },
-   {
-    "bugId": "674482",
-    "when": "07/27 09:37",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "674476",
-    "when": "07/27 08:58",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "674422",
-    "when": "07/26 23:53",
-    "type": "newBug",
-    "detail": "Tighten up fonts in the Web Console"
-   },
-   {
-    "bugId": "674351",
-    "when": "07/26 21:14",
-    "type": "newBug",
-    "detail": "can't close inspect"
-   },
-   {
-    "bugId": "672876",
-    "when": "07/26 19:23",
-    "type": "newComment",
-    "detail": "from kdangoor@mozilla.com"
-   },
-   {
-    "bugId": "674283",
-    "when": "07/26 17:54",
-    "type": "newBug",
-    "detail": ""
-   },
-   {
-    "bugId": "660606",
-    "when": "07/26 14:19",
-    "type": "newPatch",
-    "detail": "[in-fx-team] Register tools patch 10"
    }
   ]
  }
